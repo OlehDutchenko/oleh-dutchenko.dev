@@ -1,0 +1,8 @@
+src/**/*.ts text eol=lf
+src/**/*.tsx text eol=lf
+pages/**/*.ts text eol=lf
+pages/**/*.tsx text eol=lf
+package.json text eol=ls
+package-lock.json text eol=ls
+./README.md text eol=ls
+./.prettierrc.js text eol=ls

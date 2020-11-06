@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "version": "0.0.1-alpha",
+  "description": "Personal web site",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "author": {
+    "name": "Oleg Dutchenko",
+    "email": "dutchenko.o.dev@gmail.com",
+    "url": "https://dutchenko-o.dev"
+  },
+  "license": "CC0-1.0 License",
+  "dependencies": {
+    "@stripped-ui/stylelint-config-scss": "0.0.9-beta.0",
+    "eslint": "^7.12.1",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2"
+  }
+}
