@@ -1,7 +1,7 @@
-import { PropsWithChildren, ReactElement } from 'react';
+import React from 'react';
 import './globals.css';
 
-function RootLayout(props: PropsWithChildren): ReactElement {
+const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
 	return (
 		<html lang="uk">
 			<body>{props.children}</body>
