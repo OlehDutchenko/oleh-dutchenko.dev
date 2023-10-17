@@ -1,12 +1,7 @@
-import { NavProps } from '@/app/(root)/_layout-components/MainLayout/components/Nav/types';
+import { NavItem, NavProps } from './types';
 
-export function useNavItems(props: NavProps): {
-	key: string;
-	href: string;
-	label: string;
-}[] {
+export function useNavItems(props: NavProps): NavItem[] {
 	const { rootHref, navLabels } = props;
-
 	return [
 		{
 			key: 'homepage',

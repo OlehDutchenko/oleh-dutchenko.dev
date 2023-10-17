@@ -6,3 +6,9 @@ export interface NavProps {
 export interface NavLabels {
 	homepage: string;
 }
+
+export interface NavItem {
+	key: string;
+	href: string;
+	label: string;
+}
