@@ -2,11 +2,7 @@ import React from 'react';
 import './globals.css';
 
 const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
-	return (
-		<html lang="uk">
-			<body>{props.children}</body>
-		</html>
-	);
-}
+	return props.children;
+};
 
 export { RootLayout as default };
