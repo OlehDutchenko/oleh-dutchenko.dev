@@ -11,7 +11,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@wezom/fs-walker": "^0.3.0",
     "@wezom/locale-handler": "^1.0.6",
+    "markdown-to-jsx": "^7.3.2",
     "next": "^14.0.3",
     "react": "^18",
     "react-dom": "^18"
