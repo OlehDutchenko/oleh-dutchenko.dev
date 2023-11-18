@@ -1,5 +1,5 @@
 import React from 'react';
-import { MainLayout } from '../_layout-components/MainLayout';
+import { MainLayout } from '@/_layout/MainLayout';
 
 const Layout: React.FC<React.PropsWithChildren> = (props) => {
 	return (
