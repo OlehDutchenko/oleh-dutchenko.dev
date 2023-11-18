@@ -1,4 +1,4 @@
-# dutchenko-o.dev
+# oleh-duchenko.dev
 
 > My personal website
 
