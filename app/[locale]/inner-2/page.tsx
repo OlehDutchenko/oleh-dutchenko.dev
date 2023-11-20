@@ -1,36 +1,30 @@
 import { STATIC_LOCALE_PARAMS } from '@/_locales/STATIC_LOCALE_PARAMS';
-import { LocaleName } from '@/_locales/types';
+import { MarkdownFolder } from '@/_utils/markdown-folder';
+import {
+	resolveCurrentFilePath,
+	resolveCurrentFolder
+} from '@/_utils/resolve-fs';
 import { PageProps } from '@/types';
-import { FsWalker } from '@wezom/fs-walker';
 import Markdown from 'markdown-to-jsx';
-import { dirname, join } from 'path';
 import React from 'react';
-import { fileURLToPath } from 'url';
 
 export async function generateStaticParams() {
 	return STATIC_LOCALE_PARAMS;
 }
 
-interface Params {
-	locale: LocaleName;
-}
-
-function getContent(params: Params) {
-	const folder = dirname(fileURLToPath(import.meta.url));
-	const source = join(folder, `./content.${params.locale}.md`);
-	const fileSource = FsWalker.defineFile(source);
-	console.log(fileSource);
-	return Promise.resolve(fileSource.readAsText());
+function getMDContent(locale: string) {
+	const markdownFolder = new MarkdownFolder({
+		path: resolveCurrentFolder(import.meta.url)
+	});
+	return markdownFolder.readFile(locale);
 }
 
 export default async function InnerPage(props: PageProps): Promise<React.ReactElement> {
-	const content = await getContent({
-		locale: props.params.locale
-	});
-	console.log({ content });
+	const mdContent = getMDContent(props.params.locale) || '';
+
 	return (
 		<div>
-			<Markdown>{content}</Markdown>
+			<Markdown>{mdContent}</Markdown>
 		</div>
 	);
 };
