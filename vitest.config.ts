@@ -6,7 +6,7 @@ const config = defineConfig({
 	plugins: [reactPlugin()],
 	resolve: {
 		alias: {
-			'@': fromCwd('src'),
+			'@': fromCwd('app'),
 		}
 	},
 	test: {
@@ -18,7 +18,7 @@ const config = defineConfig({
 			enabled: false,
 			all: false,
 			provider: 'istanbul',
-			include: ['src/**'],
+			include: ['app/**'],
 			reporter: ['json-summary', 'html'],
 		},
 	},

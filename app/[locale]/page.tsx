@@ -1,5 +1,5 @@
-import { PageProps } from '@/app/types';
-import { STATIC_LOCALE_PARAMS } from '@/locales/STATIC_LOCALE_PARAMS';
+import { PageProps } from '@/types';
+import { STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import React from 'react';
 
 export async function generateStaticParams() {
@@ -13,4 +13,4 @@ export default function Homepage(props: PageProps): React.ReactElement {
 			<p>Lorem ipsum dolor sit amet.</p>
 		</div>
 	);
-};
+}

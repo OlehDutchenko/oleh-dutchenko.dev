@@ -1,8 +1,7 @@
-import { STATIC_LOCALE_PARAMS } from '@/_locales/STATIC_LOCALE_PARAMS';
-import { MarkdownFolder } from '@/_utils/markdown-folder';
+import { STATIC_LOCALE_PARAMS } from '@/_locales/constants';
+import { MDContentFolder } from '@/_locales/MultiLangFolder';
 import {
-	resolveCurrentFilePath,
-	resolveCurrentFolder
+	resolveCurrentFolder,
 } from '@/_utils/resolve-fs';
 import { PageProps } from '@/types';
 import Markdown from 'markdown-to-jsx';
@@ -13,13 +12,15 @@ export async function generateStaticParams() {
 }
 
 function getMDContent(locale: string) {
-	const markdownFolder = new MarkdownFolder({
-		path: resolveCurrentFolder(import.meta.url)
+	const mdContentFolder = new MDContentFolder({
+		path: resolveCurrentFolder(import.meta.url),
 	});
-	return markdownFolder.readFile(locale);
+	return mdContentFolder.getLanguageFile(locale);
 }
 
-export default async function InnerPage(props: PageProps): Promise<React.ReactElement> {
+export default async function InnerPage(
+	props: PageProps
+): Promise<React.ReactElement> {
 	const mdContent = getMDContent(props.params.locale) || '';
 
 	return (
@@ -27,4 +28,4 @@ export default async function InnerPage(props: PageProps): Promise<React.ReactEl
 			<Markdown>{mdContent}</Markdown>
 		</div>
 	);
-};
+}
