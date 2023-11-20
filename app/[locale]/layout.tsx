@@ -1,10 +1,11 @@
+import { LayoutProps } from '@/types';
 import React from 'react';
 import { MainLayout } from '@/_layout/MainLayout';
 
-const Layout: React.FC<React.PropsWithChildren> = (props) => {
+const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
 	return (
 		<MainLayout
-			lang="uk"
+			lang={props.params.locale}
 			navLabels={{
 				homepage: 'Головна',
 			}}
