@@ -1,5 +1,5 @@
 import fromCWD from 'from-cwd';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { TranslationsFolder } from '../TranslationsFolder';
 
 describe('TranslationsFolder', () => {
@@ -15,9 +15,11 @@ describe('TranslationsFolder', () => {
 		const translationsFolder = new TranslationsFolder({
 			path: getPath(),
 		});
-		let content = translationsFolder.getLanguageFile(
-			'non-existent-locale' as any
-		);
+
+		muteLog();
+		let content = translationsFolder.getLanguageFile('non-existent-locale');
+		unmuteLog();
+
 		expect(content).toBeNull();
 	});
 
@@ -25,13 +27,27 @@ describe('TranslationsFolder', () => {
 		const translationsFolder = new TranslationsFolder({
 			path: getPath(),
 		});
-		let content = translationsFolder.getLanguageFile(
-			'wrong-structure' as any
-		);
+
+		muteLog();
+		let content = translationsFolder.getLanguageFile('wrong-structure');
+		unmuteLog();
+
 		expect(content).toBeNull();
 	});
 });
 
-function getPath () {
-	return fromCWD('./app/_locales/MultiLangFolder/__specs__/fixtures/translations')
+function getPath() {
+	return fromCWD(
+		'./app/_locales/MultiLangFolder/__specs__/fixtures/translations'
+	);
+}
+
+function muteLog() {
+	vi.stubGlobal('console', {
+		error: () => {},
+	});
+}
+
+function unmuteLog() {
+	vi.unstubAllGlobals();
 }

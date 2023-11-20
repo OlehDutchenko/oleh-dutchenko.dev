@@ -11,7 +11,5 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({
 	children,
 	locale = DEFAULT_LOCALE,
 }) => {
-	return (
-		<Context.Provider value={{ locale }}>{children}</Context.Provider>
-	);
+	return <Context.Provider value={{ locale }}>{children}</Context.Provider>;
 };

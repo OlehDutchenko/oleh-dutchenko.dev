@@ -10,7 +10,7 @@ export function middleware(request: NextRequest): void | NextResponse {
 			acceptLanguages,
 			availableLocales: AVAILABLE_LOCALES,
 			defaultLocale: DEFAULT_LOCALE,
-			url: request.nextUrl
+			url: request.nextUrl,
 		});
 
 		if (localeHandler.pathnameHasMissingLocale) {
@@ -21,5 +21,5 @@ export function middleware(request: NextRequest): void | NextResponse {
 }
 
 export const config = {
-	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+	matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };

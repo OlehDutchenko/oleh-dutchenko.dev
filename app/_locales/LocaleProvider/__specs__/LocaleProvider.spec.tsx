@@ -6,7 +6,9 @@ import { describe, expect, it } from 'vitest';
 describe('LocaleProvider', () => {
 	it('should share current locale to the children components by hook', () => {
 		const { result } = renderHook(() => useLocaleContext(), {
-			wrapper: ({ children }) => <LocaleProvider>{children}</LocaleProvider>,
+			wrapper: ({ children }) => (
+				<LocaleProvider>{children}</LocaleProvider>
+			),
 		});
 		expect(result.current.locale).toBe(DEFAULT_LOCALE);
 	});

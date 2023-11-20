@@ -52,6 +52,9 @@ devDependencies:
   from-cwd:
     specifier: ^1.0.1
     version: 1.0.1
+  istanbul-badges-readme:
+    specifier: ^1.8.5
+    version: 1.8.5
   jsdom:
     specifier: ^22.1.0
     version: 22.1.0
@@ -2585,6 +2588,11 @@ packages:
 
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
+
+  /istanbul-badges-readme@1.8.5:
+    resolution: {integrity: sha512-VEh90ofuufPZIbLeDF2g14wpe0sebhirG0xHooYKpNPYOkGXm6y+HJFotQqIzCg0NmbCnlKnOPL1B2oxG7/piA==}
+    hasBin: true
+    dev: true
 
   /istanbul-lib-coverage@3.2.0:
     resolution: {integrity: sha512-eOeJ5BHCmHYvQK7xt9GkdHuzuCGS1Y6g9Gvnx3Ym33fz/HpLRYxiS0wHNr+m/MBC8B647Xt608vCDEvhl9c6Mw==}

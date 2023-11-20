@@ -7,7 +7,7 @@ const config = defineConfig({
 	resolve: {
 		alias: {
 			'@': fromCwd('app'),
-		}
+		},
 	},
 	test: {
 		globals: true,
