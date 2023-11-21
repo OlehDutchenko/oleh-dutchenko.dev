@@ -20,9 +20,7 @@ describe('MDContentFolder', () => {
 		});
 
 		muteLog();
-		let content = markdownFolder.getLanguageFile(
-			'non-existent-locale' as any
-		);
+		let content = markdownFolder.getLanguageFile('non-existent-locale');
 		unmuteLog();
 
 		expect(content).toBeNull();
