@@ -1,29 +1,18 @@
 import { STATIC_LOCALE_PARAMS } from '@/_locales/constants';
-import { MDContentFolder } from '@/_locales/MultiLangFolder';
-import { resolveCurrentFolder } from '@/_utils/resolveFS';
 import { PageProps } from '@/types';
 import Markdown from 'markdown-to-jsx';
+import { notFound } from 'next/navigation';
 import React from 'react';
+import { getMDContent } from './getMDContent';
 
 export function generateStaticParams() {
 	return STATIC_LOCALE_PARAMS;
 }
 
-function getMDContent(locale: string) {
-	const mdContentFolder = new MDContentFolder({
-		path: resolveCurrentFolder(import.meta.url),
-	});
-	return mdContentFolder.getLanguageFile(locale);
+export default function InnerPage2(props: PageProps) {
+	const mdContent = getMDContent(props.params.locale);
+	if (mdContent === null) {
+		return notFound();
+	}
+	return <Markdown>{mdContent}</Markdown>;
 }
-
-const InnerPage2: React.FC<PageProps> = (props) => {
-	const mdContent = getMDContent(props.params.locale) || '';
-
-	return (
-		<div>
-			<Markdown>{mdContent}</Markdown>
-		</div>
-	);
-};
-
-export { InnerPage2 as default };

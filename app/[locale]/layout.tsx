@@ -3,7 +3,7 @@ import { getTranslations } from '@/_layout/MainLayout/translations';
 import type { LayoutProps } from '@/types';
 import React from 'react';
 
-const Layout: React.FC<LayoutProps> = async (props) => {
+export default async function Layout(props: LayoutProps) {
 	const locale = props.params.locale;
 	const translations = await getTranslations(locale);
 	return (
@@ -11,6 +11,4 @@ const Layout: React.FC<LayoutProps> = async (props) => {
 			{props.children}
 		</MainLayout>
 	);
-};
-
-export { Layout as default };
+}
