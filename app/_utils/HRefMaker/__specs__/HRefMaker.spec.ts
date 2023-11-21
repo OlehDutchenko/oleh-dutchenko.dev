@@ -3,10 +3,8 @@ import { HRefMaker } from '../index';
 
 describe('HRefMaker', () => {
 	it('should return href for the given path', () => {
-		const homepage = new HRefMaker('uk').make('/');
-		expect(homepage).toBe('/uk');
-
-		const about = new HRefMaker('uk').make('/about');
-		expect(about).toBe('/uk/about');
+		const href = new HRefMaker('uk');
+		expect(href.make('/')).toBe('/uk');
+		expect(href.make('/about')).toBe('/uk/about');
 	});
 });
