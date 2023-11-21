@@ -1,15 +1,15 @@
 import React from 'react';
 import { Main } from './components/Main';
-import { Nav } from './components/Nav';
-import { MainLayoutProps } from './types';
+import { Nav, Props as NavProps } from './components/Nav';
 
-export const MainLayout: React.FC<MainLayoutProps> = (props) => {
-	const { locale, children } = props;
+interface Props extends NavProps, React.PropsWithChildren {}
+
+export const MainLayout: React.FC<Props> = (props) => {
 	return (
-		<html lang={locale}>
+		<html lang={props.locale}>
 			<body>
-				<Nav locale={locale} />
-				<Main>{children}</Main>
+				<Nav translations={props.translations} locale={props.locale} />
+				<Main>{props.children}</Main>
 			</body>
 		</html>
 	);

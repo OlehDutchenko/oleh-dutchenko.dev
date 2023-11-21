@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
-import { NavProps } from './types';
-import { useNavItems } from './useNavItems';
+import { Params, useNavItems } from './useNavItems';
 
-export const Nav: React.FC<NavProps> = (props) => {
+export interface Props extends Params {}
+
+export const Nav: React.FC<Props> = (props) => {
 	const navItems = useNavItems(props);
 
 	return (

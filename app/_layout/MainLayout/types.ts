@@ -1,6 +1,4 @@
 import type { PropsWithChildren } from 'react';
-import type { NavProps } from './components/Nav';
+import type { Props } from './components/Nav';
 
-export interface MainLayoutProps extends PropsWithChildren {
-	locale: NavProps['locale'];
-}
+export interface MainLayoutProps extends Props, PropsWithChildren {}
