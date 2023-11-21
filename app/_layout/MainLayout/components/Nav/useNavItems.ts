@@ -1,5 +1,6 @@
 import type { Translations } from '@/_layout/MainLayout/translations';
 import type { LocaleName } from '@/_locales/constants';
+import { HRefMaker } from '@/_utils/HRefMaker';
 import 'server-only';
 
 export interface Params {
@@ -15,26 +16,22 @@ interface Item {
 
 export function useNavItems(params: Params): Item[] {
 	const { locale, translations } = params;
+	const href = new HRefMaker(locale);
 	return [
 		{
 			key: 'homepage',
-			href: makeHref('/'),
+			href: href.make('/'),
 			label: translations.homepage,
 		},
 		{
 			key: 'inner',
-			href: makeHref('/inner'),
+			href: href.make('/inner'),
 			label: 'translations.inner',
 		},
 		{
 			key: 'inner-2',
-			href: makeHref('/inner-2'),
+			href: href.make('/inner-2'),
 			label: 'translations.inner-2',
 		},
 	];
-
-	function makeHref(path: string): string {
-		path = path.replace(/\/$/, '');
-		return `/${locale}${path}`;
-	}
 }

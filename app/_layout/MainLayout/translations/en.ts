@@ -3,7 +3,5 @@ const en = {
 	description: 'Description',
 };
 
-console.log('en', en);
-
 export { en as default };
 export type EN = typeof en;

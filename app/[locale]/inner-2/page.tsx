@@ -1,6 +1,6 @@
 import { STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import { MDContentFolder } from '@/_locales/MultiLangFolder';
-import { resolveCurrentFolder } from '@/_utils/resolve-fs';
+import { resolveCurrentFolder } from '@/_utils/resolveFS';
 import { PageProps } from '@/types';
 import Markdown from 'markdown-to-jsx';
 import React from 'react';
