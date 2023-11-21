@@ -1,10 +1,10 @@
-import { DEFAULT_LOCALE, LocaleName } from '@/_locales/constants';
+import { DEFAULT_LOCALE, Locale } from '@/_locales/constants';
 import React from 'react';
 import { Context } from './context';
 
 interface LocaleProviderProps {
 	children: NonNullable<React.ReactNode>;
-	locale?: LocaleName;
+	locale?: Locale;
 }
 
 export const LocaleProvider: React.FC<LocaleProviderProps> = ({

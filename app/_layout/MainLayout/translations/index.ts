@@ -1,4 +1,4 @@
-import { LocaleName, LocalesRecord } from '@/_locales/constants';
+import { Locale, LocalesRecord } from '@/_locales/constants';
 import 'server-only';
 import type { EN } from './en';
 import type { UK } from './uk';
@@ -10,8 +10,6 @@ const translations: LocalesRecord<() => Promise<Translations>> = {
 	uk: () => import('./uk').then((module) => module.default),
 };
 
-export async function getTranslations(
-	locale: LocaleName
-): Promise<Translations> {
+export async function getTranslations(locale: Locale): Promise<Translations> {
 	return await translations[locale]();
 }

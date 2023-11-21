@@ -1,10 +1,10 @@
 import type { Translations } from '@/_layout/MainLayout/translations';
-import type { LocaleName } from '@/_locales/constants';
+import type { Locale } from '@/_locales/constants';
 import { HRefMaker } from '@/_utils/HRefMaker';
 import 'server-only';
 
 export interface Params {
-	locale: LocaleName;
+	locale: Locale;
 	translations: Translations;
 }
 

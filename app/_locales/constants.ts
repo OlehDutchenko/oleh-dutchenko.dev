@@ -1,11 +1,11 @@
-export type LocaleName = 'en' | 'uk';
-export type LocalesRecord<Shape = string> = Record<LocaleName, Shape>;
+export type Locale = 'en' | 'uk';
+export type LocalesRecord<Shape = string> = Record<Locale, Shape>;
 
-export const AVAILABLE_LOCALES: LocaleName[] = ['en', 'uk'];
-export const DEFAULT_LOCALE: LocaleName = 'en';
+export const AVAILABLE_LOCALES: Locale[] = ['en', 'uk'];
+export const DEFAULT_LOCALE: Locale = 'en';
 
 export const STATIC_LOCALE_PARAMS: {
-	locale: LocaleName;
+	locale: Locale;
 }[] = AVAILABLE_LOCALES.map((locale) => {
 	return { locale };
 });

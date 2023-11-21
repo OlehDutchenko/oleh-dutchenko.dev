@@ -1,8 +1,8 @@
-import { DEFAULT_LOCALE, LocaleName } from '@/_locales/constants';
+import { DEFAULT_LOCALE, Locale } from '@/_locales/constants';
 import React from 'react';
 
 export interface LocaleContext {
-	locale: LocaleName;
+	locale: Locale;
 }
 
 export const Context = React.createContext<LocaleContext>({
