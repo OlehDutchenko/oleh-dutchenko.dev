@@ -1,12 +1,13 @@
 import { MainLayout } from '@/_layout/MainLayout';
 import { getTranslations } from '@/_layout/MainLayout/translations';
-import { LayoutProps } from '@/types';
+import type { LayoutProps } from '@/types';
 import React from 'react';
 
-const Layout: React.FC<LayoutProps> = async (props: LayoutProps) => {
-	const translations = await getTranslations(props.params.locale);
+const Layout: React.FC<LayoutProps> = async (props) => {
+	const locale = props.params.locale;
+	const translations = await getTranslations(locale);
 	return (
-		<MainLayout locale={props.params.locale} translations={translations}>
+		<MainLayout locale={locale} translations={translations}>
 			{props.children}
 		</MainLayout>
 	);

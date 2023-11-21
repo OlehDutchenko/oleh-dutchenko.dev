@@ -1,6 +1,7 @@
 import React from 'react';
-import { MainProps } from './types';
 
-export const Main: React.FC<MainProps> = (props) => {
+interface Props extends React.PropsWithChildren {}
+
+export const Main: React.FC<Props> = (props) => {
 	return <main>{props.children}</main>;
 };

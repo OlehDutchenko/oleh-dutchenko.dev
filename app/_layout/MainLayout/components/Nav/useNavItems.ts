@@ -1,7 +1,6 @@
 import type { Translations } from '@/_layout/MainLayout/translations';
 import type { Locale } from '@/_locales/constants';
 import { HRefMaker } from '@/_utils/HRefMaker';
-import 'server-only';
 
 export interface Params {
 	locale: Locale;

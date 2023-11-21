@@ -18,7 +18,7 @@
     "test": "vitest --run",
     "test-all-without-coverage": "vitest --run --coverage.enabled --coverage.all",
     "test-all-with-coverage": "vitest --run --coverage.enabled --coverage.all && pnpm run code-coverage-badges",
-    "code-coverage-badges": "istanbul-badges-readme",
+    "code-coverage-badges": "istanbul-badges-readme && prettier README.md --write",
     "--- CI -------------------": "SECTION",
     "ci:check": "pnpm run format-files && pnpm run lint-files",
     "ci:test": "pnpm run test-all-without-coverage",

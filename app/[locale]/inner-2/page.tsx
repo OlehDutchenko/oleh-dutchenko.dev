@@ -5,7 +5,7 @@ import { PageProps } from '@/types';
 import Markdown from 'markdown-to-jsx';
 import React from 'react';
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
 	return STATIC_LOCALE_PARAMS;
 }
 
@@ -16,9 +16,7 @@ function getMDContent(locale: string) {
 	return mdContentFolder.getLanguageFile(locale);
 }
 
-export default async function InnerPage(
-	props: PageProps
-): Promise<React.ReactElement> {
+const InnerPage2: React.FC<PageProps> = (props) => {
 	const mdContent = getMDContent(props.params.locale) || '';
 
 	return (
@@ -26,4 +24,6 @@ export default async function InnerPage(
 			<Markdown>{mdContent}</Markdown>
 		</div>
 	);
-}
+};
+
+export { InnerPage2 as default };
