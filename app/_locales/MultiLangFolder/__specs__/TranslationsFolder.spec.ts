@@ -1,5 +1,5 @@
 import fromCWD from 'from-cwd';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { TranslationsFolder } from '../TranslationsFolder';
 
 describe('TranslationsFolder', () => {
@@ -11,28 +11,28 @@ describe('TranslationsFolder', () => {
 		expect(content).toEqual({ title: 'Привіт світ!' });
 	});
 
-	it('should return null when trying to read non-existent file', () => {
+	it('should throw an error when trying to read non-existent file', () => {
 		const translationsFolder = new TranslationsFolder({
 			path: getPath(),
 		});
 
-		muteLog();
-		let content = translationsFolder.getLanguageFile('non-existent-locale');
-		unmuteLog();
+		const testFn = () => {
+			translationsFolder.getLanguageFile('non-existent-locale');
+		};
 
-		expect(content).toBeNull();
+		expect(testFn).toThrow();
 	});
 
-	it('should return null when trying to read JSON with wrong data structure', () => {
+	it('should throw an error when trying to read JSON with wrong data structure', () => {
 		const translationsFolder = new TranslationsFolder({
 			path: getPath(),
 		});
 
-		muteLog();
-		let content = translationsFolder.getLanguageFile('wrong-structure');
-		unmuteLog();
+		const testFn = () => {
+			translationsFolder.getLanguageFile('wrong-structure');
+		};
 
-		expect(content).toBeNull();
+		expect(testFn).toThrow();
 	});
 });
 
@@ -40,14 +40,4 @@ function getPath() {
 	return fromCWD(
 		'./app/_locales/MultiLangFolder/__specs__/fixtures/translations'
 	);
-}
-
-function muteLog() {
-	vi.stubGlobal('console', {
-		error: () => {},
-	});
-}
-
-function unmuteLog() {
-	vi.unstubAllGlobals();
 }

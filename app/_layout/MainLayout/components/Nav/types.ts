@@ -1,10 +1,7 @@
-export interface NavProps {
-	rootHref: string;
-	navLabels: NavLabels;
-}
+import type { LocaleName } from '@/_locales/constants';
 
-export interface NavLabels {
-	homepage: string;
+export interface NavProps {
+	locale: LocaleName;
 }
 
 export interface NavItem {

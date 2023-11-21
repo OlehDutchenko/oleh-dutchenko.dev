@@ -4,11 +4,11 @@ import { Nav } from './components/Nav';
 import { MainLayoutProps } from './types';
 
 export const MainLayout: React.FC<MainLayoutProps> = (props) => {
-	const { lang, navLabels, children } = props;
+	const { locale, children } = props;
 	return (
-		<html lang={lang}>
+		<html lang={locale}>
 			<body>
-				<Nav navLabels={navLabels} rootHref={`/${lang}`} />
+				<Nav locale={locale} />
 				<Main>{children}</Main>
 			</body>
 		</html>

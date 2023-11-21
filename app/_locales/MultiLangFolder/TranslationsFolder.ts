@@ -4,18 +4,14 @@ export class TranslationsFolder extends AbstractFolder {
 	protected readonly filePrefix = 'translations.';
 	protected readonly fileExtension = '.json';
 
-	getLanguageFile(locale: string): Record<string, string> | null {
+	/** @throws Error */
+	getLanguageFile(locale: string): Record<string, string> {
 		const file = this.getFileSource(locale);
-		try {
-			const json = file.readAsJson();
-			if (this.isCorrectStructure(json)) {
-				return json;
-			} else {
-				throw new Error('Translation JSON has wrong data structure');
-			}
-		} catch (e) {
-			console.error(e);
-			return null;
+		const json = file.readAsJson();
+		if (this.isCorrectStructure(json)) {
+			return json;
+		} else {
+			throw new Error('Translation JSON has wrong data structure');
 		}
 	}
 
