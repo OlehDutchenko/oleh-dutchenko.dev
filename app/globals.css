@@ -1,18 +1,42 @@
 :root {
-	--font-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
-		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 	--color: #111;
 	--background: #fff;
 }
 
 html {
-	font-family: var(--font-base);
 	font-size: 100%;
 }
 
 body {
 	margin: 0;
 	color: var(--color);
+}
+
+main {
+	font-size: 1.25rem;
+	line-height: 1.6em;
+	font-weight: 300;
+
+	& * {
+		margin-top: 2.14em;
+	}
+
+	& code {
+		font-size: 0.9em;
+		padding: 0 0.3em;
+		background: #f5eded;
+		letter-spacing: -0.02em;
+	}
+
+	& pre {
+		tab-size: 4;
+		font-size: 1rem;
+		line-height: 1.5em;
+		padding: 1rem;
+		background: #f4f4fd;
+		overflow: auto;
+		letter-spacing: -0.01em;
+	}
 }
 
 .main-layout-header {
@@ -26,6 +50,10 @@ body {
 
 .main-layout-header__heading {
 	margin: 0;
+
+	& img {
+		display: block;
+	}
 }
 
 .main-layout-header__heading-icon {
@@ -37,4 +65,10 @@ body {
 	display: flex;
 	gap: 2rem;
 	align-items: safe center;
+
+	& a {
+		color: var(--color);
+		font-size: 1.25rem;
+		text-decoration: none;
+	}
 }

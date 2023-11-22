@@ -1,13 +1,21 @@
-import { Cormorant, JetBrains_Mono } from 'next/font/google';
+import {
+	JetBrains_Mono as FontCode,
+	Literata as FontBase,
+	Orelega_One as FontHeadings,
+} from 'next/font/google';
 
-export const fontHeadings = Cormorant({
-	subsets: ['latin', 'cyrillic'],
-	variable: '--font-headings',
+export const fontBase = FontBase({
+	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
 	display: 'swap',
 });
 
-export const fontMonospace = JetBrains_Mono({
+export const fontHeadings = FontHeadings({
+	subsets: ['latin', 'cyrillic'],
+	weight: ['400'],
+	display: 'swap',
+});
+
+export const fontCode = FontCode({
 	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
-	variable: '--font-monospace',
 	display: 'swap',
 });

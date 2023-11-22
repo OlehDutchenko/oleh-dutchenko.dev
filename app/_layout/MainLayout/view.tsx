@@ -1,3 +1,4 @@
+import { fontBase } from '@/_fonts';
 import React from 'react';
 import { Heading } from './components/Heading';
 import { Nav, Props as NavProps } from './components/Nav';
@@ -10,12 +11,13 @@ export const MainLayout: React.FC<Props> = ({
 	children,
 }) => {
 	return (
-		<html lang={locale}>
+		<html lang={locale} className={fontBase.className}>
 			<body>
 				<header className="main-layout-header">
 					<Heading translations={translations} />
 					<Nav translations={translations} locale={locale} />
 				</header>
+				<hr style={{ opacity: 0.4 }} />
 				{children}
 			</body>
 		</html>
