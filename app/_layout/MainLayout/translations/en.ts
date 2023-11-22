@@ -1,6 +1,13 @@
 const en = {
-	homepage: 'Home',
-	description: 'Description',
+	heading: {
+		label: "Oleg Dutchenko's personal website",
+		icon: "Oleg Dutchenko's website icon",
+	},
+	nav: {
+		about: 'About me',
+		blog: 'Blog',
+		envato: 'Envato',
+	},
 };
 
 export { en as default };

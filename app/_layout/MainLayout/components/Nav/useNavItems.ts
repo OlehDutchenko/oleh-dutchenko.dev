@@ -18,19 +18,19 @@ export function useNavItems(params: Params): Item[] {
 	const href = new HRefMaker(locale);
 	return [
 		{
-			key: 'homepage',
+			key: 'about',
 			href: href.make('/'),
-			label: translations.homepage,
+			label: translations.nav.about,
 		},
 		{
-			key: 'inner',
-			href: href.make('/inner'),
-			label: 'translations.inner',
+			key: 'blog',
+			href: href.make('/blog'),
+			label: translations.nav.blog
 		},
 		{
-			key: 'inner-2',
-			href: href.make('/inner-2'),
-			label: 'translations.inner-2',
+			key: 'envato',
+			href: href.make('/envato'),
+			label: translations.nav.envato
 		},
 	];
 }
