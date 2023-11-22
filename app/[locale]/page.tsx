@@ -1,12 +1,12 @@
-import { STATIC_LOCALE_PARAMS } from '@/_locales/constants';
+import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import type { PageProps } from '@/types';
 import React from 'react';
 
-export function generateStaticParams() {
+export function generateStaticParams(): LocaleParam[] {
 	return STATIC_LOCALE_PARAMS;
 }
 
-export default function Homepage(props: PageProps) {
+export default function Homepage(props: PageProps): React.ReactElement {
 	return (
 		<div>
 			<h1>Привіт світ!</h1>

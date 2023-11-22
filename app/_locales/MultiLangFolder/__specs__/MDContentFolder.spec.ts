@@ -20,23 +20,23 @@ describe('MDContentFolder', () => {
 		});
 
 		muteLog();
-		let content = markdownFolder.getLanguageFile('non-existent-locale');
+		const content = markdownFolder.getLanguageFile('non-existent-locale');
 		unmuteLog();
 
 		expect(content).toBeNull();
 	});
 });
 
-function getPath() {
+function getPath(): string {
 	return fromCWD('./app/_locales/MultiLangFolder/__specs__/fixtures/md');
 }
 
-function muteLog() {
+function muteLog(): void {
 	vi.stubGlobal('console', {
-		error: () => {},
+		error: (): void => undefined,
 	});
 }
 
-function unmuteLog() {
+function unmuteLog(): void {
 	vi.unstubAllGlobals();
 }
