@@ -25,12 +25,12 @@ export function useNavItems(params: Params): Item[] {
 		{
 			key: 'blog',
 			href: href.make('/blog'),
-			label: translations.nav.blog
+			label: translations.nav.blog,
 		},
 		{
 			key: 'envato',
 			href: href.make('/envato'),
-			label: translations.nav.envato
+			label: translations.nav.envato,
 		},
 	];
 }
