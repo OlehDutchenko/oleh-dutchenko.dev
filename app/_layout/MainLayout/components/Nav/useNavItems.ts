@@ -19,7 +19,7 @@ export function useNavItems(params: Params): Item[] {
 	return [
 		{
 			key: 'about',
-			href: href.make('/'),
+			href: href.make('/about'),
 			label: translations.nav.about,
 		},
 		{
