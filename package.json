@@ -16,11 +16,11 @@
     "lint-app-files-with-autofix": "pnpm run lint-app-files --fix",
     "--- TEST -------------------": "SECTION",
     "test": "vitest --run",
-    "test-all-without-coverage": "vitest --run --coverage.enabled --coverage.all",
+    "test-all-without-coverage": "vitest --run --no-coverage.enabled",
     "test-all-with-coverage": "vitest --run --coverage.enabled --coverage.all && pnpm run code-coverage-badges",
     "code-coverage-badges": "istanbul-badges-readme && prettier README.md --write",
     "--- CI -------------------": "SECTION",
-    "ci:check": "pnpm run format-files && pnpm run lint-files",
+    "ci:check": "pnpm run check-root-files-format && pnpm run check-app-files-format && pnpm run lint-app-files",
     "ci:test": "pnpm run test-all-without-coverage",
     "ci:build": "pnpm run build"
   },

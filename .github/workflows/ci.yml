@@ -1,0 +1,32 @@
+name: Check, test and build
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
+jobs:
+    build:
+        runs-on: ubuntu-20.04
+        strategy:
+            matrix:
+                node-version: [20]
+        steps:
+            - uses: actions/checkout@v3
+            - uses: pnpm/action-setup@v2
+              with:
+                  version: 8
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'pnpm'
+            - name: Install dependencies
+              run: pnpm install
+            - name: Check files
+              run: pnpm run ci:check
+            - name: Run tests
+              run: pnpm run ci:test
+            - name: Build app
+              run: pnpm run ci:build
