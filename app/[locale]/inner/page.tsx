@@ -8,9 +8,11 @@ export function generateStaticParams(): LocaleParam[] {
 
 export default function InnerPage(props: PageProps): React.ReactElement {
 	return (
-		<div>
-			<h1>Привіт світ!</h1>
+		<main>
+			<header>
+				<h1>Привіт світ!</h1>
+			</header>
 			<p>Lorem ipsum dolor sit amet.</p>
-		</div>
+		</main>
 	);
 }
