@@ -8,14 +8,16 @@ export const Nav: React.FC<Props> = (props) => {
 	const navItems = useNavItems(props);
 
 	return (
-		<nav>
-			<ul>
-				{navItems.map((item) => (
-					<li key={item.key}>
-						<Link href={item.href}>{item.label}</Link>
-					</li>
-				))}
-			</ul>
+		<nav className="main-layout-header__nav">
+			{navItems.map((item) => (
+				<Link
+					key={item.key}
+					href={item.href}
+					className="main-layout-header__nav-link"
+				>
+					{item.label}
+				</Link>
+			))}
 		</nav>
 	);
 };

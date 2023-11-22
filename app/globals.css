@@ -14,3 +14,27 @@ body {
 	margin: 0;
 	color: var(--color);
 }
+
+.main-layout-header {
+	display: flex;
+	align-items: safe center;
+	gap: 3rem;
+	max-width: 1440px;
+	margin: 1rem auto;
+	padding: 0 1rem;
+}
+
+.main-layout-header__heading {
+	margin: 0;
+}
+
+.main-layout-header__heading-icon {
+	display: block;
+}
+
+.main-layout-header__nav {
+	flex-grow: 1;
+	display: flex;
+	gap: 2rem;
+	align-items: safe center;
+}

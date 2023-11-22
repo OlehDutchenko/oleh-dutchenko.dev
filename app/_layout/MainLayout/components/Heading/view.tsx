@@ -8,13 +8,18 @@ export interface Props {
 
 export const Heading: React.FC<Props> = ({ translations }) => {
 	return (
-		<h1 aria-label={translations.heading.label}>
+		<h1
+			className="main-layout-header__heading"
+			aria-label={translations.heading.label}
+		>
 			<Image
 				width="72"
 				height="69"
-				src="/static/logo.svg"
-				aria-hidden="true"
+				src="/static/icon.svg"
 				alt={translations.heading.icon}
+				className="main-layout-header__heading-icon"
+				draggable="false"
+				aria-hidden="true"
 			/>
 		</h1>
 	);

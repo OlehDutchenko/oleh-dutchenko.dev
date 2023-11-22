@@ -12,7 +12,7 @@ export const MainLayout: React.FC<Props> = ({
 	return (
 		<html lang={locale}>
 			<body>
-				<header>
+				<header className="main-layout-header">
 					<Heading translations={translations} />
 					<Nav translations={translations} locale={locale} />
 				</header>
