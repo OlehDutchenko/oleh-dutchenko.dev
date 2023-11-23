@@ -14,6 +14,7 @@ const config = defineConfig({
 		environment: 'jsdom',
 		passWithNoTests: true,
 		clearMocks: true,
+		setupFiles: ['./vitest.setup.ts'],
 		coverage: {
 			enabled: false,
 			all: false,
