@@ -1,8 +1,8 @@
-import { Translations } from '@/_layout/MainLayout/translations';
 import Image from 'next/image';
 import React from 'react';
+import { Translations } from '../../translations';
 
-export interface Props {
+interface Props {
 	translations: Translations;
 }
 
