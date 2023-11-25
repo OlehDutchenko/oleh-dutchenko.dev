@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles.module.css';
 
 export interface ControlProps {
 	children?: NonNullable<React.ReactNode>;
@@ -6,8 +7,8 @@ export interface ControlProps {
 
 export const Control: React.FC<ControlProps> = ({ children }) => {
 	return (
-		<div>
-			<div>{children}</div>
+		<div className={styles.control}>
+			<div className={styles.controlInner}>{children}</div>
 		</div>
 	);
 };

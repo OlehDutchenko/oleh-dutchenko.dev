@@ -8,12 +8,10 @@ describe('LocaleSwitcher', () => {
 			{
 				label: 'English',
 				value: 'en',
-				selected: true,
 			},
 			{
 				label: 'Українська',
 				value: 'uk',
-				selected: false,
 			},
 		];
 

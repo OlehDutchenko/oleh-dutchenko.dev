@@ -1,0 +1,75 @@
+.control {
+	position: relative;
+	display: inline-flex;
+	--radius: 6px;
+	--shift: -2px;
+	--border: 1px solid;
+}
+
+.control:focus-within {
+	--shift: 2px;
+	--border: 2px solid blue;
+}
+
+.control::before,
+.control::after,
+.controlInner::before,
+.controlInner::after {
+	content: '';
+	position: absolute;
+	border-radius: var(--radius);
+	transition: 0.15s ease-in-out;
+	pointer-events: none;
+}
+
+.control::before,
+.control::after {
+	left: 0;
+	width: 100%;
+	height: calc(var(--radius) * 2);
+}
+
+.control::before {
+	bottom: 100%;
+	margin-bottom: var(--shift);
+	border-bottom: var(--border);
+}
+
+.control::after {
+	top: 100%;
+	margin-top: var(--shift);
+	border-top: var(--border);
+}
+
+.controlInner::before,
+.controlInner::after {
+	top: 0;
+	height: 100%;
+	width: calc(var(--radius) * 2);
+}
+
+.controlInner::before {
+	right: 100%;
+	margin-right: var(--shift);
+	border-right: var(--border);
+}
+
+.controlInner::after {
+	left: 100%;
+	margin-left: var(--shift);
+	border-left: var(--border);
+}
+
+.control select,
+.control input {
+	border-width: 0;
+	font-size: inherit;
+	line-height: inherit;
+	margin: 4px 10px;
+	padding: 0;
+}
+
+.control select:focus,
+.control input:focus {
+	outline: none;
+}

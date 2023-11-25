@@ -1,21 +1,19 @@
 'use client';
 
-import 'client-only';
 import { Control } from '@/_components/Control';
+import { Locale } from '@/_locales/constants';
+import 'client-only';
 import React from 'react';
 
 export interface LocaleSwitcherProps {
-	options: Option[];
-}
-
-interface Option {
-	label: string;
-	value: string;
-	selected: boolean;
+	options: {
+		label: string;
+		value: Locale;
+	}[];
 }
 
 export const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({ options }) => {
-	const selectValue = options.find((option) => option.selected)?.value;
+	const selectValue = options[0]?.value;
 	return (
 		<Control>
 			<select defaultValue={selectValue}>
