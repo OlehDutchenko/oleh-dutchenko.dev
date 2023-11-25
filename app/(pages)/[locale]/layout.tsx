@@ -24,7 +24,11 @@ export default async function Layout(
 	return (
 		<html lang={locale} className={fontBase.className}>
 			<head>
-				<link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+				<link
+					rel="icon"
+					type="image/svg+xml"
+					href="/static/favicon.svg"
+				/>
 				<link rel="icon" type="image/png" href="/static/favicon.png" />
 			</head>
 			<body>
