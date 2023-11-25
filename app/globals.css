@@ -12,6 +12,13 @@ body {
 	color: var(--color);
 }
 
+input,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
 main {
 	font-size: 1.25rem;
 	line-height: 1.6em;
