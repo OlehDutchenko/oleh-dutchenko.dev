@@ -1,12 +1,16 @@
 import Image from 'next/image';
 import React from 'react';
-import { Translations } from '../../translations';
 
-interface Props {
-	translations: Translations;
+export interface HeadingProps {
+	translations: {
+		heading: {
+			label: string;
+			icon: string;
+		};
+	};
 }
 
-export const Heading: React.FC<Props> = ({ translations }) => {
+export const Heading: React.FC<HeadingProps> = ({ translations }) => {
 	return (
 		<h1
 			className="main-layout-header__heading"

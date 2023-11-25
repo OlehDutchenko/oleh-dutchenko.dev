@@ -1,11 +1,15 @@
 import React from 'react';
+import { Heading, HeadingProps, Nav, NavProps } from './components';
 
-interface Props extends React.PropsWithChildren {}
+type Props = NavProps & HeadingProps;
 
-export const Header: React.FC<Props> = ({ children }) => {
+export const Header: React.FC<Props> = ({ locale, translations }) => {
 	return (
 		<>
-			<header className="main-layout-header">{children}</header>
+			<header className="main-layout-header">
+				<Heading translations={translations} />
+				<Nav translations={translations} locale={locale} />
+			</header>
 			<hr />
 		</>
 	);

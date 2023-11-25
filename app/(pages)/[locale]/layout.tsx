@@ -1,7 +1,7 @@
 import { fontBase } from '@/_fonts';
 import type { LayoutProps } from '@/types';
 import React from 'react';
-import { Header, Heading, Nav } from './_layout/components';
+import { Footer, Header } from './_layout/components';
 import { getTranslations } from './_layout/translations';
 
 export default async function Layout(
@@ -13,11 +13,9 @@ export default async function Layout(
 	return (
 		<html lang={locale} className={fontBase.className}>
 			<body>
-				<Header>
-					<Heading translations={translations} />
-					<Nav translations={translations} locale={locale} />
-				</Header>
+				<Header translations={translations} locale={locale} />
 				{props.children}
+				<Footer />
 			</body>
 		</html>
 	);

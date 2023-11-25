@@ -1,10 +1,15 @@
 import type { Locale } from '@/_locales/constants';
 import { HRefMaker } from '@/_utils/HRefMaker';
-import type { Translations } from '../../translations';
 
 export interface Params {
 	locale: Locale;
-	translations: Translations;
+	translations: {
+		nav: {
+			about: string;
+			blog: string;
+			envato: string;
+		};
+	};
 }
 
 interface Item {

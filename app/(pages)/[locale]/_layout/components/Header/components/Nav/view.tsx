@@ -2,9 +2,9 @@ import Link from 'next/link';
 import React from 'react';
 import { Params, useNavItems } from './useNavItems';
 
-interface Props extends Params {}
+export interface NavProps extends Params {}
 
-export const Nav: React.FC<Props> = (props) => {
+export const Nav: React.FC<NavProps> = (props) => {
 	const navItems = useNavItems(props);
 	return (
 		<nav className="main-layout-header__nav">
