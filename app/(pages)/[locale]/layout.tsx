@@ -1,7 +1,8 @@
 import { fontBase } from '@/_fonts';
+import { HRefMaker } from '@/_utils/HRefMaker';
 import type { LayoutProps } from '@/types';
 import React from 'react';
-import { Footer, Header } from './_layout/components';
+import { Footer, Header, HeaderProps } from './_layout/components';
 import { getTranslations } from './_layout/translations';
 
 export default async function Layout(
@@ -10,10 +11,20 @@ export default async function Layout(
 	const locale = props.params.locale;
 	const translations = await getTranslations(locale);
 
+	const heading: HeaderProps['heading'] = {
+		label: translations.heading.label,
+		iconAlt: translations.heading.iconAlt,
+	};
+
+	const nav: HeaderProps['nav'] = {
+		rootHref: new HRefMaker(locale).make('/'),
+		items: translations.nav.items,
+	};
+
 	return (
 		<html lang={locale} className={fontBase.className}>
 			<body>
-				<Header translations={translations} locale={locale} />
+				<Header heading={heading} nav={nav} />
 				{props.children}
 				<Footer />
 			</body>

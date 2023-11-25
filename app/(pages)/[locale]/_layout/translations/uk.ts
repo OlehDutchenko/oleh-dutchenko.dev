@@ -1,12 +1,14 @@
 const uk = {
 	heading: {
 		label: 'Персональний сайт Олега Дутченка',
-		icon: 'Значок сайту Олега Дутченка',
+		iconAlt: 'Значок сайту Олега Дутченка',
 	},
 	nav: {
-		about: 'Про мене',
-		blog: 'Блог',
-		envato: 'Envato',
+		items: {
+			about: 'Про мене',
+			blog: 'Блог',
+			envato: 'Envato',
+		},
 	},
 };
 

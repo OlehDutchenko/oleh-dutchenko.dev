@@ -1,14 +1,9 @@
-import type { Locale } from '@/_locales/constants';
-import { HRefMaker } from '@/_utils/HRefMaker';
-
 export interface Params {
-	locale: Locale;
-	translations: {
-		nav: {
-			about: string;
-			blog: string;
-			envato: string;
-		};
+	rootHref: string;
+	items: {
+		about: string;
+		blog: string;
+		envato: string;
 	};
 }
 
@@ -19,23 +14,22 @@ interface Item {
 }
 
 export function useNavItems(params: Params): Item[] {
-	const { locale, translations } = params;
-	const href = new HRefMaker(locale);
+	const { rootHref, items } = params;
 	return [
 		{
 			key: 'about',
-			href: href.make('/about'),
-			label: translations.nav.about,
+			href: `${rootHref}/about`,
+			label: items.about,
 		},
 		{
 			key: 'blog',
-			href: href.make('/blog'),
-			label: translations.nav.blog,
+			href: `${rootHref}/blog`,
+			label: items.blog,
 		},
 		{
 			key: 'envato',
-			href: href.make('/envato'),
-			label: translations.nav.envato,
+			href: `${rootHref}/envato`,
+			label: items.envato,
 		},
 	];
 }

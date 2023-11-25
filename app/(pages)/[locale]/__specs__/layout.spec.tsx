@@ -3,20 +3,23 @@ import { describe, expect, it, vi } from 'vitest';
 import Layout from '../layout';
 
 describe('Layout', () => {
-	it('should render html with lang attribute', async () => {
-		const layoutJSX = await Layout({
-			children: 'Test',
-			params: {
-				locale: 'uk',
-			},
+	const locales = ['en', 'uk'] as const;
+	locales.forEach((locale) => {
+		it(`should render html with ${locale.toUpperCase()} lang attribute`, async () => {
+			const layoutJSX = await Layout({
+				children: 'Test',
+				params: {
+					locale,
+				},
+			});
+
+			suppressKnownAndAcceptableWarningDuringRender();
+			const { container } = render(layoutJSX);
+			removeSuppressing();
+
+			const html = container.querySelector('html');
+			expect(html?.getAttribute('lang')).toBe(locale);
 		});
-
-		suppressKnownAndAcceptableWarningDuringRender();
-		const { container } = render(layoutJSX);
-		removeSuppressing();
-
-		const html = container.querySelector('html');
-		expect(html?.getAttribute('lang')).toBe('uk');
 	});
 });
 

@@ -2,25 +2,18 @@ import Image from 'next/image';
 import React from 'react';
 
 export interface HeadingProps {
-	translations: {
-		heading: {
-			label: string;
-			icon: string;
-		};
-	};
+	label: string;
+	iconAlt: string;
 }
 
-export const Heading: React.FC<HeadingProps> = ({ translations }) => {
+export const Heading: React.FC<HeadingProps> = ({ label, iconAlt }) => {
 	return (
-		<h1
-			className="main-layout-header__heading"
-			aria-label={translations.heading.label}
-		>
+		<h1 className="main-layout-header__heading" aria-label={label}>
 			<Image
 				width="72"
 				height="69"
 				src="/static/icon.svg"
-				alt={translations.heading.icon}
+				alt={iconAlt}
 				className="main-layout-header__heading-icon"
 				draggable="false"
 				aria-hidden="true"
