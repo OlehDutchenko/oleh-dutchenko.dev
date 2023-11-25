@@ -1,5 +1,5 @@
 import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
-import type { PageProps } from '@/types';
+import type { PageProps } from '@/_types/page-props';
 import React from 'react';
 
 export function generateStaticParams(): LocaleParam[] {

@@ -1,6 +1,6 @@
 import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
+import { PageProps } from '@/_types/page-props';
 import { readMarkdownFile } from '@/_utils/readMarkdownFile';
-import { PageProps } from '@/types';
 import Markdown from 'markdown-to-jsx';
 import React from 'react';
 

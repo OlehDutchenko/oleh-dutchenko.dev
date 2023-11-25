@@ -1,6 +1,6 @@
 import { fontBase } from '@/_fonts';
+import type { LayoutProps } from '@/_types/layout-props';
 import { HRefMaker } from '@/_utils/HRefMaker';
-import type { LayoutProps } from '@/types';
 import React from 'react';
 import { Footer, Header, HeaderProps } from './_layout/components';
 import { getTranslations } from './_layout/translations';
