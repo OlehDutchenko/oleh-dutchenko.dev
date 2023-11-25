@@ -1,5 +1,9 @@
 import { vi } from 'vitest';
 
+vi.mock('server-only', () => {
+	return {};
+});
+
 vi.mock('next/font/google', async (): Promise<any> => {
 	return {
 		JetBrains_Mono: mockedFont('JetBrains_Mono'),

@@ -19,5 +19,3 @@ export const fontCode = FontCode({
 	subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
 	display: 'swap',
 });
-
-console.log(fontCode);
