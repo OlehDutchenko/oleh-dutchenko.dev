@@ -18,7 +18,22 @@ export default async function Layout(
 
 	const nav: HeaderProps['nav'] = {
 		rootHref: new HRefMaker(locale).make('/'),
+		description: translations.nav.description,
 		items: translations.nav.items,
+	};
+
+	const localeSwitcher: HeaderProps['localeSwitcher'] = {
+		description: translations.localeSwitcher.description,
+		options: [
+			{
+				label: 'English',
+				value: 'en',
+			},
+			{
+				label: 'Українська',
+				value: 'uk',
+			},
+		],
 	};
 
 	return (
@@ -32,7 +47,11 @@ export default async function Layout(
 				<link rel="icon" type="image/png" href="/static/favicon.png" />
 			</head>
 			<body>
-				<Header heading={heading} nav={nav} />
+				<Header
+					heading={heading}
+					nav={nav}
+					localeSwitcher={localeSwitcher}
+				/>
 				{props.children}
 				<Footer />
 			</body>

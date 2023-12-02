@@ -4,11 +4,15 @@ const uk = {
 		iconAlt: 'Значок сайту Олега Дутченка',
 	},
 	nav: {
+		description: 'Основні розділи сайту',
 		items: {
 			about: 'Про мене',
 			blog: 'Блог',
 			envato: 'Envato',
 		},
+	},
+	localeSwitcher: {
+		description: 'Змінити мову',
 	},
 };
 

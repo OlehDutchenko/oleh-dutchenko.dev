@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 
 export interface ControlProps {
-	children?: NonNullable<React.ReactNode>;
+	children: NonNullable<React.ReactNode>;
 }
 
 export const Control: React.FC<ControlProps> = ({ children }) => {

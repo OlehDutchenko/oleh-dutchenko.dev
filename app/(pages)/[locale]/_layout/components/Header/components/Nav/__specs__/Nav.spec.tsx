@@ -3,9 +3,11 @@ import { describe, expect, it } from 'vitest';
 import { Nav } from '../view';
 
 describe('Nav', () => {
-	it('should render <nav> element with links', () => {
+	it('should render <nav> element with links and `aria-label` attr', () => {
+		const description = 'Description';
 		render(
 			<Nav
+				description={description}
 				rootHref="/test"
 				items={{
 					blog: 'Blog',
@@ -16,6 +18,7 @@ describe('Nav', () => {
 		);
 		const nav = screen.queryByRole('navigation');
 		expect(nav).toBeInstanceOf(HTMLElement);
+		expect(nav?.getAttribute('aria-label')).toBe(description);
 
 		const links = screen.queryAllByRole<HTMLLinkElement>('link');
 		expect(links).toHaveLength(3);

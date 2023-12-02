@@ -1,39 +1,36 @@
+import { Container } from '@/_components/Container';
 import React from 'react';
 import {
 	Heading,
 	HeadingProps,
 	LocaleSwitcher,
+	LocaleSwitcherProps,
 	Nav,
 	NavProps,
 } from './components';
+import styles from './styles.module.css';
 
 export interface HeaderProps {
 	heading: HeadingProps;
 	nav: NavProps;
+	localeSwitcher: LocaleSwitcherProps;
 }
 
-export const Header: React.FC<HeaderProps> = ({ heading, nav }) => {
+export const Header: React.FC<HeaderProps> = ({
+	heading: headingProps,
+	nav: navProps,
+	localeSwitcher: localeSwitcherProps,
+}) => {
 	return (
 		<>
-			<header className="main-layout-header">
-				<Heading label={heading.label} iconAlt={heading.iconAlt} />
-				<Nav items={nav.items} rootHref={nav.rootHref} />
-				<LocaleSwitcher
-					options={[
-						{
-							label: 'English',
-							value: 'en',
-							selected: true,
-						},
-						{
-							label: 'Українська',
-							value: 'uk',
-							selected: false,
-						},
-					]}
-				/>
+			<header className={styles.header}>
+				<Container className={styles.container} maxWidth="lg">
+					<Heading {...headingProps} />
+					<Nav {...navProps} />
+					<LocaleSwitcher {...localeSwitcherProps} />
+				</Container>
 			</header>
-			<hr />
+			<hr className={styles.divider} />
 		</>
 	);
 };

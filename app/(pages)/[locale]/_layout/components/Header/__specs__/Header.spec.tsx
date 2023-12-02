@@ -9,7 +9,12 @@ describe('Header', () => {
 				heading={{ label: 'Label', iconAlt: 'Alt' }}
 				nav={{
 					rootHref: '/',
+					description: 'Description',
 					items: { blog: 'Blog', about: 'About', envato: 'Envato' },
+				}}
+				localeSwitcher={{
+					description: 'Description',
+					options: [],
 				}}
 			/>
 		);

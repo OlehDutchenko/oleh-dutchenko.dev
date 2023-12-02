@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import styles from './styles.module.css';
 
 export interface HeadingProps {
 	label: string;
@@ -8,13 +9,13 @@ export interface HeadingProps {
 
 export const Heading: React.FC<HeadingProps> = ({ label, iconAlt }) => {
 	return (
-		<h1 className="main-layout-header__heading" aria-label={label}>
+		<h1 className={styles.heading} aria-label={label}>
 			<Image
 				width="72"
 				height="69"
 				src="/static/icon.svg"
 				alt={iconAlt}
-				className="main-layout-header__heading-icon"
+				className={styles.img}
 				draggable="false"
 				aria-hidden="true"
 			/>

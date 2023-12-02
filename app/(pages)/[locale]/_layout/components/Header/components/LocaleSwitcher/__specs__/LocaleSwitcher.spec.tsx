@@ -39,15 +39,17 @@ describe('LocaleSwitcher', () => {
 		options = OPTIONS.slice();
 	});
 
-	it('should render <select> element with options', () => {
-		render(<LocaleSwitcher options={options} />);
+	it('should render <select> element with options and `title` attr', () => {
+		const description = 'Description';
+		render(<LocaleSwitcher description={description} options={options} />);
 		const select = screen.queryByRole('combobox');
 		expect(select).toBeInstanceOf(HTMLElement);
+		expect(select?.title).toBe(description);
 		expect(select?.children.length).toBe(2);
 	});
 
 	it('should programmatically redirect after selecting locale', () => {
-		render(<LocaleSwitcher options={options} />);
+		render(<LocaleSwitcher description="Description" options={options} />);
 		const select = screen.getByRole('combobox');
 		const { value, url } = getOptionMeta(SELECTED_OPTION);
 		fireEvent.change(select, { target: { value } });

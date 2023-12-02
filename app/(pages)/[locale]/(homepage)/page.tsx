@@ -1,3 +1,4 @@
+import { Container } from '@/_components/Container';
 import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import type { PageProps } from '@/_types/page-props';
 import { readMarkdownFile } from '@/_utils/readMarkdownFile';
@@ -12,9 +13,11 @@ export default function Homepage({ params }: PageProps): React.ReactElement {
 	console.log({ markdown });
 	return (
 		<main>
-			<header>
-				<h1>Привіт світ!</h1>
-			</header>
+			<Container>
+				<header>
+					<h1>Привіт світ!</h1>
+				</header>
+			</Container>
 		</main>
 	);
 }

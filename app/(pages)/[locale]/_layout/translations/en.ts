@@ -4,11 +4,15 @@ const en = {
 		iconAlt: "Oleg Dutchenko's website icon",
 	},
 	nav: {
+		description: 'Main sections of the website',
 		items: {
 			about: 'About me',
 			blog: 'Blog',
 			envato: 'Envato',
 		},
+	},
+	localeSwitcher: {
+		description: 'Change language',
 	},
 };
 
