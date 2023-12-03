@@ -1,0 +1,57 @@
+/*
+ TODO: add more icons
+ - medium.com
+ - dev.to
+ - dev.ua
+ - dou.ua
+ - web.dev
+ - stackoverflow.com
+ - youtube.com
+ - facebook.com
+ - reddit.com
+ - codepen.io
+ - codewars.com
+ - telegram
+ - typescriptlang.org
+ - nodejs.org
+ - graphql.org
+ - npmjs.com
+ - yarnpkg.com
+ - pnpm.io
+ - vercel.com
+ - apollographql.com & studio.apollographql.com
+ - prisma.io
+ */
+
+.link::before {
+	width: 0.9em;
+	height: 0.9em;
+	display: inline-block;
+	margin: 0 0.1em -0.05em 0.2em;
+	background: no-repeat center/contain;
+}
+
+.link:hover::before {
+	opacity: 0.7;
+}
+
+.link[data-domain='gist.github.com']::before,
+.link[data-domain='github.com']::before {
+	content: '';
+	background-image: url('/static/external/github.svg');
+}
+
+.link[data-domain='linkedin.com']::before {
+	content: '';
+	background-image: url('/static/external/linkedin.svg');
+}
+
+.link[data-domain='nextjs.org']::before {
+	content: '';
+	background-image: url('/static/external/nextjs.svg');
+}
+
+.link[data-domain='twitter.com']::before {
+	content: '';
+	background-image: url('/static/external/twitter.svg');
+}
