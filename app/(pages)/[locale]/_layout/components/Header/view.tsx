@@ -24,7 +24,7 @@ export const Header: React.FC<HeaderProps> = ({
 	return (
 		<>
 			<header className={styles.header}>
-				<Container className={styles.container} maxWidth="lg">
+				<Container className={styles.container} size="lg">
 					<Heading {...headingProps} />
 					<Nav {...navProps} />
 					<LocaleSwitcher {...localeSwitcherProps} />

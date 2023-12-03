@@ -2,6 +2,14 @@ import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import Layout from '../layout';
 
+vi.mock('next/navigation', () => {
+	return {
+		useRouter: () => ({ push: () => undefined }),
+		usePathname: () => '/',
+		useParams: () => ({ locale: 'en' }),
+	};
+});
+
 describe('Layout', () => {
 	const locales = ['en', 'uk'] as const;
 	locales.forEach((locale) => {

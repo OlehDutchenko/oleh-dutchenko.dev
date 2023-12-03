@@ -8,7 +8,7 @@
 
 .control:focus-within {
 	--shift: 2px;
-	--border: 2px solid blue;
+	--border: 2px solid var(--accent-color);
 }
 
 .control::before,

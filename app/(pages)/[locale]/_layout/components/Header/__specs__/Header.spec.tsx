@@ -1,6 +1,14 @@
 import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { Header } from '../view';
+
+vi.mock('next/navigation', () => {
+	return {
+		useRouter: () => ({ push: () => undefined }),
+		usePathname: () => '/',
+		useParams: () => ({ locale: 'en' }),
+	};
+});
 
 describe('Header', () => {
 	it('should render <header> element', () => {

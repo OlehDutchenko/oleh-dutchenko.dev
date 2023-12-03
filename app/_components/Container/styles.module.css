@@ -7,14 +7,14 @@
 	max-width: var(--containerMaxWidth, 100%);
 }
 
-.maxWidth_sm {
+.container[data-size="sm"] {
 	--containerMaxWidth: 680px;
 }
 
-.maxWidth_md {
+.container[data-size="md"] {
 	--containerMaxWidth: 980px;
 }
 
-.maxWidth_lg {
+.container[data-size="lg"] {
 	--containerMaxWidth: 1440px;
 }
