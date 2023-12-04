@@ -1,9 +1,13 @@
+.link {
+	display: inline-block;
+}
+
 .link[data-domain]::before {
 	content: '';
 	width: 0.9em;
 	height: 0.9em;
 	display: inline-block;
-	margin: 0 0.1em -0.05em 0.2em;
+	margin: 0 0.2em -0.05em 0.3em;
 	background: var(--domain) no-repeat center/contain;
 }
 

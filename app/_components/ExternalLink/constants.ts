@@ -1,7 +1,6 @@
 export const CSS_VAR_DOMAIN = '--domain';
 /**
  @TODO: add more icons
- - medium.com
  - dev.to
  - dev.ua
  - dou.ua
@@ -27,6 +26,7 @@ export const KNOWN_DOMAINS = [
 	'github.com',
 	'gist.github.com',
 	'linkedin.com',
+	'medium.com',
 	'nextjs.org',
 	'twitter.com',
 ];
