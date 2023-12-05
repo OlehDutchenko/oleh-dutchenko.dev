@@ -32,11 +32,10 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 };
 
 function getKnownDomain(href: string): string | null {
-	const domain =
-		href
-			.replace(/^(https?:)?\/\//, '')
-			.replace(/^www\./, '')
-			.split('/')[0];
+	const domain = href
+		.replace(/^(https?:)?\/\//, '')
+		.replace(/^www\./, '')
+		.split('/')[0];
 
 	return KNOWN_DOMAINS.includes(domain) ? domain : null;
 }
