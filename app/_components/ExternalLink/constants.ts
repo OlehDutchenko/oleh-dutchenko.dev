@@ -1,7 +1,6 @@
 export const CSS_VAR_DOMAIN = '--domain';
 /**
  @TODO: add more icons
- - dev.to
  - dev.ua
  - dou.ua
  - web.dev
@@ -23,6 +22,7 @@ export const CSS_VAR_DOMAIN = '--domain';
  - prisma.io
  */
 export const KNOWN_DOMAINS = [
+	'dev.to',
 	'github.com',
 	'gist.github.com',
 	'linkedin.com',
