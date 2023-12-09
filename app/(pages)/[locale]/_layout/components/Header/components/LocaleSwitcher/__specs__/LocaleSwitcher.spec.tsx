@@ -2,20 +2,13 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { LocaleSwitcher, LocaleSwitcherProps } from '../index';
 
-const OPTIONS: LocaleSwitcherProps['options'] = [
-	{
-		label: 'English',
-		value: 'en',
-	},
-	{
-		label: 'Українська',
-		value: 'uk',
-	},
-];
-
 const TEST_ROUTE = 'test-route';
 const INITIAL_OPTION = 1;
 const SELECTED_OPTION = 0;
+const OPTIONS: LocaleSwitcherProps['options'] = [
+	{ value: 'en', label: 'English' },
+	{ value: 'uk', label: 'Українська' },
+];
 
 const { useRouter, mockedRouterPush } = vi.hoisted(() => {
 	const mockedRouterPush = vi.fn();

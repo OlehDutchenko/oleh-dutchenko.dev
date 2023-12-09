@@ -1,3 +1,5 @@
+import type { ItemProps } from './components/Item';
+
 export interface Params {
 	rootHref: string;
 	items: {
@@ -9,8 +11,7 @@ export interface Params {
 
 interface Item {
 	key: string;
-	href: string;
-	label: string;
+	props: ItemProps;
 }
 
 export function useNavItems(params: Params): Item[] {
@@ -18,18 +19,24 @@ export function useNavItems(params: Params): Item[] {
 	return [
 		{
 			key: 'about',
-			href: `${rootHref}/about`,
-			label: items.about,
+			props: {
+				href: `${rootHref}/about`,
+				label: items.about,
+			},
 		},
 		{
 			key: 'blog',
-			href: `${rootHref}/blog`,
-			label: items.blog,
+			props: {
+				href: `${rootHref}/blog`,
+				label: items.blog,
+			},
 		},
 		{
 			key: 'envato',
-			href: `${rootHref}/envato`,
-			label: items.envato,
+			props: {
+				href: `${rootHref}/envato`,
+				label: items.envato,
+			},
 		},
 	];
 }
