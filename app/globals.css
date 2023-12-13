@@ -1,8 +1,8 @@
 :root {
 	--text-color: #111;
 	--surface: #fff;
-	--accent-color: #0000EE;
-	--link-color: #0000EE;
+	--accent-color: #0000ee;
+	--link-color: #0000ee;
 	--link-color-hover: #6c6cff;
 	--link-color-active: #000096;
 }
@@ -42,11 +42,11 @@ select {
 
 main {
 	font-size: 1.25rem;
-	line-height: 1.6em;
 	font-weight: 300;
 
 	& p {
 		margin-top: 2.14em;
+		line-height: 1.6em;
 	}
 
 	& code {
@@ -64,6 +64,14 @@ main {
 		background: #f4f4fd;
 		overflow: auto;
 		letter-spacing: -0.01em;
+	}
+}
+
+h1 {
+	line-height: 1.2em;
+
+	& small {
+		line-height: 1em;
 	}
 }
 
