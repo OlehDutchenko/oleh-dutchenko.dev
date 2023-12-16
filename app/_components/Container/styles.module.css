@@ -7,14 +7,20 @@
 	max-width: var(--containerMaxWidth, 100%);
 }
 
-.container[data-size="sm"] {
+.container[data-size='sm'] {
 	--containerMaxWidth: 680px;
 }
 
-.container[data-size="md"] {
+@media (max-width: 760px) {
+	.container [data-hide='in-sm-container'] {
+		display: none;
+	}
+}
+
+.container[data-size='md'] {
 	--containerMaxWidth: 980px;
 }
 
-.container[data-size="lg"] {
+.container[data-size='lg'] {
 	--containerMaxWidth: 1440px;
 }
