@@ -1,5 +1,5 @@
 import { Container } from '@/_components/Container';
-import type { PageProps } from '@/_types/page-props';
+import { PageProps } from '@/_types/page-props';
 import { generateStaticParams } from '@/_utils/generateStaticParams';
 import { readMarkdownFile } from '@/_utils/readMarkdownFile';
 import Markdown from 'markdown-to-jsx';

@@ -1,4 +1,4 @@
-import type { PageProps } from '@/_types/page-props';
+import { PageProps } from '@/_types/page-props';
 import { generateStaticParams } from '@/_utils/generateStaticParams';
 import React from 'react';
 
