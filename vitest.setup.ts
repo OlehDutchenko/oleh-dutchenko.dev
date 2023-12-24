@@ -1,7 +1,4 @@
-import * as matchers from '@testing-library/jest-dom/matchers';
-import { expect, vi } from 'vitest';
-
-expect.extend(matchers);
+import { vi } from 'vitest';
 
 vi.mock('server-only', () => {
 	return {};
