@@ -42,6 +42,9 @@ describe('Layout', () => {
 		const footer = container.querySelector('footer');
 		const link = footer?.querySelector('a[href*="github.com"]');
 		expect(link?.textContent).toBe('How this page works?');
+		expect(link?.hasAttribute('title')).toBeTruthy();
+		expect(link?.getAttribute('target')).toBe('_blank');
+		expect(link?.getAttribute('rel')).toBe('noopener noreferrer');
 	});
 });
 
