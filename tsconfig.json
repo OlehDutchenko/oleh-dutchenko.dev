@@ -13,7 +13,11 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"typeRoots": ["./node_modules/@types", "./app/_types"],
+		"typeRoots": [
+			"./node_modules/@types",
+			"./node_modules/@testing-library/jest-dom/types",
+			"./app/_types"
+		],
 		"plugins": [
 			{
 				"name": "next"

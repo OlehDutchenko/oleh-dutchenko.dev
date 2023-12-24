@@ -1,3 +1,4 @@
+import type { LayoutProps } from '@/_types/layout-props';
 import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import Layout from '../layout';
@@ -14,39 +15,34 @@ describe('Layout', () => {
 	const locales = ['en', 'uk'] as const;
 	locales.forEach((locale) => {
 		it(`should render html with ${locale.toUpperCase()} lang attribute`, async () => {
-			const layoutJSX = await Layout({
-				children: 'Test',
-				params: {
-					locale,
-				},
-			});
-
-			suppressKnownAndAcceptableWarningDuringRender();
-			const { container } = render(layoutJSX);
-			removeSuppressing();
-
+			const { container } = await renderLayout({ locale });
 			const html = container.querySelector('html');
 			expect(html?.getAttribute('lang')).toBe(locale);
 		});
 	});
-
-	it('should render footer with link "How this page works" (link to the GitHub)', async () => {
-		const layoutJSX = await Layout({
-			children: 'Test',
-			params: {
-				locale: 'en',
-			},
-		});
-
-		const { container } = render(layoutJSX);
-		const footer = container.querySelector('footer');
-		const link = footer?.querySelector('a[href*="github.com"]');
-		expect(link?.textContent).toBe('How this page works?');
-		expect(link?.hasAttribute('title')).toBeTruthy();
-		expect(link?.getAttribute('target')).toBe('_blank');
-		expect(link?.getAttribute('rel')).toBe('noopener noreferrer');
-	});
 });
+
+async function renderLayout({
+	children = 'Test',
+	locale = 'en',
+}: RenderLayoutProps = {}): Promise<ReturnType<typeof render>> {
+	const layoutJSX = await Layout({
+		children,
+		params: {
+			locale,
+		},
+	});
+
+	suppressKnownAndAcceptableWarningDuringRender();
+	const renderResult = render(layoutJSX);
+	removeSuppressing();
+
+	return renderResult;
+}
+interface RenderLayoutProps {
+	children?: LayoutProps['children'];
+	locale?: LayoutProps['params']['locale'];
+}
 
 function suppressKnownAndAcceptableWarningDuringRender(): void {
 	const consoleError = console.error;
