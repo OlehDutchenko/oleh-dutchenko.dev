@@ -1,11 +1,9 @@
 import { ExternalLink } from '@/_components/ExternalLink';
-import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import type { PageProps } from '@/_types/page-props';
+import { generateStaticParams } from '@/_utils/generateStaticParams';
 import React from 'react';
 
-export function generateStaticParams(): LocaleParam[] {
-	return STATIC_LOCALE_PARAMS;
-}
+export { generateStaticParams };
 
 export default function Homepage(props: PageProps): React.ReactElement {
 	return (

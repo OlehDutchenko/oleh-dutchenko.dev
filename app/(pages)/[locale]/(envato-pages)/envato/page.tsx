@@ -1,10 +1,8 @@
-import { LocaleParam, STATIC_LOCALE_PARAMS } from '@/_locales/constants';
 import type { PageProps } from '@/_types/page-props';
+import { generateStaticParams } from '@/_utils/generateStaticParams';
 import React from 'react';
 
-export function generateStaticParams(): LocaleParam[] {
-	return STATIC_LOCALE_PARAMS;
-}
+export { generateStaticParams };
 
 export default function InnerPage(props: PageProps): React.ReactElement {
 	return (
