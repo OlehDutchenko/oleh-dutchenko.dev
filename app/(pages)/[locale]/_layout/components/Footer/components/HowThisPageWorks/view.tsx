@@ -30,7 +30,11 @@ function useHref(): string {
 	const pathname = usePathname();
 	const { locale } = useParams();
 
-	const path = pathname
+	let path = pathname.endsWith(`/${locale}`)
+		? pathname + '/(homepage)'
+		: pathname;
+
+	path = path
 		.replace('/about', '/(content-pages)/about')
 		.replace('/ui-kit', '/(content-pages)/ui-kit')
 		.replace('/envato', '/(envato-pages)/envato')
