@@ -14,6 +14,10 @@ const en = {
 	localeSwitcher: {
 		description: 'Change language',
 	},
+	howThisPageWorks: {
+		label: 'How this page works?',
+		title: 'Go to the source code of the current page on the GitHub repository',
+	},
 };
 
 export { en as default };

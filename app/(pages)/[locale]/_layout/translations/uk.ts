@@ -14,6 +14,10 @@ const uk = {
 	localeSwitcher: {
 		description: 'Змінити мову',
 	},
+	howThisPageWorks: {
+		label: 'Як працює ця сторінка?',
+		title: 'Перейти до вихідного коду поточної сторінки в репозиторії GitHub',
+	},
 };
 
 export { uk as default };

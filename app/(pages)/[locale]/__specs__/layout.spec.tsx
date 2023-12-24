@@ -29,6 +29,20 @@ describe('Layout', () => {
 			expect(html?.getAttribute('lang')).toBe(locale);
 		});
 	});
+
+	it('should render footer with link "How this page works" (link to the GitHub)', async () => {
+		const layoutJSX = await Layout({
+			children: 'Test',
+			params: {
+				locale: 'en',
+			},
+		});
+
+		const { container } = render(layoutJSX);
+		const footer = container.querySelector('footer');
+		const link = footer?.querySelector('a[href*="github.com"]');
+		expect(link?.textContent).toBe('How this page works?');
+	});
 });
 
 function suppressKnownAndAcceptableWarningDuringRender(): void {

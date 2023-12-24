@@ -1,5 +1,20 @@
 import React from 'react';
+import {
+	HowThisPageWorks,
+	HowThisPageWorksProps,
+} from './components/HowThisPageWorks';
 
-export const Footer: React.FC = () => {
-	return <React.Fragment />;
+export interface FooterProps {
+	howThisPageWorks: HowThisPageWorksProps;
+}
+
+export const Footer: React.FC<FooterProps> = ({ howThisPageWorks }) => {
+	return (
+		<footer>
+			<HowThisPageWorks
+				label={howThisPageWorks.label}
+				title={howThisPageWorks.title}
+			/>
+		</footer>
+	);
 };

@@ -53,7 +53,7 @@ export default async function Layout(
 					localeSwitcher={localeSwitcher}
 				/>
 				{props.children}
-				<Footer />
+				<Footer howThisPageWorks={translations.howThisPageWorks} />
 			</body>
 		</html>
 	);
