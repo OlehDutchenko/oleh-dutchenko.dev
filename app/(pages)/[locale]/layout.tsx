@@ -1,20 +1,39 @@
-import { fontBase } from '@/_fonts';
+import { Root } from '@/_components/Root';
+import { AVAILABLE_LOCALES, Locale } from '@/_locales/constants';
 import type { LayoutProps } from '@/_types/layout-props';
 import { HRefMaker } from '@/_utils/HRefMaker';
 import React from 'react';
-import { Footer, Header, HeaderProps } from './_layout/components';
-import { getTranslations } from './_layout/translations';
+import { Footer, FooterProps, Header, HeaderProps } from './_layout/components';
+import { getTranslations, Translations } from './_layout/translations';
 
 export default async function Layout(
 	props: LayoutProps
 ): Promise<React.ReactElement> {
 	const locale = props.params.locale;
-	const translations = await getTranslations(locale);
+	if (AVAILABLE_LOCALES.includes(locale)) {
+		const translations = await getTranslations(locale);
+		return (
+			<RenderAsPage locale={locale} translations={translations}>
+				{props.children}
+			</RenderAsPage>
+		);
+	} else {
+		return <RenderAsAsset />;
+	}
+}
 
-	const heading: HeaderProps['heading'] = {
-		label: translations.heading.label,
-		iconAlt: translations.heading.iconAlt,
-	};
+interface PageProps {
+	children: React.ReactNode;
+	locale: Locale;
+	translations: Translations;
+}
+
+function RenderAsPage({
+	locale,
+	translations,
+	children,
+}: PageProps): React.ReactElement {
+	const heading: HeaderProps['heading'] = { ...translations.heading };
 
 	const nav: HeaderProps['nav'] = {
 		rootHref: new HRefMaker(locale).make('/'),
@@ -36,25 +55,23 @@ export default async function Layout(
 		],
 	};
 
+	const howThisPageWorks: FooterProps['howThisPageWorks'] = {
+		...translations.howThisPageWorks,
+	};
+
 	return (
-		<html lang={locale} className={fontBase.className}>
-			<head>
-				<link
-					rel="icon"
-					type="image/svg+xml"
-					href="/static/favicon.svg"
-				/>
-				<link rel="icon" type="image/png" href="/static/favicon.png" />
-			</head>
-			<body>
-				<Header
-					heading={heading}
-					nav={nav}
-					localeSwitcher={localeSwitcher}
-				/>
-				{props.children}
-				<Footer howThisPageWorks={translations.howThisPageWorks} />
-			</body>
-		</html>
+		<Root locale={locale}>
+			<Header
+				heading={heading}
+				nav={nav}
+				localeSwitcher={localeSwitcher}
+			/>
+			{children}
+			<Footer howThisPageWorks={howThisPageWorks} />
+		</Root>
 	);
+}
+
+function RenderAsAsset(): React.ReactNode {
+	return null;
 }

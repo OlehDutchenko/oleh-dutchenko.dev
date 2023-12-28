@@ -5,10 +5,14 @@
 	--link-color: #0000ee;
 	--link-color-hover: #6c6cff;
 	--link-color-active: #000096;
+	--font-base: serif;
+	--font-code: monospace;
+	--font-headings: serif;
 }
 
 html {
 	font-size: 100%;
+	font-family: var(--font-base), serif;
 }
 
 body {
@@ -40,35 +44,39 @@ select {
 	line-height: inherit;
 }
 
-main {
-	font-size: 1.25rem;
-	font-weight: 300;
+/*main {*/
+/*	font-size: 1.25rem;*/
+/*	font-weight: 300;*/
 
-	& p {
-		margin-top: 2.14em;
-		line-height: 1.6em;
-	}
+/*	& p {*/
+/*		margin-top: 2.14em;*/
+/*		line-height: 1.6em;*/
+/*	}*/
 
-	& code {
-		font-size: 0.9em;
-		padding: 0 0.3em;
-		background: #f5eded;
-		letter-spacing: -0.02em;
-	}
+/*	& code {*/
+/*		font-size: 0.9em;*/
+/*		padding: 0 0.3em;*/
+/*		background: #f5eded;*/
+/*		letter-spacing: -0.02em;*/
+/*		font-family: var(--font-code), monospace;*/
+/*	}*/
 
-	& pre {
-		tab-size: 4;
-		font-size: 1rem;
-		line-height: 1.5em;
-		padding: 1rem;
-		background: #f4f4fd;
-		overflow: auto;
-		letter-spacing: -0.01em;
-	}
-}
+/*	& pre {*/
+/*		font-family: var(--font-code), monospace;*/
+/*		tab-size: 4;*/
+/*		font-size: 1rem;*/
+/*		line-height: 1.5em;*/
+/*		padding: 1rem;*/
+/*		background: #f4f4fd;*/
+/*		overflow: auto;*/
+/*		letter-spacing: -0.01em;*/
+/*	}*/
+/*}*/
 
 h1 {
 	line-height: 1.2em;
+	font-family: var(--font-headings);
+	font-weight: 400;
 
 	& small {
 		line-height: 1em;

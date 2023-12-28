@@ -11,5 +11,9 @@ const translations: LocalesRecord<() => Promise<Translations>> = {
 };
 
 export async function getTranslations(locale: Locale): Promise<Translations> {
+	console.log('getTranslations', { locale });
+	if (!translations[locale]) {
+		throw new Error(`No translations for locale "${locale}"`);
+	}
 	return await translations[locale]();
 }

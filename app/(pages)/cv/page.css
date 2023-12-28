@@ -1,0 +1,105 @@
+html {
+	height: 100%;
+	font-size: 0.4cm;
+}
+
+body {
+	--surface: #000;
+	--text-color: #fff;
+	--border: #fff;
+	--link: #bbb;
+	position: relative;
+	margin: 0.5cm auto;
+	border: 1px solid var(--border);
+	min-height: calc(100% - 1cm - 4px);
+	max-width: 20cm;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+main {
+	overflow: auto;
+	display: block;
+}
+
+a {
+	color: var(--link);
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.cv-page {
+	overflow: auto;
+}
+
+.cv-box {
+	padding: 0.8cm 1.25cm;
+}
+
+.cv-box + .cv-box {
+	border-top: 1px solid var(--border);
+}
+
+.cv-box h3 {
+	font-size: 0.6cm;
+	margin: 0;
+}
+
+.cv-heading {
+	font-size: 2cm;
+	text-transform: uppercase;
+	line-height: 1.1em;
+	margin: 0;
+}
+
+.cv-heading-caption {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2em;
+}
+
+.cv-section-heading {
+	font-size: 0.325cm;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: 300;
+	width: 22%;
+	margin: 0.1cm 5% 0 0;
+	float: left;
+}
+
+.cv-section-content {
+	overflow: auto;
+}
+
+.cv-section-content > *:first-child {
+	margin-top: 0;
+}
+
+.cv-section-content > *:last-child {
+	margin-bottom: 0;
+}
+
+.cv-about-me {
+	font-size: 0.77cm;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+
+.cv-ul {
+	column-count: 3;
+}
+
+.cv-ul > li {
+	margin-bottom: 1em;
+}
+
+.cv-caption {
+	margin: 0.5em 0 0;
+	font-size: smaller;
+	opacity: 0.6;
+}
+
+.cv-block + .cv-block {
+	margin-top: 1.2cm;
+}

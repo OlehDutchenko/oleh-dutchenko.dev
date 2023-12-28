@@ -1,48 +1,28 @@
-import type { LayoutProps } from '@/_types/layout-props';
 import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import Layout from '../layout';
+import { Root } from '../view';
 
-vi.mock('next/navigation', () => {
-	return {
-		useRouter: () => ({ push: () => undefined }),
-		usePathname: () => '/',
-		useParams: () => ({ locale: 'en' }),
-	};
-});
-
-describe('Layout', () => {
-	const locales = ['en', 'uk'] as const;
+describe('Root', () => {
+	const locales = ['en', 'uk'];
 	locales.forEach((locale) => {
 		it(`should render html with ${locale.toUpperCase()} lang attribute`, async () => {
-			const { container } = await renderLayout({ locale });
+			const container = renderComponent({ locale });
 			const html = container.querySelector('html');
 			expect(html?.getAttribute('lang')).toBe(locale);
 		});
 	});
 });
 
-async function renderLayout({
-	children = 'Test',
-	locale = 'en',
-}: RenderLayoutProps = {}): Promise<ReturnType<typeof render>> {
-	const layoutJSX = await Layout({
-		children,
-		params: {
-			locale,
-		},
-	});
-
+function renderComponent({ locale }: { locale: string }): HTMLElement {
 	suppressKnownAndAcceptableWarningDuringRender();
-	const renderResult = render(layoutJSX);
+	const { container } = render(
+		<Root locale={locale}>
+			<h1>Hello world!</h1>
+		</Root>
+	);
 	removeSuppressing();
 
-	return renderResult;
-}
-
-interface RenderLayoutProps {
-	children?: LayoutProps['children'];
-	locale?: LayoutProps['params']['locale'];
+	return container;
 }
 
 function suppressKnownAndAcceptableWarningDuringRender(): void {
