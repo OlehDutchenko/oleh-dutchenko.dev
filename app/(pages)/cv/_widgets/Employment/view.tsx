@@ -30,7 +30,7 @@ export const Employment: React.FC = () => {
 					</>
 				}
 			/>
-			<PageFooter height={60} page={1} />
+			<PageFooter height={75} page={1} />
 		</Section>
 	);
 };

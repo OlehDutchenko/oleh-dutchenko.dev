@@ -5,7 +5,7 @@ import { Root } from '../view';
 describe('Root', () => {
 	const locales = ['en', 'uk'];
 	locales.forEach((locale) => {
-		it(`should render html with ${locale.toUpperCase()} lang attribute`, async () => {
+		it(`should render html with ${locale.toUpperCase()} lang attribute`, () => {
 			const container = renderComponent({ locale });
 			const html = container.querySelector('html');
 			expect(html?.getAttribute('lang')).toBe(locale);

@@ -9,6 +9,7 @@ body {
 	--text-color: #fff;
 	--border: #fff;
 	--link: #bbb;
+	--caption: #aaa;
 	position: relative;
 	margin: 0.5cm auto;
 	min-height: calc(100% - 1cm - 4px);
@@ -93,6 +94,7 @@ a {
 
 .cv-ul {
 	column-count: 3;
+	padding: 0 0 0 0.35cm;
 }
 
 .cv-ul > li {
@@ -102,12 +104,16 @@ a {
 .cv-caption {
 	margin: 0;
 	font-size: smaller;
-	opacity: 0.6;
+	color: var(--caption);
 	font-family: var(--font-code);
 }
 
+.cv-block-text p {
+	margin: 0.7em 0;
+}
+
 .cv-block + .cv-block {
-	margin-top: 1.2cm;
+	margin-top: 1cm;
 }
 
 .cv-page-footer {

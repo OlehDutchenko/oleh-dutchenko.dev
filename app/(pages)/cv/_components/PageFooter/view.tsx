@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Props {
-	page: 1;
+	page: number;
 	height: number;
 }
 

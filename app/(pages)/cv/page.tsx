@@ -6,6 +6,10 @@ import { CommercialProjects } from './_widgets/CommercialProjects';
 import { Employment } from './_widgets/Employment';
 import { Header } from './_widgets/Header';
 import { Profile } from './_widgets/Profile';
+import { OpenSourceProjects } from './_widgets/OpenSourceProjects';
+import { Education } from './_widgets/Education';
+import { Languages } from './_widgets/Languages';
+import { SocialLinks } from './_widgets/SocialLinks';
 
 export default function CVPage(): React.ReactElement {
 	return (
@@ -16,6 +20,10 @@ export default function CVPage(): React.ReactElement {
 				<Employment />
 				<PageBreak />
 				<CommercialProjects />
+				<OpenSourceProjects />
+				<Education />
+				<Languages />
+				<SocialLinks />
 			</main>
 		</Root>
 	);
