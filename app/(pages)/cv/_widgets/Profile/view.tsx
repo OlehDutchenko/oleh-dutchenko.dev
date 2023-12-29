@@ -23,10 +23,11 @@ export const Profile: React.FC = () => {
 					Clean Code
 				</a>
 				&quot;,
-				<br /> I have experience on its practical implementation on the
-				frontend <br /> of commercial's projects
+				<br />I have experience in its
+				<br /> practical implementation <br />
+				in commercial projects <br />
+				on the frontend part.
 			</p>
-			<br />
 			<p>
 				<small>Skills:</small>
 			</p>
