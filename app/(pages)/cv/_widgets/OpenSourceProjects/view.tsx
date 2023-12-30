@@ -42,7 +42,7 @@ export const OpenSourceProjects: React.FC = () => {
 					}
 				>
 					<p>
-						Wrapper for The Nu Html Checker (v.Nu). <br />
+						Wrapper for the Nu Html Checker (v.Nu). <br />
 						You can use it as CLI tool or as Node.js module in your
 						CI workflow.
 					</p>
