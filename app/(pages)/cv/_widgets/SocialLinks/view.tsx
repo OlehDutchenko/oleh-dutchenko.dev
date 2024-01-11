@@ -18,7 +18,7 @@ export const SocialLinks: React.FC = () => {
 					</ExternalLink>
 				</li>
 			</ul>
-			<PageFooter page={3} height={160} />
+			<PageFooter page={3} height={165} />
 		</Section>
 	);
 };

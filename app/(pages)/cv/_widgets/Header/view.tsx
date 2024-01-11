@@ -18,6 +18,7 @@ export const Header: React.FC = () => {
 				<br />
 				Dutchenko
 			</h1>
+			<br />
 		</header>
 	);
 };

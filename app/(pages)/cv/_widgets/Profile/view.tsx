@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { Gloock as Font } from 'next/font/google';
 import React from 'react';
+import { PageFooter } from '../../_components/PageFooter';
 import { Section } from '../../_components/Section';
 
 const fontForName = Font({
@@ -28,8 +29,30 @@ export const Profile: React.FC = () => {
 				in commercial projects <br />
 				on the frontend part.
 			</p>
+
+			<br />
 			<p>
-				<small>Skills:</small>
+				<b>Development methodologies:</b>
+			</p>
+			<ul className="cv-ul cv-ul--2">
+				<li>Scrum / Waterfall</li>
+				<li>Extreme Programming</li>
+			</ul>
+
+			<br />
+			<p>
+				<b>Development techniques:</b>
+			</p>
+			<ul className="cv-ul cv-ul--2">
+				<li>Testing Driven Development</li>
+				<li>Design review & Code review</li>
+				<li>Monorepo / Polyrepo</li>
+				<li>Git Flow / Trunk Based Development</li>
+			</ul>
+
+			<br />
+			<p>
+				<b>Skills:</b>
 			</p>
 			<ul className="cv-ul">
 				<li>HTML & CSS</li>
@@ -39,6 +62,7 @@ export const Profile: React.FC = () => {
 				<li>TypeScript</li>
 				<li>Vitest / Jest</li>
 			</ul>
+			<PageFooter page={1} height={22} />
 		</Section>
 	);
 };

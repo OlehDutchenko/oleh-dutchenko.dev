@@ -7,17 +7,27 @@ export const CommercialProjects: React.FC = () => {
 		<Section title="Commercial projects experience">
 			<Block
 				caption="March 2020 - Present"
-				title="4 successful projects that I led as a Frontend Tech Lead"
+				title={
+					<>
+						Frontend Tech Lead at <Wezom />
+					</>
+				}
 			>
+				<p>4 successful projects that I led.</p>
 				<CoreStack>
 					TypeScript, GraphQL, React, Next.js, React Hook Form, <br />
-					Vitest / Jest, MUI / Ant Design
+					Vitest / Jest, MUI / Ant Design, Storybook
 				</CoreStack>
 			</Block>
 			<Block
 				caption="February 2017 - March 2020"
-				title="7 finished projects in which I was involved as Frontend developer"
+				title={
+					<>
+						Frontend Developer at <Wezom />
+					</>
+				}
 			>
+				<p>7 finished projects in which I was involved.</p>
 				<CoreStack>
 					EJS, Sass (SCSS), Webpack, Blade (Laravel), <br />
 					jQuery, Vue and later React
@@ -25,8 +35,13 @@ export const CommercialProjects: React.FC = () => {
 			</Block>
 			<Block
 				caption="March 2014 - February 2017"
-				title="More than 20 projects in which I participated as an HTML coder"
+				title={
+					<>
+						HTML Coder at <Wezom />
+					</>
+				}
 			>
+				<p>More than 20 projects in which I was participated.</p>
 				<CoreStack>
 					HTML & CSS, jQuery, Sass (SCSS), Jade (Pug), Gulp, Webpack
 				</CoreStack>
@@ -38,9 +53,19 @@ export const CommercialProjects: React.FC = () => {
 function CoreStack(props: React.PropsWithChildren): React.ReactElement {
 	return (
 		<p>
-			<small>Core technology stack:</small>
-			<br />
-			{props.children}
+			<small>
+				Core technology stack:
+				<br />
+				{props.children}
+			</small>
 		</p>
+	);
+}
+
+function Wezom(): React.ReactElement {
+	return (
+		<a href="https://wezom.com/" target="_blank" rel="noopener noreferrer">
+			Wezom
+		</a>
 	);
 }

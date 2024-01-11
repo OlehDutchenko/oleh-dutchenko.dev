@@ -48,7 +48,7 @@ export const OpenSourceProjects: React.FC = () => {
 					</p>
 				</Block>
 
-				<PageFooter height={35} page={2} />
+				<PageFooter height={12} page={2} />
 			</Section>
 			<PageBreak />
 			<Section title="My open-source projects I am proud of">
