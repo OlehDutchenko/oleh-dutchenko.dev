@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { describe, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { Markdown } from '../view';
 
 describe('Markdown', () => {
@@ -21,5 +21,17 @@ describe('Markdown', () => {
 		screen.getByRole('heading', { level: 4 });
 		screen.getByRole('heading', { level: 5 });
 		screen.getByRole('heading', { level: 6 });
+	});
+
+	it('should render explicit HTML elements properly', () => {
+		const content = `
+			# Hello!<br/> <small className="test">My name is Oleh Dutchenko</small>
+		`;
+
+		render(<Markdown content={content} />);
+
+		const h1 = screen.getByRole('heading', { level: 1 });
+		expect(h1.querySelector('br')).toBeInTheDocument();
+		expect(h1.querySelector('small.test')).toBeInTheDocument();
 	});
 });
