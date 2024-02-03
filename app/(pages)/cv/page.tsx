@@ -7,7 +7,7 @@ import { Education } from './_widgets/Education';
 import { Header } from './_widgets/Header';
 import { Languages } from './_widgets/Languages';
 import { OpenSourceProjects } from './_widgets/OpenSourceProjects';
-import { Profile } from './_widgets/Profile';
+import { Skills } from './_widgets/Skills';
 import { SocialLinks } from './_widgets/SocialLinks';
 
 export default function CVPage(): React.ReactElement {
@@ -15,9 +15,9 @@ export default function CVPage(): React.ReactElement {
 		<Root locale="en">
 			<main>
 				<Header />
-				<Profile />
-				<PageBreak />
+				<Skills />
 				<CommercialProjects />
+				<PageBreak />
 				<OpenSourceProjects />
 				<Education />
 				<Languages />

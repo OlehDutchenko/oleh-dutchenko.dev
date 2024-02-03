@@ -9,8 +9,12 @@ interface Props {
 export const Block: React.FC<Props> = ({ title, caption, children }) => {
 	return (
 		<div className="cv-block">
-			<h3>{title}</h3>
-			<p className="cv-caption">{caption}</p>
+			<p>
+				<strong>{title}</strong>
+				<br />
+				<span className="cv-caption">{caption}</span>
+			</p>
+
 			{children && <div className="cv-block-text">{children}</div>}
 		</div>
 	);

@@ -5,7 +5,7 @@ interface Props {
 	height: number;
 }
 
-const PAGES = 3;
+const PAGES = 2;
 
 export const PageFooter: React.FC<Props> = ({ height, page }) => (
 	<div className="cv-page-footer" style={{ height }}>

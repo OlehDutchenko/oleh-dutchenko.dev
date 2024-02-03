@@ -17,9 +17,11 @@ export const Education: React.FC = () => {
 			>
 				<p>
 					During my studies at the Design, I was introduced to the web
-					development. After graduation, I worked as a motion designer
-					for television. But after three years I switched to IT. And
-					since then I still stay here.
+					development. <br />
+					After graduation, I worked as a motion designer for
+					television. <br />
+					But after three years I switched to IT. <br />
+					And since then I still stay here.
 				</p>
 			</Block>
 		</Section>
