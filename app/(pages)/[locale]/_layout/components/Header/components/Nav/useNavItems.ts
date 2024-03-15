@@ -4,8 +4,7 @@ export interface Params {
 	rootHref: string;
 	items: {
 		about: string;
-		blog: string;
-		envato: string;
+		talks: string;
 	};
 }
 
@@ -25,17 +24,10 @@ export function useNavItems(params: Params): Item[] {
 			},
 		},
 		{
-			key: 'blog',
+			key: 'talks',
 			props: {
-				href: `${rootHref}/blog`,
-				label: items.blog,
-			},
-		},
-		{
-			key: 'envato',
-			props: {
-				href: `${rootHref}/envato`,
-				label: items.envato,
+				href: `${rootHref}/talks`,
+				label: items.talks,
 			},
 		},
 	];

@@ -40,7 +40,7 @@ a {
 }
 
 .cv-box {
-	--box-x: 1.2cm;
+	--box-x: 0.7cm;
 	--box-y: 0.7cm;
 	border: 1px solid var(--border);
 	padding: var(--box-y) var(--box-x);
@@ -54,6 +54,20 @@ a {
 	font-size: 0.6cm;
 	margin: 0 0 0.1cm;
 	line-height: 1.2em;
+}
+
+.cv-header {
+	display: flex;
+	flex-direction: row;
+}
+
+.cv-header__left {
+	flex-grow: 1;
+}
+
+.cv-header__right {
+	text-align: right;
+	margin-top: -0.75rem;
 }
 
 .cv-heading {
@@ -72,7 +86,7 @@ a {
 	font-size: 0.25cm;
 	text-transform: uppercase;
 	font-weight: 400;
-	width: 16%;
+	width: 15%;
 	line-height: 1.75em;
 	margin: 0.1cm 0 0 0;
 	float: left;

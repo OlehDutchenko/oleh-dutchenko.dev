@@ -14,7 +14,6 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 	href,
 }) => {
 	const domain = getKnownDomain(href);
-	const datasetDomain = getDatasetDomain(domain);
 	const style = getStyles(domain);
 
 	return (
@@ -24,27 +23,23 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 			rel="noopener noreferrer"
 			style={style}
 			className={styles.link}
-			data-domain={datasetDomain}
+			data-domain={domain}
 		>
 			{children}
 		</a>
 	);
 };
 
-function getKnownDomain(href: string): string | null {
+function getKnownDomain(href: string): string | undefined {
 	const domain = href
 		.replace(/^(https?:)?\/\//, '')
 		.replace(/^www\./, '')
 		.split('/')[0];
 
-	return KNOWN_DOMAINS.includes(domain) ? domain : null;
+	return KNOWN_DOMAINS.includes(domain) ? domain : undefined;
 }
 
-function getDatasetDomain(domain: string | null): string | undefined {
-	return domain !== null ? '' : undefined;
-}
-
-function getStyles(domain: string | null): React.CSSProperties {
+function getStyles(domain?: string): React.CSSProperties {
 	if (!domain) {
 		return {};
 	}

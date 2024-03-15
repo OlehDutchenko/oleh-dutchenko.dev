@@ -7,6 +7,7 @@ const en = {
 		description: 'Main sections of the website',
 		items: {
 			about: 'About me',
+			talks: 'Talks',
 			blog: 'Blog',
 			envato: 'Envato',
 		},

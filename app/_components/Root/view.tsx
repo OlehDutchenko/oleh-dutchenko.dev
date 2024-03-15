@@ -8,15 +8,14 @@ interface Props {
 }
 
 export const Root: React.FC<Props> = ({ locale, children }) => {
+	const htmlClassName = clsx(
+		fontBase.variable,
+		fontHeadings.variable,
+		fontCode.variable
+	);
+
 	return (
-		<html
-			lang={locale}
-			className={clsx(
-				fontBase.variable,
-				fontHeadings.variable,
-				fontCode.variable
-			)}
-		>
+		<html lang={locale} className={htmlClassName}>
 			<head>
 				<link
 					rel="icon"

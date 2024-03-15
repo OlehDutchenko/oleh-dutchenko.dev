@@ -7,6 +7,7 @@ const uk = {
 		description: 'Основні розділи сайту',
 		items: {
 			about: 'Про мене',
+			talks: 'Доповіді',
 			blog: 'Блог',
 			envato: 'Envato',
 		},
