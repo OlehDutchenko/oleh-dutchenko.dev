@@ -23,7 +23,7 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: 'pnpm'
             - name: Install dependencies
-              run: pnpm install
+              run: pnpm install --frozen-lockfile
             - name: Check files
               run: pnpm run ci:check
             - name: Run tests
