@@ -85,13 +85,20 @@ select {
 /*	}*/
 /*}*/
 
-h1 {
+.heading-1 {
 	line-height: 1.2em;
 	font-family: var(--font-headings);
 	font-weight: 400;
+	font-size: 1.5rem;
 
 	& small {
 		line-height: 1em;
+	}
+}
+
+@media (min-width: 768px) {
+	.heading-1 {
+		font-size: 2rem;
 	}
 }
 
