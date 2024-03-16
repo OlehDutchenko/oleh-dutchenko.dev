@@ -1,3 +1,4 @@
+import { Article } from '@/_components/Article';
 import { Container } from '@/_components/Container';
 import { Markdown } from '@/_components/Markdown';
 import { generateStaticParams } from '@/_locales';
@@ -12,7 +13,9 @@ export default function Homepage({ params }: PageProps): React.ReactElement {
 	return (
 		<main>
 			<Container>
-				<Markdown locale={params.locale} content={content} />
+				<Article>
+					<Markdown content={content} />
+				</Article>
 			</Container>
 		</main>
 	);

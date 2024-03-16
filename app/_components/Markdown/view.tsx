@@ -4,20 +4,14 @@ import React from 'react';
 
 interface Props {
 	content: string;
-	locale?: string;
 }
 
-export const Markdown: React.FC<Props> = ({ content, locale }) => {
+export const Markdown: React.FC<Props> = ({ content }) => {
 	const children = normalize(content);
 
 	const options: MarkdownToJSX.Options = {
 		overrides: {
-			a: {
-				component: Link,
-				props: {
-					locale,
-				},
-			},
+			a: { component: Link },
 		},
 	};
 

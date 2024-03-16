@@ -14,7 +14,7 @@ export default function Homepage({ params }: PageProps): React.ReactElement {
 		<main>
 			<Container>
 				<Article>
-					<Markdown content={content} locale={params.locale} />
+					<Markdown content={content} />
 				</Article>
 			</Container>
 		</main>
