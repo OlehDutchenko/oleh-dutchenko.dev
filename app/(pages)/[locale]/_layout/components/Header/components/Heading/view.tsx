@@ -1,6 +1,7 @@
 'use client';
 
 import { PageProps } from '@/_types/page-props';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
@@ -38,8 +39,9 @@ function LogoLink({ children }: PropsWithChildren): ReactElement {
 	if (href === pathname) {
 		return <span className={styles.logo}>{children}</span>;
 	} else {
+		const className = clsx(styles.logo, styles.logoLink);
 		return (
-			<Link className={styles.logo} href={href}>
+			<Link className={className} href={href}>
 				{children}
 			</Link>
 		);
