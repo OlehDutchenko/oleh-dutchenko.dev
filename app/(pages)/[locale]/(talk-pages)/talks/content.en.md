@@ -1,3 +1,3 @@
 # Talks
 
--   [(Draft) Talk](talk-contract-with-devil)
+-   [(Draft) Talk](./talk-contract-with-devil)

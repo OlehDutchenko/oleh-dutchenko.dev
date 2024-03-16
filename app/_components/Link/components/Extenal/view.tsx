@@ -5,8 +5,8 @@ import { makeCssVarValue } from './makeCssVarValue';
 import styles from './styles.module.css';
 
 interface Props extends PropsWithChildren {
-	className?: string;
 	href: string;
+	className?: string;
 	title?: string;
 }
 

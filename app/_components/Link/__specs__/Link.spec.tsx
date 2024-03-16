@@ -1,28 +1,42 @@
 import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { CSS_VAR_DOMAIN, makeCssVarValue } from '../components/Extenal';
 import { Link } from '../index';
 
+const { useParams, usePathname } = vi.hoisted(() => {
+	return {
+		useParams: vi.fn(() => ({ locale: 'en' })),
+		usePathname: vi.fn(() => '/'),
+	};
+});
+
+vi.mock('next/navigation', () => {
+	return {
+		useParams,
+		usePathname,
+	};
+});
+
 describe('Link', () => {
 	describe('Internal link', () => {
-		it('should render <a> element with `href` attr', () => {
-			render(
-				<Link locale="fr" href="/about">
-					link
-				</Link>
-			);
+		it('should render <a> element with `href` with url from domain root', () => {
+			render(<Link href="/about">link</Link>);
 			const anchor = getLink();
 			expect(anchor).toHaveAttribute('href', '/about');
 		});
 
-		it('should render <a> element with localized `href` attr', () => {
-			render(
-				<Link locale="fr" href="/[locale]/about">
-					link
-				</Link>
-			);
+		it('should render <a> element with `href` with url from domain root', () => {
+			usePathname.mockReturnValueOnce('/fr/pages');
+			render(<Link href="./child-page">link</Link>);
 			const anchor = getLink();
-			expect(anchor).toHaveAttribute('href', '/fr/about');
+			expect(anchor).toHaveAttribute('href', `/fr/pages/child-page`);
+		});
+
+		it('should render <a> element with localized `href` attr', () => {
+			useParams.mockReturnValueOnce({ locale: 'uk' });
+			render(<Link href="/[locale]/about">link</Link>);
+			const anchor = getLink();
+			expect(anchor).toHaveAttribute('href', `/uk/about`);
 		});
 	});
 
