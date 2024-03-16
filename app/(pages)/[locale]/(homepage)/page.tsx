@@ -7,7 +7,7 @@ import React from 'react';
 
 export { generateStaticParams };
 
-export default function Homepage({ params }: PageProps): React.ReactElement {
+export default function Page({ params }: PageProps): React.ReactElement {
 	const content = readMarkdownFile(import.meta.url, params.locale);
 	return (
 		<CommonPage>
