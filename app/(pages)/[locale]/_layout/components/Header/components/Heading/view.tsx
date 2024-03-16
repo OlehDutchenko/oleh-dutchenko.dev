@@ -7,12 +7,12 @@ import { useParams, usePathname } from 'next/navigation';
 import React, { PropsWithChildren, ReactElement } from 'react';
 import styles from './styles.module.css';
 
-export interface HeadingProps {
+export interface Props {
 	label: string;
 	iconAlt: string;
 }
 
-export const Heading: React.FC<HeadingProps> = ({ label, iconAlt }) => {
+export function Heading({ label, iconAlt }: Props): ReactElement {
 	return (
 		<h1 className={styles.heading} aria-label={label}>
 			<LogoLink>
@@ -28,7 +28,7 @@ export const Heading: React.FC<HeadingProps> = ({ label, iconAlt }) => {
 			</LogoLink>
 		</h1>
 	);
-};
+}
 
 function LogoLink({ children }: PropsWithChildren): ReactElement {
 	const { locale } = useParams<PageProps['params']>();
@@ -36,8 +36,12 @@ function LogoLink({ children }: PropsWithChildren): ReactElement {
 	const pathname = usePathname();
 
 	if (href === pathname) {
-		return <>{children}</>;
+		return <span className={styles.logo}>{children}</span>;
 	} else {
-		return <Link href={href}>{children}</Link>;
+		return (
+			<Link className={styles.logo} href={href}>
+				{children}
+			</Link>
+		);
 	}
 }

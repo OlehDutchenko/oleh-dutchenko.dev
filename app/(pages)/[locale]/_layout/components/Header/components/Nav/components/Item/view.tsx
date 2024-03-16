@@ -1,22 +1,26 @@
+import { AccentElement } from '@/_components/AccentElement';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React from 'react';
+import React, { ReactElement } from 'react';
+import styles from './styles.module.css';
 
-export interface ItemProps {
+export interface Props {
 	href: string;
 	label: string;
 }
 
-export const Item: React.FC<ItemProps> = ({ label, href }: ItemProps) => {
-	const datasetActive = useActiveDatasetValue(href);
+export function Item({ label, href }: Props): ReactElement {
+	const active = useActive(href);
 	return (
-		<Link href={href} data-active={datasetActive}>
-			{label}
-		</Link>
+		<AccentElement>
+			<Link href={href} data-active={active} className={styles.item}>
+				{label}
+			</Link>
+		</AccentElement>
 	);
-};
+}
 
-function useActiveDatasetValue(href: string): string | undefined {
+function useActive(href: string): string | undefined {
 	const pathname = usePathname();
 	return pathname.startsWith(href) ? '' : undefined;
 }

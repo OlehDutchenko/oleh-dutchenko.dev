@@ -6,5 +6,17 @@
 .container {
 	display: flex;
 	align-items: safe center;
-	gap: 3rem;
+	gap: 1rem;
+}
+
+@media (min-width: 440px) {
+	.container {
+		gap: 1.75rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.container {
+		gap: 3rem;
+	}
 }

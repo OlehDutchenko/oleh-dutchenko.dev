@@ -18,7 +18,7 @@ describe('Header', () => {
 				nav={{
 					rootHref: '/',
 					description: 'Description',
-					items: { blog: 'Blog', about: 'About', envato: 'Envato' },
+					items: { talks: 'Talks' },
 				}}
 				localeSwitcher={{
 					description: 'Description',

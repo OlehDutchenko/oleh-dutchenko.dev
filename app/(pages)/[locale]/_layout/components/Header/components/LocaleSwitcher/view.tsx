@@ -1,12 +1,13 @@
 'use client';
 
-import { Control } from '@/_components/Control';
+import { AccentElement } from '@/_components/AccentElement';
 import { Locale } from '@/_locales';
 import { PageProps } from '@/_types/page-props';
 import { useParams, usePathname, useRouter } from 'next/navigation';
-import React from 'react';
+import React, { ReactElement } from 'react';
+import styles from './styles.module.css';
 
-export interface LocaleSwitcherProps {
+export interface Props {
 	description: string;
 	options: {
 		label: string;
@@ -14,10 +15,7 @@ export interface LocaleSwitcherProps {
 	}[];
 }
 
-export const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({
-	description,
-	options,
-}) => {
+export function LocaleSwitcher({ description, options }: Props): ReactElement {
 	const { locale } = useParams<PageProps['params']>();
 	const router = useRouter();
 	const pathname = usePathname();
@@ -28,14 +26,19 @@ export const LocaleSwitcher: React.FC<LocaleSwitcherProps> = ({
 	};
 
 	return (
-		<Control>
-			<select title={description} value={locale} onChange={handeChange}>
+		<AccentElement>
+			<select
+				className={styles.select}
+				title={description}
+				value={locale}
+				onChange={handeChange}
+			>
 				{options.map((option) => (
 					<option key={option.value} value={option.value}>
 						{option.label}
 					</option>
 				))}
 			</select>
-		</Control>
+		</AccentElement>
 	);
-};
+}

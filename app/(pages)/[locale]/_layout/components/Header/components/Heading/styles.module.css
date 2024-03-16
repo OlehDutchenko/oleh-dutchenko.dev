@@ -2,6 +2,25 @@
 	margin: 0;
 }
 
+.logo {
+	width: 36px;
+	display: block;
+}
+
 .img {
 	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+@media (min-width: 440px) {
+	.logo {
+		width: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.logo {
+		width: auto;
+	}
 }

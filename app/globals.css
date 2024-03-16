@@ -101,16 +101,3 @@ select {
 		font-size: 2rem;
 	}
 }
-
-.main-layout-header__nav {
-	flex-grow: 1;
-	display: flex;
-	gap: 2rem;
-	align-items: safe center;
-
-	& a {
-		color: var(--text-color);
-		font-size: 1.25rem;
-		text-decoration: none;
-	}
-}

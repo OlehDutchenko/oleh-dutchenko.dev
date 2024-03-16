@@ -1,4 +1,4 @@
-.control {
+.accent {
 	position: relative;
 	display: inline-flex;
 	--radius: 6px;
@@ -6,15 +6,30 @@
 	--border: 1px solid;
 }
 
-.control:focus-within {
+.accent:has(a[data-active]),
+.accent:focus-within {
 	--shift: 2px;
 	--border: 2px solid var(--accent-color);
 }
 
-.control::before,
-.control::after,
-.controlInner::before,
-.controlInner::after {
+.accent a {
+	outline: none;
+}
+
+.accent:has(a) {
+	--shift: 2px;
+	--border: 2px solid transparent;
+}
+
+.accent:has(a:hover) {
+	--shift: -2px;
+	--border: 1px solid var(--link-color-hover);
+}
+
+.accent::before,
+.accent::after,
+.accentInner::before,
+.accentInner::after {
 	content: '';
 	position: absolute;
 	border-radius: var(--radius);
@@ -22,46 +37,46 @@
 	pointer-events: none;
 }
 
-.control::before,
-.control::after {
+.accent::before,
+.accent::after {
 	left: 0;
 	width: 100%;
 	height: calc(var(--radius) * 2);
 }
 
-.control::before {
+.accent::before {
 	bottom: 100%;
 	margin-bottom: var(--shift);
 	border-bottom: var(--border);
 }
 
-.control::after {
+.accent::after {
 	top: 100%;
 	margin-top: var(--shift);
 	border-top: var(--border);
 }
 
-.controlInner::before,
-.controlInner::after {
+.accentInner::before,
+.accentInner::after {
 	top: 0;
 	height: 100%;
 	width: calc(var(--radius) * 2);
 }
 
-.controlInner::before {
+.accentInner::before {
 	right: 100%;
 	margin-right: var(--shift);
 	border-right: var(--border);
 }
 
-.controlInner::after {
+.accentInner::after {
 	left: 100%;
 	margin-left: var(--shift);
 	border-left: var(--border);
 }
 
-.control select,
-.control input {
+.accent select,
+.accent input {
 	border-width: 0;
 	font-size: inherit;
 	line-height: inherit;
@@ -69,7 +84,7 @@
 	padding: 0;
 }
 
-.control select:focus,
-.control input:focus {
+.accent select:focus,
+.accent input:focus {
 	outline: none;
 }

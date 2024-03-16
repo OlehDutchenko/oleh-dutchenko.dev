@@ -14,7 +14,6 @@ interface Props extends PropsWithChildren {
 
 export function Internal({ href, ...props }: Props): ReactElement {
 	const internalHref = useInternalHref(href);
-	console.log({ href, internalHref });
 	return <Link {...props} href={internalHref} />;
 }
 

@@ -1,4 +1,4 @@
-import type { ItemProps } from './components/Item';
+import type { Props as ItemProps } from './components/Item';
 
 export interface Params {
 	rootHref: string;

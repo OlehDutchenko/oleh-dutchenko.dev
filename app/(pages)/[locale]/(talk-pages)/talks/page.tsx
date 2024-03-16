@@ -1,5 +1,4 @@
-import { Article } from '@/_components/Article';
-import { Container } from '@/_components/Container';
+import { CommonPage } from '@/_components/CommonPage';
 import { Markdown } from '@/_components/Markdown';
 import { generateStaticParams } from '@/_locales';
 import { PageProps } from '@/_types/page-props';
@@ -11,12 +10,8 @@ export { generateStaticParams };
 export default function Homepage({ params }: PageProps): React.ReactElement {
 	const content = readMarkdownFile(import.meta.url, params.locale);
 	return (
-		<main>
-			<Container>
-				<Article>
-					<Markdown content={content} />
-				</Article>
-			</Container>
-		</main>
+		<CommonPage>
+			<Markdown content={content} />
+		</CommonPage>
 	);
 }

@@ -1,11 +1,11 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { LocaleSwitcher, LocaleSwitcherProps } from '../index';
+import { LocaleSwitcher, Props } from '../index';
 
 const TEST_ROUTE = 'test-route';
 const INITIAL_OPTION = 1;
 const SELECTED_OPTION = 0;
-const OPTIONS: LocaleSwitcherProps['options'] = [
+const OPTIONS: Props['options'] = [
 	{ value: 'en', label: 'English' },
 	{ value: 'uk', label: 'Українська' },
 ];
@@ -27,7 +27,7 @@ vi.mock('next/navigation', () => {
 });
 
 describe('LocaleSwitcher', () => {
-	let options: LocaleSwitcherProps['options'];
+	let options: Props['options'];
 	beforeEach(() => {
 		options = OPTIONS.slice();
 	});

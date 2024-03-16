@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { Control } from '../index';
+import { AccentElement } from '../index';
 
 describe('Control', () => {
-	it('should render control wrapper with inner div for decorative styles', () => {
+	it('should render accent wrapper with inner div for decorative styles', () => {
 		const { container } = render(
-			<Control>
+			<AccentElement>
 				<input />
-			</Control>
+			</AccentElement>
 		);
 
 		const div = container.firstElementChild;

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { Nav, NavProps } from '../view';
+import { Nav, Props } from '../view';
 
 const { usePathname } = vi.hoisted(() => {
 	return {
@@ -37,7 +37,7 @@ describe('Nav', () => {
 	});
 });
 
-function defaultRender(props: Partial<NavProps> = {}): void {
+function defaultRender(props: Partial<Props> = {}): void {
 	const {
 		description = 'Description',
 		rootHref = '/',
