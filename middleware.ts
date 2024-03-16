@@ -1,4 +1,4 @@
-import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from '@/_locales/constants';
+import { AVAILABLE_LOCALES, DEFAULT_LOCALE } from '@/_locales';
 import { LocaleHandler } from '@wezom/locale-handler';
 import { NextRequest, NextResponse } from 'next/server';
 

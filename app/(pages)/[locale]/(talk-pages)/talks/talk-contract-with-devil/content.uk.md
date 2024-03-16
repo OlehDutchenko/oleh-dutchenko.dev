@@ -1,3 +1,3 @@
-# Доповіді
+# Контракт з дияволом
 
--   [(Draft) Talk](./talk-contract-with-devil)
+-   [Talks](/[locale]/talks)

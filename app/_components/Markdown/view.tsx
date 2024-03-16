@@ -1,13 +1,27 @@
+import { Link } from '@/_components/Link';
+import MarkdownToJsx, { MarkdownToJSX } from 'markdown-to-jsx';
 import React from 'react';
-import MarkdownToJsx from 'markdown-to-jsx';
 
 interface Props {
 	content: string;
+	locale?: string;
 }
 
-export const Markdown: React.FC<Props> = ({ content }) => {
-	content = normalize(content);
-	return <MarkdownToJsx>{content}</MarkdownToJsx>;
+export const Markdown: React.FC<Props> = ({ content, locale }) => {
+	const children = normalize(content);
+
+	const options: MarkdownToJSX.Options = {
+		overrides: {
+			a: {
+				component: Link,
+				props: {
+					locale,
+				},
+			},
+		},
+	};
+
+	return <MarkdownToJsx options={options}>{children}</MarkdownToJsx>;
 };
 
 function normalize(content: string): string {

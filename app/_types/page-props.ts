@@ -1,4 +1,4 @@
-import { Locale } from '@/_locales/constants';
+import { Locale } from '@/_locales';
 
 export interface PageProps<
 	Params extends Record<string, any> = Record<string, any>,

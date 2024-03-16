@@ -3,10 +3,11 @@ import type { ItemProps } from './components/Item';
 export interface Params {
 	rootHref: string;
 	items: {
-		about: string;
 		talks: string;
 	};
 }
+
+type ItemKey = keyof Params['items'];
 
 interface Item {
 	key: string;
@@ -15,20 +16,15 @@ interface Item {
 
 export function useNavItems(params: Params): Item[] {
 	const { rootHref, items } = params;
-	return [
-		{
-			key: 'about',
+	const keys: ItemKey[] = ['talks'];
+
+	return keys.map(
+		(key): Item => ({
+			key,
 			props: {
-				href: `${rootHref}/about`,
-				label: items.about,
+				href: `${rootHref}/${key}`,
+				label: items[key],
 			},
-		},
-		{
-			key: 'talks',
-			props: {
-				href: `${rootHref}/talks`,
-				label: items.talks,
-			},
-		},
-	];
+		})
+	);
 }

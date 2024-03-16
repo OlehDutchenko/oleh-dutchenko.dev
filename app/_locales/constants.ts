@@ -10,7 +10,3 @@ export const STATIC_LOCALE_PARAMS: LocaleParam[] = AVAILABLE_LOCALES.map(
 		return { locale };
 	}
 );
-
-export function generateStaticParams(): LocaleParam[] {
-	return STATIC_LOCALE_PARAMS;
-}

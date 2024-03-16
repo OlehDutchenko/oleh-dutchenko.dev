@@ -1,4 +1,4 @@
-import { Locale } from '@/_locales/constants';
+import { Locale } from '@/_locales';
 import React from 'react';
 
 export interface LayoutProps<

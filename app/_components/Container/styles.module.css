@@ -22,5 +22,5 @@
 }
 
 .container[data-size='lg'] {
-	--containerMaxWidth: 1440px;
+	--containerMaxWidth: 1280px;
 }

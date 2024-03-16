@@ -1,5 +1,6 @@
 .header {
 	padding: 1rem 0;
+	border-bottom: 1px solid silver;
 }
 
 .container {
@@ -12,5 +13,5 @@
 	margin-top: 0;
 	margin-bottom: 4rem;
 	border-width: 0;
-	border-bottom: 1px solid silver;
+	border-bottom: 1px solid var(--divider-color);
 }

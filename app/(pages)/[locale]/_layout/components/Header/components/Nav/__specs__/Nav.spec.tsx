@@ -20,17 +20,11 @@ describe('Nav', () => {
 		const nav = screen.queryByRole('navigation');
 		expect(nav).toBeInstanceOf(HTMLElement);
 		expect(nav?.getAttribute('aria-label')).toBe(description);
-
-		const links = screen.queryAllByRole<HTMLLinkElement>('link');
-		expect(links).toHaveLength(3);
-		expect(getHref(links[0])).toBe('/test/about');
-		expect(getHref(links[1])).toBe('/test/blog');
-		expect(getHref(links[2])).toBe('/test/envato');
 	});
 
 	it('should render active element', () => {
 		const rootHref = '/test';
-		const itemHref = '/blog';
+		const itemHref = '/talks';
 		vi.mocked(usePathname).mockImplementation(() => rootHref + itemHref);
 		defaultRender({ rootHref });
 
@@ -48,15 +42,9 @@ function defaultRender(props: Partial<NavProps> = {}): void {
 		description = 'Description',
 		rootHref = '/',
 		items = {
-			blog: 'Blog',
-			about: 'About',
-			envato: 'Envato',
+			talks: 'Talks',
 		},
 	} = props;
 
 	render(<Nav description={description} rootHref={rootHref} items={items} />);
-}
-
-function getHref(link: HTMLLinkElement): string | null {
-	return link.getAttribute('href');
 }

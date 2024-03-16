@@ -1,27 +1,23 @@
 'use client';
 
+import { Link } from '@/_components/Link';
 import { useParams, usePathname } from 'next/navigation';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import 'client-only';
 
-export interface HowThisPageWorksProps {
+export interface Props {
 	label: string;
 	title: string;
 }
 
-export const HowThisPageWorks: React.FC<HowThisPageWorksProps> = (props) => {
+export function HowThisPageWorks({ label, title }: Props): ReactElement {
 	const href = useHref();
 	return (
-		<a
-			target="_blank"
-			rel="noopener noreferrer"
-			title={props.title}
-			href={href}
-		>
-			{props.label}
-		</a>
+		<Link href={href} title={title}>
+			{label}
+		</Link>
 	);
-};
+}
 
 const HREF =
 	'https://github.com/OlehDutchenko/oleh-dutchenko.dev/tree/master/app';
@@ -35,9 +31,7 @@ function useHref(): string {
 		: pathname;
 
 	path = path
-		.replace('/about', '/(content-pages)/about')
-		.replace('/ui-kit', '/(content-pages)/ui-kit')
-		.replace('/envato', '/(envato-pages)/envato')
+		.replace('/talks', '/(talk-pages)/talks')
 		.replace(`/${locale}`, '/(pages)/%5Blocale%5D');
 
 	return HREF + path + '/page.tsx';

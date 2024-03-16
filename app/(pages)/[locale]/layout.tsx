@@ -1,5 +1,5 @@
 import { Root } from '@/_components/Root';
-import { AVAILABLE_LOCALES, Locale } from '@/_locales/constants';
+import { AVAILABLE_LOCALES, Locale } from '@/_locales';
 import type { LayoutProps } from '@/_types/layout-props';
 import { HRefMaker } from '@/_utils/HRefMaker';
 import React from 'react';
@@ -66,7 +66,7 @@ function RenderAsPage({
 				nav={nav}
 				localeSwitcher={localeSwitcher}
 			/>
-			{children}
+			<div className="body-grow">{children}</div>
 			<Footer howThisPageWorks={howThisPageWorks} />
 		</Root>
 	);

@@ -1,20 +1,24 @@
-import React from 'react';
-import 'server-only';
+import clsx from 'clsx';
+import React, { PropsWithChildren, ReactElement } from 'react';
 import { CSS_VAR_DOMAIN, KNOWN_DOMAINS } from './constants';
 import { makeCssVarValue } from './makeCssVarValue';
 import styles from './styles.module.css';
 
-export interface ExternalLinkProps {
-	children: NonNullable<React.ReactNode>;
+interface Props extends PropsWithChildren {
+	className?: string;
 	href: string;
+	title?: string;
 }
 
-export const ExternalLink: React.FC<ExternalLinkProps> = ({
+export function External({
 	children,
+	className: propClassName,
 	href,
-}) => {
+	title,
+}: Props): ReactElement {
 	const domain = getKnownDomain(href);
 	const style = getStyles(domain);
+	const className = clsx(styles.link, propClassName);
 
 	return (
 		<a
@@ -22,13 +26,14 @@ export const ExternalLink: React.FC<ExternalLinkProps> = ({
 			target="_blank"
 			rel="noopener noreferrer"
 			style={style}
-			className={styles.link}
+			className={className}
 			data-domain={domain}
+			title={title}
 		>
 			{children}
 		</a>
 	);
-};
+}
 
 function getKnownDomain(href: string): string | undefined {
 	const domain = href

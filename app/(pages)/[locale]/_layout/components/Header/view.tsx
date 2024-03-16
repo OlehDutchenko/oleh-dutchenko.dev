@@ -24,13 +24,12 @@ export const Header: React.FC<HeaderProps> = ({
 	return (
 		<>
 			<header className={styles.header}>
-				<Container className={styles.container} size="lg">
+				<Container className={styles.container} size="md">
 					<Heading {...headingProps} />
 					<Nav {...navProps} />
 					<LocaleSwitcher {...localeSwitcherProps} />
 				</Container>
 			</header>
-			<hr className={styles.divider} />
 		</>
 	);
 };

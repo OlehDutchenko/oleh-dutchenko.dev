@@ -1,8 +1,10 @@
+import { Container } from '@/_components/Container';
 import React from 'react';
 import {
 	HowThisPageWorks,
-	HowThisPageWorksProps,
+	Props as HowThisPageWorksProps,
 } from './components/HowThisPageWorks';
+import styles from './styles.module.css';
 
 export interface FooterProps {
 	howThisPageWorks: HowThisPageWorksProps;
@@ -10,11 +12,14 @@ export interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ howThisPageWorks }) => {
 	return (
-		<footer>
-			<HowThisPageWorks
-				label={howThisPageWorks.label}
-				title={howThisPageWorks.title}
-			/>
+		<footer className={styles.footer}>
+			<Container className={styles.container} size="md">
+				<div />
+				<HowThisPageWorks
+					label={howThisPageWorks.label}
+					title={howThisPageWorks.title}
+				/>
+			</Container>
 		</footer>
 	);
 };

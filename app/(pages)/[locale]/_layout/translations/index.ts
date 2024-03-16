@@ -1,4 +1,4 @@
-import { Locale, LocalesRecord } from '@/_locales/constants';
+import { Locale, LocalesRecord } from '@/_locales';
 import 'server-only';
 import type { EN } from './en';
 import type { UK } from './uk';

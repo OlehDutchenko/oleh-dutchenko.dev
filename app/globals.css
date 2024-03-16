@@ -2,6 +2,7 @@
 	--text-color: #111;
 	--surface: #fff;
 	--accent-color: #0000ee;
+	--divider-color: #e0e0e0;
 	--link-color: #0000ee;
 	--link-color-hover: #6c6cff;
 	--link-color-active: #000096;
@@ -13,12 +14,23 @@
 html {
 	font-size: 100%;
 	font-family: var(--font-base), serif;
+	height: 100%;
 }
 
 body {
 	margin: 0;
 	color: var(--text-color);
 	background: var(--surface);
+	height: 100%;
+	display: grid;
+	align-content: space-between;
+	grid-template-rows: auto 1fr auto;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 a {

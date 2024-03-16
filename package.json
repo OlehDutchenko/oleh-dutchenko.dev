@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "feature-ready": "pnpm run check-root-files-format-with-autofix && pnpm run check-app-files-format-with-autofix && pnpm run lint-app-files-with-autofix && pnpm run test-all-with-coverage",
+    "pr-ready": "pnpm run check-root-files-format-with-autofix && pnpm run check-app-files-format-with-autofix && pnpm run lint-app-files-with-autofix && pnpm run test-all-with-coverage",
     "--- CHECK -------------------": "SECTION",
     "check-root-files-format": "prettier \"./*.{ts,js,json,md}\" --check",
     "check-root-files-format-with-autofix": "pnpm run check-root-files-format --write",

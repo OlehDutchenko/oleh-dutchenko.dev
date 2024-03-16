@@ -1,3 +1,3 @@
 # Доповіді
 
--   [(Draft) Talk](talks/talk-contract-with-devil)
+-   [(Draft) Talk](/[locale]/talks/talk-contract-with-devil)

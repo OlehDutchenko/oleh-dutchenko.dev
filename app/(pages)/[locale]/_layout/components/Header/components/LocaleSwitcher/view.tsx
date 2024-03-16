@@ -1,7 +1,7 @@
 'use client';
 
 import { Control } from '@/_components/Control';
-import { Locale } from '@/_locales/constants';
+import { Locale } from '@/_locales';
 import { PageProps } from '@/_types/page-props';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import React from 'react';

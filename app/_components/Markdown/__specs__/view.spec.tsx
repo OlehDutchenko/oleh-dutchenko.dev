@@ -34,4 +34,15 @@ describe('Markdown', () => {
 		expect(h1.querySelector('br')).toBeInTheDocument();
 		expect(h1.querySelector('small.test')).toBeInTheDocument();
 	});
+
+	it('should render link element with locale', () => {
+		const content = `
+			[link](/[locale]/about)
+		`;
+
+		render(<Markdown content={content} locale="uk" />);
+
+		const link = screen.getByRole('link');
+		expect(link).toHaveAttribute('href', '/uk/about');
+	});
 });

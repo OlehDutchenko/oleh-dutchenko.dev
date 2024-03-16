@@ -1,7 +1,7 @@
 import { Container } from '@/_components/Container';
 import { Markdown } from '@/_components/Markdown';
+import { generateStaticParams } from '@/_locales';
 import { PageProps } from '@/_types/page-props';
-import { generateStaticParams } from '@/_utils/generateStaticParams';
 import { readMarkdownFile } from '@/_utils/readMarkdownFile';
 import React from 'react';
 
@@ -12,7 +12,7 @@ export default function Homepage({ params }: PageProps): React.ReactElement {
 	return (
 		<main>
 			<Container>
-				<Markdown content={content} />
+				<Markdown locale={params.locale} content={content} />
 			</Container>
 		</main>
 	);
