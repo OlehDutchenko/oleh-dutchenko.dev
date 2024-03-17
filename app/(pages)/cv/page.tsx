@@ -12,7 +12,7 @@ import { SocialLinks } from './_widgets/SocialLinks';
 
 export default function CVPage(): React.ReactElement {
 	return (
-		<Root locale="en">
+		<Root>
 			<main>
 				<Header />
 				<Skills />

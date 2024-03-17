@@ -12,6 +12,7 @@ export const Markdown: React.FC<Props> = ({ content }) => {
 	const options: MarkdownToJSX.Options = {
 		overrides: {
 			h1: { props: { className: 'heading-1' } },
+			h2: { props: { className: 'heading-2' } },
 			a: { component: Link },
 		},
 	};

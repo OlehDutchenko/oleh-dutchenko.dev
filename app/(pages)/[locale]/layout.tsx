@@ -61,7 +61,7 @@ function RenderAsPage({
 	};
 
 	return (
-		<Root locale={locale}>
+		<Root locale={locale} gridBody>
 			<Header
 				heading={heading}
 				nav={nav}

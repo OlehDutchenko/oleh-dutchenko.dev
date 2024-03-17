@@ -7,6 +7,14 @@
 	max-width: var(--containerMaxWidth, 100%);
 }
 
+.container [data-container-unfold] {
+	--containerUnfoldMaxWidth: 100%;
+	margin-left: 50%;
+	width: 100vw;
+	max-width: var(--containerUnfoldMaxWidth);
+	transform: translateX(-50%);
+}
+
 .container[data-size='sm'] {
 	--containerMaxWidth: 680px;
 }
@@ -23,4 +31,8 @@
 
 .container[data-size='lg'] {
 	--containerMaxWidth: 1280px;
+}
+
+.container [data-container-unfold="lg"] {
+	--containerUnfoldMaxWidth: 1280px;
 }
