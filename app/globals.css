@@ -98,7 +98,6 @@ select {
 
 .heading-2 {
 	font-size: 1.25rem;
-	font-family: var(--font-headings);
 	line-height: 1.2em;
 }
 

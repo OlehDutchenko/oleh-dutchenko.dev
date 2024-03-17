@@ -34,5 +34,5 @@ function useHref(): string {
 		.replace('/talks', '/(talk-pages)/talks')
 		.replace(`/${locale}`, '/(pages)/%5Blocale%5D');
 
-	return HREF + path + '/page.tsx';
+	return HREF + path;
 }

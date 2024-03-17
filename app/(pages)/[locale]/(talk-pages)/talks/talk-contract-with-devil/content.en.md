@@ -14,6 +14,6 @@ hiding in?".
 
 <div data-container-unfold="lg">
     <div class="aspect-ratio" data-ratio="16/9">
-        <iframe src="/slides/contract-with-devil" title="slides" frameborder="0" />
+        <iframe src="/slides/contract-with-devil" title="Presentation slides" />
     </div>
 </div>
