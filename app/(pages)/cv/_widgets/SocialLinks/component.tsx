@@ -1,9 +1,9 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { ExternalLink } from '../../_components/ExternalLink';
 import { PageFooter } from '../../_components/PageFooter';
 import { Section } from '../../_components/Section';
 
-export const SocialLinks: React.FC = () => {
+export function SocialLinks(): ReactElement {
 	return (
 		<Section title="Social links">
 			<ul className="cv-ul">
@@ -21,4 +21,4 @@ export const SocialLinks: React.FC = () => {
 			<PageFooter page={2} height={154} />
 		</Section>
 	);
-};
+}

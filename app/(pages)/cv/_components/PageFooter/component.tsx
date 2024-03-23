@@ -1,4 +1,4 @@
-import React from 'react';
+import { ReactElement } from 'react';
 
 interface Props {
 	page: number;
@@ -7,8 +7,12 @@ interface Props {
 
 const PAGES = 2;
 
-export const PageFooter: React.FC<Props> = ({ height, page }) => (
-	<div className="cv-page-footer" style={{ height }}>
-		<div className="cv-pagination">{`${page} / ${PAGES}`}</div>
-	</div>
-);
+export function PageFooter({ height, page }: Props): ReactElement {
+	const style = { height };
+	const pages = `${page} / ${PAGES}`;
+	return (
+		<div className="cv-page-footer" style={style}>
+			<div className="cv-pagination">{pages}</div>
+		</div>
+	);
+}

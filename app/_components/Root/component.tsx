@@ -1,23 +1,22 @@
 import { fontBase, fontCode, fontHeadings } from '@/_fonts';
 import { DEFAULT_LOCALE } from '@/_locales';
 import clsx from 'clsx';
-import React from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import styles from './styles.module.css';
 
-interface Props {
+interface Props extends PropsWithChildren {
 	locale?: string;
 	gridBody?: boolean;
 	bodyClassName?: string;
 	noindex?: boolean;
-	children: NonNullable<React.ReactNode>;
 }
 
-export const Root: React.FC<Props> = ({
+export function Root({
 	locale = DEFAULT_LOCALE,
 	gridBody = false,
 	bodyClassName: propBodyClassName,
 	children,
-}) => {
+}: Props): ReactElement {
 	const htmlClassName = clsx(
 		fontBase.variable,
 		fontHeadings.variable,
@@ -39,4 +38,4 @@ export const Root: React.FC<Props> = ({
 			<body className={bodyClassName}>{children}</body>
 		</html>
 	);
-};
+}

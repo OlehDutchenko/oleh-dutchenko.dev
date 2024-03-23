@@ -1,7 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import type { Props } from './components/Reveal';
 
 const Reveal = dynamic(

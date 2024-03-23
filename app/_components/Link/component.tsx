@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import { External } from './components/Extenal';
 import { Internal, LOCALE_START_REGEXP } from './components/Internal';
 

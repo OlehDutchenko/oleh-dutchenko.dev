@@ -1,5 +1,5 @@
 import { Root } from '@/_components/Root';
-import React from 'react';
+import { ReactElement } from 'react';
 import './page.css';
 import { PageBreak } from './_components/PageBreak';
 import { CommercialProjects } from './_widgets/CommercialProjects';
@@ -10,7 +10,7 @@ import { OpenSourceProjects } from './_widgets/OpenSourceProjects';
 import { Skills } from './_widgets/Skills';
 import { SocialLinks } from './_widgets/SocialLinks';
 
-export default function CVPage(): React.ReactElement {
+export default function CVPage(): ReactElement {
 	return (
 		<Root>
 			<main>

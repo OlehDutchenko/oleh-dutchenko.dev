@@ -1,9 +1,4 @@
-import React, {
-	PropsWithChildren,
-	ReactElement,
-	useEffect,
-	useRef,
-} from 'react';
+import { PropsWithChildren, ReactElement, useEffect, useRef } from 'react';
 import RevealJS from 'reveal.js';
 
 export interface Props

@@ -1,7 +1,7 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Section } from '../../_components/Section';
 
-export const Languages: React.FC = () => {
+export function Languages(): ReactElement {
 	return (
 		<Section title="Languages">
 			<ul className="cv-ul">
@@ -9,4 +9,4 @@ export const Languages: React.FC = () => {
 			</ul>
 		</Section>
 	);
-};
+}

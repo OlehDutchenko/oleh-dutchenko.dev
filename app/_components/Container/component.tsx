@@ -1,19 +1,18 @@
 import clsx from 'clsx';
-import React from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import { ContainerSize, DEFAULT_SIZE } from './constants';
 import styles from './styles.module.css';
 
-export interface ContainerProps {
-	children: NonNullable<React.ReactNode>;
+interface Props extends PropsWithChildren {
 	className?: string;
 	size?: ContainerSize;
 }
 
-export const Container: React.FC<ContainerProps> = ({
+export function Container({
 	children,
 	className: customClassName,
 	size = DEFAULT_SIZE,
-}) => {
+}: Props): ReactElement {
 	return (
 		<div
 			className={clsx(styles.container, customClassName)}
@@ -22,4 +21,4 @@ export const Container: React.FC<ContainerProps> = ({
 			{children}
 		</div>
 	);
-};
+}

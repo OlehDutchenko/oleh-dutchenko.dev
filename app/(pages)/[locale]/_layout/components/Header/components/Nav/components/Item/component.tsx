@@ -1,7 +1,7 @@
 import { AccentElement } from '@/_components/AccentElement';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import styles from './styles.module.css';
 
 export interface Props {

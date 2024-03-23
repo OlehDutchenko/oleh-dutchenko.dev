@@ -1,6 +1,6 @@
 'use client';
 
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { Item } from './components/Item';
 import { Params, useNavItems } from './hooks/useNavItems';
 import styles from './styles.module.css';

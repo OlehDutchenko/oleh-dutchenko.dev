@@ -1,7 +1,7 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { PageCaption } from '../../_components/PageCaption';
 
-export const Header: React.FC = () => {
+export function Header(): ReactElement {
 	return (
 		<header className="cv-box">
 			<PageCaption mainPage />
@@ -36,4 +36,4 @@ export const Header: React.FC = () => {
 			</div>
 		</header>
 	);
-};
+}

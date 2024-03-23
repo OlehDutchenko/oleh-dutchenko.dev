@@ -1,14 +1,13 @@
-import React from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 
-interface Props {
+interface Props extends PropsWithChildren {
 	href: string;
-	children: React.ReactNode;
 }
 
-export const ExternalLink: React.FC<Props> = ({ href, children }) => {
+export function ExternalLink({ href, children }: Props): ReactElement {
 	return (
 		<a href={href} target="_blank" rel="noopener noreferrer">
 			{children}
 		</a>
 	);
-};
+}

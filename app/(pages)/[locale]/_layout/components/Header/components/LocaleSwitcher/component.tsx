@@ -4,7 +4,7 @@ import { AccentElement } from '@/_components/AccentElement';
 import { Locale } from '@/_locales';
 import { PageProps } from '@/_types/page-props';
 import { useParams, usePathname, useRouter } from 'next/navigation';
-import React, { ReactElement } from 'react';
+import { ChangeEvent, ReactElement } from 'react';
 import styles from './styles.module.css';
 
 export interface Props {
@@ -19,7 +19,7 @@ export function LocaleSwitcher({ description, options }: Props): ReactElement {
 	const { locale } = useParams<PageProps['params']>();
 	const router = useRouter();
 	const pathname = usePathname();
-	const handeChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
+	const handeChange = (event: ChangeEvent<HTMLSelectElement>): void => {
 		const value = event.target.value;
 		const redirectPath = pathname.replace(`/${locale}`, `/${value}`);
 		router.push(redirectPath);

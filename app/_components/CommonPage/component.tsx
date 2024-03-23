@@ -1,6 +1,6 @@
 import { Article } from '@/_components/Article';
 import { Container } from '@/_components/Container';
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 
 interface Props extends PropsWithChildren {}
 

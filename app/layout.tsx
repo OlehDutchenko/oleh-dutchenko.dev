@@ -1,8 +1,6 @@
-import React from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import './globals.css';
 
-const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
+export default function RootLayout(props: PropsWithChildren): ReactNode {
 	return props.children;
-};
-
-export { RootLayout as default };
+}

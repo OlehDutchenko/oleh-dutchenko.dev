@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { CSSProperties, PropsWithChildren, ReactElement } from 'react';
 import { CSS_VAR_DOMAIN, KNOWN_DOMAINS } from './constants';
 import styles from './styles.module.css';
 import { makeCssVarValue } from './utils/makeCssVarValue';
@@ -44,11 +44,11 @@ function getKnownDomain(href: string): string | undefined {
 	return KNOWN_DOMAINS.includes(domain) ? domain : undefined;
 }
 
-function getStyles(domain?: string): React.CSSProperties {
+function getStyles(domain?: string): CSSProperties {
 	if (!domain) {
 		return {};
 	}
 	return {
 		[CSS_VAR_DOMAIN]: makeCssVarValue(domain),
-	} as React.CSSProperties;
+	} as CSSProperties;
 }

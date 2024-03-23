@@ -1,12 +1,11 @@
-import React from 'react';
+import { PropsWithChildren, ReactElement, ReactNode } from 'react';
 
-interface Props {
-	title: React.ReactNode;
-	caption?: React.ReactNode;
-	children?: React.ReactNode;
+interface Props extends PropsWithChildren {
+	title: ReactNode;
+	caption?: ReactNode;
 }
 
-export const Block: React.FC<Props> = ({ title, caption, children }) => {
+export function Block({ title, caption, children }: Props): ReactElement {
 	return (
 		<div className="cv-block">
 			<p>
@@ -18,4 +17,4 @@ export const Block: React.FC<Props> = ({ title, caption, children }) => {
 			{children && <div className="cv-block-text">{children}</div>}
 		</div>
 	);
-};
+}

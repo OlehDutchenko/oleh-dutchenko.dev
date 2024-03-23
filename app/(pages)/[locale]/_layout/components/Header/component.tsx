@@ -1,5 +1,5 @@
 import { Container } from '@/_components/Container';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { Heading, Props as HeadingProps } from './components/Heading';
 import {
 	LocaleSwitcher,

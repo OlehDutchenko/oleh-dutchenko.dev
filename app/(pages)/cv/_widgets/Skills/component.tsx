@@ -1,7 +1,7 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Section } from '../../_components/Section';
 
-export const Skills: React.FC = () => {
+export function Skills(): ReactElement {
 	return (
 		<Section title="Skills">
 			<p className="cv-skill-subtitle">Development methodologies:</p>
@@ -29,4 +29,4 @@ export const Skills: React.FC = () => {
 			</ul>
 		</Section>
 	);
-};
+}

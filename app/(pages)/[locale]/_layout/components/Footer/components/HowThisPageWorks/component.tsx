@@ -2,7 +2,7 @@
 
 import { Link } from '@/_components/Link';
 import { useParams, usePathname } from 'next/navigation';
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import 'client-only';
 
 export interface Props {

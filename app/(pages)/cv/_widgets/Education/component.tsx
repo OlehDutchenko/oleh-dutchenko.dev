@@ -1,8 +1,8 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import { Block } from '../../_components/Block';
 import { Section } from '../../_components/Section';
 
-export const Education: React.FC = () => {
+export function Education(): ReactElement {
 	return (
 		<Section title="Education">
 			<Block
@@ -26,4 +26,4 @@ export const Education: React.FC = () => {
 			</Block>
 		</Section>
 	);
-};
+}

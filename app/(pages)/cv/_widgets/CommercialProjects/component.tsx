@@ -1,9 +1,9 @@
 import { PageFooter } from '@/(pages)/cv/_components/PageFooter';
-import React from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import { Block } from '../../_components/Block';
 import { Section } from '../../_components/Section';
 
-export const CommercialProjects: React.FC = () => {
+export function CommercialProjects(): ReactElement {
 	return (
 		<Section title="Commercial projects experience">
 			<Block
@@ -60,7 +60,7 @@ export const CommercialProjects: React.FC = () => {
 			<PageFooter page={1} height={5} />
 		</Section>
 	);
-};
+}
 
 function currentDuration(): string {
 	const now = new Date();
@@ -76,7 +76,7 @@ function currentDuration(): string {
 	return `${years} years ${monthValue}`;
 }
 
-function ProjectsDomains(props: React.PropsWithChildren): React.ReactElement {
+function ProjectsDomains(props: PropsWithChildren): ReactElement {
 	return (
 		<p>
 			<span className="cv-block-subtitle">Projects domains:</span>
@@ -86,7 +86,7 @@ function ProjectsDomains(props: React.PropsWithChildren): React.ReactElement {
 	);
 }
 
-function CoreStack(props: React.PropsWithChildren): React.ReactElement {
+function CoreStack(props: PropsWithChildren): ReactElement {
 	return (
 		<p>
 			<span className="cv-block-subtitle">Core technology stack:</span>
@@ -96,7 +96,7 @@ function CoreStack(props: React.PropsWithChildren): React.ReactElement {
 	);
 }
 
-function Wezom(): React.ReactElement {
+function Wezom(): ReactElement {
 	return (
 		<a href="https://wezom.com/" target="_blank" rel="noopener noreferrer">
 			Wezom

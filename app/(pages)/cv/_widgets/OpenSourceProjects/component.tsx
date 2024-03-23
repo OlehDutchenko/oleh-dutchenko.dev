@@ -1,9 +1,9 @@
 import { ExternalLink } from '@/(pages)/cv/_components/ExternalLink';
-import React from 'react';
+import { ReactElement } from 'react';
 import { Block } from '../../_components/Block';
 import { Section } from '../../_components/Section';
 
-export const OpenSourceProjects: React.FC = () => {
+export function OpenSourceProjects(): ReactElement {
 	return (
 		<Section title="My open-source projects I am proud of">
 			<Block
@@ -76,4 +76,4 @@ export const OpenSourceProjects: React.FC = () => {
 			</Block>
 		</Section>
 	);
-};
+}

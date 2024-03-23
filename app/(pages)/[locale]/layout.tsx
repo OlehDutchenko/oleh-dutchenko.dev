@@ -1,14 +1,14 @@
 import { Root } from '@/_components/Root';
 import { AVAILABLE_LOCALES, Locale } from '@/_locales';
 import type { LayoutProps } from '@/_types/layout-props';
-import React from 'react';
+import { PropsWithChildren, ReactElement, ReactNode } from 'react';
 import { Footer, Props as FooterProps } from './_layout/components/Footer';
 import { Header, Props as HeaderProps } from './_layout/components/Header';
 import { getTranslations, Translations } from './_layout/translations';
 
 export default async function Layout(
 	props: LayoutProps
-): Promise<React.ReactElement> {
+): Promise<ReactElement> {
 	const locale = props.params.locale;
 	if (AVAILABLE_LOCALES.includes(locale)) {
 		const translations = await getTranslations(locale);
@@ -22,8 +22,7 @@ export default async function Layout(
 	}
 }
 
-interface PageProps {
-	children: React.ReactNode;
+interface PageProps extends PropsWithChildren {
 	locale: Locale;
 	translations: Translations;
 }
@@ -32,7 +31,7 @@ function RenderAsPage({
 	locale,
 	translations,
 	children,
-}: PageProps): React.ReactElement {
+}: PageProps): ReactElement {
 	const heading: HeaderProps['heading'] = { ...translations.heading };
 
 	const nav: HeaderProps['nav'] = {
@@ -72,6 +71,6 @@ function RenderAsPage({
 	);
 }
 
-function RenderAsAsset(): React.ReactNode {
+function RenderAsAsset(): ReactNode {
 	return null;
 }

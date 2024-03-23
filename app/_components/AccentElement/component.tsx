@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactElement } from 'react';
+import { PropsWithChildren, ReactElement } from 'react';
 import styles from './styles.module.css';
 
 interface Props extends PropsWithChildren {}
