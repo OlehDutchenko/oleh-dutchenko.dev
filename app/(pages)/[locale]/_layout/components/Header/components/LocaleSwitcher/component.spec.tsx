@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { LocaleSwitcher, Props } from '../index';
+import { LocaleSwitcher, Props } from './component';
 
 const TEST_ROUTE = 'test-route';
 const INITIAL_OPTION = 1;

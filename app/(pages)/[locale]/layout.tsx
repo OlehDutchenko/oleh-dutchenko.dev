@@ -3,8 +3,8 @@ import { AVAILABLE_LOCALES, Locale } from '@/_locales';
 import type { LayoutProps } from '@/_types/layout-props';
 import { HRefMaker } from '@/_utils/HRefMaker';
 import React from 'react';
-import { Footer, Props as FooterProps } from './_layout/components/Footer/view';
-import { Header, Props as HeaderProps } from './_layout/components/Header/view';
+import { Footer, Props as FooterProps } from './_layout/components/Footer';
+import { Header, Props as HeaderProps } from './_layout/components/Header';
 import { getTranslations, Translations } from './_layout/translations';
 
 export default async function Layout(

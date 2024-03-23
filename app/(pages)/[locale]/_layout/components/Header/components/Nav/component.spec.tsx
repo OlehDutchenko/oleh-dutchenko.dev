@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { Nav, Props } from '../view';
+import { Nav, Props } from './component';
 
 const { usePathname } = vi.hoisted(() => {
 	return {

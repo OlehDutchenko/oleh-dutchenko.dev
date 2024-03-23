@@ -2,8 +2,8 @@
 
 import React, { ReactElement } from 'react';
 import { Item } from './components/Item';
+import { Params, useNavItems } from './hooks/useNavItems';
 import styles from './styles.module.css';
-import { Params, useNavItems } from './useNavItems';
 
 export interface Props extends Params {
 	description: string;

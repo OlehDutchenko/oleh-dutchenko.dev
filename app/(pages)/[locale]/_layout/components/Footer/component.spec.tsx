@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { Footer } from '../view';
+import { Footer } from './component';
 
 vi.mock('next/navigation', () => {
 	return {

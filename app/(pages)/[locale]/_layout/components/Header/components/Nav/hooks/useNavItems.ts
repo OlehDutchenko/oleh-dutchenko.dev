@@ -1,5 +1,3 @@
-import type { Props as ItemProps } from './components/Item';
-
 export interface Params {
 	rootHref: string;
 	items: {
@@ -11,7 +9,10 @@ type ItemKey = keyof Params['items'];
 
 interface Item {
 	key: string;
-	props: ItemProps;
+	props: {
+		href: string;
+		label: string;
+	};
 }
 
 export function useNavItems(params: Params): Item[] {

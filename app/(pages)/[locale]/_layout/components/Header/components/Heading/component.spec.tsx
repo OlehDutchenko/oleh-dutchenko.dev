@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { Heading } from '../view';
+import { Heading } from './component';
 
 describe('Heading', () => {
 	it.skip('should render <h1> element', () => {
