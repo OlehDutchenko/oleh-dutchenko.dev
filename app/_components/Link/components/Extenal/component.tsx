@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactElement } from 'react';
 import { CSS_VAR_DOMAIN, KNOWN_DOMAINS } from './constants';
-import { makeCssVarValue } from './makeCssVarValue';
 import styles from './styles.module.css';
+import { makeCssVarValue } from './utils/makeCssVarValue';
 
 interface Props extends PropsWithChildren {
 	href: string;

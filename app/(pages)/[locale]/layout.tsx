@@ -1,7 +1,6 @@
 import { Root } from '@/_components/Root';
 import { AVAILABLE_LOCALES, Locale } from '@/_locales';
 import type { LayoutProps } from '@/_types/layout-props';
-import { HRefMaker } from '@/_utils/HRefMaker';
 import React from 'react';
 import { Footer, Props as FooterProps } from './_layout/components/Footer';
 import { Header, Props as HeaderProps } from './_layout/components/Header';
@@ -37,7 +36,7 @@ function RenderAsPage({
 	const heading: HeaderProps['heading'] = { ...translations.heading };
 
 	const nav: HeaderProps['nav'] = {
-		rootHref: new HRefMaker(locale).make('/'),
+		rootHref: `/${locale}`,
 		description: translations.nav.description,
 		items: translations.nav.items,
 	};

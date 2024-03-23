@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { AccentElement } from '../index';
+import { AccentElement } from './component';
 
 describe('Control', () => {
 	it('should render accent wrapper with inner div for decorative styles', () => {

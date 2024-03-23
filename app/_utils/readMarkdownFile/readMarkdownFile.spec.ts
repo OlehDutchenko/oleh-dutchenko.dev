@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readMarkdownFile } from '../index';
+import { readMarkdownFile } from './readMarkdownFile';
 
 describe('readMarkdownFile', () => {
 	it('should read and return content from the child file', () => {

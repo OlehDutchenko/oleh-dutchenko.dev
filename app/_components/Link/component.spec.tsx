@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
-import { CSS_VAR_DOMAIN, makeCssVarValue } from '../components/Extenal';
-import { Link } from '../index';
+import { CSS_VAR_DOMAIN, makeCssVarValue } from './components/Extenal';
+import { Link } from './component';
 
 const { useParams, usePathname } = vi.hoisted(() => {
 	return {

@@ -1,3 +1,3 @@
 export * from './constants';
-export * from './view';
-export * from './makeCssVarValue';
+export * from './component';
+export * from './utils/makeCssVarValue';

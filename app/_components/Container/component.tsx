@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import React from 'react';
-import styles from './styles.module.css';
 import { ContainerSize, DEFAULT_SIZE } from './constants';
+import styles from './styles.module.css';
 
 export interface ContainerProps {
 	children: NonNullable<React.ReactNode>;

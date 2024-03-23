@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
-import { Markdown } from '../view';
+import { Markdown } from './component';
 
 describe('Markdown', () => {
 	it('should render all HTML heading elements', () => {
