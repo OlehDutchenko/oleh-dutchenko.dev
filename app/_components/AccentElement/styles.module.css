@@ -28,8 +28,8 @@
 
 .accent::before,
 .accent::after,
-.accentInner::before,
-.accentInner::after {
+.inner::before,
+.inner::after {
 	content: '';
 	position: absolute;
 	border-radius: var(--radius);
@@ -41,38 +41,46 @@
 .accent::after {
 	left: 0;
 	width: 100%;
-	height: calc(var(--radius) * 2);
+	height: var(--radius);
 }
 
 .accent::before {
 	bottom: 100%;
 	margin-bottom: var(--shift);
 	border-bottom: var(--border);
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 }
 
 .accent::after {
 	top: 100%;
 	margin-top: var(--shift);
 	border-top: var(--border);
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
-.accentInner::before,
-.accentInner::after {
+.inner::before,
+.inner::after {
 	top: 0;
 	height: 100%;
-	width: calc(var(--radius) * 2);
+	width: var(--radius);
 }
 
-.accentInner::before {
+.inner::before {
 	right: 100%;
 	margin-right: var(--shift);
 	border-right: var(--border);
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
-.accentInner::after {
+.inner::after {
 	left: 100%;
 	margin-left: var(--shift);
 	border-left: var(--border);
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .accent select,

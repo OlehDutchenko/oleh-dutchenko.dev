@@ -6,7 +6,7 @@ interface Props extends PropsWithChildren {}
 export function AccentElement({ children }: Props): ReactElement {
 	return (
 		<div className={styles.accent}>
-			<div className={styles.accentInner}>{children}</div>
+			<div className={styles.inner}>{children}</div>
 		</div>
 	);
 }
