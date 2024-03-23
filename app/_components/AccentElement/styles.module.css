@@ -90,6 +90,7 @@
 	line-height: inherit;
 	margin: 4px 10px;
 	padding: 0;
+	background: transparent;
 }
 
 .accent select:focus,

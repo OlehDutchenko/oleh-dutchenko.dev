@@ -13,7 +13,7 @@
 ## Слайди презентації
 
 <div data-container-unfold="lg">
-    <div class="aspect-ratio" data-ratio="16/9">
+    <div className="aspect-ratio" data-ratio="16/9">
         <iframe src="/slides/contract-with-devil" title="Слайди презентації" />
     </div>
 </div>
