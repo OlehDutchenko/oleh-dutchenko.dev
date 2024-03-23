@@ -1,5 +1,3 @@
-'use client';
-
 import { RevealSlides } from '@/_components/RevealSlides';
 import { Root } from '@/_components/Root';
 import { ReactElement } from 'react';
