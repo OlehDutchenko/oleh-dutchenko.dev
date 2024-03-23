@@ -19,8 +19,8 @@ export function PageCaption({ mainPage }: Props): ReactElement {
 				)}
 			</div>
 			<div>
-				<a href="mailto:ducthenko.o.cv@gmail.com">
-					ducthenko.o.cv@gmail.com
+				<a href="mailto:dutchenko.o.cv@gmail.com">
+					dutchenko.o.cv@gmail.com
 				</a>
 			</div>
 		</div>
