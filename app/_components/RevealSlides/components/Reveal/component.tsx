@@ -1,14 +1,22 @@
 import { PropsWithChildren, ReactElement, useEffect, useRef } from 'react';
 import RevealJS from 'reveal.js';
+import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 
 export interface Props
 	extends PropsWithChildren,
-		Partial<Pick<RevealJS.Options, 'transition' | 'transitionSpeed'>> {}
+		Partial<
+			Pick<
+				RevealJS.Options,
+				'transition' | 'transitionSpeed' | 'hash' | 'hashOneBasedIndex'
+			>
+		> {}
 
 export function Reveal({
 	children,
 	transition = 'slide',
 	transitionSpeed = 'default',
+	hash,
+	hashOneBasedIndex,
 }: Props): ReactElement {
 	const deckDivRef = useRef<HTMLDivElement>(null);
 	const deckRef = useRef<RevealJS.Api | null>(null);
@@ -21,6 +29,9 @@ export function Reveal({
 			const reveal = new RevealJS(deckDivRef.current, {
 				transition,
 				transitionSpeed,
+				hash,
+				hashOneBasedIndex,
+				plugins: [RevealHighlight],
 			});
 
 			reveal.on('slidechanged', (event) => {
@@ -36,14 +47,9 @@ export function Reveal({
 
 		if (deckRef.current) {
 			// eslint-disable-next-line @typescript-eslint/no-floating-promises
-			deckRef.current
-				.initialize()
-				.then(() => {
-					// good place for event handlers and plugin setups
-				})
-				.finally(() => {
-					console.log('Reveal.js initialized.');
-				});
+			deckRef.current.initialize().finally(() => {
+				console.log('Reveal.js initialized.');
+			});
 		}
 
 		return () => {

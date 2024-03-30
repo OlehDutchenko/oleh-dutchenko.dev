@@ -4,6 +4,7 @@
 	--radius: 6px;
 	--shift: -2px;
 	--border: 1px solid;
+	--size: calc(var(--radius) + 1px);
 }
 
 .accent:has(a[data-active]),
@@ -41,7 +42,7 @@
 .accent::after {
 	left: 0;
 	width: 100%;
-	height: var(--radius);
+	height: var(--size);
 }
 
 .accent::before {
@@ -64,7 +65,7 @@
 .inner::after {
 	top: 0;
 	height: 100%;
-	width: var(--radius);
+	width: var(--size);
 }
 
 .inner::before {

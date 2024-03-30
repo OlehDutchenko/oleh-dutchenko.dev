@@ -10,13 +10,74 @@ body {
 :root {
 	--r-main-font-size: 30px;
 	--r-main-font: var(--font-base);
+	--r-code-font: var(--font-code);
 	--r-heading1-size: 2.77em;
 }
 
-.reveal .slides > section {
-	--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
-	transition-timing-function: var(--easing), var(--easing), var(--easing),
-		var(--easing);
+.reveal .slides {
+	& > section {
+		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
+		transition-timing-function: var(--easing), var(--easing), var(--easing),
+			var(--easing);
+	}
+
+	& pre {
+		width: calc(100% - 10px);
+		margin: 5px;
+		font-size: 0.7em;
+
+		& code {
+			padding: 2rem;
+			background: none;
+			color: dimgray;
+		}
+
+		& .hljs-keyword,
+		& .hljs-selector-tag,
+		& .hljs-tag {
+			color: maroon;
+		}
+
+		& .hljs-deletion,
+		& .hljs-string,
+		& .hljs-built_in,
+		& .hljs-builtin-name {
+			color: #cc5d09;
+		}
+	}
+
+	& ol {
+		list-style: upper-roman;
+	}
+
+	& ul {
+		list-style: square;
+	}
+
+	& ::marker {
+		color: dimgray;
+	}
+
+	& blockquote {
+		font-style: normal;
+		text-align: left;
+		padding: 1.2em;
+		margin: 5px;
+		width: auto;
+		box-shadow: none;
+		background: #fff9;
+		font-size: 0.8em;
+		box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+		& > :first-child {
+			margin-top: 0;
+		}
+
+		& footer {
+			font-size: 0.8em;
+			font-weight: 300;
+		}
+	}
 }
 
 .hero-block {
