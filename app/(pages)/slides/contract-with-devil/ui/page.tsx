@@ -15,7 +15,7 @@ export default function Page(): ReactElement {
 					<div className="hero-block">
 						<h1 className="hero-title">Hero title</h1>
 						<p className="hero-subtitle">
-							Hero subtitle <br />
+							Hero subtitle <br/>
 							with line break
 						</p>
 					</div>
@@ -47,6 +47,17 @@ export default function Page(): ReactElement {
 					</AccentElement>
 				</section>
 				<section>
+					<h3>Blockquote</h3>
+					<AccentElement>
+						<blockquote>
+							<p>Lorem ipsum dolor sit amet, consectetur <br/>
+								adipisicing elit. Adipisci amet animi error ex
+							</p>
+							<footer>Author</footer>
+						</blockquote>
+					</AccentElement>
+				</section>
+				<section>
 					<h3>Ordered list</h3>
 					<ol>
 						<li>First item</li>
@@ -63,18 +74,6 @@ export default function Page(): ReactElement {
 						<li>Second item with long text</li>
 						<li>Third item</li>
 					</ul>
-				</section>
-				<section>
-					<h3>Blockquote</h3>
-					<AccentElement>
-						<blockquote>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur <br />
-								adipisicing elit. Adipisci amet animi error ex
-							</p>
-							<footer>Author</footer>
-						</blockquote>
-					</AccentElement>
 				</section>
 			</RevealSlides>
 		</Root>

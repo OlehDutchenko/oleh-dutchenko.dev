@@ -10,16 +10,17 @@ export default function Page(): ReactElement {
 		<Root>
 			<RevealSlides>
 				<section
+					data-background-color="black"
 					data-background-image="/static/slides-contract-with-devil/fire-wallpaper.gif"
-					data-transition="zoom-out"
+					data-transition="fade"
 					data-transition-speed="slow"
 				>
 					<div className="hero-block">
-						<h1 className="hero-title">«Контракт з Дияволом»</h1>
-						<p className="hero-subtitle">
+						<p className="hero-subtitle fragment">
 							Підводні камені генерованого <br />
 							TypeScript коду зі схеми GraphQL
 						</p>
+						<h1 className="hero-title">«Контракт з Дияволом»</h1>
 					</div>
 				</section>
 				<section
@@ -31,6 +32,7 @@ export default function Page(): ReactElement {
 					<p>Description</p>
 				</section>
 				<section
+					data-background-color="#f0f1eb"
 					data-transition="convex-in"
 					data-transition-speed="slow"
 				>
