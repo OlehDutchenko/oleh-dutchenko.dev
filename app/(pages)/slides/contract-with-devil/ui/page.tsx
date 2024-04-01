@@ -15,7 +15,7 @@ export default function Page(): ReactElement {
 					<div className="hero-block">
 						<h1 className="hero-title">Hero title</h1>
 						<p className="hero-subtitle">
-							Hero subtitle <br/>
+							Hero subtitle <br />
 							with line break
 						</p>
 					</div>
@@ -38,7 +38,7 @@ export default function Page(): ReactElement {
 				</section>
 				<section>
 					<h3>Code block</h3>
-					<AccentElement bold>
+					<AccentElement>
 						<pre>
 							<code data-trim className="language-typescript">
 								{"import { ... } from 'Dictionaries/GQL';"}
@@ -50,7 +50,8 @@ export default function Page(): ReactElement {
 					<h3>Blockquote</h3>
 					<AccentElement>
 						<blockquote>
-							<p>Lorem ipsum dolor sit amet, consectetur <br/>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur <br />
 								adipisicing elit. Adipisci amet animi error ex
 							</p>
 							<footer>Author</footer>

@@ -63,7 +63,7 @@ export function Reveal({
 				console.log(e);
 			}
 		};
-	}, [transition, transitionSpeed]);
+	}, [hash, hashOneBasedIndex, transition, transitionSpeed]);
 
 	return (
 		<div className="reveal" ref={deckDivRef}>
