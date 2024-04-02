@@ -7,6 +7,7 @@ import styles from './styles.module.css';
 interface Props extends PropsWithChildren {
 	locale?: string;
 	gridBody?: boolean;
+	htmlClassName?: string;
 	bodyClassName?: string;
 	noindex?: boolean;
 }
@@ -14,13 +15,15 @@ interface Props extends PropsWithChildren {
 export function Root({
 	locale = DEFAULT_LOCALE,
 	gridBody = false,
+	htmlClassName: propHtmlClassName,
 	bodyClassName: propBodyClassName,
 	children,
 }: Props): ReactElement {
 	const htmlClassName = clsx(
 		fontBase.variable,
 		fontHeadings.variable,
-		fontCode.variable
+		fontCode.variable,
+		propHtmlClassName
 	);
 
 	const bodyClassName = clsx(propBodyClassName, gridBody && styles.gridBody);

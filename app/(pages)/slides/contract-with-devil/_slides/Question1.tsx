@@ -4,8 +4,7 @@ import { CSSProperties, ReactElement } from 'react';
 export function Question1(): ReactElement {
 	return (
 		<section
-			data-background-color="maroon"
-			data-background-image="/static/slides-contract-with-devil/waves-a.gif"
+			data-background-color="black"
 			data-transition="fade-in slide-out"
 			data-transition-speed="slow"
 			className="section-question"
@@ -22,19 +21,18 @@ export function Question1(): ReactElement {
 						}}
 					>
 						<p
-							className="font-weight-light question"
+							className="question"
 							style={{
 								lineHeight: 1.5,
 								padding: '0 7rem',
 							}}
 						>
 							<span>
-								Чи може
-								<b>
-									{' '}
-									<u>технологія</u>{' '}
-								</b>
-								привести до ситуації,{' '}
+								Чи може{' '}
+								<span style={{ borderBottom: '1px solid' }}>
+									технологія
+								</span>{' '}
+								призвести до ситуації,{' '}
 							</span>
 							<span
 								className="fragment _slide-up"
