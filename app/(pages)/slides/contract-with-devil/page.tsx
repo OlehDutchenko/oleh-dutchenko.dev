@@ -1,12 +1,13 @@
 import { RevealSlides } from '@/_components/RevealSlides';
 import { Root } from '@/_components/Root';
-import { Wix_Madefor_Display as FontSlideBase } from 'next/font/google';
+import { Tenor_Sans as FontSlideBase } from 'next/font/google';
 import { ReactElement } from 'react';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/serif.css';
 import { Introduce } from './_slides/Introduce';
 import './overrides.css';
 import { MyStory } from './_slides/MyStory';
+import { MyTalkPromise } from './_slides/MyTalkPromise';
 import { Question1 } from './_slides/Question1';
 import { Title } from './_slides/Title';
 
@@ -23,6 +24,7 @@ export default function Page(): ReactElement {
 			<RevealSlides hash hashOneBasedIndex>
 				<Title />
 				<Question1 />
+				<MyTalkPromise />
 				<MyStory />
 				<Introduce />
 				<section

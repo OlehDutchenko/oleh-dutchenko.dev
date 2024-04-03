@@ -11,10 +11,12 @@ body {
 	--r-main-font-size: 30px;
 	--r-main-font: var(--font-slide-base);
 	--r-code-font: var(--font-code);
-	--r-heading1-size: 2.77em;
+	--r-heading1-size: 2.77em
 }
 
 .reveal .slides {
+	letter-spacing: -0.025em;
+
 	& .divider {
 		border-width: 0;
 		border-bottom: 1px solid;
@@ -26,7 +28,7 @@ body {
 	}
 
 	& .font-weight-light {
-		font-weight: 200;
+		font-weight: 200
 	}
 
 	& .fragment {
@@ -36,34 +38,15 @@ body {
 			will-change: auto;
 		}
 
-		&._slide-up {
-			overflow: hidden;
-			display: block;
-			transition: 0.6s ease-in-out;
-			max-height: 0;
 
-			& > span {
-				transform: translateY(-50%);
-				display: block;
-				transition: 0.5s ease;
-			}
-
-			&.visible {
-				max-height: var(--mh);
-			}
-
-			&.visible span {
-				transform: translateY(0);
-			}
-		}
 	}
 
 	& > section {
 		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
-		/*--easing: cubic-bezier(.52,0,.81,.33);*/
-		/*--easing: cubic-bezier(.9,0,.6,.6);*/
 		transition-timing-function: var(--easing), var(--easing), var(--easing),
-			var(--easing);
+		var(--easing);
+		width: 80%;
+		margin-left: 10%;
 
 		&[data-transition~='zoom-in'].future {
 			transform: scale(0.5);
@@ -155,12 +138,11 @@ body {
 	backdrop-filter: blur(14px);
 	padding: 3rem 1rem;
 	border: 3px double rgba(219, 151, 138, 0.58);
-	text-shadow:
-		0 0 5px black,
-		0 2px black,
-		0 -2px black,
-		2px 0 black,
-		-2px 0 black;
+	text-shadow: 0 0 5px black,
+	0 2px black,
+	0 -2px black,
+	2px 0 black,
+	-2px 0 black;
 
 	& .hero-title {
 		color: #fff;

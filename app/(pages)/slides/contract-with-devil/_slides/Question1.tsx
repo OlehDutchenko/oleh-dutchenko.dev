@@ -1,5 +1,6 @@
 import { AccentElement } from '@/_components/AccentElement';
-import { CSSProperties, ReactElement } from 'react';
+import { ReactElement } from 'react';
+import { RollingFragment } from '../_components/RollingFragment';
 
 export function Question1(): ReactElement {
 	return (
@@ -14,46 +15,26 @@ export function Question1(): ReactElement {
 			</p>
 			<div className="fragment _no-will-change">
 				<AccentElement>
-					<blockquote
-						style={{
-							background: '#0003',
-							backdropFilter: 'blur(14px)',
-						}}
+					<p
+						className="question"
+						style={{ lineHeight: 1.5, padding: '0 7rem' }}
 					>
-						<p
-							className="question"
-							style={{
-								lineHeight: 1.5,
-								padding: '0 7rem',
-							}}
-						>
-							<span>
-								Чи може{' '}
-								<span style={{ borderBottom: '1px solid' }}>
-									технологія
-								</span>{' '}
-								призвести до ситуації,{' '}
-							</span>
-							<span
-								className="fragment _slide-up"
-								style={{ '--mh': '100px' } as CSSProperties}
-							>
-								<span>
-									коли розробка проекту <br />
-									стає настільки складною та нестерпною,
-								</span>
-							</span>
-							<span
-								className="fragment _slide-up"
-								style={{ '--mh': '100px' } as CSSProperties}
-							>
-								<span>
-									що подальша робота здається <br />
-									абсолютно неможливою?
-								</span>
-							</span>
-						</p>
-					</blockquote>
+						<span>
+							Чи може{' '}
+							<span style={{ borderBottom: '1px solid' }}>
+								технологія
+							</span>{' '}
+							призвести до ситуації,{' '}
+						</span>
+						<RollingFragment maxHeight={100}>
+							коли розробка проекту <br />
+							стає настільки складною та нестерпною,
+						</RollingFragment>
+						<RollingFragment maxHeight={100}>
+							що подальша робота здається <br />
+							абсолютно неможливою?
+						</RollingFragment>
+					</p>
 				</AccentElement>
 			</div>
 		</section>
