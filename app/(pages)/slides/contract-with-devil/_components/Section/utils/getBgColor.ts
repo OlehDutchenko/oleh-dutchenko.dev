@@ -1,6 +1,6 @@
 const BG_COLORS = {
 	darker: 'black',
-	dark: 'dimgray',
+	dark: '#1b2c4f',
 	light: '#f0f1eb',
 	lighter: 'white',
 };
