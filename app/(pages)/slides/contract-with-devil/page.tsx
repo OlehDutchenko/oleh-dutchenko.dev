@@ -8,7 +8,7 @@ import { Introduce } from './_slides/Introduce';
 import './overrides.css';
 import { MyStory } from './_slides/MyStory';
 import { MyTalkPromise } from './_slides/MyTalkPromise';
-import { Question1 } from './_slides/Question1';
+import { Question } from './_slides/Question';
 import { Title } from './_slides/Title';
 
 const fontSlideBase = FontSlideBase({
@@ -23,7 +23,7 @@ export default function Page(): ReactElement {
 		<Root htmlClassName={fontSlideBase.variable}>
 			<RevealSlides hash hashOneBasedIndex>
 				<Title />
-				<Question1 />
+				<Question />
 				<MyTalkPromise />
 				<MyStory />
 				<Introduce />

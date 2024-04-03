@@ -1,0 +1,55 @@
+:global(.reveal) .block {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 1rem;
+	text-shadow:
+		0 0 5px black,
+		0 2px black,
+		0 -2px black,
+		2px 0 black,
+		-2px 0 black;
+}
+
+.block > * {
+	position: relative;
+	z-index: 2;
+}
+
+:global(.reveal) .title {
+	color: #fff;
+	font-size: 2.165em;
+	text-shadow: inherit;
+	order: 1;
+	transform: translateY(60%);
+	transition: transform 0.7s ease !important;
+	margin: 0;
+}
+
+.subtitle {
+	color: #fff;
+	font-weight: 200;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	line-height: 1.5;
+	order: 2;
+	transition-duration: 0.7s;
+}
+
+.bg {
+	z-index: 1;
+	background: rgba(39, 0, 0, 0.67);
+	backdrop-filter: blur(14px);
+	border: 3px double rgba(219, 151, 138, 0.58);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: scaleY(0.5) translateY(-30px);
+	transition: transform 0.7s ease;
+}
+
+:global(.visible) ~ .title,
+:global(.visible) ~ .bg {
+	transform: none;
+}

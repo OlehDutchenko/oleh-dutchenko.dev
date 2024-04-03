@@ -1,15 +1,12 @@
 import { AccentElement } from '@/_components/AccentElement';
 import { ReactElement } from 'react';
-import { RollingFragment } from '../_components/RollingFragment';
+import { RollingFragment } from '../../_components/RollingFragment';
+import { Section } from '../../_components/Section';
+import styles from './styles.module.css';
 
-export function Question1(): ReactElement {
+export function Question(): ReactElement {
 	return (
-		<section
-			data-background-color="black"
-			data-transition="fade-in slide-out"
-			data-transition-speed="slow"
-			className="section-question"
-		>
+		<Section bgColor="darker" className={styles.section}>
 			<p className="font-weight-light">
 				<small>Питання до аудиторії:</small>
 			</p>
@@ -17,7 +14,7 @@ export function Question1(): ReactElement {
 				<AccentElement>
 					<p
 						className="question"
-						style={{ lineHeight: 1.5, padding: '0 7rem' }}
+						style={{ lineHeight: 1.5, padding: '0 4rem' }}
 					>
 						<span>
 							Чи може{' '}
@@ -37,6 +34,6 @@ export function Question1(): ReactElement {
 					</p>
 				</AccentElement>
 			</div>
-		</section>
+		</Section>
 	);
 }
