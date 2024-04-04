@@ -7,7 +7,7 @@ export function Introduce(): ReactElement {
 			<p>
 				<small>для початку</small>
 				<br />
-				Дозвольте представитись
+				дозвольте представитись
 			</p>
 		</Section>
 	);

@@ -23,7 +23,7 @@ export function BaldursGate3(): ReactElement {
 							<RollingFragment maxHeight={200}>
 								<p>
 									Це гра з не лінійним сюжетом, в якій гравець
-									постійно приймає різні рішення
+									постійно приймає різні рішення.
 								</p>
 							</RollingFragment>
 						</td>

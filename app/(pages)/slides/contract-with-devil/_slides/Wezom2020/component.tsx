@@ -20,7 +20,7 @@ export function Wezom2020(): ReactElement {
 								width={800}
 								alt=""
 								style={{ background: 'white' }}
-								src="https://graphqleditor.com/images/graphql.png"
+								src="/static/slides-contract-with-devil/graphql.png"
 							/>
 						</td>
 					</tr>

@@ -14,7 +14,7 @@ export function OpenSourceAndGames(): ReactElement {
 					roll="left"
 					className={styles.left}
 				>
-					Замаюсь опенсоурсними <br />
+					Займаюсь опенсоурсними <br />
 					пет-проектами
 				</RollingFragment>
 				<div className={clsx('fragment', styles.slash)}>/</div>

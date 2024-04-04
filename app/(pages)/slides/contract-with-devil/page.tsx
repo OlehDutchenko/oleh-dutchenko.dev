@@ -5,20 +5,23 @@ import { ReactElement } from 'react';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/serif.css';
 import { Section } from './_components/Section';
-import { Bio } from './_slides/Bio';
-import { Bio2 } from './_slides/Bio2';
-import { Introduce } from './_slides/Introduce';
-import './overrides.css';
-import { OpenSourceAndGames } from './_slides/OpenSourceAndGames';
 import { BaldursGate3 } from './_slides/BaldursGate3';
-import { MyStory } from './_slides/MyStory';
-import { MyTalkPromise } from './_slides/MyTalkPromise';
-import { Question } from './_slides/Question';
-import { Title } from './_slides/Title';
+import { Bio } from './_slides/Bio';
 import { GameAnalogy } from './_slides/GameAnalogy';
 import { GameDecision } from './_slides/GameDecision';
-import { Wezom2020 } from './_slides/Wezom2020';
+import { GameNotTheTalkTheme } from './_slides/GameNotTheTalkTheme';
+import { Introduce } from './_slides/Introduce';
+import './overrides.css';
 import { MyRoleInCompany } from './_slides/MyRoleInCompany';
+import { MyStory } from './_slides/MyStory';
+import { MyTalkPromise } from './_slides/MyTalkPromise';
+import { OpenSourceAndGames } from './_slides/OpenSourceAndGames';
+import { Question } from './_slides/Question';
+import { Title } from './_slides/Title';
+import { Wezom2020 } from './_slides/Wezom2020';
+import { WezomCommonArch } from './_slides/WezomCommonArch';
+import { AccToDepsRule } from './_slides/AccToDepsRule';
+import { WezomOutsource } from './_slides/WezomOutsource';
 
 const fontSlideBase = FontSlideBase({
 	subsets: ['latin', 'cyrillic'],
@@ -37,37 +40,18 @@ export default function Page(): ReactElement {
 				<MyStory />
 				<Introduce />
 				<Bio />
-				<Bio2 />
 				<Wezom2020 />
 				<OpenSourceAndGames />
 				<BaldursGate3 />
 				<GameDecision />
+				<GameNotTheTalkTheme />
 				<GameAnalogy />
 				<MyRoleInCompany />
-
+				<WezomOutsource />
+				<WezomCommonArch />
+				<AccToDepsRule />
 				<Section bgColor="light">
-					<table>
-						<tbody>
-							<tr>
-								<td width="68%">
-									<p>
-										в 2020 зробив доповідь для керівництва
-										та топ-менеджменту де “продав” GraphQL,
-										як технологію на яку потрібно зробити
-										ставку в майбутньому!
-									</p>
-								</td>
-								<td>
-									<img
-										width={800}
-										alt=""
-										style={{ background: 'white' }}
-										src="https://graphqleditor.com/images/graphql.png"
-									/>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<p>Work in progress...</p>
 				</Section>
 			</RevealSlides>
 		</Root>

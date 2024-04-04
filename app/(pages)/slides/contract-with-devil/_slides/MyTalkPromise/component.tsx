@@ -14,7 +14,7 @@ export function MyTalkPromise(): ReactElement {
 					roll="left"
 					className={styles.left}
 				>
-					я дам свою відповісти <br />
+					я дам свою відповідь <br />
 					на поставленне запитання
 				</RollingFragment>
 				<div className={clsx('fragment', styles.slash)}>/</div>

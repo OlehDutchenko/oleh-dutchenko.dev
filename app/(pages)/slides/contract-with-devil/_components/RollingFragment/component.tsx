@@ -8,7 +8,7 @@ import {
 import styles from './styles.module.css';
 
 interface Props extends PropsWithChildren {
-	component?: 'span' | 'div' | 'p';
+	component?: 'span' | 'div' | 'p' | 'footer';
 	roll?: 'up' | 'down' | 'left' | 'right';
 	maxHeight?: number;
 	className?: string;
