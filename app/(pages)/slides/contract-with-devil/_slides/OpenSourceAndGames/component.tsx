@@ -15,7 +15,13 @@ export function OpenSourceAndGames(): ReactElement {
 					className={styles.left}
 				>
 					Займаюсь опенсоурсними <br />
-					пет-проектами
+					пет-проектами: <br />
+					<small>
+						<br />
+						<code>sort-css-media-queries</code>
+						{' | '}
+						<code>node-w3c-validator</code>
+					</small>
 				</RollingFragment>
 				<div className={clsx('fragment', styles.slash)}>/</div>
 				<RollingFragment
@@ -23,7 +29,8 @@ export function OpenSourceAndGames(): ReactElement {
 					roll="right"
 					className={styles.right}
 				>
-					та граю <br />у відеоігри
+					та <br />
+					граю <br />у відеоігри
 				</RollingFragment>
 			</div>
 		</Section>
