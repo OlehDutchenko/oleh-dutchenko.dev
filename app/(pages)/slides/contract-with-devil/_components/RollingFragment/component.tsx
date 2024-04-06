@@ -12,12 +12,14 @@ interface Props extends PropsWithChildren {
 	roll?: 'up' | 'down' | 'left' | 'right';
 	maxHeight?: number;
 	className?: string;
+	dataSectionClassName?: string;
 }
 
 export function RollingFragment({
 	maxHeight = 50,
 	component = 'span',
 	roll = 'up',
+	dataSectionClassName,
 	className: propClassName,
 	children,
 }: Props): ReactElement {
@@ -26,7 +28,12 @@ export function RollingFragment({
 
 	return createElement(
 		component,
-		{ className, style, 'data-roll': roll },
+		{
+			className,
+			style,
+			'data-roll': roll,
+			'data-section-class-name': dataSectionClassName,
+		},
 		<span className={styles.child}>{children}</span>
 	);
 }

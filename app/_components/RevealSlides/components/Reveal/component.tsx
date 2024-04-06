@@ -34,13 +34,8 @@ export function Reveal({
 				plugins: [RevealHighlight],
 			});
 
-			reveal.on('slidechanged', (event) => {
-				slideChange(event, true);
-			});
-
-			reveal.on('slidetransitionend', (event) => {
-				slideChange(event, false);
-			});
+			reveal.on('fragmentshown', fragmentShown);
+			reveal.on('fragmenthidden', fragmentHidden);
 
 			deckRef.current = reveal;
 		}
@@ -72,25 +67,33 @@ export function Reveal({
 	);
 }
 
-function slideChange(event: Record<string, any>, changing: boolean): void {
-	if (isRevealEvent(event)) {
-		set(event.currentSlide);
-		set(event.previousSlide);
-	}
-
-	function set(el: HTMLElement): void {
-		el.setAttribute('data-slide-changing', String(changing));
+function fragmentShown(event: FragmentEvent): void {
+	const { section, className } = getSectionMeta(event.fragment);
+	if (section && className) {
+		section.classList.add(className);
 	}
 }
 
-function isRevealEvent(event: Record<string, any>): event is RevealEvent {
-	return (
-		event.currentSlide instanceof HTMLElement &&
-		event.previousSlide instanceof HTMLElement
-	);
+function fragmentHidden(event: FragmentEvent): void {
+	const { section, className } = getSectionMeta(event.fragment);
+	if (section && className) {
+		section.classList.remove(className);
+	}
 }
 
-interface RevealEvent extends Event {
-	currentSlide: HTMLElement;
-	previousSlide: HTMLElement;
+function getSectionMeta(fragment?: HTMLElement): {
+	section: HTMLElement | null;
+	className: string | undefined;
+} {
+	let section = null;
+	let className;
+	if (fragment) {
+		section = fragment.closest('section');
+		className = fragment.dataset.sectionClassName;
+	}
+	return { section, className };
+}
+
+interface FragmentEvent extends Event {
+	fragment?: HTMLElement;
 }
