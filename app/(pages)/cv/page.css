@@ -9,7 +9,7 @@ body {
 	--text-color: #111;
 	--border: #aaa;
 	--link: #00f;
-	--caption: #777;
+	--caption: #666;
 	position: relative;
 	margin: 0.5cm auto;
 	min-height: calc(100% - 1cm - 4px);
@@ -27,6 +27,23 @@ main {
 p,
 ul {
 	margin: 0.5em 0;
+	font-size: 14px;
+}
+
+table {
+	width: 100%;
+	font-size: 14px;
+
+	& td {
+		padding: 0;
+		vertical-align: top;
+	}
+}
+
+.cv-table--double {
+	& td:nth-child(2) {
+		text-align: right;
+	}
 }
 
 a {
@@ -41,9 +58,15 @@ a {
 
 .cv-box {
 	--box-x: 0.7cm;
-	--box-y: 0.7cm;
+	--box-y: 0.6cm;
 	border: 1px solid var(--border);
 	padding: var(--box-y) var(--box-x);
+
+	@media not print {
+		&:last-child {
+			margin-bottom: 3rem;
+		}
+	}
 }
 
 .cv-box + .cv-box {
@@ -71,29 +94,20 @@ a {
 }
 
 .cv-heading {
-	font-size: 1.5cm;
+	font-size: 1.25cm;
 	line-height: 1.1em;
 	margin: 0;
 }
 
-.cv-page-caption {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 0.5em;
-}
-
 .cv-section-heading {
-	font-size: 0.25cm;
-	text-transform: uppercase;
-	font-weight: 400;
-	width: 15%;
+	font-size: 0.4cm;
+	text-transform: capitalize;
+	font-weight: 700;
 	line-height: 1.75em;
-	margin: 0.1cm 0 0 0;
-	float: left;
+	margin: -0.1cm 0 0.1cm 0;
 }
 
-.cv-section-content {
-	margin-left: 20%;
+.cv-section-content p + p {
 }
 
 .cv-section-content > *:first-child {
@@ -110,14 +124,6 @@ a {
 	margin: 0;
 }
 
-.cv-skill-subtitle {
-	font-weight: 700;
-}
-
-.cv-ul + .cv-skill-subtitle {
-	margin-top: 1em;
-}
-
 .cv-ul {
 	column-count: 3;
 	padding: 0 0 0 0.35cm;
@@ -130,7 +136,6 @@ a {
 
 .cv-ul > li {
 	margin-bottom: 0.2em;
-	font-size: smaller;
 }
 
 .cv-caption {
@@ -154,6 +159,7 @@ a {
 
 .cv-block-subtitle {
 	color: var(--caption);
+	display: block;
 }
 
 .cv-page-footer {
@@ -168,7 +174,7 @@ a {
 
 .cv-pagination {
 	margin: 0 calc(var(--box-x) * -1) calc(var(--box-y) * -1) 0;
-	font-size: 0.35cm;
+	font-size: 0.25cm;
 	font-family: var(--font-code);
 	padding: 0.05cm 0.3cm;
 	border: 1px solid var(--border);
@@ -177,12 +183,12 @@ a {
 }
 
 .cv-page-break {
-	& + .cv-box {
-		border-top-width: 0px;
-	}
-
 	@media not print {
 		display: none;
+
+		& + .cv-box {
+			border-top-width: 0px;
+		}
 	}
 
 	@media print {

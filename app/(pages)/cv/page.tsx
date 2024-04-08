@@ -8,7 +8,6 @@ import { Header } from './_widgets/Header';
 import { Languages } from './_widgets/Languages';
 import { OpenSourceProjects } from './_widgets/OpenSourceProjects';
 import { Skills } from './_widgets/Skills';
-import { SocialLinks } from './_widgets/SocialLinks';
 
 export default function CVPage(): ReactElement {
 	return (
@@ -19,9 +18,8 @@ export default function CVPage(): ReactElement {
 				<CommercialProjects />
 				<PageBreak />
 				<OpenSourceProjects />
-				<Education />
 				<Languages />
-				<SocialLinks />
+				<Education />
 			</main>
 		</Root>
 	);

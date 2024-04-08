@@ -22,7 +22,7 @@ export function WezomCommonArch(): ReactElement {
 				</p>
 				<div style={{ textAlign: 'left' }}>
 					<RollingFragment component="div" maxHeight={100}>
-						<b>1. Визначані бізнес правила</b>, які є основними
+						<b>1. Визначені бізнес правила</b>, які є основними
 						Сутностями системи. Ними керує бекенд.
 					</RollingFragment>
 					<br />
