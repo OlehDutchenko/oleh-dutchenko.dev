@@ -10,12 +10,11 @@ export function Header(): ReactElement {
 					<h1 className="cv-heading">Oleh Dutchenko</h1>
 				</div>
 				<div className="cv-header__right">
-					<p>
+					<p style={{ lineHeight: 1.6 }}>
 						<a href="mailto:dutchenko.o.cv@gmail.com">
 							dutchenko.o.cv@gmail.com
 						</a>{' '}
 						<br />
-						Social links:{' '}
 						<ExternalLink href="https://github.com/OlehDutchenko">
 							GitHub
 						</ExternalLink>{' '}

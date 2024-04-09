@@ -6,9 +6,10 @@ interface Props extends PropsWithChildren {
 
 export function Section({ title, children }: Props): ReactElement {
 	return (
-		<section className="cv-box">
-			<h2 className="cv-section-heading">{title}</h2>
-			<div className="cv-section-content">{children}</div>
+		<section>
+			<h2>{title}</h2>
+			<hr />
+			<div>{children}</div>
 		</section>
 	);
 }
