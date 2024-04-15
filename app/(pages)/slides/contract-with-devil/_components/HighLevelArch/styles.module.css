@@ -1,0 +1,315 @@
+.root {
+	--transation: 1s ease-in-out;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	padding-top: var(--size);
+	width: var(--size);
+	transition: var(--transation);
+	text-align: left;
+
+	--c1-radius: 100%;
+	--c1-x: 50%;
+	--c1-y: 50%;
+	--c1-color: transparent;
+
+	--c2-radius: 100%;
+	--c2-x: 50%;
+	--c2-y: 50%;
+	--c2-color: transparent;
+
+	--c3-radius: 100%;
+	--c3-x: 50%;
+	--c3-y: 50%;
+	--c3-color: transparent;
+
+	--t1-font: 1.2;
+	--t1-color: currentColor;
+	--t1-x: 50%;
+	--t1-y: 50%;
+
+	--t2-font: 1.2;
+	--t2-color: currentColor;
+	--t2-x: 50%;
+	--t2-y: 50%;
+
+	--t3-font: 1.2;
+	--t3-color: currentColor;
+	--t3-x: 50%;
+	--t3-y: 50%;
+}
+
+.circles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: var(--transation);
+}
+
+.circle {
+	transition: var(--transation);
+	transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	width: var(--radius);
+	height: var(--radius);
+	border-radius: 100%;
+}
+
+.circle::before {
+	transition: var(--transation);
+	content: '';
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	width: calc(100% - 2px);
+	border-radius: calc(100% - 2px);
+	height: 100%;
+	box-shadow: 0 0 0 1px var(--color), 1px 0 0 1px var(--color);
+}
+
+.gradient {
+	transition: var(--transation);
+	position: absolute;
+	background: linear-gradient(90deg, rgba(240, 241, 236, 0.86) 0%, transparent 100%);
+	top: var(--c3-y);
+	left: var(--c3-x);
+	width: var(--c3-radius);
+	height: var(--c3-radius);
+	transform: translateX(-51%) translateY(-50%);
+}
+
+.text {
+	transition: var(--transation);
+	font-size: calc(var(--font) * 1rem);
+	transform: translateX(-50%) translateY(-50%);
+	position: absolute;
+	top: var(--y);
+	left: var(--x);
+	height: 2.7em;
+	width: 9em;
+	color: var(--color);
+	z-index: 2;
+}
+
+.greenArrows {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 61%;
+	left: 31%;
+	width: 46%;
+	color: green;
+	font-size: 2.2em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.greenArrows span {
+	position: relative;
+	background: #f0f1ec;
+	height: 12px;
+	line-height: 17px;
+}
+
+.greenArrows span + span {
+	transform: translateY(15px);
+}
+
+.redArrows {
+	transition: .5s ease;
+	position: absolute;
+	top: 35.5%;
+	left: 35.25%;
+	width: 43%;
+	color: red;
+	font-size: 2.3em;
+	display: flex;
+	justify-content: space-between;
+}
+
+.redArrows span {
+	position: relative;
+	background: #f0f1ec;
+	height: 12px;
+	line-height: 13px;
+}
+
+.redArrows span + span {
+	transform: translateY(-15px);
+	transition-delay: .2s;
+}
+
+.circle_1 {
+	--radius: var(--c1-radius);
+	--x: var(--c1-x);
+	--y: var(--c1-y);
+	--color: var(--c1-color);
+}
+
+.circle_2 {
+	--radius: var(--c2-radius);
+	--x: var(--c2-x);
+	--y: var(--c2-y);
+	--color: var(--c2-color);
+}
+
+.circle_3 {
+	--radius: var(--c3-radius);
+	--x: var(--c3-x);
+	--y: var(--c3-y);
+	--color: var(--c3-color);
+}
+
+.text_1 {
+	--font: var(--t1-font);
+	--color: var(--t1-color);
+	--x: var(--t1-x);
+	--y: var(--t1-y);
+}
+
+.text_2 {
+	--font: var(--t2-font);
+	--color: var(--t2-color);
+	--x: var(--t2-x);
+	--y: var(--t2-y);
+}
+
+.text_2 .gqlLogo {
+	opacity: 0;
+	transition: var(--transation);
+	transform: scale(0.6);
+	width: 5em;
+	position: absolute;
+	bottom: 140%;
+	left: 0;
+	max-width: initial;
+	max-height: initial;
+	margin: 0;
+}
+
+.text_3 {
+	--font: var(--t3-font);
+	--color: var(--t3-color);
+	--x: var(--t3-x);
+	--y: var(--t3-y);
+}
+
+.intro .root {
+	--transation: 1s ease-in-out;
+	--size: 55%;
+
+	--c1-color: transparent;
+	--t1-color: transparent;
+	--t1-x: 2%;
+	--t1-y: 50%;
+
+	--c2-color: transparent;
+	--t2-color: transparent;
+	--t2-x: 52%;
+	--t2-y: 50%;
+
+	--c3-color: transparent;
+	--t3-color: transparent;
+	--t3-x: 100%;
+	--t3-y: 50%;
+}
+
+.showT1 .root {
+	--transation: 0.4s ease-in-out;
+	--t1-color: currentColor;
+}
+
+.showT2 .root {
+	--transation: 0.4s ease-in-out;
+	--t2-color: currentColor;
+}
+
+.showT3 .root {
+	--transation: 0.4s ease-in-out;
+	--t3-color: currentColor;
+}
+
+.initialStructure .root {
+	--transation: 1s ease-in-out;
+	--size: 60%;
+	--c1-color: currentColor;
+	--c1-radius: 43%;
+	--c1-x: 24%;
+	--c1-y: 50%;
+	--t1-font: 1.35;
+	--t1-x: 27%;
+	--t1-y: 50%;
+	--c2-color: currentColor;
+	--c2-radius: 94%;
+	--c2-x: 28%;
+	--c2-y: 50%;
+	--t2-font: 1.1;
+	--t2-x: 65%;
+	--t2-y: 48.5%;
+	--c3-color: currentColor;
+	--c3-radius: 140%;
+	--c3-x: 30%;
+	--c3-y: 50%;
+	--t3-font: 0.8;
+	--t3-x: 91%;
+	--t3-y: 49%;
+}
+
+.withOverText .root {
+	margin-top: -6%;
+}
+
+.intro:not(.showGreenArrows) .greenArrows,
+.initialStructure:not(.showGreenArrows) .greenArrows {
+	transform: translateX(1rem);
+	opacity: 0;
+}
+
+.intro:not(.showRedArrows) .redArrows,
+.initialStructure:not(.showRedArrows) .redArrows {
+	transform: translateX(-1rem);
+	opacity: 0;
+}
+
+.showGreenArrows .greenArrows {
+	opacity: 1;
+	transform: none;
+}
+
+.showRedArrows .redArrows {
+	opacity: 1;
+	transform: none;
+}
+
+.outro .redArrows,
+.outro .greenArrows,
+.outro .overText {
+	opacity: 0 !important;
+}
+
+.outro .gqlLogo {
+	opacity: 1;
+	transform: none;
+}
+
+.outro .root {
+	margin-top: 0 !important;
+	--size: 170%;
+	--c1-x: 17%;
+	--c2-x: 16%;
+	--c3-x: 17%;
+	--t1-x: 26%;
+	--t2-x: 52%;
+	--t3-x: 77%;
+	--t1-font: 1.3;
+	--t2-font: 1.3;
+	--t3-font: 1.3;
+	--t1-y: 50%;
+	--t2-y: 50%;
+	--t3-y: 50%;
+}

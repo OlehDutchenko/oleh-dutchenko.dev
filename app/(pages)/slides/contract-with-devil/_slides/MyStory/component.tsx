@@ -3,7 +3,7 @@ import { Section } from '../../_components/Section';
 
 export function MyStory(): ReactElement {
 	return (
-		<Section bgColor="darker">
+		<Section bgColor="darker" transition="zoom-in zoom-out">
 			<h3>Моя історія</h3>
 			<hr style={{ width: '10%' }} />
 			<p>

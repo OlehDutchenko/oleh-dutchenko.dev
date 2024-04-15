@@ -33,9 +33,8 @@ export function Header(): ReactElement {
 				I have 10 years of experience in outsourced projects. Have been
 				working on different domains, <br />
 				such as Real Estate, Energy carriers, News portal and VoIP
-				telephony, by making the E-Commerce, CMS, HRM, CRM and ERP
-				systems. Passionate about developing with GraphQL, TypeScript
-				and React.
+				telephony, by making the E-Commerce, CMS, HRM and CRM systems.
+				Passionate about developing with GraphQL, TypeScript and React.
 			</p>
 		</header>
 	);

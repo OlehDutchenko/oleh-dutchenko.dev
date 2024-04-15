@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { PropsWithChildren, ReactElement, useEffect, useRef } from 'react';
 import RevealJS from 'reveal.js';
 import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
@@ -10,6 +11,8 @@ export interface Props
 				'transition' | 'transitionSpeed' | 'hash' | 'hashOneBasedIndex'
 			>
 		> {}
+
+const RECORD_MODE = process.env.NEXT_PUBLIC_SLIDES_RECORD_MODE === 'true';
 
 export function Reveal({
 	children,
@@ -60,8 +63,10 @@ export function Reveal({
 		};
 	}, [hash, hashOneBasedIndex, transition, transitionSpeed]);
 
+	const className = clsx('reveal', RECORD_MODE && 'reveal-video-placeholder');
+
 	return (
-		<div className="reveal" ref={deckDivRef}>
+		<div className={className} ref={deckDivRef}>
 			<div className="slides">{children}</div>
 		</div>
 	);

@@ -7,6 +7,7 @@ import 'reveal.js/dist/theme/serif.css';
 import { Section } from './_components/Section';
 import { BaldursGate3 } from './_slides/BaldursGate3';
 import { Bio } from './_slides/Bio';
+import { DepsRuleIntro } from './_slides/DepsRuleIntro';
 import { GameAnalogy } from './_slides/GameAnalogy';
 import { GameDecision } from './_slides/GameDecision';
 import { GameNotTheTalkTheme } from './_slides/GameNotTheTalkTheme';
@@ -20,7 +21,6 @@ import { Question } from './_slides/Question';
 import { Title } from './_slides/Title';
 import { Wezom2020 } from './_slides/Wezom2020';
 import { WezomCommonArch } from './_slides/WezomCommonArch';
-import { AccToDepsRule } from './_slides/AccToDepsRule';
 import { WezomOutsource } from './_slides/WezomOutsource';
 
 const fontSlideBase = FontSlideBase({
@@ -37,7 +37,6 @@ export default function Page(): ReactElement {
 				<Title />
 				<Question />
 				<MyTalkPromise />
-				<MyStory />
 				<Introduce />
 				<Bio />
 				<Wezom2020 />
@@ -49,7 +48,8 @@ export default function Page(): ReactElement {
 				<MyRoleInCompany />
 				<WezomOutsource />
 				<WezomCommonArch />
-				<AccToDepsRule />
+				<DepsRuleIntro />
+				<MyStory />
 				<Section bgColor="light">
 					<p>Work in progress...</p>
 				</Section>

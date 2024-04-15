@@ -130,3 +130,7 @@ body {
 		}
 	}
 }
+
+.reveal-video-placeholder {
+	max-width: 70%;
+}
