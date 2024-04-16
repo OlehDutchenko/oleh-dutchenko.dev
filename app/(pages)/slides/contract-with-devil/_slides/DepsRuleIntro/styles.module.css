@@ -3,10 +3,6 @@
 	height: 540px;
 }
 
-:global(.slides) .sectionAttention {
-	top: 200px !important;
-}
-
 .introParagraph {
 	margin: 0;
 	top: 160px;

@@ -7,7 +7,7 @@ import {
 } from 'react';
 
 interface Props extends PropsWithChildren, HTMLAttributes<any> {
-	component?: 'span' | 'div' | 'p' | 'footer';
+	component?: 'span' | 'div' | 'p' | 'footer' | 'h2' | 'h3';
 	dataSectionClassName?: string;
 	fx?: 'fade-out' | 'fade-up' | 'fade-down' | 'fade-in-then-out';
 	index?: number;
