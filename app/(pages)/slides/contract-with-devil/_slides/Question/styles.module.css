@@ -1,3 +1,7 @@
 :global(.slides) .section {
-	top: 150px !important
+	top: 150px !important;
+}
+
+:global(.reveal .slides) .section :global(.fragment) {
+	transition-duration: 1s;
 }

@@ -1,4 +1,3 @@
-import { RollingFragment } from '@/(pages)/slides/contract-with-devil/_components/RollingFragment';
 import { AccentElement } from '@/_components/AccentElement';
 import clsx from 'clsx';
 import { ReactElement } from 'react';
@@ -88,42 +87,6 @@ export function DepsRuleIntro(): ReactElement {
 					</AccentElement>
 				</Fragment>
 				<Fragment dataSectionClassName={_.outro} />
-			</Section>
-			<Section bgColor="highlight" transition="zoom-in zoom-out">
-				<h3>GraphQL</h3>
-				<hr style={{ width: '10%' }} />
-				<p>
-					Вписується дуже добре в цю систему. <br />
-					За рахунок його операцій, ми реалізуємо необхідні нам
-					Варіанти використання. І вони абстраговані <br />
-					від UI, як і вимагає “Правило залежностей“.
-				</p>
-			</Section>
-			<Section bgColor="accent" transition="zoom-in zoom-out">
-				<h3>
-					Проте у &quot;правила залежностей&quot; <br />є і друга
-					сторона медалі
-				</h3>
-			</Section>
-			<Section
-				bgColor="accent"
-				className={styles.sectionAttention}
-				transition="zoom-in zoom-out"
-			>
-				<AccentElement>
-					<blockquote style={{ background: 'none' }}>
-						<p>
-							Кожне зовнішнє “коло” <br />
-							залежить від його внутрішнього “сусіда”
-						</p>
-					</blockquote>
-				</AccentElement>
-				<RollingFragment component="p">
-					<small>Саме на цю проблему хочу звернути вашу увагу!</small>
-				</RollingFragment>
-				<RollingFragment component="p">
-					<b>Залежність UI від АПІ</b>
-				</RollingFragment>
 			</Section>
 		</>
 	);

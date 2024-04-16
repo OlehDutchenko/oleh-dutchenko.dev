@@ -9,7 +9,7 @@ import {
 interface Props extends PropsWithChildren, HTMLAttributes<any> {
 	component?: 'span' | 'div' | 'p' | 'footer';
 	dataSectionClassName?: string;
-	fx?: 'fade-out' | 'fade-down' | 'fade-in-then-out';
+	fx?: 'fade-out' | 'fade-up' | 'fade-down' | 'fade-in-then-out';
 	index?: number;
 }
 
