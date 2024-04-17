@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { ImageWrapper } from '../../_components/ImageWrapper';
 import { Section } from '../../_components/Section';
 
 export function WezomOutsource(): ReactElement {
@@ -15,11 +16,13 @@ export function WezomOutsource(): ReactElement {
 							<p> Різних розмірів та предметних областей.</p>
 						</td>
 						<td>
-							<img
-								width={800}
-								alt=""
-								src="/static/slides-contract-with-devil/wezom-logo-white.png"
-							/>
+							<ImageWrapper>
+								<img
+									width={800}
+									alt=""
+									src="/static/slides-contract-with-devil/wezom-logo-white.png"
+								/>
+							</ImageWrapper>
 						</td>
 					</tr>
 				</tbody>

@@ -17,6 +17,10 @@ body {
 .reveal .slides {
 	letter-spacing: -0.025em;
 
+	& h3 {
+		font-family: var(--font-headings);
+	}
+
 	& hr {
 		border-width: 0;
 		border-top: 1px solid;

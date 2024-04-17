@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { ImageWrapper } from '../../_components/ImageWrapper';
 import { Section } from '../../_components/Section';
 
 export function Wezom2020(): ReactElement {
@@ -16,12 +17,14 @@ export function Wezom2020(): ReactElement {
 							</p>
 						</td>
 						<td>
-							<img
-								width={800}
-								alt=""
-								style={{ background: 'white' }}
-								src="/static/slides-contract-with-devil/graphql.png"
-							/>
+							<ImageWrapper>
+								<img
+									width={800}
+									alt=""
+									style={{ background: 'white' }}
+									src="/static/slides-contract-with-devil/graphql.png"
+								/>
+							</ImageWrapper>
 						</td>
 					</tr>
 				</tbody>

@@ -31,10 +31,8 @@ export function DepsRuleIntro(): ReactElement {
 					component="div"
 					className={clsx(styles.introParagraph)}
 				>
-					<small>
-						На високому рівні системи у нас типові архітектурні кола
-						з власними межами:
-					</small>
+					На високому рівні системи - <br />
+					типові архітектурні кола з власними межами:
 				</Fragment>
 				<Fragment
 					component="div"
@@ -87,6 +85,20 @@ export function DepsRuleIntro(): ReactElement {
 					</AccentElement>
 				</Fragment>
 				<Fragment dataSectionClassName={_.outro} />
+				<Fragment component="div" className={clsx(styles.over2)}>
+					<AccentElement>
+						<blockquote>
+							<div className={styles.block}>
+								<div>
+									<footer>
+										<i>GraphQL це про </i>
+									</footer>
+									<div>Дані та відносини між ними</div>
+								</div>
+							</div>
+						</blockquote>
+					</AccentElement>
+				</Fragment>
 			</Section>
 		</>
 	);

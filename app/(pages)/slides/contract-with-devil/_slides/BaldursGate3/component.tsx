@@ -1,5 +1,6 @@
-import { RollingFragment } from '@/(pages)/slides/contract-with-devil/_components/RollingFragment';
 import { ReactElement } from 'react';
+import { ImageWrapper } from '../../_components/ImageWrapper';
+import { RollingFragment } from '../../_components/RollingFragment';
 import { Section } from '../../_components/Section';
 
 export function BaldursGate3(): ReactElement {
@@ -9,11 +10,13 @@ export function BaldursGate3(): ReactElement {
 				<tbody>
 					<tr>
 						<td>
-							<img
-								width={800}
-								src="https://upload.wikimedia.org/wikipedia/ru/d/dc/Baldur%27s_Gate_III_Logo.png"
-								alt=""
-							/>
+							<ImageWrapper>
+								<img
+									width={800}
+									src="https://upload.wikimedia.org/wikipedia/ru/d/dc/Baldur%27s_Gate_III_Logo.png"
+									alt=""
+								/>
+							</ImageWrapper>
 						</td>
 						<td width="50%">
 							<p>

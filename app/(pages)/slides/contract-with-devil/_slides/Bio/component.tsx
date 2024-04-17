@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import { ImageWrapper } from '../../_components/ImageWrapper';
 import { Section } from '../../_components/Section';
 
 export function Bio(): ReactElement {
@@ -9,11 +10,13 @@ export function Bio(): ReactElement {
 					<tbody>
 						<tr>
 							<td>
-								<img
-									width={800}
-									alt=""
-									src="/static/slides-contract-with-devil/my-avatar.png"
-								/>
+								<ImageWrapper>
+									<img
+										width={800}
+										alt=""
+										src="/static/slides-contract-with-devil/my-avatar.png"
+									/>
+								</ImageWrapper>
 							</td>
 							<td width="68%">
 								<h3>Олег Дутченко</h3>
@@ -32,11 +35,13 @@ export function Bio(): ReactElement {
 					<tbody>
 						<tr>
 							<td>
-								<img
-									width={800}
-									alt=""
-									src="/static/slides-contract-with-devil/wezom-logo-white.png"
-								/>
+								<ImageWrapper>
+									<img
+										width={800}
+										alt=""
+										src="/static/slides-contract-with-devil/wezom-logo-white.png"
+									/>
+								</ImageWrapper>
 							</td>
 							<td width="68%">
 								<p>

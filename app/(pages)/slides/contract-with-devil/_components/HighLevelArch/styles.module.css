@@ -69,13 +69,19 @@
 	width: calc(100% - 2px);
 	border-radius: calc(100% - 2px);
 	height: 100%;
-	box-shadow: 0 0 0 1px var(--color), 1px 0 0 1px var(--color);
+	box-shadow:
+		0 0 0 1px var(--color),
+		1px 0 0 1px var(--color);
 }
 
 .gradient {
 	transition: var(--transation);
 	position: absolute;
-	background: linear-gradient(90deg, rgba(240, 241, 236, 0.86) 0%, transparent 100%);
+	background: linear-gradient(
+		90deg,
+		rgba(240, 241, 236, 0.86) 0%,
+		transparent 100%
+	);
 	top: var(--c3-y);
 	left: var(--c3-x);
 	width: var(--c3-radius);
@@ -97,7 +103,7 @@
 }
 
 .greenArrows {
-	transition: .5s ease;
+	transition: 0.5s ease;
 	opacity: 0;
 	position: absolute;
 	top: 61%;
@@ -121,7 +127,7 @@
 }
 
 .redArrows {
-	transition: .5s ease;
+	transition: 0.5s ease;
 	position: absolute;
 	top: 35.5%;
 	left: 35.25%;
@@ -141,7 +147,7 @@
 
 .redArrows span + span {
 	transform: translateY(-15px);
-	transition-delay: .2s;
+	transition-delay: 0.2s;
 }
 
 .circle_1 {
@@ -202,21 +208,21 @@
 .intro .root {
 	--transation: 1s ease-in-out;
 	--size: 55%;
-
 	--c1-color: transparent;
 	--t1-color: transparent;
-	--t1-x: 2%;
-	--t1-y: 50%;
-
+	--t1-font: 1.6;
+	--t1-x: -5%;
+	--t1-y: 58%;
 	--c2-color: transparent;
 	--t2-color: transparent;
-	--t2-x: 52%;
-	--t2-y: 50%;
-
+	--t2-font: 1.6;
+	--t2-x: 64%;
+	--t2-y: 58%;
 	--c3-color: transparent;
 	--t3-color: transparent;
-	--t3-x: 100%;
-	--t3-y: 50%;
+	--t3-font: 1.6;
+	--t3-x: 131%;
+	--t3-y: 58%;
 }
 
 .showT1 .root {
