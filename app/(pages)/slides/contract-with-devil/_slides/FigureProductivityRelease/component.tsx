@@ -25,7 +25,11 @@ export function FigureProductivityRelease(): ReactElement {
 				</RollingFragment>
 			</Section>
 			<Section bgColor="light">
-				<p>Давайте по порядку</p>
+				<p>
+					Давайте по черзі,
+					<br />
+					як я то зробив...
+				</p>
 			</Section>
 		</>
 	);

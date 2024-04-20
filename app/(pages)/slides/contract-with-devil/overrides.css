@@ -25,6 +25,12 @@ body {
 		height: var(--height, 690px);
 	}
 
+	& a {
+		--r-link-color: var(--link-color);
+		transition: none;
+		text-decoration: underline;
+	}
+
 	& small small {
 		font-size: small;
 	}
@@ -54,7 +60,7 @@ body {
 	}
 
 	& .fragment {
-		transition: 0.6s ease-in-out;
+		transition: 0.5s ease-in-out;
 
 		&._no-will-change {
 			will-change: auto;
