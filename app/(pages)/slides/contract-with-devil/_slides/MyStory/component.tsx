@@ -1,6 +1,5 @@
-import { Fragment } from '@/(pages)/slides/contract-with-devil/_components/Fragment';
-import styles from '@/(pages)/slides/contract-with-devil/_slides/DepsRuleIntro/styles.module.css';
 import { ReactElement } from 'react';
+import { Fragment } from '../../_components/Fragment';
 import { Section } from '../../_components/Section';
 
 export function MyStory(): ReactElement {
@@ -16,11 +15,7 @@ export function MyStory(): ReactElement {
 					внутрішнього
 				</Fragment>
 			</Section>
-			<Section
-				bgColor="accent"
-				className={styles.sectionAttention}
-				transition="zoom-in slide-out"
-			>
+			<Section bgColor="accent" transition="zoom-in slide-out">
 				<p>Фокус моєї доповіді:</p>
 				<h3>Залежність Клієнта від АПІ</h3>
 				<p>&nbsp;</p>

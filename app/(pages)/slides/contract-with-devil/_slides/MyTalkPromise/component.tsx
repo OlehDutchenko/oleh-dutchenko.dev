@@ -1,32 +1,30 @@
-import { RollingFragment } from '@/(pages)/slides/contract-with-devil/_components/RollingFragment';
-import clsx from 'clsx';
 import { ReactElement } from 'react';
 import { Section } from '../../_components/Section';
-import styles from './styles.module.css';
+import { SlashBlock } from '../../_components/SlashBlock';
 
 export function MyTalkPromise(): ReactElement {
 	return (
 		<Section bgColor="darker">
 			<h3>Наприкінці розповіді</h3>
-			<div className={styles.block}>
-				<RollingFragment
-					component="p"
-					roll="left"
-					className={styles.left}
-				>
-					я дам свою відповідь <br />
-					на поставленне запитання
-				</RollingFragment>
-				<div className={clsx('fragment', styles.slash)}>/</div>
-				<RollingFragment
-					component="p"
-					roll="right"
-					className={styles.right}
-				>
-					а ви зробите <br />
-					власні висновки
-				</RollingFragment>
-			</div>
+			<SlashBlock left={<Left />} right={<Right />} />
 		</Section>
+	);
+}
+
+function Left(): ReactElement {
+	return (
+		<>
+			я дам свою відповідь <br />
+			на поставленне запитання
+		</>
+	);
+}
+
+function Right(): ReactElement {
+	return (
+		<>
+			а ви зробите <br />
+			власні висновки
+		</>
 	);
 }

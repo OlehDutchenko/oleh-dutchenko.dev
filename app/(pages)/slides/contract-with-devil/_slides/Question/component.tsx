@@ -24,7 +24,7 @@ export function Question(): ReactElement {
 							призвести до ситуації,{' '}
 						</span>
 						<RollingFragment maxHeight={100}>
-							коли розробка проекту <br />
+							коли розробка проєкту <br />
 							стає настільки складною та нестерпною,
 						</RollingFragment>
 						<RollingFragment maxHeight={100}>
