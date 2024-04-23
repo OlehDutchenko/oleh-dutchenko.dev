@@ -1,0 +1,79 @@
+.structurePreElement {
+	--code-max-height: 530px;
+	pointer-events: none;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.demo {
+	position: absolute;
+	opacity: 0;
+	transition: 0.2s ease-in-out;
+	z-index: 2;
+	transform: translateY(1rem);
+	--code-font-size: 0.575em;
+	--t: 0.5s;
+}
+
+.demo pre {
+	background: white !important;
+	line-height: 1.4;
+}
+
+.demo pre code {
+	padding: 1.2rem !important;
+}
+
+.demoProductsUsage1 {
+	top: 120px;
+	left: 60px;
+}
+
+.demoProductsView1 {
+	top: 162px;
+	left: 120px;
+}
+
+.demoProductsQuery1 {
+	top: 210px;
+	left: 210px;
+}
+
+.demoProductCardFragment1 {
+	top: 290px;
+	left: 312px;
+	--code-font-size: 0.5em;
+}
+
+.demoProductsQuery2 {
+	top: -20px;
+	left: 440px;
+	--code-font-size: 0.5em;
+}
+
+.demoCoverCarouselFragment1 {
+	top: 340px;
+	left: -40px;
+	--code-font-size: 0.5em;
+}
+
+.demoProductCardFragment2 {
+	top: 194px;
+	left: -130px;
+	--code-font-size: 0.5em;
+}
+
+:global([data-fragment='1']) .demoProductsUsage1,
+:global([data-fragment='5']) .demoProductsView1,
+:global([data-fragment='7']) .demoProductsQuery1,
+:global([data-fragment='11']) .demoProductCardFragment1,
+:global([data-fragment='12']) .demoProductsQuery2,
+:global([data-fragment='14']) .demoCoverCarouselFragment1,
+:global([data-fragment='15']) .demoProductCardFragment2 {
+	opacity: 1;
+	transform: none;
+	transition-duration: var(--t);
+	transition-delay: var(--t);
+}

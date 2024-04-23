@@ -15,6 +15,9 @@ export function GraphQL101(): ReactElement {
 						Виконайте інтроспекцію GraphQL
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
+						Опишіть бажану операцію
+					</RollingFragment>
+					<RollingFragment component="li" fx="fade-up">
 						Згенеруйте з неї TypeScript код
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
@@ -22,7 +25,9 @@ export function GraphQL101(): ReactElement {
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
 						Будьте щасливі!{' '}
-						<em className="fragment">Ta ta, for now!</em>
+						<em className="fragment" style={{ color: 'tomato' }}>
+							Ta ta, for now!
+						</em>
 					</RollingFragment>
 				</ul>
 			</Section>

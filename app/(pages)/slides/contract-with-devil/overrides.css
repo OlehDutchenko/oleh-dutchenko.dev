@@ -10,7 +10,7 @@ body {
 :root {
 	--r-main-font-size: 30px;
 	--r-main-font: var(--font-slide-base);
-	--r-code-font: var(--font-code);
+	--r-heading-color: var(--r-main-color);
 	--r-heading1-size: 2.77em;
 }
 
@@ -65,6 +65,11 @@ body {
 		&._no-will-change {
 			will-change: auto;
 		}
+
+		&.hljs.visible:not(.current-fragment) {
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 
 	& > section {
@@ -86,25 +91,48 @@ body {
 	& pre {
 		width: calc(100% - 10px);
 		margin: 5px;
-		font-size: 0.7em;
+		font-size: var(--code-font-size, 0.675em);
 
 		& code {
 			padding: 2rem;
 			background: none;
 			color: dimgray;
+			max-height: var(--code-max-height, 400px);
 		}
 
-		& .hljs-keyword,
-		& .hljs-selector-tag,
-		& .hljs-tag {
+		& .hljs-keyword {
 			color: maroon;
 		}
 
-		& .hljs-deletion,
+		& .hljs-selector-tag,
+		& .hljs-tag {
+			color: dimgray;
+		}
+
+		& .hljs-name {
+			color: maroon;
+		}
+
+		& .hljs-attr {
+			color: tomato;
+		}
+
 		& .hljs-string,
+		& .hljs-bullet,
+		& .hljs-subst,
+		& .hljs-title,
+		& .hljs-section,
+		& .hljs-emphasis,
+		& .hljs-type,
 		& .hljs-built_in,
-		& .hljs-builtin-name {
-			color: #cc5d09;
+		& .hljs-builtin-name,
+		& .hljs-selector-attr,
+		& .hljs-selector-pseudo,
+		& .hljs-addition,
+		& .hljs-variable,
+		& .hljs-template-tag,
+		& .hljs-template-variable {
+			color: tomato;
 		}
 	}
 
@@ -139,7 +167,51 @@ body {
 
 		& footer {
 			font-size: 0.8em;
-			font-weight: 300;
+			font-weight: 300
+		}
+	}
+}
+
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+	filter: grayscale(1);
+	opacity: .3;
+}
+
+.code-wrapper:has(code.fragment) > code:first-child:not(.fragment) {
+	transition: all .2s ease;
+}
+
+.code-wrapper:has(code.fragment.visible) > code:first-child:not(.fragment) {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.reveal table {
+	width: 100%;
+}
+
+.has-light-background pre {
+	background: #fff7;
+}
+
+.code-wrapper-bg-lines tr.highlight-line {
+	background: rgba(0,0,0,.05);
+}
+
+.reveal .code-wrapper-hide-numbers {
+	& .hljs-ln-numbers {
+		opacity: 0;
+		width: 1px !important;
+		padding: 0;
+	}
+}
+
+.reveal .code-wrapper-hide-next tr.highlight-line {
+	& ~ tr:not(.highlight-line) {
+		opacity: 0;
+
+		&:has( ~ tr.highlight-line) {
+			opacity: .375;
 		}
 	}
 }

@@ -14,7 +14,7 @@ export function DepsRuleIntro(): ReactElement {
 		<>
 			<Section
 				bgColor="light"
-				transition="zoom-in zoom-out"
+				transition="zoom-in slide-out"
 				className={clsx(
 					styles.sectionMain,
 					styles.makeCircles,

@@ -5,7 +5,7 @@ import { Section } from '../../_components/Section';
 export function MyStory(): ReactElement {
 	return (
 		<>
-			<Section bgColor="light" transition="zoom-in fade-out">
+			<Section bgColor="light" transition="slide-in slide-out">
 				<h3>
 					Проте у &quot;правила залежностей&quot; <br />є і друга
 					сторона медалі

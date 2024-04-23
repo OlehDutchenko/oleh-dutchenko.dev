@@ -4,6 +4,7 @@ import { Tenor_Sans as FontSlideBase } from 'next/font/google';
 import { ReactElement } from 'react';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/serif.css';
+import 'reveal.js/plugin/highlight/monokai.css';
 import { Section } from './_components/Section';
 import { BaldursGate3 } from './_slides/BaldursGate3';
 import { Bio } from './_slides/Bio';
@@ -13,6 +14,8 @@ import { GameAnalogy } from './_slides/GameAnalogy';
 import { GameDecision } from './_slides/GameDecision';
 import { GameNotTheTalkTheme } from './_slides/GameNotTheTalkTheme';
 import { GraphQL101 } from './_slides/GraphQL101';
+import { GraphQLStructureBefore } from './_slides/GraphQLStructureBefore';
+import { GraphQLUsageBefore } from './_slides/GraphQLUsageBefore';
 import { Introduce } from './_slides/Introduce';
 import './overrides.css';
 import { MyRoleInCompany } from './_slides/MyRoleInCompany';
@@ -57,6 +60,8 @@ export default function Page(): ReactElement {
 				{/* ---== MAIN ==--- */}
 				<FigureProductivityRelease />
 				<GraphQL101 />
+				<GraphQLStructureBefore />
+				<GraphQLUsageBefore />
 				<Section bgColor="light">
 					<p>Work in progress...</p>
 				</Section>
