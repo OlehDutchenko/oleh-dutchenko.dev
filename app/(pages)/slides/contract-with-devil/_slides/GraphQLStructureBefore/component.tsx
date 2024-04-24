@@ -62,7 +62,7 @@ export function GraphQLStructureBefore(): ReactElement {
 					</Demo>
 					<Demo
 						className={styles.demoProductCardFragment2}
-						lines="2-4,11-13,16"
+						lines="2-4,7,12-14,17"
 					>
 						{getProductCardFragment2Code()}
 					</Demo>
@@ -71,7 +71,7 @@ export function GraphQLStructureBefore(): ReactElement {
 					</Demo>
 					<Demo
 						className={styles.demoProductCardView1}
-						lines="1-4,7,9-10,12"
+						lines="1-4,7,9-10,12,13"
 					>
 						{getProductCardView1Code()}
 					</Demo>
@@ -200,7 +200,7 @@ export const FRAGMENT_COVER_CAROUSEL = gql\`
 \`;`;
 }
 
-function getProductCardFragment2Code(): string {
+export function getProductCardFragment2Code(): string {
 	return `import { qgl } from '@apollo/client';
 import { 
     FRAGMENT_COVER_CAROUSEL

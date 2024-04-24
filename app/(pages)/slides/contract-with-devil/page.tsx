@@ -14,13 +14,14 @@ import { GameAnalogy } from './_slides/GameAnalogy';
 import { GameDecision } from './_slides/GameDecision';
 import { GameNotTheTalkTheme } from './_slides/GameNotTheTalkTheme';
 import { GraphQL101 } from './_slides/GraphQL101';
+import { GraphQLFocus } from './_slides/GraphQLFocus';
 import { GraphQLStructureBefore } from './_slides/GraphQLStructureBefore';
-import { GraphQLUsageBefore } from './_slides/GraphQLUsageBefore';
 import { Introduce } from './_slides/Introduce';
 import './overrides.css';
 import { MyRoleInCompany } from './_slides/MyRoleInCompany';
 import { MyStory } from './_slides/MyStory';
 import { MyTalkPromise } from './_slides/MyTalkPromise';
+import { NewProject } from './_slides/NewProject';
 import { OpenSourceAndGames } from './_slides/OpenSourceAndGames';
 import { Question } from './_slides/Question';
 import { Title } from './_slides/Title';
@@ -61,7 +62,9 @@ export default function Page(): ReactElement {
 				<FigureProductivityRelease />
 				<GraphQL101 />
 				<GraphQLStructureBefore />
-				<GraphQLUsageBefore />
+				<GraphQLFocus />
+				<NewProject />
+
 				<Section bgColor="light">
 					<p>Work in progress...</p>
 				</Section>
