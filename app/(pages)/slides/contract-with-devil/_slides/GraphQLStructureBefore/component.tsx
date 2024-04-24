@@ -7,7 +7,10 @@ export function GraphQLStructureBefore(): ReactElement {
 	return (
 		<>
 			<Section bgColor="dark" transition="slide-in slide-out">
-				<h3>Як ми використовували GraphQL</h3>
+				<h3>
+					Як ми використовували <br /> GraphQL + TypeScript <br />і
+					React
+				</h3>
 			</Section>
 
 			<Section
@@ -31,7 +34,7 @@ export function GraphQLStructureBefore(): ReactElement {
 						<code
 							className="hljs bash"
 							data-trim={true}
-							data-line-numbers="1-2|3|3|4|5|2-5|5|6|6-7|8|8-9|10-12|13-14|7,14|15-17|18-19|14,19|7,14,19|20-22|5,7,14,19,23-24"
+							data-line-numbers="1-2|3|3|4|5|2-5|5|6|6-7|8|8-9|10-12|13-14|7,14|15-17|18-19|14,19|7,14,19|20-22|7,14,19,23-24|9,11,20-24|9,12,20-24|16-17,20-24"
 						>
 							{getProductsStructure()}
 						</code>
@@ -62,6 +65,21 @@ export function GraphQLStructureBefore(): ReactElement {
 						lines="2-4,11-13,16"
 					>
 						{getProductCardFragment2Code()}
+					</Demo>
+					<Demo className={styles.demoProductCardTypes1} lines="1,4">
+						{getProductCardTypes1Code()}
+					</Demo>
+					<Demo
+						className={styles.demoProductCardView1}
+						lines="1-4,7,9-10,12"
+					>
+						{getProductCardView1Code()}
+					</Demo>
+					<Demo
+						className={styles.demoCoverCarouselTypes1}
+						lines="1,4"
+					>
+						{getCoverCarouselTypes1Code()}
 					</Demo>
 				</div>
 			</Section>
@@ -114,8 +132,8 @@ function getProductsStructure(): string {
 }
 
 function getProductsUsage1Code(): string {
-	return `import { ... } from 'Widgets/Products'; // Correct
-import { ... } from 'Widgets/Products/inner/path'; // Wrong`;
+	return `import { ... } from '@/Widgets/Products'; // Correct
+import { ... } from '@/Widgets/Products/inner/path'; // Avoid`;
 }
 
 function getProductsView1Code(): string {
@@ -177,7 +195,7 @@ export const FRAGMENT_COVER_CAROUSEL = gql\`
     fragment CoverCarousel on ProductCover {
         id
         url
-        type
+        sourceTypeEnum
     }
 \`;`;
 }
@@ -193,6 +211,7 @@ export const FRAGMENT_PRODUCT_CARD = gql\`
         id
         title
         price
+        status
         covers {
             ...CoverCarousel
         }
@@ -200,4 +219,41 @@ export const FRAGMENT_PRODUCT_CARD = gql\`
     
     $\{FRAGMENT_COVER_CAROUSEL}
 \`;`;
+}
+
+function getProductCardTypes1Code(): string {
+	return `import { FragmentProductCard } from '@/GraphQL/generated';
+
+export interface Props {
+    product: FragmentProductCard;
+    ...
+}`;
+}
+
+function getProductCardView1Code(): string {
+	return `import { Props } from './types';
+import { CoverCarousel } from './components/CoverCarousel';
+
+export function ProductCard({ product }: Props): ReactElement {
+    return (
+        <article>
+            <CoverCarousel covers={product.covers} />
+            <header>
+                <h2>{product.title}</h2>
+                <span>{product.status}</span>
+            </header>
+            <p>Price: {product.price}</p>
+            ...
+        </article>
+    )
+}`;
+}
+
+function getCoverCarouselTypes1Code(): string {
+	return `import { FragmentCoverCarousel } from '@/GraphQL/generated';
+
+export interface Props {
+    covers: FragmentCoverCarousel[];
+    ...
+}`;
 }

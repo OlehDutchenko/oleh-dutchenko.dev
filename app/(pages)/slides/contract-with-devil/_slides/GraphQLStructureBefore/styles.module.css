@@ -13,6 +13,7 @@
 	transition: 0.2s ease-in-out;
 	z-index: 2;
 	transform: translateY(1rem);
+	pointer-events: none;
 	--code-font-size: 0.575em;
 	--t: 0.5s;
 }
@@ -65,15 +66,37 @@
 	--code-font-size: 0.5em;
 }
 
+.demoProductCardTypes1 {
+	top: 180px;
+	left: 270px;
+	--code-font-size: 0.5em;
+}
+
+.demoProductCardView1 {
+	top: 204px;
+	left: 270px;
+	--code-font-size: 0.5em;
+}
+
+.demoCoverCarouselTypes1 {
+	top: 325px;
+	left: 300px;
+	--code-font-size: 0.5em;
+}
+
 :global([data-fragment='1']) .demoProductsUsage1,
 :global([data-fragment='5']) .demoProductsView1,
 :global([data-fragment='7']) .demoProductsQuery1,
 :global([data-fragment='11']) .demoProductCardFragment1,
 :global([data-fragment='12']) .demoProductsQuery2,
 :global([data-fragment='14']) .demoCoverCarouselFragment1,
-:global([data-fragment='15']) .demoProductCardFragment2 {
+:global([data-fragment='15']) .demoProductCardFragment2,
+:global([data-fragment='19']) .demoProductCardTypes1,
+:global([data-fragment='20']) .demoProductCardView1,
+:global([data-fragment='21']) .demoCoverCarouselTypes1 {
 	opacity: 1;
 	transform: none;
+	pointer-events: auto;
 	transition-duration: var(--t);
 	transition-delay: var(--t);
 }

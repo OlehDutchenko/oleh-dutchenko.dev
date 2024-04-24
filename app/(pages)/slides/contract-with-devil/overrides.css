@@ -2,6 +2,10 @@ body {
 	background: #000 !important;
 }
 
+#gtx-trans {
+	display: none !important;
+}
+
 .reveal-loading {
 	color: #fff;
 	text-align: center;
@@ -167,18 +171,18 @@ body {
 
 		& footer {
 			font-size: 0.8em;
-			font-weight: 300
+			font-weight: 300;
 		}
 	}
 }
 
 .reveal .hljs.has-highlights tr:not(.highlight-line) {
 	filter: grayscale(1);
-	opacity: .3;
+	opacity: 0.3;
 }
 
 .code-wrapper:has(code.fragment) > code:first-child:not(.fragment) {
-	transition: all .2s ease;
+	transition: all 0.2s ease;
 }
 
 .code-wrapper:has(code.fragment.visible) > code:first-child:not(.fragment) {
@@ -195,7 +199,7 @@ body {
 }
 
 .code-wrapper-bg-lines tr.highlight-line {
-	background: rgba(0,0,0,.05);
+	background: rgba(0, 0, 0, 0.05);
 }
 
 .reveal .code-wrapper-hide-numbers {
@@ -210,8 +214,8 @@ body {
 	& ~ tr:not(.highlight-line) {
 		opacity: 0;
 
-		&:has( ~ tr.highlight-line) {
-			opacity: .375;
+		&:has(~ tr.highlight-line) {
+			opacity: 0.375;
 		}
 	}
 }
