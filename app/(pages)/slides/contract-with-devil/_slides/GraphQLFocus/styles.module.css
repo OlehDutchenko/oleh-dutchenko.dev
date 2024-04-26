@@ -12,6 +12,14 @@
 	padding: 1rem !important;
 }
 
+.descr {
+	font-size: 0.7em;
+}
+
+.descr li {
+	text-align: center !important;
+}
+
 .video {
 	position: absolute;
 	top: 50%;
@@ -29,4 +37,21 @@
 
 .video:global(.visible) video {
 	transform: scale(3);
+}
+
+.circles {
+	padding-top: 350px;
+	height: 460px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.accentText {
+	position: relative;
+	z-index: 5;
+}
+
+.accentText blockquote {
+	background: red !important;
+	color: white;
 }

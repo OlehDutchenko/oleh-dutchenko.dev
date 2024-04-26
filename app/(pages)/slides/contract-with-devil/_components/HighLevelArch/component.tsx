@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { ReactElement, ReactNode } from 'react';
-import { Fragment } from '../Fragment';
 import styles from './styles.module.css';
 
 export function HighLevelArch(): ReactElement {

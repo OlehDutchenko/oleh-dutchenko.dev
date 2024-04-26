@@ -16,7 +16,7 @@ export function MyStory(): ReactElement {
 				</Fragment>
 			</Section>
 			<Section bgColor="accent" transition="zoom-in slide-out">
-				<p>Фокус моєї доповіді:</p>
+				<p>Акцент моєї доповіді:</p>
 				<h3>Залежність Клієнта від АПІ</h3>
 				<p>&nbsp;</p>
 			</Section>

@@ -1,4 +1,5 @@
 import { PropsWithChildren, ReactElement } from 'react';
+import { Fragment } from '../../_components/Fragment';
 import { RollingFragment } from '../../_components/RollingFragment';
 import { Section } from '../../_components/Section';
 
@@ -13,18 +14,22 @@ export function GraphQL101(): ReactElement {
 				<ul>
 					<RollingFragment component="li" fx="fade-up">
 						Виконайте інтроспекцію GraphQL
+						<Done />
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
 						Опишіть бажану операцію
+						<Done />
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
 						Згенеруйте з неї TypeScript код
+						<Done />
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
-						Юзайте його в своєму віджеті
+						Використайте його в своєму віджеті
+						<Done />
 					</RollingFragment>
 					<RollingFragment component="li" fx="fade-up">
-						Будьте щасливі!{' '}
+						Будьте щасливі!{' 🙌 '}
 						<em className="fragment" style={{ color: 'tomato' }}>
 							Ta ta, for now!
 						</em>
@@ -58,6 +63,10 @@ export function GraphQL101(): ReactElement {
 			</Section>
 		</>
 	);
+}
+
+function Done(): ReactElement {
+	return <Fragment>&nbsp;✅&nbsp;</Fragment>;
 }
 
 interface LibLinkProps extends PropsWithChildren {

@@ -1,5 +1,10 @@
+import { AccentElement } from '@/_components/AccentElement';
 import clsx from 'clsx';
 import { ReactElement } from 'react';
+import {
+	HighLevelArch,
+	highLevelArchStyles,
+} from '../../_components/HighLevelArch';
 import { Section } from '../../_components/Section';
 import styles from './styles.module.css';
 
@@ -14,188 +19,150 @@ export function GraphQLFocus(): ReactElement {
 			<Section bgColor="accent" transition="slide-in slide-out">
 				<h3>Фокус-покус 🪄</h3>
 			</Section>
+			<section>
+				<Section
+					bgColor="light"
+					transition="slide-in slide-out"
+					autoAnimate
+				>
+					<FragmentEqualComponent />
+				</Section>
+				<Section bgColor="light" transition="slide-in slide-out">
+					<h3>Умови збігу АПІ з UI?</h3>
+				</Section>
+				<Section bgColor="light" transition="slide-in slide-out">
+					<AccentElement>
+						<blockquote>
+							<footer>Нескладна домена область</footer>
+							<hr style={{ width: '10%' }} />
+							<div style={{ padding: '0 2rem' }}>
+								Прості та пласкі структури даних
+							</div>
+						</blockquote>
+					</AccentElement>
+				</Section>
+				<Section bgColor="light" transition="slide-in slide-out">
+					<AccentElement>
+						<blockquote>
+							<footer>REST в голові</footer>
+							<hr style={{ width: '10%' }} />
+							<div style={{ padding: '0 2rem' }}>
+								Проф. деформація авторів АПІ
+							</div>
+						</blockquote>
+					</AccentElement>
+				</Section>
+				<Section
+					bgColor="light"
+					transition="slide-in slide-out"
+					className={clsx(
+						styles.circles,
+						highLevelArchStyles.initialStructure,
+						highLevelArchStyles.showGreenArrows,
+						highLevelArchStyles.showRedArrows
+					)}
+				>
+					<HighLevelArch />
+					<AccentElement className={styles.accentText}>
+						<blockquote>
+							<footer>Порушення “Правила залежностей”</footer>
+							<hr style={{ width: '10%' }} />
+							<div style={{ padding: '0 2rem' }}>
+								АПІ готується під потреби UI
+							</div>
+						</blockquote>
+					</AccentElement>
+				</Section>
+			</section>
 			<Section bgColor="light" autoAnimate>
-				<h3 data-id="code-title">Fragment === Component</h3>
-				<div className={styles.tableExpand}>
-					<table className={styles.tableCode}>
-						<tbody>
-							<tr>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
-									>
-										<code
-											className="hljs graphql"
-											data-trim={true}
-											data-line-numbers={true}
-										>
-											{`fragment ProductCard on Product {
-    id
-    title
-    price
-    status
-    covers {
-        ...CoverCarousel
-    }
-}`}
-										</code>
-									</pre>
-								</td>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
-									>
-										<code
-											className="hljs tsx"
-											data-line-numbers={true}
-										>
-											{`<article>
-    <CoverCarousel covers={product.covers} />
-    <header>
-        <h2>{product.title}</h2>
-        <span>{product.status}</span>
-    </header>
-    <p>Price: {product.price}</p>
-    ...
-</article>`}
-										</code>
-									</pre>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+				<FragmentEqualComponent changeFragment />
 			</Section>
 			<Section bgColor="light" autoAnimate>
-				<h3 data-id="code-title">Fragment === Component</h3>
-				<div className={styles.tableExpand}>
-					<table className={clsx(styles.tableCode)}>
-						<tbody>
-							<tr>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
-									>
-										<code
-											className="hljs graphql"
-											data-trim={true}
-											data-line-numbers={true}
-										>
-											{`fragment ProductCard on Product {
-    id
-    title {
+				<FragmentEqualComponent changeFragment changeComponent />
+				<div className={clsx('fragment', styles.video)}>
+					<video
+						data-autoplay={true}
+						loop={true}
+						autoPlay={true}
+						muted={true}
+						playsInline={true}
+						src="/static/slides-contract-with-devil/jack-nicholson.mp4"
+					/>
+				</div>
+			</Section>
+		</>
+	);
+}
+
+function FragmentEqualComponent(props: {
+	changeFragment?: boolean;
+	changeComponent?: boolean;
+}): ReactElement {
+	const titleInFragment = props.changeFragment
+		? `title {
         current
-    }
-    price
-    status
-    covers {
-        ...CoverCarousel
-    }
-}`}
-										</code>
-									</pre>
-								</td>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
-									>
-										<code
-											className="hljs tsx"
-											data-line-numbers={true}
-										>
-											{`<article>
-    <CoverCarousel covers={product.covers} />
-    <header>
-        <h2>{product.title}</h2>
-        <span>{product.status}</span>
-    </header>
-    <p>Price: {product.price}</p>
-    ...
-</article>
+    }`
+		: 'title';
 
+	const titleInComponent = props.changeComponent
+		? `product.title.current`
+		: 'product.title';
 
-`}
-										</code>
-									</pre>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</Section>
-			<Section bgColor="light" autoAnimate>
-				<h3 data-id="code-title">Fragment === Component</h3>
-				<div className={styles.tableExpand}>
-					<table className={clsx(styles.tableCode)}>
-						<tbody>
-							<tr>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
+	const componentEnd = props.changeFragment ? '\n\n\n' : '';
+
+	return (
+		<>
+			<h3 data-id="code-title">Fragment === Component</h3>
+			<div className={styles.tableExpand}>
+				<table className={styles.tableCode}>
+					<tbody>
+						<tr>
+							<td width="50%">
+								<pre
+									data-id="code-animation"
+									className="code-wrapper-hide-numbers"
+								>
+									<code
+										className="hljs graphql"
+										data-line-numbers={true}
 									>
-										<code
-											className="hljs graphql"
-											data-trim={true}
-											data-line-numbers={true}
-										>
-											{`fragment ProductCard on Product {
+										{`fragment ProductCard on Product {
     id
-    title {
-        current
-    }
+    ${titleInFragment}
     price
     status
     covers {
         ...CoverCarousel
     }
 }`}
-										</code>
-									</pre>
-								</td>
-								<td width="50%">
-									<pre
-										data-id="code-animation"
-										className="code-wrapper-hide-numbers"
+									</code>
+								</pre>
+							</td>
+							<td width="50%">
+								<pre
+									data-id="code-animation"
+									className="code-wrapper-hide-numbers"
+								>
+									<code
+										className="hljs tsx"
+										data-line-numbers={true}
 									>
-										<code
-											className="hljs tsx"
-											data-line-numbers={true}
-										>
-											{`<article>
+										{`<article>
     <CoverCarousel covers={product.covers} />
     <header>
-        <h2>{product.title.current}</h2>
+        <h2>{${titleInComponent}}</h2>
         <span>{product.status}</span>
     </header>
     <p>Price: {product.price}</p>
     ...
-</article>
-
-
-`}
-										</code>
-									</pre>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div className={clsx('fragment', styles.video)}>
-						<video
-							data-autoplay={true}
-							loop={true}
-							autoPlay={true}
-							muted={true}
-							playsInline={true}
-							src="/static/slides-contract-with-devil/jack-nicholson.mp4"
-						/>
-					</div>
-				</div>
-			</Section>
+</article>${componentEnd}`}
+									</code>
+								</pre>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</>
 	);
 }

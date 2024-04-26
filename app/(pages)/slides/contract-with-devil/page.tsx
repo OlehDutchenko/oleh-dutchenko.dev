@@ -9,7 +9,6 @@ import { Section } from './_components/Section';
 import { BaldursGate3 } from './_slides/BaldursGate3';
 import { Bio } from './_slides/Bio';
 import { DepsRuleIntro } from './_slides/DepsRuleIntro';
-import { FigureProductivityRelease } from './_slides/FigureProductivityRelease';
 import { GameAnalogy } from './_slides/GameAnalogy';
 import { GameDecision } from './_slides/GameDecision';
 import { GameNotTheTalkTheme } from './_slides/GameNotTheTalkTheme';
@@ -59,7 +58,6 @@ export default function Page(): ReactElement {
 				<MyStory />
 
 				{/* ---== MAIN ==--- */}
-				<FigureProductivityRelease />
 				<GraphQL101 />
 				<GraphQLStructureBefore />
 				<GraphQLFocus />
