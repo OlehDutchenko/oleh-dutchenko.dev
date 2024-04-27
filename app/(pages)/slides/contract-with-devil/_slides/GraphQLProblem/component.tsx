@@ -27,7 +27,7 @@ export function GraphQLProblem(): ReactElement {
 					</Fragment>
 				</p>
 			</Section>
-			<Section bgColor="light">
+			<Section bgColor="dark">
 				<h3>Фокус прикладу 🪄</h3>
 			</Section>
 			<Section bgColor="light">
@@ -68,10 +68,10 @@ export function GraphQLProblem(): ReactElement {
 			<Section bgColor="light" autoAnimate>
 				<p>
 					<em>Так от,</em> <br />
-					Коли АПІ почне змінюватись
+					Коли АПІ буде змінюватись
 				</p>
 				<Fragment className="like-h3">
-					Потрібно постійно вносити <br /> правки в код!
+					Потрібно постійно вносити <br /> правки в код шаблону!
 				</Fragment>
 			</Section>
 
