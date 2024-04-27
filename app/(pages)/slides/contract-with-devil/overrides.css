@@ -18,6 +18,17 @@ body {
 	--r-heading1-size: 2.77em;
 }
 
+.like-h3 {
+	font-family: var(--font-headings);
+	font-size: var(--r-heading3-size);
+	font-weight: var(--r-heading-font-weight);
+	line-height: var(--r-heading-line-height);
+	letter-spacing: var(--r-heading-letter-spacing);
+	text-transform: var(--r-heading-text-transform);
+	text-shadow: var(--r-heading-text-shadow);
+	word-wrap: break-word;
+}
+
 .reveal .slides {
 	letter-spacing: -0.025em;
 
@@ -138,6 +149,11 @@ body {
 		& .hljs-template-variable {
 			color: tomato;
 		}
+	}
+
+	& .language-graphql .hljs-comment {
+		color: #b0ad9e;
+		font-style: italic;
 	}
 
 	& ol {
