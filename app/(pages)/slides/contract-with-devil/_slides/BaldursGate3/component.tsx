@@ -13,7 +13,7 @@ export function BaldursGate3(): ReactElement {
 							<ImageWrapper>
 								<img
 									width={800}
-									src="https://upload.wikimedia.org/wikipedia/ru/d/dc/Baldur%27s_Gate_III_Logo.png"
+									src="/static/slides-contract-with-devil/Baldur's_Gate_III_Logo.png"
 									alt=""
 								/>
 							</ImageWrapper>

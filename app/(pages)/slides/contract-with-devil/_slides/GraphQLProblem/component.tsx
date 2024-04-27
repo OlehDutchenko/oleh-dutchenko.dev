@@ -287,6 +287,37 @@ fragment UserMiniCard on User {
 					</RollingFragment>
 				</div>
 			</Section>
+
+			<Section bgColor="dark" className="flex-section">
+				<h3>Так це ж бекенд винний...</h3>
+				<div>
+					<RollingFragment component="div" fx="fade-up">
+						вони зламали АПІ
+					</RollingFragment>
+					<RollingFragment
+						component="div"
+						fx="fade-up"
+						maxHeight={100}
+					>
+						і взагалі, чому не використовували директиву
+						депрекейтед, щоб поступово не переїхати
+					</RollingFragment>
+				</div>
+			</Section>
+
+			<Section
+				bgColor="dark"
+				className="flex-section"
+				transition="slide-in slide-out"
+			>
+				<p>...Але це не скасовує факт: </p>
+				<RollingFragment component="h3">
+					Ми залежні від АПІ у всьому!
+				</RollingFragment>
+				<RollingFragment component="p">
+					Ми привʼязані до нього по рукам і ногам
+				</RollingFragment>
+			</Section>
 		</>
 	);
 }

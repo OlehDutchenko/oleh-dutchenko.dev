@@ -25,6 +25,8 @@ import { Question } from './_slides/Question';
 import { Title } from './_slides/Title';
 import { Wezom2020 } from './_slides/Wezom2020';
 import { WezomCommonArch } from './_slides/WezomCommonArch';
+import { Despondency } from './_slides/Despondency';
+import { FindingSolution } from './_slides/FindingSolution';
 import { WezomOutsource } from './_slides/WezomOutsource';
 
 const fontSlideBase = FontSlideBase({
@@ -60,6 +62,8 @@ export default function Page(): ReactElement {
 				<GraphQL101 />
 				<GraphQLStructureBefore />
 				<GraphQLProblem />
+				<Despondency />
+				<FindingSolution />
 
 				<Section bgColor="light">
 					<p>Work in progress...</p>
