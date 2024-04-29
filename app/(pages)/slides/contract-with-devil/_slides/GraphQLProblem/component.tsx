@@ -273,26 +273,11 @@ fragment UserMiniCard on User {
 				</div>
 			</Section>
 
-			<Section bgColor="accent" className="flex-section">
-				<h3>11 х 6 = 66 годин</h3>
-				<div className={styles.expand}>
-					<RollingFragment component="div" fx="fade-up">
-						Помножте цей час на рейти ваших розробників,
-					</RollingFragment>
-					<RollingFragment component="div" fx="fade-up">
-						додайте простій на спринту,
-					</RollingFragment>
-					<RollingFragment component="div" fx="fade-up">
-						отримайте суму в яку вам обійдеться такий факап
-					</RollingFragment>
-				</div>
-			</Section>
-
 			<Section bgColor="dark" className="flex-section">
 				<h3>Так це ж бекенд винний...</h3>
 				<div>
 					<RollingFragment component="div" fx="fade-up">
-						вони зламали АПІ
+						вони зламали АПІ,
 					</RollingFragment>
 					<RollingFragment
 						component="div"
@@ -305,18 +290,54 @@ fragment UserMiniCard on User {
 				</div>
 			</Section>
 
-			<Section
-				bgColor="dark"
-				className="flex-section"
-				transition="slide-in slide-out"
-			>
-				<p>...Але це не скасовує факт: </p>
+			<Section bgColor="dark" className="flex-section">
+				<div>
+					Так, можна звинувачувати бекенд... <br />
+					<Fragment>Але це не скасовує очевидний факт</Fragment>
+				</div>
 				<RollingFragment component="h3">
 					Ми залежні від АПІ у всьому!
 				</RollingFragment>
-				<RollingFragment component="p">
+				<RollingFragment component="div">
 					Ми привʼязані до нього по рукам і ногам
 				</RollingFragment>
+			</Section>
+
+			<Section bgColor="dark" className="flex-section">
+				<div>
+					Можна миритись з цим, <br /> вважаючи що це нормально
+				</div>
+				<RollingFragment component="h3" className="like-h3">
+					Фронтенд є &quot;веб-мордою&quot; даних
+				</RollingFragment>
+				<RollingFragment component="div">
+					Якщо дані міняються, фронт завжди &quot;підганяється&quot;
+				</RollingFragment>
+			</Section>
+
+			<Section bgColor="dark" className="flex-section">
+				<h3>І це, відносно, не дорого...</h3>
+				<RollingFragment component="h1" maxHeight={120}>
+					<b>Хіба ні?</b>
+				</RollingFragment>
+			</Section>
+
+			<Section bgColor="accent" className="flex-section">
+				<h3>11 х 6 = 66 годин</h3>
+				<div className={styles.expand}>
+					<RollingFragment component="div" fx="fade-up">
+						Помножте цей час на рейти ваших розробників,
+					</RollingFragment>
+					<RollingFragment component="div" fx="fade-up">
+						додайте простій на спринту,
+					</RollingFragment>
+					<RollingFragment component="div" fx="fade-up">
+						отримайте суму в яку вам обійдеться такий факап.
+					</RollingFragment>
+					<RollingFragment component="div" fx="fade-up">
+						А чи буде він один?
+					</RollingFragment>
+				</div>
 			</Section>
 		</>
 	);

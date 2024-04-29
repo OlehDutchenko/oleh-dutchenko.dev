@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
+import { Fragment } from '../../_components/Fragment';
 import { ImageWrapper } from '../../_components/ImageWrapper';
 import { RollingFragment } from '../../_components/RollingFragment';
-import { Fragment } from '../../_components/Fragment';
 import { Section } from '../../_components/Section';
 
 export function FindingSolution(): ReactElement {
@@ -53,6 +53,20 @@ export function FindingSolution(): ReactElement {
 					У всіх розділах <em>&quot;Як не треба робити&quot;</em>{' '}
 					<br /> <Fragment>я впізнавав наш проєкт</Fragment>
 				</p>
+			</Section>
+
+			<Section bgColor="light" className="flex-section">
+				<p>
+					DDD вказує на загальні рішення
+					<br />
+					<RollingFragment className="like-h3">
+						Customer-Supplier
+					</RollingFragment>
+				</p>
+				<RollingFragment component="p" maxHeight={100}>
+					Ми навчились правильно впроваджувати зміни в АПІ <br />
+					<code>@deprecated</code>
+				</RollingFragment>
 			</Section>
 		</>
 	);
