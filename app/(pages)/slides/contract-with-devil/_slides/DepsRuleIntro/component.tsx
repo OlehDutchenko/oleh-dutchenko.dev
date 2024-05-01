@@ -31,8 +31,7 @@ export function DepsRuleIntro(): ReactElement {
 					component="div"
 					className={clsx(styles.introParagraph)}
 				>
-					На високому рівні системи - <br />
-					типові архітектурні кола з власними межами:
+					Типова архітектура <br />з поділом на високорівневі кола:
 				</Fragment>
 				<Fragment
 					component="div"
@@ -49,7 +48,8 @@ export function DepsRuleIntro(): ReactElement {
 										високорівневих політик.”
 									</p>
 									<footer style={{ paddingBottom: '2rem' }}>
-										Правило залежностей
+										Правило залежностей “Чистої Архітектури”
+										Р. Мартіна
 									</footer>
 								</Fragment>
 								<Fragment

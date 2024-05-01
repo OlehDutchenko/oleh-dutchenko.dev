@@ -7,6 +7,10 @@ import {
 	highLevelArchStyles,
 } from '../../_components/HighLevelArch';
 import { Section } from '../../_components/Section';
+import {
+	ApiVsTemplate,
+	apiVsTemplateStyles,
+} from '../../_components/ApiVsTemplate';
 import styles from './styles.module.css';
 
 export function GraphQLProblem(): ReactElement {
@@ -31,7 +35,10 @@ export function GraphQLProblem(): ReactElement {
 				<h3>Фокус прикладу 🪄</h3>
 			</Section>
 			<Section bgColor="light">
-				<FragmentEqualComponent stage="initial" />
+				<h3>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API === Component
+				</h3>
+				<ApiVsTemplate stage="initial" />
 			</Section>
 			<Section bgColor="light">
 				<h3>Ми самі себе робимо повністю залежними від АПІ!</h3>
@@ -44,13 +51,13 @@ export function GraphQLProblem(): ReactElement {
 			</Section>
 			<Section bgColor="light" autoAnimate>
 				<h3 data-id="when" className={styles.when}>
-					Якщо
+					&nbsp;Якщо?
 				</h3>
 				<h3>АПІ зміниться...</h3>
 			</Section>
 			<Section bgColor="light" autoAnimate>
 				<h3 data-id="when" className={styles.when}>
-					<s>Якщо</s> <br /> Коли
+					<s>&nbsp;Якщо&nbsp;</s> <br /> Коли
 				</h3>
 				<h3>АПІ зміниться...</h3>
 			</Section>
@@ -109,30 +116,33 @@ export function GraphQLProblem(): ReactElement {
 			</Section>
 
 			<Section bgColor="darker">
-				<h3>
-					Тому що <br /> знання з АПІ будуть всюди!
-				</h3>
+				<h3>Знання з АПІ будуть всюди!</h3>
 				<Fragment component="p">І по декілька разів!</Fragment>
 			</Section>
 
 			<Section bgColor="darker">
-				<h3>
+				<p>
 					Система стає <br />
-					Картковим будинком
-				</h3>
+					<span className="like-h3">Картковим будинком</span>
+				</p>
 				<Fragment component="p">
-					достатньо одного, необережного, пчиху в АПІ, <br />
+					Достатньо одного, необережного, пчиху в АПІ, <br />
 					щоб його рознесло!
 				</Fragment>
 			</Section>
 			<Section bgColor="dark">
-				<h3>Якщо ви думаєте, що я вас “лякаю”...</h3>
+				<p>
+					Якщо ви думаєте,
+					<br />
+					<span className="like-h3">що я вас “лякаю”...</span>
+				</p>
 			</Section>
 			<Section bgColor="dark" className="flex-section">
-				<h3>
-					Реальний проєкт <br />
-					який ми ведемо вже 2 роки
-				</h3>
+				<p>
+					Реальний проєкт
+					<br />
+					<span className="like-h3">який ми ведемо вже 2 роки</span>
+				</p>
 				<ul className={styles.projectCtxList}>
 					<RollingFragment component="li">
 						ERP система
@@ -148,7 +158,7 @@ export function GraphQLProblem(): ReactElement {
 				</ul>
 			</Section>
 			<Section bgColor="dark">
-				<h3>Трохи цифр з проєкту</h3>
+				<h3>Трохи цифр для наочності</h3>
 				<div className="r-stack">
 					<img
 						alt=""
@@ -166,11 +176,11 @@ export function GraphQLProblem(): ReactElement {
 			</Section>
 			<Section bgColor="dark" autoAnimate>
 				<h3>Приклад зміни Сутностей</h3>
-				<div className={styles.expand}>
+				<div className={apiVsTemplateStyles.expand}>
 					<table
 						className={clsx(
-							styles.tableCode,
-							styles.tableCodeCompact
+							apiVsTemplateStyles.tableCode,
+							apiVsTemplateStyles.tableCodeCompact
 						)}
 					>
 						<tbody>
@@ -199,11 +209,11 @@ export function GraphQLProblem(): ReactElement {
 
 			<Section bgColor="dark" autoAnimate>
 				<h3>Приклад зміни Сутностей</h3>
-				<div className={styles.expand}>
+				<div className={apiVsTemplateStyles.expand}>
 					<table
 						className={clsx(
-							styles.tableCode,
-							styles.tableCodeCompact
+							apiVsTemplateStyles.tableCode,
+							apiVsTemplateStyles.tableCodeCompact
 						)}
 					>
 						<tbody>
@@ -254,7 +264,7 @@ fragment UserMiniCard on User {
 					“Бекенди” внесли <br />
 					ламаючі зміни в АПІ
 				</h3>
-				<div className={styles.expand}>
+				<div className={apiVsTemplateStyles.expand}>
 					<div>
 						<RollingFragment component="div" fx="fade-up">
 							TypeScript помилок було стільки, що проєкт не
@@ -267,7 +277,7 @@ fragment UserMiniCard on User {
 							4 команди (11 фронтів в загальному складі)
 						</RollingFragment>
 						<RollingFragment component="div" fx="fade-up">
-							не робили нічого з того, що запланували на спринт
+							не робили нічого з того, що запланували на спринт!
 						</RollingFragment>
 					</div>
 				</div>
@@ -285,7 +295,7 @@ fragment UserMiniCard on User {
 						maxHeight={100}
 					>
 						і взагалі, чому не використовували директиву
-						депрекейтед, щоб поступово не переїхати
+						депрекейтед, щоб поступово не переїхати?
 					</RollingFragment>
 				</div>
 			</Section>
@@ -305,7 +315,7 @@ fragment UserMiniCard on User {
 
 			<Section bgColor="dark" className="flex-section">
 				<div>
-					Можна миритись з цим, <br /> вважаючи що це нормально
+					Можна миритись з цим, <br /> вважаючи, що це нормально...
 				</div>
 				<RollingFragment component="h3" className="like-h3">
 					Фронтенд є &quot;веб-мордою&quot; даних
@@ -339,105 +349,6 @@ fragment UserMiniCard on User {
 					</RollingFragment>
 				</div>
 			</Section>
-		</>
-	);
-}
-
-function FragmentEqualComponent(props: {
-	stage:
-		| 'initial'
-		| 'deprecated'
-		| 'titleVariants'
-		| 'changeComponent'
-		| 'removeDeprecation';
-}): ReactElement {
-	let titleInFragment = 'title';
-	let titleInComponent = 'product.title';
-	let componentEnd = '';
-
-	switch (props.stage) {
-		case 'deprecated':
-			titleInFragment = 'title @deprecated';
-			break;
-		case 'titleVariants':
-			componentEnd = '\n\n\n\n';
-			titleInFragment = `title @deprecated
-    titleVariants {
-        current
-    }`;
-			break;
-		case 'changeComponent':
-			componentEnd = '\n\n\n\n';
-			titleInComponent = `product.titleVariants.current`;
-			titleInFragment = `title @deprecated
-    titleVariants {
-        current
-    }`;
-			break;
-		case 'removeDeprecation':
-			titleInComponent = `product.titleVariants.current`;
-			componentEnd = '\n\n\n';
-			titleInFragment = `titleVariants {
-        current
-    }`;
-			break;
-	}
-
-	return (
-		<>
-			<h3 data-id="code-title">
-				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;API === Component
-			</h3>
-			<div className={styles.expand}>
-				<table className={styles.tableCode}>
-					<tbody>
-						<tr>
-							<td width="50%">
-								<pre
-									data-id="code-animation"
-									className="code-wrapper-hide-numbers"
-								>
-									<code
-										className="hljs graphql"
-										data-line-numbers={true}
-									>
-										{`fragment ProductCard on Product {
-    id
-    ${titleInFragment}
-    price
-    status
-    covers {
-        ...CoverCarousel
-    }
-}`}
-									</code>
-								</pre>
-							</td>
-							<td width="50%">
-								<pre
-									data-id="code-animation"
-									className="code-wrapper-hide-numbers"
-								>
-									<code
-										className="hljs tsx"
-										data-line-numbers={true}
-									>
-										{`<article>
-    <CoverCarousel covers={product.covers} />
-    <header>
-        <h2>{${titleInComponent}}</h2>
-        <span>{product.status}</span>
-    </header>
-    <p>Price: {product.price}</p>
-    ...
-</article>${componentEnd}`}
-									</code>
-								</pre>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
 		</>
 	);
 }

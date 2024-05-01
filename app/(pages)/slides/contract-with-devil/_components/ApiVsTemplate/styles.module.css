@@ -1,0 +1,23 @@
+.expand {
+	margin: 0 -5rem;
+	position: relative;
+}
+
+.tableCode {
+	--code-font-size: 0.55em;
+}
+
+.tableCode code {
+	line-height: 1.4;
+	padding: 1rem !important;
+	background: white !important;
+}
+
+.tableCodeCompact td {
+	--code-font-size: 0.675em;
+	border-width: 0 !important;
+}
+
+.tableCodeCompact td {
+	padding: 0 !important;
+}

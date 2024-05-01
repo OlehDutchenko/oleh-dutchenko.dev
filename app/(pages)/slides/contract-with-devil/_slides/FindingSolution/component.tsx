@@ -1,8 +1,10 @@
 import { ReactElement } from 'react';
+import { ApiVsTemplate } from '../../_components/ApiVsTemplate';
 import { Fragment } from '../../_components/Fragment';
 import { ImageWrapper } from '../../_components/ImageWrapper';
 import { RollingFragment } from '../../_components/RollingFragment';
 import { Section } from '../../_components/Section';
+import styles from './styles.module.css';
 
 export function FindingSolution(): ReactElement {
 	return (
@@ -57,17 +59,66 @@ export function FindingSolution(): ReactElement {
 
 			<Section bgColor="light" className="flex-section">
 				<p>
-					DDD вказує на загальні рішення
+					DDD вказує на загальну проблему відносин
 					<br />
 					<RollingFragment className="like-h3">
 						Customer-Supplier
 					</RollingFragment>
 				</p>
-				<RollingFragment component="p" maxHeight={100}>
-					Ми навчились правильно впроваджувати зміни в АПІ <br />
-					<code>@deprecated</code>
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+				<ApiVsTemplate stage="initial" />
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+				<ApiVsTemplate stage="deprecated" />
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+				<ApiVsTemplate stage="titleVariants" />
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+				<ApiVsTemplate stage="changeComponent" />
+			</Section>
+
+			<Section bgColor="light" autoAnimate>
+				<DeprecateHeading />
+				<ApiVsTemplate stage="removeDeprecation" />
+			</Section>
+
+			<Section
+				bgColor="dark"
+				className="flex-section"
+				transition="slide-in slide-out"
+			>
+				<h3>
+					Чи це довше?<Fragment> Так!</Fragment>
+				</h3>
+
+				<RollingFragment component="h2" maxHeight={80}>
+					Чи це важливо?
+					<Fragment> Так!</Fragment>
 				</RollingFragment>
 			</Section>
 		</>
+	);
+}
+
+function DeprecateHeading(): ReactElement {
+	return (
+		<p>
+			Коректна зміна АПІ <br /> через директиву{' '}
+			<code className={styles.inlineCode}>@deprecated</code>
+		</p>
 	);
 }

@@ -1,0 +1,7 @@
+:global(.slides) .sectionAnalogy {
+	top: 225px !important
+}
+
+:global(.slides) .sectionAccent {
+	top: 270px !important;
+}
