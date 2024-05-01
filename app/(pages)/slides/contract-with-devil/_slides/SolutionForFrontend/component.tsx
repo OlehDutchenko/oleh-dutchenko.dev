@@ -3,6 +3,7 @@ import { AccentElement } from '@/_components/AccentElement';
 import { ReactElement } from 'react';
 import { Fragment } from '../../_components/Fragment';
 import { Section } from '../../_components/Section';
+import styles from './styles.module.css';
 
 export function SolutionForFrontend(): ReactElement {
 	return (
@@ -17,22 +18,37 @@ export function SolutionForFrontend(): ReactElement {
 			<Section bgColor="light" className="flex-section">
 				<h3>База даних - це деталь!</h3>
 				<Fragment data-id="anim">
-					<div style={{ padding: 10 }}>
+					<div className={styles.dbText}>
 						<AccentElement>
 							<blockquote>
-								<div>
-									База даних - це утиліта, що забезпечує
-									доступ до даних. <br />
-									<RollingFragment maxHeight={100}>
-										Із погляду архітектури вона не має
-										жодного значення, <br /> це деталь,
-										механізм (який може, і буде,
-										змінюватись).
-										<br />
+								<footer>
+									&quot;Чиста архітектура&quot;, Розділ 30
+								</footer>
+								<div style={{ marginTop: 12 }}>
+									<RollingFragment component="div">
+										База даних - це утиліта, що забезпечує
+										доступ до даних.
 									</RollingFragment>
-									<RollingFragment maxHeight={100}>
-										Не дозволяйте низькорівневим механізмам
-										просочуватись в архітектуру системи!
+									<RollingFragment component="div">
+										Із погляду архітектури вона не має
+										жодного значення,
+									</RollingFragment>
+									<RollingFragment component="div">
+										це деталь, механізм{' '}
+										<em>
+											(який може, і буде, змінюватись)
+										</em>
+										.
+									</RollingFragment>
+									<RollingFragment
+										component="div"
+										maxHeight={100}
+									>
+										<div className={styles.dbTextAccent}>
+											Не дозволяйте низькорівневим
+											механізмам <br />
+											просочуватись в архітектуру системи!
+										</div>
 									</RollingFragment>
 								</div>
 							</blockquote>
@@ -41,10 +57,38 @@ export function SolutionForFrontend(): ReactElement {
 				</Fragment>
 			</Section>
 			<Section bgColor="light" className="flex-section">
-				<h3>GraphQL - це доступ до даних</h3>
+				<h3>GraphQL - це ресурс даних!</h3>
 				<RollingFragment>
-					це &quot;База Даних&quot; для фронту
+					Це &quot;База Даних&quot; для клієнта (фронту)
 				</RollingFragment>
+			</Section>
+			<Section bgColor="light" className="flex-section">
+				<h3>Як мінімізувати вплив БД?</h3>
+				<RollingFragment maxHeight={100}>
+					Працювати через &quot;шлюз&quot;, <br />
+					який відділяє логіку від ресурсу.
+				</RollingFragment>
+			</Section>
+			<Section bgColor="light" className="flex-section">
+				<h3>Наше рішення:</h3>
+				<ul style={{ margin: '0 -3rem' }}>
+					<RollingFragment component="li">
+						Прибрати фрагменти GraphQL з коду компонентів
+					</RollingFragment>
+					<RollingFragment component="li" maxHeight={100}>
+						Вирішити задачу абстраговано від АПІ <br /> описавши
+						власний інтерфейс та реалізувавши його
+					</RollingFragment>
+					<RollingFragment component="li">
+						На верхньому рівні виконати запит
+					</RollingFragment>
+					<RollingFragment component="li">
+						Нормалізувати його в очікуваний формат
+					</RollingFragment>
+					<RollingFragment component="li">
+						Передати результат в компоненти
+					</RollingFragment>
+				</ul>
 			</Section>
 		</>
 	);

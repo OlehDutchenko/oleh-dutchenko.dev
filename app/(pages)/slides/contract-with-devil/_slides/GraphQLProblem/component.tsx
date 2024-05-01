@@ -1,16 +1,12 @@
 import { RollingFragment } from '@/(pages)/slides/contract-with-devil/_components/RollingFragment';
 import clsx from 'clsx';
 import { ReactElement } from 'react';
-import { Fragment } from '../../_components/Fragment';
-import {
-	HighLevelArch,
-	highLevelArchStyles,
-} from '../../_components/HighLevelArch';
-import { Section } from '../../_components/Section';
 import {
 	ApiVsTemplate,
 	apiVsTemplateStyles,
 } from '../../_components/ApiVsTemplate';
+import { Fragment } from '../../_components/Fragment';
+import { Section } from '../../_components/Section';
 import styles from './styles.module.css';
 
 export function GraphQLProblem(): ReactElement {
@@ -44,42 +40,48 @@ export function GraphQLProblem(): ReactElement {
 				<h3>Ми самі себе робимо повністю залежними від АПІ!</h3>
 			</Section>
 			<Section bgColor="light" autoAnimate>
-				<h3 data-id="when" className={styles.when}>
+				<div data-id="when" className={styles.when}>
 					Коли
-				</h3>
-				<h3>АПІ зміниться...</h3>
+				</div>
+				<div data-id="api">
+					АПІ зміниться...
+					<br />
+					<span data-id="span" />
+				</div>
 			</Section>
 			<Section bgColor="light" autoAnimate>
-				<h3 data-id="when" className={styles.when}>
+				<div data-id="when" className={styles.when}>
 					&nbsp;Якщо?
-				</h3>
-				<h3>АПІ зміниться...</h3>
+				</div>
+				<div data-id="api">
+					АПІ зміниться...
+					<br />
+					<span data-id="span" />
+				</div>
 			</Section>
 			<Section bgColor="light" autoAnimate>
-				<h3 data-id="when" className={styles.when}>
+				<div data-id="when" className={styles.when}>
 					<s>&nbsp;Якщо&nbsp;</s> <br /> Коли
-				</h3>
-				<h3>АПІ зміниться...</h3>
+				</div>
+				<div data-id="api">
+					АПІ зміниться...
+					<br />
+					<span data-id="span" />
+				</div>
 			</Section>
-			<Section
-				bgColor="light"
-				className={clsx(
-					styles.circles,
-					highLevelArchStyles.initialStructure,
-					highLevelArchStyles.showGreenArrows
-				)}
-			>
-				<HighLevelArch />
-			</Section>
-
 			<Section bgColor="light" autoAnimate>
-				<p>
-					<em>Так от,</em> <br />
-					Коли АПІ буде змінюватись
-				</p>
-				<Fragment className="like-h3">
-					Потрібно постійно вносити <br /> правки в код шаблону!
-				</Fragment>
+				<div data-id="when" className={styles.when}>
+					<s>&nbsp;Якщо&nbsp;</s> <br /> Коли
+				</div>
+				<div data-id="api">
+					АПІ зміниться... <br />
+					<span data-id="span">
+						<span className="like-h3">
+							Потрібно постійно вносити <br /> правки в код
+							шаблону!
+						</span>
+					</span>
+				</div>
 			</Section>
 
 			<Section bgColor="dark" className="flex-section">

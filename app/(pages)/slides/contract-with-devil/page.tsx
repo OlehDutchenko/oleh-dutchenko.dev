@@ -5,7 +5,6 @@ import { ReactElement } from 'react';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/serif.css';
 import 'reveal.js/plugin/highlight/monokai.css';
-import { Section } from './_components/Section';
 import { DepsRuleIntro } from './_slides/DepsRuleIntro';
 import { Despondency } from './_slides/Despondency';
 import { FindingSolution } from './_slides/FindingSolution';
@@ -20,6 +19,8 @@ import { MyTalkPromise } from './_slides/MyTalkPromise';
 import { OpenSourceAndGames } from './_slides/OpenSourceAndGames';
 import { Question } from './_slides/Question';
 import { SolutionForFrontend } from './_slides/SolutionForFrontend';
+import { FinalWords } from './_slides/FinalWords';
+import { SolutionResult } from './_slides/SolutionResult';
 import { Title } from './_slides/Title';
 import { Wezom2020 } from './_slides/Wezom2020';
 import { WezomOutsource } from './_slides/WezomOutsource';
@@ -35,7 +36,6 @@ export default function Page(): ReactElement {
 	return (
 		<Root htmlClassName={fontSlideBase.variable}>
 			<RevealSlides hash hashOneBasedIndex>
-				{/* ---== INTRO ==--- */}
 				<Title />
 				<Question />
 				<MyTalkPromise />
@@ -46,20 +46,15 @@ export default function Page(): ReactElement {
 				<WezomOutsource />
 				<DepsRuleIntro />
 				<MyStory />
-
-				{/* ---== MAIN ==--- */}
 				<GraphQL101 />
 				<GraphQLStructureBefore />
 				<GraphQLProblem />
 				<Despondency />
 				<FindingSolution />
 				<SolutionForFrontend />
-
-				<Section bgColor="light">
-					<p>Work in progress...</p>
-				</Section>
-
-				{/* ---== CONCLUSION ==--- */}
+				<SolutionResult />
+				<Question withAnswer />
+				<FinalWords />
 			</RevealSlides>
 		</Root>
 	);
