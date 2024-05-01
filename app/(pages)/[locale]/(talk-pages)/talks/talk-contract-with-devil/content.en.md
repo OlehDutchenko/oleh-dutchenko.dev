@@ -10,7 +10,7 @@ the world of code. We'll see what consequences blind compliance with the
 conditions can lead to. And also we will try to find out "where is the Devil
 hiding in?".
 
-## Presentation slides
+## Presentation slides [Ukr]
 
 <div data-container-unfold="lg">
     <div className="aspect-ratio" data-ratio="16/9">

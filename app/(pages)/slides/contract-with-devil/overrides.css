@@ -248,3 +248,15 @@ body {
 .reveal-video-placeholder {
 	max-width: 70%;
 }
+
+.fwdays-logo {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 100px;
+	transition: all 0.8s ease;
+}
+
+.has-dark-background ~ .fwdays-logo {
+	filter: invert(1) grayscale(1) brightness(1.5);
+}

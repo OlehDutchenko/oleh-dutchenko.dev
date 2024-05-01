@@ -7,6 +7,7 @@ import 'reveal.js/dist/theme/serif.css';
 import 'reveal.js/plugin/highlight/monokai.css';
 import { DepsRuleIntro } from './_slides/DepsRuleIntro';
 import { Despondency } from './_slides/Despondency';
+import { FinalWords } from './_slides/FinalWords';
 import { FindingSolution } from './_slides/FindingSolution';
 import { GraphQL101 } from './_slides/GraphQL101';
 import { GraphQLProblem } from './_slides/GraphQLProblem';
@@ -19,7 +20,6 @@ import { MyTalkPromise } from './_slides/MyTalkPromise';
 import { OpenSourceAndGames } from './_slides/OpenSourceAndGames';
 import { Question } from './_slides/Question';
 import { SolutionForFrontend } from './_slides/SolutionForFrontend';
-import { FinalWords } from './_slides/FinalWords';
 import { SolutionResult } from './_slides/SolutionResult';
 import { Title } from './_slides/Title';
 import { Wezom2020 } from './_slides/Wezom2020';
@@ -56,6 +56,12 @@ export default function Page(): ReactElement {
 				<Question withAnswer />
 				<FinalWords />
 			</RevealSlides>
+			<img
+				src="/static/slides-contract-with-devil/js_rgb.png"
+				alt=""
+				aria-hidden="true"
+				className="fwdays-logo"
+			/>
 		</Root>
 	);
 }
