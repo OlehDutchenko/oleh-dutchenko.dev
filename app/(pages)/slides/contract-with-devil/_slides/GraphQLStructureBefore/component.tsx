@@ -13,14 +13,14 @@ export function GraphQLStructureBefore(): ReactElement {
 				</h3>
 			</Section>
 
-			<Section
-				autoAnimate
-				bgColor="light"
-				transition="slide-in slide-out"
-			>
-				<h3 data-id="code-title">
-					Умовний віджет &quot;Список товарів&quot;
-				</h3>
+			<Section bgColor="dark">
+				<p>
+					Умовний віджет <br />
+					<span className="like-h3">&quot;Список товарів&quot;</span>
+				</p>
+			</Section>
+
+			<Section bgColor="light" className={styles.sectionCode}>
 				<div className={styles.wrapper}>
 					<pre
 						data-id="code-animation"

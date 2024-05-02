@@ -41,10 +41,24 @@ export function Question({ withAnswer }: Props): ReactElement {
 						самі ведуть себе в пастку!
 					</RollingFragment>
 				</Section>
-				<Section bgColor="darker" className="flex-section">
+				<Section bgColor="accent" className="flex-section">
+					<h1
+						style={{
+							fontSize: 68,
+							margin: '0 -5rem',
+						}}
+					>
+						&quot;Диявол ховається в деталях&quot;
+					</h1>
+					<Fragment component="p">
+						Не давайте низькорівневим складовим, <br /> впливати на
+						суть вашого завдання
+					</Fragment>
+				</Section>
+				<Section bgColor="dark" className="flex-section">
 					<h1>Технологія</h1>
 					<Fragment>
-						Це концепт, який не дає конкретного рішення.
+						Це інструмент, який не дає конкретного рішення.
 						<br />
 						<Fragment>Це напрям, яким можна піти, </Fragment>
 						<Fragment>

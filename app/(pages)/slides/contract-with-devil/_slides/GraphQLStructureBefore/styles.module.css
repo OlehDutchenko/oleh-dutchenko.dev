@@ -1,10 +1,14 @@
 .structurePreElement {
-	--code-max-height: 530px;
+	--code-max-height: 500px;
 	pointer-events: none;
 }
 
 .wrapper {
 	position: relative;
+}
+
+:global(.slides) .sectionCode {
+	top: 80px !important;
 }
 
 .demo {
@@ -43,7 +47,7 @@
 }
 
 .demoProductCardFragment1 {
-	top: 290px;
+	top: 272px;
 	left: 312px;
 	--code-font-size: 0.5em;
 }
@@ -55,31 +59,31 @@
 }
 
 .demoCoverCarouselFragment1 {
-	top: 340px;
+	top: 310px;
 	left: -40px;
 	--code-font-size: 0.5em;
 }
 
 .demoProductCardFragment2 {
-	top: 194px;
-	left: -130px;
+	top: 170px;
+	left: -125px;
 	--code-font-size: 0.5em;
 }
 
 .demoProductCardTypes1 {
-	top: 180px;
+	top: 150px;
 	left: 270px;
 	--code-font-size: 0.5em;
 }
 
 .demoProductCardView1 {
-	top: 204px;
+	top: 175px;
 	left: 270px;
 	--code-font-size: 0.5em;
 }
 
 .demoCoverCarouselTypes1 {
-	top: 325px;
+	top: 295px;
 	left: 300px;
 	--code-font-size: 0.5em;
 }

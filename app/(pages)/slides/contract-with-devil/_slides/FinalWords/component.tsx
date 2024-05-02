@@ -12,8 +12,8 @@ export function FinalWords(): ReactElement {
 							<td>
 								<ImageWrapper>
 									<img
-										width={800}
 										alt=""
+										width={800}
 										src="/static/slides-contract-with-devil/qr.png"
 									/>
 								</ImageWrapper>

@@ -62,6 +62,7 @@ export default function Page(): ReactElement {
 				aria-hidden="true"
 				className="fwdays-logo"
 			/>
+			<div className="fwdays-frame"></div>
 		</Root>
 	);
 }
