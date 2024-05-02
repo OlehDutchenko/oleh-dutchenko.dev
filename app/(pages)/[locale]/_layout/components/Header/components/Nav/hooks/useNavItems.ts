@@ -1,7 +1,7 @@
 export interface Params {
 	rootHref: string;
 	items: {
-		talks: string;
+		// talks: string;
 	};
 }
 
@@ -17,7 +17,7 @@ interface Item {
 
 export function useNavItems(params: Params): Item[] {
 	const { rootHref, items } = params;
-	const keys: ItemKey[] = ['talks'];
+	const keys: ItemKey[] = [];
 
 	return keys.map(
 		(key): Item => ({

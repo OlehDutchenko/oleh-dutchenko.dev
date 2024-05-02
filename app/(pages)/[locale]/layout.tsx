@@ -37,7 +37,7 @@ function RenderAsPage({
 	const nav: HeaderProps['nav'] = {
 		rootHref: `/${locale}`,
 		description: translations.nav.description,
-		items: translations.nav.items,
+		items: {} // translations.nav.items,
 	};
 
 	const localeSwitcher: HeaderProps['localeSwitcher'] = {
