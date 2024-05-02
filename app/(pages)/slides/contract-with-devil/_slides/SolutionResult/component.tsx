@@ -32,13 +32,13 @@ export function SolutionResult(): ReactElement {
 						Окреме тестування &quot;нормалізаторів&quot;
 					</RollingFragment>
 					<RollingFragment component="li">
-						Перевикористання коду &quot;нормалізторів&quot;
+						Перевикористання коду &quot;нормалізаторів&quot;
 					</RollingFragment>
 				</ul>
 			</Section>
 			<Section bgColor="light" className="flex-section">
 				<div>Таким чином ми досягли чого хотіли</div>
-				<Fragment component="div">і навіть трохи більше...</Fragment>
+				<Fragment component="div">і навіть трохи більше ))</Fragment>
 			</Section>
 			<Section bgColor="dark" className="flex-section">
 				<div>Наша подорож продовжується...</div>
