@@ -62,8 +62,8 @@ export function Question({ withAnswer }: Props): ReactElement {
 						<br />
 						<Fragment>Це напрям, яким можна піти, </Fragment>
 						<Fragment>
-							як саме ви будете долати цей шлях - залежить тільки
-							від вас!
+							a як саме ви будете долати цей шлях - залежить
+							тільки від вас!
 						</Fragment>
 					</Fragment>
 				</Section>

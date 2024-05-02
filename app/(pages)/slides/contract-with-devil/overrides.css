@@ -192,6 +192,10 @@ body {
 	}
 }
 
+.reveal .has-dark-background a {
+	--r-link-color: #8585fc;
+}
+
 .reveal .hljs.has-highlights tr:not(.highlight-line) {
 	filter: grayscale(1);
 	opacity: 0.3;
@@ -274,7 +278,7 @@ body {
 
 	&::before,
 	&::after {
-		content: "";
+		content: '';
 		position: absolute;
 		left: 0;
 		width: 100%;
