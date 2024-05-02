@@ -1,5 +1,6 @@
 import { AccentElement } from '@/_components/AccentElement';
 import { ReactElement } from 'react';
+import { Fragment } from '../../_components/Fragment';
 import { RollingFragment } from '../../_components/RollingFragment';
 import { Section } from '../../_components/Section';
 import styles from './styles.module.css';
@@ -31,11 +32,26 @@ export function Question({ withAnswer }: Props): ReactElement {
 				<Section bgColor="darker" className="flex-section">
 					<h1>Ні!</h1>
 					<RollingFragment>
-						Сліпо слідуючи своїми захопленнями,
+						Сліпо слідуючи за своїми захопленнями,
 					</RollingFragment>
 					<RollingFragment>
-						розробники самі ведуть себе в пастку!
+						<span style={{ borderBottom: '1px solid' }}>
+							розробники
+						</span>{' '}
+						самі ведуть себе в пастку!
 					</RollingFragment>
+				</Section>
+				<Section bgColor="darker" className="flex-section">
+					<h1>Технологія</h1>
+					<Fragment>
+						Це концепт, який не дає конкретного рішення.
+						<br />
+						<Fragment>Це напрям, яким можна піти, </Fragment>
+						<Fragment>
+							як саме ви будете долати цей шлях - залежить тільки
+							від вас!
+						</Fragment>
+					</Fragment>
 				</Section>
 			</>
 		);

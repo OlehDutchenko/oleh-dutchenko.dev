@@ -36,6 +36,10 @@ export function SolutionResult(): ReactElement {
 					</RollingFragment>
 				</ul>
 			</Section>
+			<Section bgColor="light" className="flex-section">
+				<div>Таким чином ми досягли чого хотіли</div>
+				<Fragment component="div">і навіть трохи більше...</Fragment>
+			</Section>
 			<Section bgColor="dark" className="flex-section">
 				<div>Наша подорож продовжується...</div>
 				<Fragment component="div">
