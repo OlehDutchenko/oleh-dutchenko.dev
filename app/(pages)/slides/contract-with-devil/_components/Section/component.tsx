@@ -23,9 +23,11 @@ export function Section({
 	className,
 	autoAnimate,
 	transition = 'zoom-in slide-out',
+	...props
 }: Props): ReactElement {
 	return (
 		<section
+			{...props}
 			data-auto-animate={autoAnimate || undefined}
 			data-background-color={getBgColor(bgColor)}
 			data-background-image={getBgImage(bgImage)}

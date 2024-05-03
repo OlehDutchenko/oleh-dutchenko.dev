@@ -1,6 +1,6 @@
-import { RollingFragment } from '../../_components/RollingFragment';
 import { ReactElement } from 'react';
 import { Fragment } from '../../_components/Fragment';
+import { RollingFragment } from '../../_components/RollingFragment';
 import { Section } from '../../_components/Section';
 
 export function SolutionResult(): ReactElement {
@@ -38,7 +38,7 @@ export function SolutionResult(): ReactElement {
 			</Section>
 			<Section bgColor="light" className="flex-section">
 				<div>Таким чином ми досягли чого хотіли</div>
-				<Fragment component="div">і навіть трохи більше ))</Fragment>
+				<Fragment component="div">і навіть трохи більше 😎</Fragment>
 			</Section>
 			<Section bgColor="dark" className="flex-section">
 				<div>Наша подорож продовжується...</div>

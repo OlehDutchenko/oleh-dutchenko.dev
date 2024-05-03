@@ -107,6 +107,7 @@ body {
 		width: calc(100% - 10px);
 		margin: 5px;
 		font-size: var(--code-font-size, 0.675em);
+		line-height: var(--code-line-height, 1.2);
 
 		& code {
 			padding: 2rem;

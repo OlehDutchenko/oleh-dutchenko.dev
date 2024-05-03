@@ -28,7 +28,7 @@ export function MyStory(): ReactElement {
 					<br />
 					<Fragment>про зневіру в обраному шляху</Fragment>
 					<br />
-					<Fragment>та &quot;просвітлення&quot; 😎</Fragment>
+					<Fragment>та &quot;просвітлення&quot; 😇</Fragment>
 				</p>
 			</Section>
 		</>
