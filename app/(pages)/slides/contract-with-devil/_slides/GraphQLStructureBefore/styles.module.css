@@ -11,26 +11,6 @@
 	top: 80px !important;
 }
 
-.demo {
-	position: absolute;
-	opacity: 0;
-	transition: 0.2s ease-in-out;
-	z-index: 2;
-	transform: translateY(1rem);
-	pointer-events: none;
-	--code-font-size: 0.575em;
-	--t: 0.5s;
-}
-
-.demo pre {
-	background: white !important;
-	line-height: 1.4;
-}
-
-.demo pre code {
-	padding: 1.2rem !important;
-}
-
 .demoProductsUsage1 {
 	top: 120px;
 	left: 60px;

@@ -55,52 +55,108 @@
 	transition: all 0.5s ease 0.2s !important;
 }
 
-[data-fragment='-1'] .highlight[data-li='2'] {
+[data-fragment='0'] .highlight[data-li='1.1'] {
+	opacity: var(--opacity);
+	height: 42px;
+	top: 250px;
+}
+[data-fragment='0'] .highlight[data-li='1.2'] {
+	opacity: var(--opacity);
+	height: 42px;
+	top: 348px;
+}
+
+[data-fragment='-1'] .highlight[data-li='2.1'] {
 	opacity: var(--opacity);
 	height: 142px;
 	top: 172px;
 }
 
-[data-fragment='0'] .highlight[data-li='2'] {
+[data-fragment='0'] .highlight[data-li='2.1'] {
 	opacity: var(--opacity);
 	height: 22px;
 	top: 212px;
 }
 
-[data-fragment='1'] .highlight[data-li='2'] {
+[data-fragment='1'] .highlight[data-li='2.1'] {
 	opacity: var(--opacity);
 	height: 22px;
 	top: 231px;
 }
 
-[data-fragment='-1'] .highlight[data-li='3'] {
+[data-fragment='-1'] .highlight[data-li='3.1'] {
 	opacity: var(--opacity);
 	height: 62px;
 	top: 114px;
 }
 
-[data-fragment='0'] .highlight[data-li='3'] {
+[data-fragment='0'] .highlight[data-li='3.1'] {
 	opacity: var(--opacity);
 	height: 22px;
 	top: 153px;
 }
 
-[data-fragment='-1'] .highlight[data-li='4'],
-[data-fragment='-1'] .highlight[data-li='5'] {
+[data-fragment='-1'] .highlight[data-li='4.1'],
+[data-fragment='-1'] .highlight[data-li='5.1'] {
 	opacity: var(--opacity);
 	height: 42px;
 	top: 114px;
 }
 
-[data-fragment='0'] .highlight[data-li='4'],
-[data-fragment='0'] .highlight[data-li='5'] {
+[data-fragment='0'] .highlight[data-li='4.1'],
+[data-fragment='0'] .highlight[data-li='5.1'] {
 	opacity: var(--opacity);
 	height: 22px;
 	top: 134px;
 }
 
-.highlight[data-li='6'] {
+.highlight[data-li='6.1'] {
 	opacity: var(--opacity);
 	height: 22px;
 	top: 95px;
+}
+
+/* ------ demo ------ */
+
+.demo {
+	transition: 0.2s ease-in-out !important;
+	height: 50px !important;
+	--code-font-size: 0.47em;
+	--code-line-height: 1.3;
+}
+
+.demoProductCardTypes1 {
+	top: 184px;
+	left: 220px;
+}
+
+.demoProductCardView1 {
+	top: 204px;
+	left: 220px;
+}
+
+.demoFragmentProductCard1 {
+	top: 171px;
+	left: 75px;
+}
+
+.demoNormalizeProduct1 {
+	top: 152px;
+	left: -130px;
+}
+
+.demoUseProducts1 {
+	top: 152px;
+	left: -80px;
+}
+
+[data-fragment='0'] .highlight[data-li='2.1'] ~ .demoProductCardTypes1,
+[data-fragment='1'] .highlight[data-li='2.1'] ~ .demoProductCardView1,
+[data-fragment='0'] .highlight[data-li='3.1'] ~ .demoFragmentProductCard1,
+[data-fragment='0'] .highlight[data-li='4.1'] ~ .demoNormalizeProduct1 ,
+[data-fragment='0'] .highlight[data-li='5.1'] ~ .demoUseProducts1  {
+	opacity: 1;
+	pointer-events: auto;
+	transform: none;
+	transition: all 0.5s ease 0.2s !important;
 }

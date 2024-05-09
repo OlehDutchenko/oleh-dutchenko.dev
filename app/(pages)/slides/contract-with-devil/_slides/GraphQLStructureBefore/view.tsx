@@ -1,5 +1,6 @@
 import clsx from 'clsx';
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement } from 'react';
+import { Demo } from '../../_components/Demo';
 import { Section } from '../../_components/Section';
 import styles from './styles.module.css';
 
@@ -42,7 +43,7 @@ export function GraphQLStructureBefore(): ReactElement {
 					<Demo className={styles.demoProductsUsage1}>
 						{getProductsUsage1Code()}
 					</Demo>
-					<Demo className={styles.demoProductsView1}>
+					<Demo className={styles.demoProductsView1} lang="tsx">
 						{getProductsView1Code()}
 					</Demo>
 					<Demo className={styles.demoProductsQuery1}>
@@ -84,22 +85,6 @@ export function GraphQLStructureBefore(): ReactElement {
 				</div>
 			</Section>
 		</>
-	);
-}
-
-function Demo(props: {
-	className: string;
-	lines?: string;
-	children: ReactNode;
-}): ReactElement {
-	return (
-		<div className={clsx(styles.demo, props.className)}>
-			<pre className={clsx(props.lines && 'code-wrapper-hide-numbers')}>
-				<code className="hljs ts" data-line-numbers={props.lines}>
-					{props.children}
-				</code>
-			</pre>
-		</div>
 	);
 }
 

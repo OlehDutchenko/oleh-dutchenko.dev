@@ -14,6 +14,10 @@ export function SolutionResult(): ReactElement {
 						<Fragment>&nbsp;✅&nbsp;</Fragment>
 					</RollingFragment>
 					<RollingFragment component="li">
+						Зберегти профіт кодо-генерації
+						<Fragment>&nbsp;✅&nbsp;</Fragment>
+					</RollingFragment>
+					<RollingFragment component="li">
 						Вносити зміни <em>&quot;швидко&quot;</em>
 						<Fragment>&nbsp;✅&nbsp;</Fragment>
 					</RollingFragment>
@@ -32,7 +36,7 @@ export function SolutionResult(): ReactElement {
 						Окреме тестування &quot;нормалізаторів&quot;
 					</RollingFragment>
 					<RollingFragment component="li">
-						Перевикористання коду &quot;нормалізаторів&quot;
+						Перевикористання коду
 					</RollingFragment>
 				</ul>
 			</Section>
