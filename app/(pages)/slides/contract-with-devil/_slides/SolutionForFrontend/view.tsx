@@ -58,8 +58,35 @@ export function SolutionForFrontend(): ReactElement {
 					</div>
 				</Fragment>
 			</Section>
-			<Section bgColor="light" className="flex-section">
-				<h3>GraphQL - це ресурс даних!</h3>
+			<Section bgColor="light" className="flex-section" autoAnimate>
+				<p data-id="a">
+					&ldquo;Чиста Архітектура&ldquo; та &ldquo;Чистий Kод&ldquo;
+				</p>
+				<h3 className={styles.sqlHeading}>
+					<span data-id="b.1">Описують антипаттерни&nbsp;</span>
+					<span data-id="b.2">SQL</span>
+				</h3>
+			</Section>
+			<Section bgColor="light" className="flex-section" autoAnimate>
+				<h3 className={styles.sqlHeading}>
+					<span data-id="b.2">SQL</span>
+					<span data-id="b.3">&nbsp;!==&nbsp;</span>
+					<span data-id="b.4">GraphQL</span>
+				</h3>
+			</Section>
+			<Section bgColor="light" className="flex-section" autoAnimate>
+				<h3 className={styles.sqlHeading}>
+					<span data-id="b.2">SQL</span>
+					<span data-id="b.3">&nbsp;!==&nbsp;</span>
+					<span data-id="b.4">GraphQL</span>
+					<span data-id="b.5">&nbsp;?</span>
+				</h3>
+			</Section>
+			<Section bgColor="light" className="flex-section" autoAnimate>
+				<h3 className={styles.sqlHeading}>
+					<span data-id="b.4">GraphQL</span>
+					<span data-id="b.6">&nbsp;- це ресурс даних!</span>
+				</h3>
 				<RollingFragment>
 					Це &quot;База Даних&quot; для клієнта (фронту)
 				</RollingFragment>
