@@ -58,8 +58,20 @@ export function FindingSolution(): ReactElement {
 			</Section>
 
 			<Section bgColor="light" className="flex-section">
+				<h3>Основні проблеми:</h3>
+				<ol>
+					<RollingFragment component="li">
+						&nbsp;Ломаючі зміни в АПІ
+					</RollingFragment>
+					<RollingFragment component="li">
+						Тотальне використання GraphQL в коді
+					</RollingFragment>
+				</ol>
+			</Section>
+
+			<Section bgColor="light" className="flex-section">
 				<p>
-					DDD вказує на загальну проблему відносин
+					DDD вказує на проблему відносин
 					<br />
 					<RollingFragment className="like-h3">
 						Customer-Supplier

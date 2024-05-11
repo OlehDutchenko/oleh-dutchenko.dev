@@ -88,7 +88,7 @@ export function SolutionForFrontend(): ReactElement {
 					<span data-id="b.6">&nbsp;- це ресурс даних!</span>
 				</h3>
 				<RollingFragment>
-					Це &quot;База Даних&quot; для клієнта (фронту)
+					&quot;База Даних&quot; для клієнта (фронту)
 				</RollingFragment>
 			</Section>
 			<Section bgColor="light" className="flex-section">
