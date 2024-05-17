@@ -328,7 +328,9 @@ function getDemoFragmentProductCard1(): string {
 export const FRAGMENT_PRODUCT_CARD = gql\`
     fragment ProductCard on Product {
         id
-        title
+        titleVariants {
+            current
+        }
         price
         status
         covers {
@@ -351,9 +353,9 @@ function getDemoNormalizeProduct(): string {
     }
 }
 
-function formatPrice() { ... }
-function normalizeStatus() { ... }
-function normalizeCover() { ... }
+function formatPrice(): string { ... }
+function normalizeStatus(): string { ... }
+function normalizeCover(): ImageCover | VideoCover | YoutubeCover { ... }
 `;
 }
 
