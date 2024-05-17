@@ -39,49 +39,31 @@ export function GraphQLProblem(): ReactElement {
 			<Section bgColor="light">
 				<h3>Ми самі себе робимо повністю залежними від АПІ!</h3>
 			</Section>
-			<Section bgColor="light" autoAnimate>
-				<div data-id="when" className={styles.when}>
-					Коли
+			<Section bgColor="light" autoAnimate className="flex-section">
+				<div className={styles.when}>
+					<span data-id="wh1">Коли</span>
 				</div>
-				<div data-id="api">
-					АПІ зміниться...
-					<br />
-					<span data-id="span" />
-				</div>
+				<p>АПІ буде мінятись...</p>
 			</Section>
-			<Section bgColor="light" autoAnimate>
-				<div data-id="when" className={styles.when}>
-					&nbsp;Якщо?
+			<Section bgColor="light" autoAnimate className="flex-section">
+				<div className={styles.when}>
+					<span data-id="wh2">Якщо?</span>
 				</div>
-				<div data-id="api">
-					АПІ зміниться...
-					<br />
-					<span data-id="span" />
-				</div>
+				<p>АПІ буде мінятись...</p>
 			</Section>
-			<Section bgColor="light" autoAnimate>
-				<div data-id="when" className={styles.when}>
-					<s>&nbsp;Якщо&nbsp;</s> <br /> Коли
-				</div>
-				<div data-id="api">
-					АПІ зміниться...
-					<br />
-					<span data-id="span" />
-				</div>
-			</Section>
-			<Section bgColor="light" autoAnimate>
-				<div data-id="when" className={styles.when}>
-					<s>&nbsp;Якщо&nbsp;</s> <br /> Коли
-				</div>
-				<div data-id="api">
-					АПІ зміниться... <br />
-					<span data-id="span">
-						<span className="like-h3">
-							Потрібно постійно вносити <br /> правки в код
-							шаблону!
-						</span>
+			<Section bgColor="light" autoAnimate className="flex-section">
+				<div className={styles.when}>
+					<span data-id="wh2">
+						<s>Якщо?</s>
 					</span>
+					<span data-id="wh3">&nbsp;Коли</span>
 				</div>
+				<p>АПІ буде мінятись...</p>
+				<RollingFragment maxHeight={173}>
+					<span className="like-h3">
+						Потрібно постійно вносити <br /> правки в код шаблону!
+					</span>
+				</RollingFragment>
 			</Section>
 
 			<Section bgColor="dark" className="flex-section">

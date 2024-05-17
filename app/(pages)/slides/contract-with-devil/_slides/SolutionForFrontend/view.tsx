@@ -18,7 +18,10 @@ export function SolutionForFrontend(): ReactElement {
 				</p>
 			</Section>
 			<Section bgColor="light" className="flex-section">
-				<h3>База даних - це деталь!</h3>
+				<p>
+					&quot;Фронтендам&quot; на замітку: <br />
+					<span className="like-h3">База даних - це деталь!</span>
+				</p>
 				<Fragment data-id="anim">
 					<div className={styles.dbText}>
 						<AccentElement>
