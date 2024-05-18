@@ -4,3 +4,12 @@
 	font-size: 0.9em;
 	border-radius: 0.3em;
 }
+
+.extendOl {
+	margin: 0 -1rem !important;
+	padding-left: 20px;
+}
+
+.nonBreakLine {
+	white-space: nowrap;
+}

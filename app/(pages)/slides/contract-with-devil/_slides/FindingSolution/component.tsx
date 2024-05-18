@@ -77,6 +77,20 @@ export function FindingSolution(): ReactElement {
 						Customer-Supplier
 					</RollingFragment>
 				</p>
+				<ol className={styles.extendOl}>
+					<RollingFragment component="li">
+						&nbsp;Єдиний менеджмент
+						<Fragment>&nbsp;✅&nbsp;</Fragment>
+					</RollingFragment>
+					<RollingFragment
+						component="li"
+						className={styles.nonBreakLine}
+					>
+						&quot;Постачальник&quot; має враховувати потреби
+						&quot;споживача&quot;
+						<Fragment>&nbsp;❌&nbsp;</Fragment>
+					</RollingFragment>
+				</ol>
 			</Section>
 
 			<Section bgColor="light" autoAnimate>
