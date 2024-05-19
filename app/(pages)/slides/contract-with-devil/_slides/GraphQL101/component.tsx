@@ -31,7 +31,7 @@ export function GraphQL101(): ReactElement {
 					<RollingFragment component="li" fx="fade-up">
 						Будьте щасливі!{' 🙌 '}
 						<em className="fragment" style={{ color: 'tomato' }}>
-							Ta ta, for now!
+							Ta-ta, for now!
 						</em>
 					</RollingFragment>
 				</ul>
@@ -40,7 +40,7 @@ export function GraphQL101(): ReactElement {
 				<h3>І це дійсно працює!</h3>
 			</Section>
 			<Section bgColor="light" className="flex-section">
-				<h3>Є класні бібліотеки, які допомагають зробити це швидко</h3>
+				<h3>Є бібліотеки, котрі допомагають робити це швидко</h3>
 				<ul>
 					<RollingFragment component="li" fx="fade-up">
 						<LibLink href="https://www.npmjs.com/package/apollo-codegen">

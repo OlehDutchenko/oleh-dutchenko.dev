@@ -287,7 +287,7 @@ fragment UserMiniCard on User {
 			<Section bgColor="dark" className="flex-section">
 				<div>
 					Так, можна звинувачувати бекенд... <br />
-					<Fragment>Але це не скасовує очевидний факт</Fragment>
+					<Fragment>Але це не спростовує очевидний факт</Fragment>
 				</div>
 				<RollingFragment component="h3">
 					Ми залежні від АПІ у всьому!
@@ -299,7 +299,8 @@ fragment UserMiniCard on User {
 
 			<Section bgColor="dark" className="flex-section">
 				<div>
-					Можна миритись з цим, <br /> вважаючи, що це нормально...
+					Мабуть, можна миритись з цим, <br /> вважаючи, що це
+					нормально...
 				</div>
 				<RollingFragment component="h3" className="like-h3">
 					Фронтенд є &quot;веб-мордою&quot; даних
