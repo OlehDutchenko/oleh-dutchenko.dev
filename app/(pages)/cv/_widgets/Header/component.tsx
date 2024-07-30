@@ -6,8 +6,8 @@ export function Header(): ReactElement {
 		<header className="cv-box">
 			<div className="cv-header">
 				<div className="cv-header__left">
-					<div>Frontend developer</div>
-					<h1 className="cv-heading">Oleh Dutchenko</h1>
+					<div>Senior Frontend Developer</div>
+					<h1>Oleh Dutchenko</h1>
 				</div>
 				<div className="cv-header__right">
 					<p style={{ lineHeight: 1.6 }}>

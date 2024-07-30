@@ -15,11 +15,10 @@ export default function CVPage(): ReactElement {
 			<main>
 				<Header />
 				<Skills />
-				<Languages />
-				<Education />
-				<PageBreak />
 				<CommercialProjects />
 				<OpenSourceProjects />
+				<Languages />
+				<Education />
 			</main>
 		</Root>
 	);

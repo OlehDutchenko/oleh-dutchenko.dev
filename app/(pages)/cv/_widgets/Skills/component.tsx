@@ -11,18 +11,20 @@ export function Skills(): ReactElement {
 						HTML, CSS, JavaScript, TypeScript, GraphQL; <br />
 						<i>Basic understanding:</i> PHP, Python and Java.
 					</Details>
-					<Details title="Techniques and methodologies:">
-						TDD, BEM, Responsive Design, Mobile/Desktop First,
-						Cross-browser compatibility;
+					<Details title="Style techniques and methodologies:">
+						Styled Components, CSS Modules, JSS, Sass;
 						<br />
-						Styled Components, CSS Modules, JSS, Sass.
+						Responsive Design, Mobile/Desktop First.
 					</Details>
-					<Details title="Development practices and principles:">
-						Design review, Code review, Pair programming,
-						Refactoring; SOLID, DRY.
+					<Details title="Development methodologies, practices and principles:">
+						Test-Driven Development, Design review, Code review,
+						Pair programming, Refactoring; SOLID, DRY.
 					</Details>
-					<Details title="Project managment:">
-						Scrum / Waterfall, Domain Driven Design.
+					<Details title="Project managment methodologies and approaches:">
+						Agile / Waterfall, Domain Driven Design.
+					</Details>
+					<Details title="Project managment tools:">
+						Jira, Worksection, Trello.
 					</Details>
 					<Details title="CI/CD infrastructure and tools:">
 						Monorepo / Polyrepo; <br />
