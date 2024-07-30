@@ -47,18 +47,18 @@ hr {
 
 table {
 	width: calc(100% + 10px);
-	margin-left: -5px;
-	margin-right: -5px;
-
-	& th {
-		padding: 5px;
-		text-align: left;
-		background: #eee;
-	}
 
 	& td {
 		padding: 5px;
 		vertical-align: top;
+	}
+
+	& td:first-child {
+		padding-left: 0;
+	}
+
+	& td:last-child {
+		padding-right: 0;
 	}
 
 	& tr:last-child td > p:last-child {
@@ -77,8 +77,11 @@ table {
 			margin-bottom: 0.4em;
 		}
 	}
+}
 
-	& tbody tr:not(:last-child) td {
+.cv-tr-line {
+	& td {
+		padding-bottom: 8px;
 		border-bottom: 1px solid #bbb;
 	}
 }
@@ -112,7 +115,7 @@ section {
 .cv-columns {
 	display: flex;
 	flex-direction: row;
-	gap: 1cm;
+	gap: 0.6cm;
 
 	& > div {
 		flex-grow: 1;
@@ -130,6 +133,10 @@ section {
 
 .cv-block {
 	margin: 7px 0;
+
+	a {
+		font-weight: normal;
+	}
 }
 
 .cv-block::after {
@@ -181,5 +188,13 @@ h2 {
 		.cv-page-break__gap {
 			height: 0.5cm;
 		}
+	}
+}
+
+.cv-ul {
+	padding-left: 13px;
+
+	& li:not(:last-child) {
+		margin-bottom: 0.4em;
 	}
 }

@@ -4,7 +4,7 @@ import { Section } from '../../_components/Section';
 
 export function Experience(): ReactElement {
 	return (
-		<Section title="Experience in various development positions">
+		<Section title="Main responsibilities and achievements">
 			<div className="cv-columns">
 				<Details
 					title="Senior Frontend Developer at Wezom"
@@ -17,23 +17,19 @@ export function Experience(): ReactElement {
 						</>
 					}
 				>
-					<p>
-						Expanding my experience in the
-						development of large projects, managing technical
-						processes in a team, understanding the feasibility of
-						selected technologies and forecasting the consequences
-						of their use.
-					</p>
-					<p>
-						Conducted technical interviews for junior and middle
-						level specialists. After hiring, conducted onboarding
-						for the project.
-					</p>
-					<p>
-						Participated in the creation of internal solutions for
-						the company: open source libraries and boilerplate
-						templates for typical projects.
-					</p>
+					<ul className="cv-ul">
+						<li>
+							Expanding experience in the development of large
+							projects
+						</li>
+						<li>Management of technical processes in the team</li>
+						<li>Providing TDD in development processes</li>
+						<li>
+							Conducting technical interviews and onboarding of
+							new specialists
+						</li>
+						<li>Creation of internal solutions for the company</li>
+					</ul>
 				</Details>
 				<Details
 					title="Middle Frontend Developer at Wezom"
@@ -45,21 +41,22 @@ export function Experience(): ReactElement {
 						</>
 					}
 				>
-					<p>
-						I gained experience working in a team and knowledge in
-						different technologies such as{' '}
-						<i>
-							EJS, Sass (SCSS), Webpack, Blade (Laravel), jQuery,
-							and later React
-						</i>
-						.
-					</p>
-					<p>
-						I learned how write tests and documentation, how to set up
-						CI/CD pipelines for frontend needs, and how to manage
-						technical processes. It helped me to grow up my
-						skills in the development of the complex systems.
-					</p>
+					<ul className="cv-ul">
+						<li>Gained experience working in a team</li>
+						<li>
+							Study of various technologies such as EJS, Sass
+							(SCSS), Webpack, Blade (Laravel), jQuery, and later
+							React
+						</li>
+						<li>
+							I learned how write tests and technical
+							documentation
+						</li>
+						<li>
+							I learned how to set up CI/CD pipelines for frontend
+							needs, and how to manage technical processes
+						</li>
+					</ul>
 				</Details>
 				<Details
 					title="HTML Coder at Wezom"
@@ -78,7 +75,7 @@ export function Experience(): ReactElement {
 						projects.
 					</p>
 					<p>
-						I learned fundamentals of the web development and gained
+						Learned fundamentals of a web development and gained
 						experience in the development of the websites from the
 						scratch using such technologies as HTML & CSS, jQuery,
 						Sass (SCSS), Jade (Pug), Gulp, Webpack.

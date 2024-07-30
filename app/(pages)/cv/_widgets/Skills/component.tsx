@@ -8,32 +8,29 @@ export function Skills(): ReactElement {
 			<div className="cv-columns">
 				<div>
 					<Details title="Languages:">
-						HTML, CSS, JavaScript, TypeScript, GraphQL; <br/>
-						<br/>
-						<i>Basic understanding:</i> <br/> PHP, Python and Java.
+						HTML, CSS, JavaScript, TypeScript, GraphQL; <br />
+						<i>Basic understanding:</i> <br /> PHP, Python and Java.
 					</Details>
 					<Details title="Style techniques and methodologies:">
 						Styled Components, CSS Modules, JSS, Sass;
-						<br/>
+						<br />
 						Responsive Design, Mobile/Desktop First.
 					</Details>
 					<Details title="CI/CD infrastructure and tools:">
-						Monorepo / Polyrepo; <br/>
-						Bitbucket Pipelines, GitHub Actions; <br/>
+						Bitbucket Pipelines, GitHub Actions; <br />
 						TurboRepo, Lerna.
 					</Details>
 				</div>
 				<div>
 					<Details title="UI Libraries & Frameworks:">
-						React.js, Next.js, Storybook, React Hook
-						Form; <br/>{' '}
-						MUI, Ant Design.
+						React.js, Next.js, Storybook, React Hook Form; MUI, Ant
+						Design.
 					</Details>
 					<Details title="GraphQL libraries:">
 						Apollo Client, Apollo Server, Apollo Federation,
 						graphql-codegen.
 					</Details>
-					<Details title="Testing and schema validation libraries:">
+					<Details title="Testing & Validation">
 						Vitest / Jest, Testing Library; Zod.
 					</Details>
 					<Details title="WYSIWYG:">
@@ -44,25 +41,23 @@ export function Skills(): ReactElement {
 					</Details>
 				</div>
 				<div>
-					<Details
-						title="Development methodologies, practices and principles:">
+					<Details title="Development methodologies, practices and principles:">
 						Test-Driven Development, Design review, Code review,
 						Pair programming, Refactoring; SOLID, DRY.
 					</Details>
-					<Details
-						title="Project managment methodologies and approaches:">
+					<Details title="Project managment methodologies">
 						Agile / Waterfall, Domain Driven Design.
 					</Details>
 					<Details title="Project managment tools:">
 						Jira, Worksection, Trello.
 					</Details>
 					<Details title="Version control strategies:">
-						Git Flow / Trunk Based Development; <br/> Semantic
+						Git Flow / Trunk Based Development; <br /> Semantic
 						Versioning.
 					</Details>
 				</div>
 			</div>
-			<br/>
+			<br />
 		</Section>
 	);
 }

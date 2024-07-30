@@ -1,7 +1,6 @@
 import { Root } from '@/_components/Root';
 import { ReactElement } from 'react';
 import './page.css';
-import { PageBreak } from './_components/PageBreak';
 import { Projects } from './_widgets/Projects';
 import { Education } from './_widgets/Education';
 import { Header } from './_widgets/Header';
@@ -17,9 +16,8 @@ export default function CVPage(): ReactElement {
 				<Skills />
 				<Experience />
 				<Education />
-				<OpenSourceProjects />
-				<PageBreak />
 				<Projects />
+				<OpenSourceProjects />
 			</main>
 		</Root>
 	);
