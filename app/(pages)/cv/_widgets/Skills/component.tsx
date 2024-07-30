@@ -62,6 +62,7 @@ export function Skills(): ReactElement {
 					</Details>
 				</div>
 			</div>
+			<br/>
 		</Section>
 	);
 }

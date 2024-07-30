@@ -4,6 +4,7 @@ import { ReactElement } from 'react';
 export function Header(): ReactElement {
 	return (
 		<header className="cv-box">
+			<br/>
 			<div className="cv-header">
 				<div className="cv-header__left">
 					<div>Senior Frontend Developer</div>
@@ -33,9 +34,10 @@ export function Header(): ReactElement {
 				I have 10 years of experience in outsourced projects. Have been
 				working on different domains, <br />
 				such as Real Estate, Energy carriers, News portal and VoIP
-				telephony, by making the E-Commerce, CMS, HRM and CRM systems.
+				telephony, by making the E-Commerce, CMS, HRM and CRM systems. <br/>
 				Passionate about developing with GraphQL, TypeScript and React.
 			</p>
+			<br/>
 		</header>
 	);
 }
