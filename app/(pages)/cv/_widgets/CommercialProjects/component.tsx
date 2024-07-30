@@ -1,45 +1,47 @@
 import { Details } from '@/(pages)/cv/_components/Details';
 import { ExternalLink } from '@/(pages)/cv/_components/ExternalLink';
+import { PageBreak } from '@/(pages)/cv/_components/PageBreak';
 import { ReactElement } from 'react';
 import { Section } from '../../_components/Section';
 
 export function CommercialProjects(): ReactElement {
 	return (
-		<Section title="Projects experience">
-			<Details
-				title="Senior Frontend Developer at Wezom"
-				aside={
-					<>
-						March 2020 - Present,
-						<br />
-						{currentDuration()}
-					</>
-				}
-			>
-				<p>
-					In this position I am expanding my experience in the
-					development of large projects, <br /> managing technical
-					processes in a team, understanding the feasibility <br />
-					of selected technologies and forecasting the consequences of
-					their use. Conducted technical interviews for junior and
-					middle level specialists. After hiring, conducted onboarding
-					for the project. Also participated in the creation of internal solutions for
-					the company: open source libraries and boilerplate templates
-					for typical projects.
-				</p>
-				<p style={{ paddingTop: 6, marginBottom: '1em' }}>
-					<strong>Key projects in this position:</strong>
-				</p>
-				<table cellSpacing={1} style={{ fontSize: 11 }}>
-					<thead>
+		<>
+			<Section title="Projects experience">
+				<Details
+					title="Senior Frontend Developer at Wezom"
+					aside={
+						<>
+							March 2020 - Present,
+							<br />
+							{currentDuration()}
+						</>
+					}
+				>
+					<p>
+						In this position I am expanding my experience in the
+						development of large projects, <br /> managing technical
+						processes in a team, understanding the feasibility <br />
+						of selected technologies and forecasting the consequences of
+						their use. Conducted technical interviews for junior and
+						middle level specialists. After hiring, conducted onboarding
+						for the project. Also participated in the creation of internal solutions for
+						the company: open source libraries and boilerplate templates
+						for typical projects.
+					</p>
+					<p style={{ paddingTop: 6, marginBottom: '1em' }}>
+						<strong>Key projects in this position:</strong>
+					</p>
+					<table cellSpacing={1} style={{ fontSize: 11 }}>
+						<thead>
 						<tr>
 							<th width={100}>Project</th>
 							<th width={280}>Achievements</th>
 							<th width={200}>Responsibility</th>
 							<th>Tech stack</th>
 						</tr>
-					</thead>
-					<tbody>
+						</thead>
+						<tbody>
 						<tr>
 							<td>
 								<span>
@@ -254,58 +256,64 @@ export function CommercialProjects(): ReactElement {
 								CKEditor, CKFinder, Jest,
 							</td>
 						</tr>
-					</tbody>
-				</table>
-			</Details>
-			<Details
-				title="Middle Frontend Developer at Wezom"
-				aside={
-					<>
-						February 2017 - March 2020,
-						<br />2 years 8 months
-					</>
-				}
-			>
-				<p>
-					I am gained experience working in team and knowledge in the
-					different technologies such as{' '}
-					<i>
-						EJS, Sass (SCSS), Webpack, Blade (Laravel), jQuery and
-						later React
-					</i>
-					.
-				</p>
-				<p>
-					I learned how write tests and documentation, how set up the
-					CI/CD pipelines for frontend needs and how to manage the
-					technical processes. It helped me to grow up my skills in
-					the development of the complex systems.
-				</p>
-			</Details>
-			<hr />
-			<Details
-				title="HTML Coder at Wezom"
-				aside={
-					<>
-						March 2014 - August 2017,
-						<br />3 years 6 months
-					</>
-				}
-			>
-				<p>
-					I have been switched from Motion Design to IT as HTML Coder.{' '}
-					<br />
-					At this position I was participated in more than 20
-					projects.
-				</p>
-				<p>
-					I learned fundamentals of the web development and gained
-					experience in the development of the websites from the
-					scratch using such technologies as HTML & CSS, jQuery, Sass
-					(SCSS), Jade (Pug), Gulp, Webpack.
-				</p>
-			</Details>
-		</Section>
+						</tbody>
+					</table>
+				</Details>
+			</Section>
+			<PageBreak />
+			<Section title="Experience of previous positions">
+				<div className="cv-columns">
+					<Details
+						title="Middle Frontend Developer at Wezom"
+						aside={
+							<>
+								February 2017 - March 2020,
+								<br />2 years 8 months
+							</>
+						}
+					>
+						<p>
+							I am gained experience working in team and knowledge in the
+							different technologies such as{' '}
+							<i>
+								EJS, Sass (SCSS), Webpack, Blade (Laravel), jQuery and
+								later React
+							</i>
+							.
+						</p>
+						<p>
+							I learned how write tests and documentation, how set up the
+							CI/CD pipelines for frontend needs and how to manage the
+							technical processes. It helped me to grow up my skills in
+							the development of the complex systems.
+						</p>
+					</Details>
+					<Details
+						title="HTML Coder at Wezom"
+						aside={
+							<>
+								March 2014 - August 2017,
+								<br />3 years 6 months
+							</>
+						}
+					>
+						<p>
+							I have been switched from Motion Design to IT as HTML Coder.{' '}
+							<br />
+							At this position I was participated in more than 20
+							projects.
+						</p>
+						<p>
+							I learned fundamentals of the web development and gained
+							experience in the development of the websites from the
+							scratch using such technologies as HTML & CSS, jQuery, Sass
+							(SCSS), Jade (Pug), Gulp, Webpack.
+						</p>
+					</Details>
+				</div>
+				<br/>
+			</Section>
+		</>
 	);
 }
 

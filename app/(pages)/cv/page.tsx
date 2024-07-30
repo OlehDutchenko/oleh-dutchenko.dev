@@ -17,7 +17,6 @@ export default function CVPage(): ReactElement {
 				<Skills />
 				<CommercialProjects />
 				<OpenSourceProjects />
-				<Languages />
 				<Education />
 			</main>
 		</Root>

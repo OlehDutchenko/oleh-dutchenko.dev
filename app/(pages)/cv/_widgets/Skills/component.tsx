@@ -8,37 +8,25 @@ export function Skills(): ReactElement {
 			<div className="cv-columns">
 				<div>
 					<Details title="Languages:">
-						HTML, CSS, JavaScript, TypeScript, GraphQL; <br />
-						<i>Basic understanding:</i> PHP, Python and Java.
+						HTML, CSS, JavaScript, TypeScript, GraphQL; <br/>
+						<br/>
+						<i>Basic understanding:</i> <br/> PHP, Python and Java.
 					</Details>
 					<Details title="Style techniques and methodologies:">
 						Styled Components, CSS Modules, JSS, Sass;
-						<br />
+						<br/>
 						Responsive Design, Mobile/Desktop First.
 					</Details>
-					<Details title="Development methodologies, practices and principles:">
-						Test-Driven Development, Design review, Code review,
-						Pair programming, Refactoring; SOLID, DRY.
-					</Details>
-					<Details title="Project managment methodologies and approaches:">
-						Agile / Waterfall, Domain Driven Design.
-					</Details>
-					<Details title="Project managment tools:">
-						Jira, Worksection, Trello.
-					</Details>
 					<Details title="CI/CD infrastructure and tools:">
-						Monorepo / Polyrepo; <br />
-						Bitbucket Pipelines, GitHub Actions; <br />
+						Monorepo / Polyrepo; <br/>
+						Bitbucket Pipelines, GitHub Actions; <br/>
 						TurboRepo, Lerna.
 					</Details>
 				</div>
 				<div>
-					<Details title="Version control strategies:">
-						Git Flow / Trunk Based Development; <br /> Semantic
-						Versioning.
-					</Details>
 					<Details title="UI Libraries & Frameworks:">
-						React.js, Next.js, Storybook, React Hook Form; <br />{' '}
+						React.js, Next.js, Storybook, React Hook
+						Form; <br/>{' '}
 						MUI, Ant Design.
 					</Details>
 					<Details title="GraphQL libraries:">
@@ -53,6 +41,24 @@ export function Skills(): ReactElement {
 					</Details>
 					<Details title="Narrowly profiled libraries:">
 						Apache ECharts, JsSIP, GSAP.
+					</Details>
+				</div>
+				<div>
+					<Details
+						title="Development methodologies, practices and principles:">
+						Test-Driven Development, Design review, Code review,
+						Pair programming, Refactoring; SOLID, DRY.
+					</Details>
+					<Details
+						title="Project managment methodologies and approaches:">
+						Agile / Waterfall, Domain Driven Design.
+					</Details>
+					<Details title="Project managment tools:">
+						Jira, Worksection, Trello.
+					</Details>
+					<Details title="Version control strategies:">
+						Git Flow / Trunk Based Development; <br/> Semantic
+						Versioning.
 					</Details>
 				</div>
 			</div>

@@ -78,6 +78,7 @@ export function OpenSourceProjects(): ReactElement {
 					</Details>
 				</div>
 			</div>
+			<br/>
 		</Section>
 	);
 }
