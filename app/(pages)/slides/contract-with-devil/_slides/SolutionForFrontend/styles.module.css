@@ -153,14 +153,13 @@
 [data-fragment='0'] .highlight[data-li='2.1'] ~ .demoProductCardTypes1,
 [data-fragment='1'] .highlight[data-li='2.1'] ~ .demoProductCardView1,
 [data-fragment='0'] .highlight[data-li='3.1'] ~ .demoFragmentProductCard1,
-[data-fragment='0'] .highlight[data-li='4.1'] ~ .demoNormalizeProduct1 ,
-[data-fragment='0'] .highlight[data-li='5.1'] ~ .demoUseProducts1  {
+[data-fragment='0'] .highlight[data-li='4.1'] ~ .demoNormalizeProduct1,
+[data-fragment='0'] .highlight[data-li='5.1'] ~ .demoUseProducts1 {
 	opacity: 1;
 	pointer-events: auto;
 	transform: none;
 	transition: all 0.5s ease 0.2s !important;
 }
-
 
 .sqlHeading {
 	display: flex;
