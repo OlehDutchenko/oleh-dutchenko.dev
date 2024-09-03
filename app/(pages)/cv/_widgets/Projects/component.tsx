@@ -74,7 +74,11 @@ export function Projects(): ReactElement {
 				</table>
 			</Section>
 			<PageBreak />
-			<Section title="Key projects in my carier (сontinuation)">
+			<section>
+				<h2 className="cv-only-print">
+					Key projects in my carier (сontinuation)
+				</h2>
+				<hr className="cv-only-print" />
 				<table cellSpacing={1}>
 					<tbody>
 						<TableHeading />
@@ -236,7 +240,7 @@ export function Projects(): ReactElement {
 						</tr>
 					</tbody>
 				</table>
-			</Section>
+			</section>
 			<br />
 		</>
 	);

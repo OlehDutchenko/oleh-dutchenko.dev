@@ -198,3 +198,9 @@ h2 {
 		margin-bottom: 0.4em;
 	}
 }
+
+.cv-only-print {
+	@media not print {
+		display: none;
+	}
+}
