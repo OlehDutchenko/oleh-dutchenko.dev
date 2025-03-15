@@ -2,12 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	padding: 3rem 1rem;
-	text-shadow:
-		0 0 5px black,
-		0 2px black,
-		0 -2px black,
-		2px 0 black,
-		-2px 0 black;
+	text-shadow: 0 0 5px black,
+	0 2px black,
+	0 -2px black,
+	2px 0 black,
+	-2px 0 black;
 }
 
 .block > * {

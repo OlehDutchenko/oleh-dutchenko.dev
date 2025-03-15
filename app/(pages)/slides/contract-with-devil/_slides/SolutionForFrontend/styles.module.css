@@ -60,6 +60,7 @@
 	height: 42px;
 	top: 250px;
 }
+
 [data-fragment='0'] .highlight[data-li='1.2'] {
 	opacity: var(--opacity);
 	height: 42px;

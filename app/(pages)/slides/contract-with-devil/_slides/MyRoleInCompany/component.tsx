@@ -1,5 +1,5 @@
-import { AccentElement } from '@/_components/AccentElement';
 import { ReactElement } from 'react';
+import { AccentElement } from '../../_components/AccentElement';
 import { Section } from '../../_components/Section';
 
 export function MyRoleInCompany(): ReactElement {

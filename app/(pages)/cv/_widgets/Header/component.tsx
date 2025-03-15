@@ -7,7 +7,7 @@ export function Header(): ReactElement {
 			<br />
 			<div className="cv-header">
 				<div className="cv-header__left">
-					<div>Senior Frontend Developer</div>
+					<div>Senior Frontend Engineer | Tech Lead</div>
 					<h1>Oleh Dutchenko</h1>
 				</div>
 				<div className="cv-header__right">
@@ -31,7 +31,7 @@ export function Header(): ReactElement {
 				</div>
 			</div>
 			<p>
-				Frontend developer with 10 years of experience in developing and
+				Frontend developer with 11 years of experience in developing and
 				managing large-scale web applications. <br /> Specialized in
 				React, Typescript and GraphQL. <br />
 				Passionated about TDD methodology and DDD approach.

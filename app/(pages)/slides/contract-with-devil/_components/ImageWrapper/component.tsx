@@ -1,5 +1,5 @@
-import { AccentElement } from '@/_components/AccentElement';
 import { PropsWithChildren, ReactElement } from 'react';
+import { AccentElement } from '../AccentElement';
 import styles from './styles.module.css';
 
 interface Props extends PropsWithChildren {}
