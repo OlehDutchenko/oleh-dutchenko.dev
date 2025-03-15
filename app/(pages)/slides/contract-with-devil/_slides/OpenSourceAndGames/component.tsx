@@ -1,5 +1,5 @@
-import { AccentElement } from '@/_components/AccentElement';
 import { ReactElement } from 'react';
+import { AccentElement } from '../../_components/AccentElement';
 import { Fragment } from '../../_components/Fragment';
 import { ImageWrapper } from '../../_components/ImageWrapper';
 import { RollingFragment } from '../../_components/RollingFragment';

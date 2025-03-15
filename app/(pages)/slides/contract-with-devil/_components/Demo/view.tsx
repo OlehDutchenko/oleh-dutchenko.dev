@@ -3,7 +3,7 @@ import { ReactElement, ReactNode } from 'react';
 import styles from './styles.module.css';
 
 interface Props {
-	className: string;
+	className?: string;
 	lines?: string;
 	children: ReactNode;
 	lang?: 'ts' | 'tsx';

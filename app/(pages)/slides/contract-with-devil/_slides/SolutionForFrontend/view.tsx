@@ -1,6 +1,6 @@
-import { AccentElement } from '@/_components/AccentElement';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactElement } from 'react';
+import { AccentElement } from '../../_components/AccentElement';
 import { Demo } from '../../_components/Demo';
 import { Fragment } from '../../_components/Fragment';
 import { RollingFragment } from '../../_components/RollingFragment';
@@ -152,6 +152,7 @@ interface Props extends PropsWithChildren {
 	li?: number;
 	withoutFrg?: boolean;
 }
+
 function CodeDescription({
 	children,
 	lines = '',
@@ -401,6 +402,7 @@ function getProductsStructureBefore(): string {
 
 `;
 }
+
 function getProductsStructureAfter1(fragment?: boolean): string {
 	return `Products/
 ├─ index.ts

@@ -1,12 +1,12 @@
 import reactPlugin from '@vitejs/plugin-react';
-import fromCwd from 'from-cwd';
+import { join } from 'path';
 import { defineConfig } from 'vitest/config';
 
 const config = defineConfig({
 	plugins: [reactPlugin()],
 	resolve: {
 		alias: {
-			'@': fromCwd('app'),
+			'@': join(process.cwd(), 'app'),
 		},
 	},
 	test: {

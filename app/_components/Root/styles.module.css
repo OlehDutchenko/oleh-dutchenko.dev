@@ -1,5 +1,0 @@
-.gridBody {
-	display: grid;
-	align-content: space-between;
-	grid-template-rows: auto 1fr auto;
-}
