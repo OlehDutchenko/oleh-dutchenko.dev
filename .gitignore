@@ -39,4 +39,5 @@ yarn-error.log*
 .cache
 .refs
 .tmp
+*.tsbuildinfo
 *.pem

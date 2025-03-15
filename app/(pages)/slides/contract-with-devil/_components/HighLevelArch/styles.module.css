@@ -69,8 +69,9 @@
 	width: calc(100% - 2px);
 	border-radius: calc(100% - 2px);
 	height: 100%;
-	box-shadow: 0 0 0 1px var(--color),
-	1px 0 0 1px var(--color);
+	box-shadow:
+		0 0 0 1px var(--color),
+		1px 0 0 1px var(--color);
 }
 
 .gradient {
