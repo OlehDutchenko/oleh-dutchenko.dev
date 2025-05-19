@@ -1,0 +1,51 @@
+:root {
+	--font-slide-heading: serif;
+	--font-slide-base: serif;
+	font-family: var(--font-slide-base);
+}
+
+.font-heading {
+	font-family: var(--font-slide-heading);
+}
+
+.font-base {
+	font-family: var(--font-slide-base);
+}
+
+.fwdays-logo {
+	position: absolute;
+	bottom: 90px;
+	left: 30px;
+	width: 100px;
+	z-index: 100;
+	pointer-events: none;
+	transition: all 0.8s ease;
+}
+
+.fwdays-frame {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 70px;
+		background: #00f5;
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+}
