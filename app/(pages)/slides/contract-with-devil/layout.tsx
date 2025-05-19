@@ -25,12 +25,8 @@ export default function RootLayout({ children }: PropsWithChildren) {
 	return (
 		<html lang="en" className={htmlClassName}>
 			<head>
-				<link
-					rel="icon"
-					type="image/svg+xml"
-					href="/static/favicon.svg"
-				/>
-				<link rel="icon" type="image/png" href="/static/favicon.png" />
+				<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+				<link rel="icon" type="image/png" href="/favicon.png" />
 			</head>
 			<body>{children}</body>
 		</html>
