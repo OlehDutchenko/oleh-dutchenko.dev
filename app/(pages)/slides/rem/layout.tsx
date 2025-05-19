@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 import './globals.css';
-import { fontsClassName } from './utils/fonts';
+import { fontsClassName } from './_utils/fonts';
 
 export const metadata = {
 	title: 'Слайди доповіді "Rem — одна одиниця, щоб правити всім"',

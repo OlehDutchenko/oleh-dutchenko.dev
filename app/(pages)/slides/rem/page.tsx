@@ -1,6 +1,9 @@
+import { RevealSlides } from '@slides/_components/RevealSlides';
+
 export default function Page() {
 	return (
 		<>
+			<RevealSlides></RevealSlides>
 			<img
 				src="/static/slides-contract-with-devil/js_rgb.png"
 				alt=""
