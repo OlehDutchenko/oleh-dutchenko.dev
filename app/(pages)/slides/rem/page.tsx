@@ -1,4 +1,5 @@
 import { RevealSlides } from '@slides/_components/RevealSlides';
+import { Intro } from './_slides/intro';
 import { Preface } from './_slides/preface';
 
 export default function Page() {
@@ -6,7 +7,7 @@ export default function Page() {
 		<>
 			<RevealSlides hash hashOneBasedIndex>
 				<Preface />
-				<Preface />
+				<Intro />
 			</RevealSlides>
 			<img
 				src="/static/slides-contract-with-devil/js_rgb.png"

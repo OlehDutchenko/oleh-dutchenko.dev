@@ -3,10 +3,10 @@ import { RemSlide } from '@slides/rem/_components/rem-slide';
 
 export function Preface() {
 	return (
-		<RemSlide bgColor="darker" width100p>
+		<RemSlide bgColor="darker" width100p bgImage="wavesOfDarkWaterGif">
 			<div className="font-title">
 				<Fragment component="p" fx="fade-in-nth-child">
-					<span>У самому</span>
+					<span>«У самому</span>
 					<span>серці</span>
 					<span>інтернету,</span>
 					<span>серед</span>
@@ -37,7 +37,7 @@ export function Preface() {
 						<span></span>
 						<span>використав</span>
 						<span>
-							<code>px</code>
+							<code>px</code>»
 						</span>
 					</Fragment>
 				</p>
@@ -45,7 +45,9 @@ export function Preface() {
 			<Fragment component="p" fx="fade-in-nth-child" className="t-right">
 				<span>
 					<small className="op-60">
-						<em>— ChatGPT</em>
+						<em>
+							— ChatGPT, <small>2025 р.</small>
+						</em>
 					</small>
 				</span>
 			</Fragment>
