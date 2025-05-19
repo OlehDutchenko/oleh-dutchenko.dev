@@ -4,7 +4,7 @@ import { Tenor_Sans as FontSlideBase } from 'next/font/google';
 import { PropsWithChildren } from 'react';
 
 export const metadata = {
-	title: 'Slides for talk: Contract with Devil',
+	title: 'Слайди доповіді "Підводні камені генерованого TypeScript коду зі схеми GraphQL"',
 };
 
 const fontSlideBase = FontSlideBase({
