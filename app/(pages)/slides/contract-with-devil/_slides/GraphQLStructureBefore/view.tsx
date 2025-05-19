@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ReactElement } from 'react';
 import { Demo } from '../../_components/Demo';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
 export function GraphQLStructureBefore(): ReactElement {

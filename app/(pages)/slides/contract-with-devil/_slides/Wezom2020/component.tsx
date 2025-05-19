@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { ImageWrapper } from '../../_components/ImageWrapper';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 
 export function Wezom2020(): ReactElement {
 	return (

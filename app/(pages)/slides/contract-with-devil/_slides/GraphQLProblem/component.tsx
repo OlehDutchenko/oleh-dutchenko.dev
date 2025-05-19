@@ -6,7 +6,7 @@ import {
 	apiVsTemplateStyles,
 } from '../../_components/ApiVsTemplate';
 import { Fragment } from '../../_components/Fragment';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
 export function GraphQLProblem(): ReactElement {

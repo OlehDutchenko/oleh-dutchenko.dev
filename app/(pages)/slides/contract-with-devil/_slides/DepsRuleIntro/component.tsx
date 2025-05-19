@@ -6,7 +6,7 @@ import {
 	HighLevelArch,
 	highLevelArchStyles as _,
 } from '../../_components/HighLevelArch';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
 export function DepsRuleIntro(): ReactElement {

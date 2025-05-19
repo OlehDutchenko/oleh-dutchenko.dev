@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { Fragment } from '../../_components/Fragment';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 
 export function Despondency(): ReactElement {
 	return (

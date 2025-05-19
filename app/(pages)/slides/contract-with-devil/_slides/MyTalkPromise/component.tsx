@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 import { SlashBlock } from '../../_components/SlashBlock';
 
 export function MyTalkPromise(): ReactElement {
