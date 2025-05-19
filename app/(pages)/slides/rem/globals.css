@@ -6,18 +6,6 @@
 	font-family: var(--font-slide-base);
 }
 
-.font-title {
-	font-family: var(--font-slide-title);
-}
-
-.font-heading {
-	font-family: var(--font-slide-heading);
-}
-
-.font-base {
-	font-family: var(--font-slide-base);
-}
-
 .has-dark-background ~ .fwdays-logo {
 	filter: invert(1) grayscale(1) brightness(1.5);
 }
@@ -60,20 +48,40 @@
 	}
 }
 
-.t-left { text-align: left; }
-.t-right { text-align: right; }
+.t-left {
+	text-align: left;
+}
+.t-right {
+	text-align: right;
+}
 
-.op-70 { opacity: 0.70; }
-.op-60 { opacity: 0.60; }
-.op-50 { opacity: 0.50; }
+.op-70 {
+	opacity: 0.7;
+}
+.op-60 {
+	opacity: 0.6;
+}
+.op-50 {
+	opacity: 0.5;
+}
 
 .reveal .slides {
-	& > section:not(.custom) {
+	& .font-title {
+		font-family: var(--font-slide-title);
+	}
+
+	& .font-heading {
+		font-family: var(--font-slide-heading);
+	}
+
+	& .font-base {
+		font-family: var(--font-slide-base);
+	}
+
+	& > section {
 		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
 		transition-timing-function: var(--easing), var(--easing), var(--easing),
-		var(--easing);
-		width: 80%;
-		margin-left: 10%;
+			var(--easing);
 
 		&[data-transition~='zoom-in'].future {
 			transform: scale(0.5);
@@ -81,6 +89,11 @@
 
 		&[data-transition~='zoom-out'].past {
 			transform: scale(5);
+		}
+
+		&:not(.custom) {
+			width: 80%;
+			margin-left: 10%;
 		}
 	}
 
@@ -97,7 +110,7 @@
 		border: 1px solid #0003;
 	}
 
-	& [data-background-color="black"] {
+	& [data-background-color='black'] {
 		& code {
 			background: #fff2;
 			border-color: #fff4;
@@ -105,7 +118,7 @@
 	}
 
 	& .fragment {
-		transition: 0.5s ease-in-out;
+		transition: 1s ease-in-out;
 
 		&._no-will-change {
 			will-change: auto;
@@ -117,7 +130,7 @@
 		}
 
 		&.fade-in-nth-child {
-			& span {
+			& .child {
 				opacity: 0;
 				transition: 1s ease-in-out;
 
@@ -126,24 +139,66 @@
 				}
 			}
 
-			&.visible span {
+			&.visible .child {
 				opacity: 1;
 				transition: 2s ease-in-out;
+			}
 
-				&:nth-child(2) { transition-delay: 0.3s; }
-				&:nth-child(3) { transition-delay: 0.6s; }
-				&:nth-child(4) { transition-delay: 0.9s; }
-				&:nth-child(5) { transition-delay: 1.2s; }
-				&:nth-child(6) { transition-delay: 1.5s; }
-				&:nth-child(7) { transition-delay: 1.8s; }
-				&:nth-child(8) { transition-delay: 2.1s; }
-				&:nth-child(9) { transition-delay: 2.4s; }
-				&:nth-child(10) { transition-delay: 2.7s; }
-				&:nth-child(11) { transition-delay: 3s; }
-				&:nth-child(12) { transition-delay: 3.3s; }
-				&:nth-child(13) { transition-delay: 3.6s; }
-				&:nth-child(14) { transition-delay: 3.9s; }
-				&:nth-child(15) { transition-delay: 4.2s; }
+			&.visible > .child-auto:nth-child(2),
+			&.visible .child-2 {
+				transition-delay: 0.3s;
+			}
+			&.visible > .child-auto:nth-child(3),
+			&.visible .child-3 {
+				transition-delay: 0.6s;
+			}
+			&.visible > .child-auto:nth-child(4),
+			&.visible .child-4 {
+				transition-delay: 0.9s;
+			}
+			&.visible > .child-auto:nth-child(5),
+			&.visible .child-5 {
+				transition-delay: 1.2s;
+			}
+			&.visible > .child-auto:nth-child(6),
+			&.visible .child-6 {
+				transition-delay: 1.5s;
+			}
+			&.visible > .child-auto:nth-child(7),
+			&.visible .child-7 {
+				transition-delay: 1.8s;
+			}
+			&.visible > .child-auto:nth-child(8),
+			&.visible .child-8 {
+				transition-delay: 2.1s;
+			}
+			&.visible > .child-auto:nth-child(9),
+			&.visible .child-9 {
+				transition-delay: 2.4s;
+			}
+			&.visible > .child-auto:nth-child(10),
+			&.visible .child-10 {
+				transition-delay: 2.7s;
+			}
+			&.visible > .child-auto:nth-child(11),
+			&.visible .child-11 {
+				transition-delay: 3s;
+			}
+			&.visible > .child-auto:nth-child(12),
+			&.visible .child-12 {
+				transition-delay: 3.3s;
+			}
+			&.visible > .child-auto:nth-child(13),
+			&.visible .child-13 {
+				transition-delay: 3.6s;
+			}
+			&.visible > .child-auto:nth-child(14),
+			&.visible .child-14 {
+				transition-delay: 3.9s;
+			}
+			&.visible > .child-auto:nth-child(15),
+			&.visible .child-15 {
+				transition-delay: 4.2s;
 			}
 		}
 	}

@@ -1,12 +1,14 @@
 import { RevealSlides } from '@slides/_components/RevealSlides';
 import { Intro } from './_slides/intro';
 import { Preface } from './_slides/preface';
+import { Title } from './_slides/title';
 
 export default function Page() {
 	return (
 		<>
 			<RevealSlides hash hashOneBasedIndex>
 				<Preface />
+				<Title />
 				<Intro />
 			</RevealSlides>
 			<img

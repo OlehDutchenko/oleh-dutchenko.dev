@@ -6,44 +6,44 @@ export function Preface() {
 		<RemSlide bgColor="darker" width100p bgImage="wavesOfDarkWaterGif">
 			<div className="font-title">
 				<Fragment component="p" fx="fade-in-nth-child">
-					<span>«У самому</span>
-					<span>серці</span>
-					<span>інтернету,</span>
-					<span>серед</span>
-					<span>тисяч</span>
-					<span>сторінок</span>
-					<span>і екранів,</span>
+					<span className="child child-auto">«У самому</span>
+					<span className="child child-auto">серці</span>
+					<span className="child child-auto">інтернету,</span>
+					<span className="child child-auto">серед</span>
+					<span className="child child-auto">тисяч</span>
+					<span className="child child-auto">сторінок</span>
+					<span className="child child-auto">і екранів,</span>
 				</Fragment>
 				<Fragment component="p" fx="fade-in-nth-child">
-					<span>браузери</span>
-					<span>боронять</span>
-					<span>право</span>
-					<span>кожного —</span>
-					<span>бачити</span>
-					<span>текст.</span>
+					<span className="child child-auto">браузери</span>
+					<span className="child child-auto">боронять</span>
+					<span className="child child-auto">право</span>
+					<span className="child child-auto">кожного —</span>
+					<span className="child child-auto">бачити</span>
+					<span className="child child-auto">текст.</span>
 				</Fragment>
 				<Fragment component="p" fx="fade-in-nth-child">
-					<span>Але</span>
-					<span></span>
-					<span>ця</span>
-					<span>рівновага</span>
-					<span>порушена.</span>
+					<span className="child child-auto">Але</span>
+					<span className="child child-auto"></span>
+					<span className="child child-auto">ця</span>
+					<span className="child child-auto">рівновага</span>
+					<span className="child child-auto">порушена.</span>
 				</Fragment>
 				<p>
 					<Fragment fx="fade-in-nth-child">
-						<span>Хтось…</span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span>використав</span>
-						<span>
+						<span className="child child-auto">Хтось…</span>
+						<span className="child child-auto"></span>
+						<span className="child child-auto"></span>
+						<span className="child child-auto"></span>
+						<span className="child child-auto">використав</span>
+						<span className="child child-auto">
 							<code>px</code>»
 						</span>
 					</Fragment>
 				</p>
 			</div>
 			<Fragment component="p" fx="fade-in-nth-child" className="t-right">
-				<span>
+				<span className="child child-auto">
 					<small className="op-60">
 						<em>
 							— ChatGPT, <small>2025 р.</small>
