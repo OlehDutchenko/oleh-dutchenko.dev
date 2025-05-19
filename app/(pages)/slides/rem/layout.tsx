@@ -1,5 +1,8 @@
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/serif.css';
+import 'reveal.js/plugin/highlight/monokai.css';
 import './globals.css';
 import { fontsClassName } from './_utils/fonts';
 

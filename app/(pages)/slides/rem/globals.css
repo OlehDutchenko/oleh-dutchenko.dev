@@ -1,7 +1,13 @@
 :root {
 	--font-slide-heading: serif;
+	--font-slide-title: serif;
 	--font-slide-base: serif;
+	--font-code: monospace;
 	font-family: var(--font-slide-base);
+}
+
+.font-title {
+	font-family: var(--font-slide-title);
 }
 
 .font-heading {
