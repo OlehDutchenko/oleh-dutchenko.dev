@@ -68,7 +68,7 @@
 .op-50 { opacity: 0.50; }
 
 .reveal .slides {
-	& > section {
+	& > section:not(.custom) {
 		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
 		transition-timing-function: var(--easing), var(--easing), var(--easing),
 		var(--easing);

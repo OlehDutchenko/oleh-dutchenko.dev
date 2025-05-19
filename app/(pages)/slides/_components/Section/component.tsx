@@ -1,4 +1,6 @@
+import clsx from 'clsx';
 import { PropsWithChildren, ReactElement } from 'react';
+import styles from './styles.module.css';
 import { BgColor, getBgColor } from './utils/getBgColor';
 import { BgImage, getBgImage } from './utils/getBgImage';
 
@@ -7,6 +9,7 @@ interface Props extends PropsWithChildren {
 	bgImage?: BgImage;
 	className?: string;
 	autoAnimate?: boolean;
+	width100p?: boolean;
 	transition?:
 		| 'zoom-in zoom-out'
 		| 'zoom-in slide-out'
@@ -23,6 +26,7 @@ export function Section({
 	className,
 	autoAnimate,
 	transition = 'zoom-in slide-out',
+	width100p,
 	...props
 }: Props): ReactElement {
 	return (
@@ -33,7 +37,10 @@ export function Section({
 			data-background-image={getBgImage(bgImage)}
 			data-transition={transition}
 			data-transition-speed="slow"
-			className={className}
+			className={clsx(
+				width100p && [styles.width100p, 'custom'],
+				className
+			)}
 		>
 			{children}
 		</section>

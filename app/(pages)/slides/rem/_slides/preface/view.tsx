@@ -1,9 +1,9 @@
+import { Fragment } from '@slides/_components/Fragment';
 import { RemSlide } from '@slides/rem/_components/rem-slide';
-import { Fragment } from '../../../_components/Fragment';
 
-export function Intro() {
+export function Preface() {
 	return (
-		<RemSlide bgColor="darker">
+		<RemSlide bgColor="darker" width100p>
 			<div className="font-title">
 				<Fragment component="p" fx="fade-in-nth-child">
 					<span>У самому</span>
@@ -13,23 +13,28 @@ export function Intro() {
 					<span>тисяч</span>
 					<span>сторінок</span>
 					<span>і екранів,</span>
+				</Fragment>
+				<Fragment component="p" fx="fade-in-nth-child">
 					<span>браузери</span>
 					<span>боронять</span>
 					<span>право</span>
-					<span>кожного</span>
-					<span>— бачити</span>
+					<span>кожного —</span>
+					<span>бачити</span>
 					<span>текст.</span>
 				</Fragment>
 				<Fragment component="p" fx="fade-in-nth-child">
-					<span>Але ця</span>
+					<span>Але</span>
+					<span></span>
+					<span>ця</span>
 					<span>рівновага</span>
 					<span>порушена.</span>
 				</Fragment>
 				<p>
 					<Fragment fx="fade-in-nth-child">
 						<span>Хтось…</span>
-					</Fragment>{' '}
-					<Fragment fx="fade-in-nth-child">
+						<span></span>
+						<span></span>
+						<span></span>
 						<span>використав</span>
 						<span>
 							<code>px</code>
