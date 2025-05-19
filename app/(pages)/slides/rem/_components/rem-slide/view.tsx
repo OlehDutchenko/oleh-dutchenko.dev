@@ -1,6 +1,8 @@
 import { Section } from '@slides/_components/Section';
-import { PropsWithChildren } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 
-export function RemSlide({ children }: PropsWithChildren) {
-	return <Section>{children}</Section>;
+type Props = ComponentProps<typeof Section>;
+
+export function RemSlide(props: Props) {
+	return <Section transition="fade" {...props} />;
 }

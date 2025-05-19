@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ReactElement } from 'react';
 import { AccentElement } from '../../_components/AccentElement';
-import { Fragment } from '../../_components/Fragment';
+import { Fragment } from '../../../_components/Fragment';
 import {
 	HighLevelArch,
 	highLevelArchStyles as _,

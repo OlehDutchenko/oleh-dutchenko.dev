@@ -18,6 +18,10 @@
 	font-family: var(--font-slide-base);
 }
 
+.has-dark-background ~ .fwdays-logo {
+	filter: invert(1) grayscale(1) brightness(1.5);
+}
+
 .fwdays-logo {
 	position: absolute;
 	bottom: 90px;
@@ -53,5 +57,94 @@
 
 	&::after {
 		bottom: 0;
+	}
+}
+
+.t-left { text-align: left; }
+.t-right { text-align: right; }
+
+.op-70 { opacity: 0.70; }
+.op-60 { opacity: 0.60; }
+.op-50 { opacity: 0.50; }
+
+.reveal .slides {
+	& > section {
+		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
+		transition-timing-function: var(--easing), var(--easing), var(--easing),
+		var(--easing);
+		width: 80%;
+		margin-left: 10%;
+
+		&[data-transition~='zoom-in'].future {
+			transform: scale(0.5);
+		}
+
+		&[data-transition~='zoom-out'].past {
+			transform: scale(5);
+		}
+	}
+
+	& small {
+		font-size: smaller;
+	}
+
+	& code {
+		font-family: var(--font-code);
+		font-size: 0.75em;
+		padding: 0 0.3em;
+		border-radius: 0.3em;
+		background: #0001;
+		border: 1px solid #0003;
+	}
+
+	& [data-background-color="black"] {
+		& code {
+			background: #fff2;
+			border-color: #fff4;
+		}
+	}
+
+	& .fragment {
+		transition: 0.5s ease-in-out;
+
+		&._no-will-change {
+			will-change: auto;
+		}
+
+		&.hljs.visible:not(.current-fragment) {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&.fade-in-nth-child {
+			& span {
+				opacity: 0;
+				transition: 1s ease-in-out;
+
+				&:not(:last-child)::after {
+					content: ' ';
+				}
+			}
+
+			&.visible span {
+				opacity: 1;
+				transition: 2s ease-in-out;
+
+				&:nth-child(2) { transition-delay: 0.3s; }
+				&:nth-child(3) { transition-delay: 0.6s; }
+				&:nth-child(4) { transition-delay: 0.9s; }
+				&:nth-child(5) { transition-delay: 1.2s; }
+				&:nth-child(6) { transition-delay: 1.5s; }
+				&:nth-child(7) { transition-delay: 1.8s; }
+				&:nth-child(8) { transition-delay: 2.1s; }
+				&:nth-child(9) { transition-delay: 2.4s; }
+				&:nth-child(10) { transition-delay: 2.7s; }
+				&:nth-child(11) { transition-delay: 3s; }
+				&:nth-child(12) { transition-delay: 3.3s; }
+				&:nth-child(13) { transition-delay: 3.6s; }
+				&:nth-child(14) { transition-delay: 3.9s; }
+				&:nth-child(15) { transition-delay: 4.2s; }
+			}
+		}
 	}
 }

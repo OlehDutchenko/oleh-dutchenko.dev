@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import { AccentElement } from '../../_components/AccentElement';
-import { Fragment } from '../../_components/Fragment';
+import { Fragment } from '../../../_components/Fragment';
 import { ImageWrapper } from '../../_components/ImageWrapper';
-import { RollingFragment } from '../../_components/RollingFragment';
+import { RollingFragment } from '../../../_components/RollingFragment';
 import { Section } from '../../../_components/Section';
 import { SlashBlock } from '../../_components/SlashBlock';
 import styles from './styles.module.css';

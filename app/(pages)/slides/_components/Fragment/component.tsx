@@ -9,7 +9,12 @@ import {
 interface Props extends PropsWithChildren, HTMLAttributes<any> {
 	component?: 'span' | 'div' | 'p' | 'footer' | 'h1' | 'h2' | 'h3' | 'li';
 	dataSectionClassName?: string;
-	fx?: 'fade-out' | 'fade-up' | 'fade-down' | 'fade-in-then-out';
+	fx?:
+		| 'fade-out'
+		| 'fade-up'
+		| 'fade-down'
+		| 'fade-in-then-out'
+		| 'fade-in-nth-child';
 	index?: number;
 }
 
@@ -25,7 +30,12 @@ export function Fragment({
 	return createElement(
 		component,
 		{
-			className: clsx('fragment', fx, className),
+			className: clsx(
+				'fragment',
+				fx,
+				className,
+				fx === 'fade-in-nth-child' && 'custom'
+			),
 			'data-section-class-name': dataSectionClassName,
 			'data-fragment-index': index,
 			...props,

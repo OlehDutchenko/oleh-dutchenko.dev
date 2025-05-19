@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import { ApiVsTemplate } from '../../_components/ApiVsTemplate';
-import { Fragment } from '../../_components/Fragment';
+import { Fragment } from '../../../_components/Fragment';
 import { ImageWrapper } from '../../_components/ImageWrapper';
-import { RollingFragment } from '../../_components/RollingFragment';
+import { RollingFragment } from '../../../_components/RollingFragment';
 import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
