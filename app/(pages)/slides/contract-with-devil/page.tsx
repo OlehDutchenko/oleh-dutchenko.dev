@@ -1,8 +1,8 @@
+import { RevealSlides } from '@slides/_components/RevealSlides';
 import { ReactElement } from 'react';
 import 'reveal.js/dist/reveal.css';
 import 'reveal.js/dist/theme/serif.css';
 import 'reveal.js/plugin/highlight/monokai.css';
-import { RevealSlides } from '@slides/_components/RevealSlides';
 import { DepsRuleIntro } from './_slides/DepsRuleIntro';
 import { Despondency } from './_slides/Despondency';
 import { FinalWords } from './_slides/FinalWords';

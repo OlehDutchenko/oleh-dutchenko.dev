@@ -1,14 +1,18 @@
 'use client';
 
-import { ReactElement, useEffect, useState } from 'react';
-import { Reveal, Props } from './components/Reveal';
+import dynamic from 'next/dynamic';
+import { ReactElement, Suspense } from 'react';
+import { type Props } from './components/Reveal';
+
+const Reveal = dynamic(
+	() => import('./components/Reveal').then((m) => m.Reveal),
+	{ ssr: false }
+);
 
 export function RevealSlides(props: Props): ReactElement {
-	const [isBrowser, setIsBrowser] = useState(false);
-
-	useEffect(() => {
-		setIsBrowser(true);
-	}, []);
-
-	return isBrowser ? <Reveal {...props} /> : <>Loading</>;
+	return (
+		<Suspense fallback="Loading...">
+			<Reveal {...props} />
+		</Suspense>
+	);
 }

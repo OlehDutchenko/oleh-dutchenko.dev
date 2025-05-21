@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { PropsWithChildren, ReactElement, useEffect, useRef } from 'react';
+import { PropsWithChildren, useEffect, useRef } from 'react';
 import RevealJS from 'reveal.js';
 import RevealHighlight from 'reveal.js/plugin/highlight/highlight.esm.js';
 
@@ -14,13 +14,13 @@ export interface Props
 
 const RECORD_MODE = process.env.NEXT_PUBLIC_SLIDES_RECORD_MODE === 'true';
 
-export function Reveal({
+export async function Reveal({
 	children,
 	transition = 'slide',
 	transitionSpeed = 'default',
 	hash,
 	hashOneBasedIndex,
-}: Props): ReactElement {
+}: Props) {
 	const deckDivRef = useRef<HTMLDivElement>(null);
 	const deckRef = useRef<RevealJS.Api | null>(null);
 
