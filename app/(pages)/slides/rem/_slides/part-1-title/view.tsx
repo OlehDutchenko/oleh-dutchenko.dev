@@ -7,16 +7,16 @@ export function Part1Title() {
 	return (
 		<>
 			<RemSlide
-				transition="fade-in zoom-out"
+				transition="zoom-in zoom-out"
 				bgColor="darker"
 				bgImage="wavesOfDarkWaterGif"
 			>
-				<Fragment component="p" className="font-title">
+				<p className="font-title">
 					Це історія про давню,
 					<br />
 					але досі актуальну проблему Інтернету <br /> — відображення
 					тексту.
-				</Fragment>
+				</p>
 			</RemSlide>
 
 			<RemSlide
@@ -24,12 +24,9 @@ export function Part1Title() {
 				bgColor="darker"
 				width100p
 				bgImage="wavesOfDarkWaterGif"
+				variant="fade-in-nth-child"
 			>
-				<Fragment
-					component="h1"
-					fx="fade-in-nth-child"
-					className={clsx(styles.title, 'font-title')}
-				>
+				<h1 className={clsx(styles.title, 'font-title')}>
 					<span className={styles.t1}>
 						<b className="child child-6">Братство</b>{' '}
 						<span className="child child-1">Частина I</span>
@@ -37,7 +34,7 @@ export function Part1Title() {
 					<span className={styles.t2}>
 						<b className="child child-9">Доступності</b>
 					</span>
-				</Fragment>
+				</h1>
 			</RemSlide>
 		</>
 	);

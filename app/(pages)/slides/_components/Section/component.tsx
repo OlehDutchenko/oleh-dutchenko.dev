@@ -11,6 +11,7 @@ interface Props extends PropsWithChildren {
 	autoAnimate?: boolean;
 	width100p?: boolean;
 	transition?:
+		| 'zoom-out'
 		| 'zoom-in zoom-out'
 		| 'zoom-in slide-out'
 		| 'zoom-in fade-out'
