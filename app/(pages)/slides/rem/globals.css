@@ -80,15 +80,21 @@
 
 	& > section {
 		--easing: cubic-bezier(0.69, 0, 0.58, 0.69);
-		transition-timing-function: var(--easing), var(--easing), var(--easing),
-			var(--easing);
+		transition:
+			transform-origin 0.8s var(--easing),
+			filter 0.8s var(--easing),
+			transform 0.8s var(--easing),
+			visibility 0.8s var(--easing),
+			opacity 0.8s var(--easing);
 
 		&[data-transition~='zoom-in'].future {
-			transform: scale(0.5);
+			transform: scale(0.8);
+			filter: blur(10px);
 		}
 
 		&[data-transition~='zoom-out'].past {
-			transform: scale(5);
+			transform: scale(1.3);
+			filter: blur(10px);
 		}
 
 		&:not(.custom) {
@@ -138,87 +144,109 @@
 					content: ' ';
 				}
 			}
+		}
 
-			&.visible .child {
+		&.fade-in-nth-child.visible {
+			& .child {
 				opacity: 1;
-				transition: 2s ease-in-out;
+				transition: opacity 2s ease-in-out;
 			}
 
-			&.visible > .child-auto:nth-child(2),
-			&.visible .child-2 {
+			& .child-auto:nth-child(2),
+			& .child-2 {
 				transition-delay: 0.3s;
 			}
-			&.visible > .child-auto:nth-child(3),
-			&.visible .child-3 {
+			& .child-auto:nth-child(3),
+			& .child-3 {
 				transition-delay: 0.6s;
 			}
-			&.visible > .child-auto:nth-child(4),
-			&.visible .child-4 {
+			& .child-auto:nth-child(4),
+			& .child-4 {
 				transition-delay: 0.9s;
 			}
-			&.visible > .child-auto:nth-child(5),
-			&.visible .child-5 {
+			& .child-auto:nth-child(5),
+			& .child-5 {
 				transition-delay: 1.2s;
 			}
-			&.visible > .child-auto:nth-child(6),
-			&.visible .child-6 {
+			& .child-auto:nth-child(6),
+			& .child-6 {
 				transition-delay: 1.5s;
 			}
-			&.visible > .child-auto:nth-child(7),
-			&.visible .child-7 {
+			& .child-auto:nth-child(7),
+			& .child-7 {
 				transition-delay: 1.8s;
 			}
-			&.visible > .child-auto:nth-child(8),
-			&.visible .child-8 {
+			& .child-auto:nth-child(8),
+			& .child-8 {
 				transition-delay: 2.1s;
 			}
-			&.visible > .child-auto:nth-child(9),
-			&.visible .child-9 {
+			& .child-auto:nth-child(9),
+			& .child-9 {
 				transition-delay: 2.4s;
 			}
-			&.visible > .child-auto:nth-child(10),
-			&.visible .child-10 {
+			& .child-auto:nth-child(10),
+			& .child-10 {
 				transition-delay: 2.7s;
 			}
-			&.visible > .child-auto:nth-child(11),
-			&.visible .child-11 {
+			& .child-auto:nth-child(11),
+			& .child-11 {
 				transition-delay: 3s;
 			}
-			&.visible > .child-auto:nth-child(12),
-			&.visible .child-12 {
+			& .child-auto:nth-child(12),
+			& .child-12 {
 				transition-delay: 3.3s;
 			}
-			&.visible > .child-auto:nth-child(13),
-			&.visible .child-13 {
+			& .child-auto:nth-child(13),
+			& .child-13 {
 				transition-delay: 3.6s;
 			}
-			&.visible > .child-auto:nth-child(14),
-			&.visible .child-14 {
+			& .child-auto:nth-child(14),
+			& .child-14 {
 				transition-delay: 3.9s;
 			}
-			&.visible > .child-auto:nth-child(15),
-			&.visible .child-15 {
+			& .child-auto:nth-child(15),
+			& .child-15 {
 				transition-delay: 4.2s;
 			}
-			&.visible > .child-auto:nth-child(16),
-			&.visible .child-16 {
+			& .child-auto:nth-child(16),
+			& .child-16 {
 				transition-delay: 4.4s;
 			}
-			&.visible > .child-auto:nth-child(17),
-			&.visible .child-17 {
+			& .child-auto:nth-child(17),
+			& .child-17 {
 				transition-delay: 4.6s;
 			}
-			&.visible > .child-auto:nth-child(18),
-			&.visible .child-18 {
+			& .child-auto:nth-child(18),
+			& .child-18 {
 				transition-delay: 4.8s;
 			}
-			&.visible > .child-auto:nth-child(19),
-			&.visible .child-19 {
+			& .child-auto:nth-child(19),
+			& .child-19 {
 				transition-delay: 5s;
 			}
-			&.visible > .child-auto:nth-child(20),
-			&.visible .child-20 {
+			& .child-auto:nth-child(20),
+			& .child-20 {
 				transition-delay: 5.2s;
+			}
+			& .child-auto:nth-child(21),
+			& .child-21 {
+				transition-delay: 5.4s;
+			}
+			& .child-auto:nth-child(22),
+			& .child-22 {
+				transition-delay: 5.6s;
+			}
+			& .child-auto:nth-child(23),
+			& .child-23 {
+				transition-delay: 5.8s;
+			}
+			& .child-auto:nth-child(24),
+			& .child-24 {
+				transition-delay: 6s;
+			}
+			& .child-auto:nth-child(25),
+			& .child-25 {
+				transition-delay: 6.2s;
 			}
 		}
 	}

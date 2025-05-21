@@ -1,6 +1,6 @@
 .title {
 	white-space: nowrap;
-	padding-bottom: 0.6em;
+	padding-bottom: 0.7em;
 	color: gold !important;
 }
 
@@ -29,4 +29,15 @@
 		bottom: 67%;
 		right: -6%;
 	}
+}
+
+.logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+	z-index: 100;
+	pointer-events: none;
+	transition: all 0.8s ease;
+	filter: invert(1) grayscale(1) brightness(1.5);
 }
