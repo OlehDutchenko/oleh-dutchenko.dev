@@ -32,15 +32,17 @@ export function Intro() {
 					<span className="child child-auto">«У самому</span>
 					<span className="child child-auto">серці</span>
 					<span className="child child-auto">інтернету,</span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<br />
 					<span className="child child-auto">серед</span>
 					<span className="child child-auto">тисяч</span>
 					<span className="child child-auto">сторінок</span>
 					<span className="child child-auto">і екранів,</span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<br />
 					<span className="child child-auto">браузери</span>
 					<span className="child child-auto">боронять</span>
@@ -48,32 +50,35 @@ export function Intro() {
 					<span className="child child-auto">кожного —</span>
 					<span className="child child-auto">бачити</span>
 					<span className="child child-auto">текст.</span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<div className="p-gap" />
 					<span className="child child-auto">Але</span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
 					<span className="child child-auto">ця</span>
 					<span className="child child-auto">рівновага</span>
 					<span className="child child-auto">порушена.</span>
 					<br />
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<span className="child child-auto">Хтось…</span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<span className="child child-auto">використав</span>
 					<span className="child child-auto">
 						<code>px</code>»
 					</span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
-					<span className="child child-auto"></span>
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
+					<span className="child child-auto" />
 					<div className="p-gap" />
 					<div className="child child-auto t-right">
 						<small className="op-60">
