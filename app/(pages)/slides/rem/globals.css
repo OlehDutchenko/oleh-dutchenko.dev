@@ -200,6 +200,26 @@
 			&.visible .child-15 {
 				transition-delay: 4.2s;
 			}
+			&.visible > .child-auto:nth-child(16),
+			&.visible .child-16 {
+				transition-delay: 4.4s;
+			}
+			&.visible > .child-auto:nth-child(17),
+			&.visible .child-17 {
+				transition-delay: 4.6s;
+			}
+			&.visible > .child-auto:nth-child(18),
+			&.visible .child-18 {
+				transition-delay: 4.8s;
+			}
+			&.visible > .child-auto:nth-child(19),
+			&.visible .child-19 {
+				transition-delay: 5s;
+			}
+			&.visible > .child-auto:nth-child(20),
+			&.visible .child-20 {
+				transition-delay: 5.2s;
+			}
 		}
 	}
 }
