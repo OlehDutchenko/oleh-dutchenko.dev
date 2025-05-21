@@ -1,12 +1,12 @@
 import clsx from 'clsx';
 import { ReactElement } from 'react';
 import { AccentElement } from '../../_components/AccentElement';
-import { Fragment } from '../../_components/Fragment';
+import { Fragment } from '../../../_components/Fragment';
 import {
 	HighLevelArch,
 	highLevelArchStyles as _,
 } from '../../_components/HighLevelArch';
-import { Section } from '../../_components/Section';
+import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
 export function DepsRuleIntro(): ReactElement {

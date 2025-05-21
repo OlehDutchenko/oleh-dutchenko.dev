@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { Fragment } from '../../_components/Fragment';
-import { RollingFragment } from '../../_components/RollingFragment';
-import { Section } from '../../_components/Section';
+import { Fragment } from '../../../_components/Fragment';
+import { RollingFragment } from '../../../_components/RollingFragment';
+import { Section } from '../../../_components/Section';
 
 export function SolutionResult(): ReactElement {
 	return (

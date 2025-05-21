@@ -1,6 +1,6 @@
 import { ReactElement, ReactNode } from 'react';
-import { Fragment } from '../Fragment';
-import { RollingFragment } from '../RollingFragment';
+import { Fragment } from '../../../_components/Fragment';
+import { RollingFragment } from '../../../_components/RollingFragment';
 import styles from './styles.module.css';
 
 interface Props {

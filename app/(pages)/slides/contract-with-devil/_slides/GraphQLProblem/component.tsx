@@ -1,12 +1,12 @@
-import { RollingFragment } from '@/(pages)/slides/contract-with-devil/_components/RollingFragment';
+import { RollingFragment } from '../../../_components/RollingFragment';
 import clsx from 'clsx';
 import { ReactElement } from 'react';
 import {
 	ApiVsTemplate,
 	apiVsTemplateStyles,
 } from '../../_components/ApiVsTemplate';
-import { Fragment } from '../../_components/Fragment';
-import { Section } from '../../_components/Section';
+import { Fragment } from '../../../_components/Fragment';
+import { Section } from '../../../_components/Section';
 import styles from './styles.module.css';
 
 export function GraphQLProblem(): ReactElement {
