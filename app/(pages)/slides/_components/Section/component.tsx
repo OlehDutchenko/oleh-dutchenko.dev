@@ -18,7 +18,8 @@ interface Props extends PropsWithChildren {
 		| 'zoom-in fade-out'
 		| 'fade'
 		| 'fade-in zoom-out'
-		| 'slide-in slide-out';
+		| 'slide-in slide-out'
+		| 'slide-in zoom-out';
 }
 
 export function Section({

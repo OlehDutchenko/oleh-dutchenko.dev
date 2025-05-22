@@ -2,7 +2,7 @@ import { fontCode } from '@/_fonts';
 import clsx from 'clsx';
 import {
 	Forum as FontSlideTitle,
-	Literata as FontSlideHeading,
+	Forum as FontSlideHeading,
 	Tenor_Sans as FontSlideBase,
 } from 'next/font/google';
 
@@ -15,7 +15,7 @@ const fontSlideTitle = FontSlideTitle({
 
 const fontSlideHeading = FontSlideHeading({
 	subsets: ['latin', 'cyrillic'],
-	weight: ['400', '700', '900'],
+	weight: ['400'],
 	display: 'swap',
 	variable: '--font-slide-heading',
 });
