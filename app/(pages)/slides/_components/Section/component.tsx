@@ -7,6 +7,7 @@ import { BgImage, getBgImage } from './utils/getBgImage';
 interface Props extends PropsWithChildren {
 	bgColor?: BgColor;
 	bgImage?: BgImage;
+	bgIframe?: string;
 	className?: string;
 	autoAnimate?: boolean;
 	width100p?: boolean;
@@ -23,6 +24,7 @@ interface Props extends PropsWithChildren {
 export function Section({
 	bgColor,
 	bgImage,
+	bgIframe,
 	children,
 	className,
 	autoAnimate,
@@ -38,6 +40,8 @@ export function Section({
 			data-background-image={getBgImage(bgImage)}
 			data-transition={transition}
 			data-transition-speed="slow"
+			data-background-iframe={bgIframe}
+			data-background-interactive={bgIframe ? true : undefined}
 			className={clsx(
 				width100p && [styles.width100p, 'custom'],
 				className

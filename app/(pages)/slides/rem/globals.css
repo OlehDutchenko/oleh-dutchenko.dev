@@ -76,6 +76,18 @@
 	opacity: 0.5;
 }
 
+.reveal {
+	.slide-background iframe {
+		opacity: 0;
+		transition: 0.5s ease;
+	}
+
+	.slide-background.present iframe {
+		opacity: 1;
+		transition: 1s 0.5s ease-in;
+	}
+}
+
 .reveal .slides {
 	& .font-title {
 		font-family: var(--font-slide-title);
