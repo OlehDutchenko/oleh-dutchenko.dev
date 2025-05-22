@@ -80,9 +80,9 @@
 .reveal {
 	font-family: var(--font-slide-base);
 
-	em,
-	i {
+	.caption-italic {
 		font-family: var(--r-main-font);
+		font-style: italic;
 	}
 
 	h3 {
