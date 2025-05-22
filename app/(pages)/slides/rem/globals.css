@@ -6,6 +6,13 @@
 	font-family: var(--font-slide-base);
 }
 
+.frame * {
+	font-family: initial !important;
+	font-size: initial !important;
+	color: initial !important;
+	text-align: unset !important;
+}
+
 .has-dark-background ~ .fwdays-logo {
 	filter: invert(1) grayscale(1) brightness(1.5);
 }
