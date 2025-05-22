@@ -14,7 +14,7 @@ export interface Props
 
 const RECORD_MODE = process.env.NEXT_PUBLIC_SLIDES_RECORD_MODE === 'true';
 
-export async function Reveal({
+export function Reveal({
 	children,
 	transition = 'slide',
 	transitionSpeed = 'default',

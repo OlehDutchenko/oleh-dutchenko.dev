@@ -3,21 +3,13 @@ import { RemSlide } from '@slides/rem/_components/rem-slide';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-export function Part1Title() {
+export function Bio() {
 	return (
 		<>
-			<RemSlide
-				transition="zoom-in zoom-out"
-				bgColor="darker"
-				bgImage="wavesOfDarkWaterGif"
-			>
-				<p className="font-title">
-					Це історія про давню,
-					<br />
-					але досі актуальну проблему Інтернету <br /> — відображення
-					тексту.
-				</p>
-			</RemSlide>
+			<section
+				data-background-iframe="/static/slides-rem/bio.html"
+				data-background-interactive
+			/>
 
 			<RemSlide
 				transition="fade-in zoom-out"
