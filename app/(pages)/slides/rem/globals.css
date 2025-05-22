@@ -3,6 +3,7 @@
 	--font-slide-title: serif;
 	--font-slide-base: serif;
 	--font-code: monospace;
+	--r-heading-font: var(--font-slide-heading);
 	font-family: var(--font-slide-base);
 }
 
@@ -77,6 +78,26 @@
 }
 
 .reveal {
+	font-family: var(--font-slide-base);
+
+	.caption-italic {
+		font-family: var(--r-main-font);
+		font-style: italic;
+	}
+
+	h3 {
+		font-weight: bold;
+	}
+
+	blockquote {
+		text-align: left;
+		border-width: 0;
+		border-left: 4px solid currentColor;
+		width: 100%;
+		padding: 0 0 0 1em;
+		box-shadow: none;
+	}
+
 	.slide-background iframe {
 		opacity: 0;
 		transition: 0.5s ease;
@@ -122,11 +143,6 @@
 		&[data-transition~='zoom-out'].past {
 			transform: scale(1.3);
 			filter: blur(10px);
-		}
-
-		&:not(.custom) {
-			width: 80%;
-			margin-left: 10%;
 		}
 	}
 

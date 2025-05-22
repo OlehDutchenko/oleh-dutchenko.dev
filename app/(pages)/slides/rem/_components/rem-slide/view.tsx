@@ -7,5 +7,11 @@ type Props = ComponentProps<typeof Section> & {
 };
 
 export function RemSlide({ variant, ...props }: Props) {
-	return <Section {...props} className={clsx(props.className, variant)} />;
+	return (
+		<Section
+			width100p
+			{...props}
+			className={clsx(props.className, variant)}
+		/>
+	);
 }

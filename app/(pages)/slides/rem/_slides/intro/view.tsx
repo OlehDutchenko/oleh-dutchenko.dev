@@ -82,7 +82,7 @@ export function Intro() {
 					<div className="p-gap" />
 					<div className="child child-auto t-right">
 						<small className="op-60">
-							<em>
+							<em className="caption-italic">
 								— ChatGPT, <small>2025 р.</small>
 							</em>
 						</small>
