@@ -4,7 +4,7 @@ import { RemSlide } from '@slides/rem/_components/rem-slide';
 export function WCAG() {
 	return (
 		<>
-			<RemSlide transition="slide-in slide-out" bgColor="light">
+			<RemSlide transition="slide-in slide-out" bgColor="lighter">
 				<p>Це про відповідність стандартам доступності</p>
 			</RemSlide>
 			<RemSlide transition="slide-in zoom-out" bgColor="light">
@@ -18,7 +18,7 @@ export function WCAG() {
 					</a>
 				</p>
 			</RemSlide>
-			<RemSlide transition="zoom-in zoom-out" bgColor="light">
+			<RemSlide transition="zoom-in zoom-out" bgColor="lighter">
 				<blockquote>
 					<p>
 						<strong>Критерії успішності</strong> <br />
@@ -30,7 +30,7 @@ export function WCAG() {
 					</p>
 				</blockquote>
 			</RemSlide>
-			<RemSlide transition="zoom-in zoom-out" bgColor="light">
+			<RemSlide transition="zoom-in zoom-out" bgColor="lighter">
 				<blockquote>
 					<p>
 						<strong>Мета</strong> <br />
@@ -63,7 +63,7 @@ export function WCAG() {
 					Механізми впливу <br /> на розмір тексту
 				</h3>
 			</RemSlide>
-			<RemSlide transition="slide-in slide-out" bgColor="light">
+			<RemSlide transition="slide-in slide-out" bgColor="lighter">
 				<p>1. Налаштування браузера</p>
 				<ul>
 					<li>
@@ -92,7 +92,7 @@ export function WCAG() {
 				</ul>
 			</RemSlide>
 
-			<RemSlide transition="slide-in slide-out" bgColor="light">
+			<RemSlide transition="slide-in slide-out" bgColor="lighter">
 				<p>
 					2. Десктопні ОС <br />
 					<small>
@@ -132,7 +132,7 @@ export function WCAG() {
 				</ul>
 			</RemSlide>
 
-			<RemSlide transition="slide-in zoom-out" bgColor="light">
+			<RemSlide transition="slide-in zoom-out" bgColor="lighter">
 				<p>3. Мобільні пристрої</p>
 				<p>
 					<small>
@@ -146,18 +146,18 @@ export function WCAG() {
 				</p>
 				<ul>
 					<li>
-						<b>iOS / iPadOS </b> <br />{' '}
-						<small>
-							<small>
-								Settings → Accessibility → Display & Text Size
-							</small>
-						</small>
-					</li>
-					<li>
 						<b>Android</b> <br />
 						<small>
 							<small>
 								Settings → Display → Font size and display size
+							</small>
+						</small>
+					</li>
+					<li>
+						<b>iOS / iPadOS </b> <br />{' '}
+						<small>
+							<small>
+								Settings → Accessibility → Display & Text Size
 							</small>
 						</small>
 					</li>

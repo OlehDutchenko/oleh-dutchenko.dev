@@ -22,7 +22,6 @@ export function Part1Title() {
 			<RemSlide
 				transition="zoom-in fade-out"
 				bgColor="darker"
-				width100p
 				bgImage="wavesOfDarkWaterGif"
 				variant="fade-in-nth-child"
 			>
