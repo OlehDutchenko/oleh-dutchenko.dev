@@ -2,7 +2,7 @@ import { RemSlide } from '@slides/rem/_components/rem-slide';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-export function Part2Title() {
+export function Part3Title() {
 	return (
 		<RemSlide
 			transition="zoom-in zoom-out"
@@ -12,11 +12,11 @@ export function Part2Title() {
 		>
 			<h1 className={clsx(styles.title, 'font-title')}>
 				<span className={styles.t1}>
-					<span className="child child-1">Частина II</span>
-					<b className="child child-6">Дві вежі</b>{' '}
+					<span className="child child-1">Частина III</span>
+					<b className="child child-6">Повернення</b>{' '}
 				</span>
 				<span className={styles.t2}>
-					<b className="child child-9">px - rem</b>
+					<b className="child child-9">доступності</b>
 				</span>
 			</h1>
 		</RemSlide>

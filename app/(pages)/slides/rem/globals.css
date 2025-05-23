@@ -89,8 +89,8 @@
 	}
 
 	li {
-		margin-top: 0.5em;
-		margin-bottom: 0.5em;
+		margin-top: 0.6em;
+		margin-bottom: 0.6em;
 	}
 
 	h3 {
@@ -129,11 +129,11 @@
 		}
 
 		&:not(.visible) {
-			th, td {
+			th,
+			td {
 				border-color: transparent;
 			}
 		}
-
 	}
 
 	& .font-title {
@@ -176,13 +176,39 @@
 		font-size: smaller;
 	}
 
-	& code {
+	& code:not([class*='language-']) {
 		font-family: var(--font-code);
 		font-size: 0.75em;
 		padding: 0 0.3em;
 		border-radius: 0.3em;
 		background: #0001;
 		border: 1px solid #0003;
+	}
+
+	& pre {
+		background: #324f8b22 !important;
+	}
+
+	& pre code {
+		padding: 5%;
+		line-height: 1.6em;
+		background: none !important;
+		tab-size: 4;
+
+		&.has-highlights tr:not(.highlight-line) .hljs-ln-code {
+			opacity: 0;
+			transition: inherit;
+		}
+	}
+
+	.hljs-selector-tag,
+	.hljs-selector-class {
+		font-weight: normal;
+		color: #7ee787;
+	}
+
+	.hljs-attribute {
+		color: #8eb6f9;
 	}
 
 	& [data-background-color='black'] {
