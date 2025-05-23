@@ -25,7 +25,6 @@ export function Intro() {
 				transition="fade-in zoom-out"
 				bgColor="darker"
 				bgImage="wavesOfDarkWaterGif"
-				width100p
 				variant="fade-in-nth-child"
 			>
 				<div className="font-title">
@@ -92,7 +91,6 @@ export function Intro() {
 			<RemSlide
 				transition="fade-in zoom-out"
 				bgColor="darker"
-				width100p
 				bgImage="wavesOfDarkWaterGif"
 				className="fade-in-nth-child"
 			>

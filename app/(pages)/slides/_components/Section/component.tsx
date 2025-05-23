@@ -13,13 +13,15 @@ interface Props extends PropsWithChildren {
 	width100p?: boolean;
 	transition?:
 		| 'zoom-out'
+		| 'zoom-in'
 		| 'zoom-in zoom-out'
 		| 'zoom-in slide-out'
 		| 'zoom-in fade-out'
 		| 'fade'
 		| 'fade-in zoom-out'
 		| 'slide-in slide-out'
-		| 'slide-in zoom-out';
+		| 'slide-in zoom-out'
+		| null;
 }
 
 export function Section({
@@ -39,7 +41,7 @@ export function Section({
 			data-auto-animate={autoAnimate || undefined}
 			data-background-color={getBgColor(bgColor)}
 			data-background-image={getBgImage(bgImage)}
-			data-transition={transition}
+			data-transition={transition ?? undefined}
 			data-transition-speed="slow"
 			data-background-iframe={bgIframe}
 			data-background-interactive={bgIframe ? true : undefined}
