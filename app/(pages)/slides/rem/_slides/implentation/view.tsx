@@ -186,11 +186,11 @@ export function Implementation() {
 			<RemSlide transition="slide-in zoom-out" bgColor="dark">
 				<p>
 					<code>PX</code> лишається корисним там, <br /> де{' '}
-					<u>текст не задіяний напряму</u>
+					<em>текст не задіяний напряму</em>
 				</p>
 				<br />
 				<p>
-					aбо де потрібна <u>абсолютна точність</u>{' '}
+					aбо де потрібна <em>абсолютна точність</em>{' '}
 					позиціонування/розмірів
 				</p>
 			</RemSlide>

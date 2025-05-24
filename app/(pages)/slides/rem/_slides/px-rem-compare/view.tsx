@@ -17,8 +17,7 @@ export function PxRemCompare() {
 							<td>
 								<code>cm</code> <code>mm</code> <br />
 								<code>Q</code> <code>in</code> <br />
-								<code>px</code> <code>pc</code>
-								<code>pt</code>
+								<code>px</code> <code>pc</code> <code>pt</code>
 							</td>
 							<td>&nbsp;</td>
 							<Fragment component="td">
@@ -66,60 +65,6 @@ export function PxRemCompare() {
 						</tr>
 					</tbody>
 				</table>
-			</RemSlide>
-			<RemSlide bgColor="dark" transition={null} autoAnimate>
-				<p id="p0">
-					<big>
-						<code>px</code>
-					</big>
-				</p>
-				<ul>
-					<li>
-						<small>
-							Не масштабується разом із розміром шрифту в
-							налаштуваннях користувача.
-						</small>
-					</li>
-
-					<li>
-						<small>
-							Браузер завжди змушений рендерити “в конкретному
-							розмірі”, не зважаючи на user preferences.
-						</small>
-					</li>
-
-					<li>
-						<small>
-							Звично для дизайнерів, бо відповідає макетам.
-						</small>
-					</li>
-				</ul>
-			</RemSlide>
-			<RemSlide bgColor="dark" transition={null} autoAnimate>
-				<p id="p0">
-					<big>
-						<code>rem</code>
-					</big>
-				</p>
-				<ul>
-					<li>
-						<small>
-							Базується на <code>font-size</code> кореневого
-							елементу (<code>html</code>).
-						</small>
-					</li>
-
-					<li>
-						<small>
-							Змінюється разом із налаштуваннями шрифту у браузері
-							або ОС.
-						</small>
-					</li>
-
-					<li>
-						<small>Створює гнучку, масштабовану типографіку</small>
-					</li>
-				</ul>
 			</RemSlide>
 
 			<RemSlide bgColor="light" transition="slide-in zoom-out">
