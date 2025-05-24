@@ -43,8 +43,7 @@ export function ChallengeUx() {
 							Для дотичних параметрів{' '}
 							<em>(текстова лінія, відступи та інше)</em>{' '}
 							використовувати відносні значення: <code>%</code>,{' '}
-							<code>em</code> або <code>rem</code>, <br />
-							або, знову ж таки, кратні значення в пікселях
+							<code>em</code> або <code>rem</code>
 						</Fragment>
 						<Fragment component="li">
 							Не вимагати фіксованого вигляду елементів, особливо
