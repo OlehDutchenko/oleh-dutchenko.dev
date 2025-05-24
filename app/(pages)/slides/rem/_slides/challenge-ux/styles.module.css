@@ -1,0 +1,41 @@
+.images {
+	position: relative;
+	padding: 5% 0 15%;
+
+	img {
+		display: block;
+		border: 1px solid silver;
+
+		&:not(.image) {
+			position: absolute;
+			width: 49%;
+		}
+	}
+}
+
+.image {
+	position: relative !important;
+	margin: 0 auto !important;
+}
+
+.image1 {
+	left: 0;
+	padding: 1.4% 0;
+	top: -25.5%;
+}
+
+.image2 {
+	right: 0;
+	top: -25.5%;
+}
+
+.image3 {
+	left: 0;
+	bottom: -29.5%;
+	padding: 2.2% 0;
+}
+
+.image4 {
+	right: 0;
+	bottom: -29.5%;
+}

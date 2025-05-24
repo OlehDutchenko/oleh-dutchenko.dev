@@ -17,7 +17,9 @@ interface Props extends PropsWithChildren, HTMLAttributes<any> {
 		| 'h3'
 		| 'li'
 		| 'tr'
-		| 'td';
+		| 'td'
+		| 'pre'
+		| 'img';
 	dataSectionClassName?: string;
 	fx?:
 		| 'fade-out'
@@ -26,6 +28,8 @@ interface Props extends PropsWithChildren, HTMLAttributes<any> {
 		| 'fade-in-then-out'
 		| 'fade-in-nth-child';
 	index?: number;
+	src?: string;
+	alt?: string;
 }
 
 export function Fragment({

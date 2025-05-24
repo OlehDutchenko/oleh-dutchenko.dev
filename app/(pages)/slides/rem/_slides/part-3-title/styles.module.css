@@ -1,0 +1,25 @@
+.title {
+	white-space: nowrap;
+	padding-bottom: 1em;
+	color: gold !important;
+}
+
+.t1 {
+	position: relative;
+	font-size: 0.9em;
+
+	& span {
+		position: absolute;
+		font-size: 0.2em;
+		bottom: 82%;
+		left: 78%;
+	}
+}
+
+.t2 {
+	position: relative;
+	font-size: 0.7em;
+	margin-left: -2.8em;
+	display: inline-block;
+	transform: translate(0, 0.8em);
+}

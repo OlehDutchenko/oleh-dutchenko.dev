@@ -5,13 +5,13 @@ import styles from './styles.module.css';
 export function FilterExample() {
 	return (
 		<>
-			<RemSlide transition="zoom-in zoom-out" bgColor="dark">
+			<RemSlide transition="zoom-in slide-out" bgColor="dark">
 				<p>
 					Звучить просто: <br />
 					використовуйте <code>rem</code>, і все буде гнучко
 				</p>
 			</RemSlide>
-			<RemSlide transition="zoom-in slide-out" bgColor="dark">
+			<RemSlide transition="slide-in slide-out" bgColor="dark">
 				<p>Але чи дійсно це так?</p>
 			</RemSlide>
 			<RemSlide transition="slide-in zoom-out" bgColor="lighter">
@@ -27,18 +27,20 @@ export function FilterExample() {
 					Початково використовувався <code>px</code>
 				</p>
 			</RemSlide>
-			<RemSlide transition="slide-in zoom-out" bgColor="lighter">
-				<video
-					src="/static/slides-rem/filter-rem.mp4"
-					controls
-					loop
-					muted
-					playsInline
-					webkit-playsinline="true"
-					className={styles.video}
-					width="1260"
-					height="305"
-				/>
+			<RemSlide transition="slide-in fade-out" bgColor="lighter">
+				<Fragment component="div" fx="fade-out">
+					<video
+						src="/static/slides-rem/filter-rem.mp4?v=1"
+						controls
+						loop
+						muted
+						playsInline
+						webkit-playsinline="true"
+						className={styles.video}
+						width="1260"
+						height="305"
+					/>
+				</Fragment>
 				<p>
 					Після &quot;переїзду&quot; на <code>rem</code>
 				</p>
