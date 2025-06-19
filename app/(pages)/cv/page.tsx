@@ -1,6 +1,8 @@
 import './page.css';
 import { ExternalLink } from '@/(pages)/cv/_components/ExternalLink';
 
+const EXTENDED_VERSION = true;
+
 export default function CVPage() {
 	return (
 		<main>
@@ -58,53 +60,40 @@ export default function CVPage() {
 					<b>Key Skills</b>
 				</p>
 				<ul className="key-skills">
-					<li>React.js / Next.js (App Router, SSR, SSG)</li>
-					<li>TypeScript / JavaScript (ES6+)</li>
+					<li>TypeScript, JavaScript (ES6+), React.js</li>
+					<li>GraphQL (certified Apollo Graph Developer)</li>
 					<li>
-						GraphQL (Apollo Client & Server, Schema Design,
-						graphql-codegen)
+						Scalable Frontend Architecture (Monorepo, Modular
+						Design)
 					</li>
 					<li>
-						Scalable Frontend Architecture (Monorepo, Turborepo,
-						Modular Design)
+						Clean Code Principles (SOLID, DRY, KISS, Refactoring)
 					</li>
-					<li>TDD (Vitest, Jest, Testing Library)</li>
-					<li>Design Reviews, Code Reviews, Refactoring</li>
-					<li>Clean Code Principles (SOLID, DRY, KISS)</li>
 					<li>Domain-Driven Design (DDD applied to frontend)</li>
-					<li>
-						Component-Driven Development (Storybook, Design Systems)
-					</li>
-					<li>Git Flow, GitHub Flow, Trunk-Based Development</li>
-					<li>
-						CI/CD for Frontend (Bitbucket Pipelines, GitHub Actions)
-					</li>
-					<li>Mentoring, Team Leadership, Onboarding Engineers</li>
+					<li>Component-Driven Development</li>
+					<li>CI/CD for Frontend</li>
+					<li>Mentoring, Leadership, Onboarding Engineers</li>
 				</ul>
 			</section>
+
+			<hr />
 			<section className="experience">
 				<h2>Professional Experience</h2>
 
 				<div className="job">
-					<h3>Wezom - Senior Frontend Engineer / Tech Lead</h3>
-					<div>
+					<h3>Senior Frontend Engineer / Tech Lead - Wezom</h3>
+					<div className="caption">
 						<em>March 2020–Present (5+ years)</em>
 					</div>
+					<div className="mt-1em">Key achievements</div>
 					<ul>
 						<li>
 							Leading frontend team (11 developers across 4
 							sub-teams) in large-scale ERP, CRM and Billing
 							systems
 						</li>
-						<li>
-							Driving scalable frontend architecture (monorepo,
-							multi-zone, modular design with Turborepo and
-							Next.js)
-						</li>
-						<li>
-							Implementing TDD as core development practice
-							(Vitest, Testing Library)
-						</li>
+						<li>Driving scalable frontend architecture</li>
+						<li>Implementing TDD as core development practice</li>
 						<li>
 							Conducting design reviews, code reviews, and
 							mentoring developers
@@ -115,51 +104,120 @@ export default function CVPage() {
 							company-wide frontend development
 						</li>
 					</ul>
+					<div>Technologies</div>
+					<ul>
+						<li>TypeScript, JavaScript (ES6+)</li>
+						<li>
+							React.js, React Hook Form, MUI, Ant Design,
+							shadcn-ui, Tailwind CSS, Radix UI
+						</li>
+						<li>Next.js: Page Router, App Router, SSR, SSG</li>
+						<li>Apollo Client, graphql-codegen, introspection</li>
+						<li>Vitest, Jest, testing-library</li>
+						<li>Date libraries (day.js, date-fns, Moment.js)</li>
+						<li>CSS Animations, GSAP, Canvas, SVG</li>
+						<li>Storybook, Design Systems</li>
+						<li>WebSockets</li>
+						<li>VoIP: JsSIP</li>
+						<li>Tooling: ESLint, Prettier, Stylelint</li>
+						<li className="page-break">
+							Node.js (operational tasks)
+						</li>
+						<li>Bitbucket Pipelines, GitHub Actions</li>
+						<li>Turborepo, Lerna</li>
+						<li>Docker</li>
+						<li>react-redux, redux-saga</li>
+						<li>Vue.js (basic knowledge)</li>
+					</ul>
+					<div>Methodologies and practices</div>
+					<ul>
+						<li>Agile (Scrum)</li>
+						<li>Technical Documentation writing</li>
+						<li>
+							Gitflow workflow, Trunk-Based Development, Feature
+							toggles
+						</li>
+						<li>TDD, DDD, Design Reviews, Code Reviews</li>
+					</ul>
 				</div>
 
 				<div className="job">
-					<h3>Wezom - Middle Frontend Engineer</h3>
-					<div>
+					<h3>Middle Frontend Engineer - Wezom</h3>
+					<div className="caption">
 						<em>February 2017–March 2020 (3 years)</em>
 					</div>
+					<div className="mt-1em">Key achievements</div>
 					<ul>
 						<li>
-							Transitioned from traditional frontend stack
-							(jQuery, Laravel Blade, EJS) to React and
-							GraphQL-based applications
+							Transitioned from HTML developer to more traditional
+							frontend perspectives and technology stack
 						</li>
 						<li>
 							Implemented CI/CD pipelines for frontend delivery
 							(GitHub Actions, Bitbucket Pipelines)
 						</li>
 						<li>
-							Started adopting automated testing and technical
-							documentation practices
+							Started adopting automated unit-testing and
+							technical documentation practices
 						</li>
+					</ul>
+					<div>Technologies</div>
+					<ul>
+						<li>SVG, HTML Canvas</li>
+						<li>Pug (Jade), Sass (SCSS), jQuery, Bootstrap</li>
+						<li>Grunt, Gulp, Webpack</li>
+						<li>CSS Animations, GSAP</li>
+						<li>EJS, Laravel Blade, PHP (basic knowledge)</li>
+						<li>
+							CI/CD: Travis, GitHub Actions, Bitbucket Pipelines
+						</li>
+						<li>Adobe Photoshop</li>
+					</ul>
+					<div>Methodologies and practices</div>
+					<ul>
+						<li>Waterfall, Agile (Scrum)</li>
+						<li>Gitflow workflow</li>
+						<li>Technical Documentation writing, Code Reviews</li>
+						<li>Unit Testing, Automation Testing Initiatives</li>
 					</ul>
 				</div>
 
 				<div className="job">
-					<h3>Wezom - HTML Developer</h3>
-					<div>
+					<h3>HTML Developer - Wezom</h3>
+					<div className="caption">
 						<em>March 2014–February 2017 (3 years)</em>
 					</div>
+					<div className="mt-1em">Key achievements</div>
 					<ul>
-						<li>
-							Built more than 20 web projects from scratch (HTML,
-							CSS, Sass, jQuery, Pug, Gulp, Webpack)
-						</li>
+						<li>Built more than 20 web projects from scratch</li>
 						<li>
 							Learned fundamentals of web development, responsive
-							design and frontend tooling
+							design and fundamental tooling
 						</li>
 						<li>
 							Fully switched career path from Motion Design to Web
 							Development
 						</li>
 					</ul>
+					<div>Technologies</div>
+					<ul>
+						<li>HTML, CSS, JavaScript, jQuery</li>
+						<li>Adobe Photoshop</li>
+						<li>FTP, SFTP</li>
+						<li>Version Control: Git</li>
+					</ul>
+					<div>Methodologies</div>
+					<ul>
+						<li>
+							Responsive Web Design, Cross-browser compatibility
+						</li>
+						<li>Pixel-perfect UI slicing</li>
+						<li>Waterfall methodology</li>
+					</ul>
 				</div>
 			</section>
+
+			<hr className="hide-on-print" />
 
 			<div className="page-break" />
 
@@ -224,6 +282,8 @@ export default function CVPage() {
 				</div>
 			</section>
 
+			<hr />
+
 			<section>
 				<h2>Education & Certifications</h2>
 
@@ -256,6 +316,8 @@ export default function CVPage() {
 					</li>
 				</ul>
 			</section>
+
+			<hr />
 
 			<section>
 				<h2>Community Contributions</h2>

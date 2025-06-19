@@ -107,10 +107,23 @@ hr {
 
 	.page-break {
 		page-break-before: always;
-		height: 0.75cm;
+		margin-top: 0.75cm;
 	}
 }
 
 .project h3 {
 	margin: 0;
+}
+
+.mt-1em {
+	margin-top: 1em;
+}
+
+.job {
+	margin-top: 1.5em;
+
+	h3,
+	.caption {
+		text-align: center;
+	}
 }
