@@ -9,9 +9,9 @@ export default function CVPage() {
 				<div>
 					<p>
 						Email:{' '}
-						<ExternalLink href="mailto:dutchenko.o.cv@gmail.com">
+						<a href="mailto:dutchenko.o.cv@gmail.com">
 							dutchenko.o.cv@gmail.com
-						</ExternalLink>
+						</a>
 					</p>
 					<p>
 						LinkedIn:{' '}
@@ -34,10 +34,7 @@ export default function CVPage() {
 				</div>
 				<div>
 					<p>
-						Phone:{' '}
-						<ExternalLink href="tel:+380668231442">
-							+380 66 823 1442
-						</ExternalLink>
+						Phone: <a href="tel:+380668231442">+380 66 823 1442</a>
 					</p>
 					<p>Vinnytsia, Ukraine - Remote</p>
 					<p>English: B2 (Upper-Intermediate)</p>
@@ -295,17 +292,17 @@ export default function CVPage() {
 				<ul>
 					<li>
 						JavaScript fwdays'25 - "
-						<a href="https://fwdays.com/en/event/javascript-fwdays-2025/review/rem-one-unit-to-rule-them-all">
+						<ExternalLink href="https://fwdays.com/en/event/javascript-fwdays-2025/review/rem-one-unit-to-rule-them-all">
 							Rem - one unit to rule them all
-						</a>
+						</ExternalLink>
 						" [ukr]
 					</li>
 					<li>
 						JavaScript fwdays'24 - "
-						<a href="https://fwdays.com/en/event/javascript-fwdays-2024/review/pitfalls-of-typescript-generated-code-from-a-graphql-schema">
+						<ExternalLink href="https://fwdays.com/en/event/javascript-fwdays-2024/review/pitfalls-of-typescript-generated-code-from-a-graphql-schema">
 							Pitfalls of TypeScript-generated code from a GraphQL
 							schema
-						</a>
+						</ExternalLink>
 						" [ukr]
 					</li>
 				</ul>
