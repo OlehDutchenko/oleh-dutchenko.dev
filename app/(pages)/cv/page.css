@@ -25,13 +25,32 @@ main {
 	display: block;
 }
 
-h1,
+h1 {
+	text-align: center;
+
+	@media print {
+		letter-spacing: -0.05em;
+	}
+}
+
 h2 {
 	text-align: center;
+	margin-top: 1.16em;
+	margin-bottom: 0.5em;
 }
 
 h3 {
+	font-size: 1.1em;
+	margin-top: 0.6em;
 	margin-bottom: 0;
+
+	& + * {
+		margin-top: 0;
+	}
+
+	& ~ p {
+		margin-left: 2em;
+	}
 }
 
 a {
@@ -49,7 +68,7 @@ a {
 hr {
 	border: none;
 	border-top: 1px solid silver;
-	margin: 1em 0 0.5em 0;
+	margin: 1.25em 0 1em 0;
 }
 
 .contacts {
@@ -88,14 +107,10 @@ hr {
 
 	.page-break {
 		page-break-before: always;
+		height: 0.75cm;
 	}
 }
 
 .project h3 {
 	margin: 0;
-
-	& + p {
-		margin-top: 0.25em;
-		margin-left: 2em;
-	}
 }

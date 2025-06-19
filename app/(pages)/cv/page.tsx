@@ -25,6 +25,12 @@ export default function CVPage() {
 							Oleh Dutchenko
 						</ExternalLink>
 					</p>
+					<p>
+						GitHub:{' '}
+						<ExternalLink href="https://github.com/OlehDutchenko">
+							OlehDutchenko
+						</ExternalLink>
+					</p>
 				</div>
 				<div>
 					<p>
@@ -33,14 +39,14 @@ export default function CVPage() {
 							+380 66 823 1442
 						</ExternalLink>
 					</p>
-					<p>Vinnytsia, Ukraine — Remote</p>
+					<p>Vinnytsia, Ukraine - Remote</p>
 					<p>English: B2 (Upper-Intermediate)</p>
 				</div>
 			</section>
 			<hr />
 			<section className="summary">
 				<h2>
-					Frontend Senior Engineer{' '}
+					Senior Frontend Engineer{' '}
 					<span style={{ fontWeight: 400, margin: '0 0.5em' }}>
 						/
 					</span>{' '}
@@ -52,111 +58,114 @@ export default function CVPage() {
 					code and building strong teams.
 				</p>
 				<p>
-					<b>Key Skills:</b>
+					<b>Key Skills</b>
 				</p>
 				<ul className="key-skills">
 					<li>React.js / Next.js (App Router, SSR, SSG)</li>
 					<li>TypeScript / JavaScript (ES6+)</li>
-					<li>GraphQL (Apollo Client & Server, Schema Design)</li>
+					<li>
+						GraphQL (Apollo Client & Server, Schema Design,
+						graphql-codegen)
+					</li>
 					<li>
 						Scalable Frontend Architecture (Monorepo, Turborepo,
 						Modular Design)
 					</li>
 					<li>TDD (Vitest, Jest, Testing Library)</li>
-					<li>Design Reviews / Code Reviews / Refactoring</li>
+					<li>Design Reviews, Code Reviews, Refactoring</li>
 					<li>Clean Code Principles (SOLID, DRY, KISS)</li>
 					<li>Domain-Driven Design (DDD applied to frontend)</li>
 					<li>
 						Component-Driven Development (Storybook, Design Systems)
 					</li>
-					<li>Git Flow / GitHub Flow / Trunk-Based Development</li>
+					<li>Git Flow, GitHub Flow, Trunk-Based Development</li>
 					<li>
 						CI/CD for Frontend (Bitbucket Pipelines, GitHub Actions)
 					</li>
 					<li>Mentoring, Team Leadership, Onboarding Engineers</li>
 				</ul>
 			</section>
-			<hr />
 			<section className="experience">
 				<h2>Professional Experience</h2>
 
 				<div className="job">
-					<h3>Wezom — Senior Frontend Engineer / Tech Lead</h3>
+					<h3>Wezom - Senior Frontend Engineer / Tech Lead</h3>
 					<div>
-						<em>March 2020 – Present (5+ years)</em>
+						<em>March 2020–Present (5+ years)</em>
 					</div>
 					<ul>
 						<li>
 							Leading frontend team (11 developers across 4
 							sub-teams) in large-scale ERP, CRM and Billing
-							systems.
+							systems
 						</li>
 						<li>
 							Driving scalable frontend architecture (monorepo,
 							multi-zone, modular design with Turborepo and
-							Next.js).
+							Next.js)
 						</li>
 						<li>
 							Implementing TDD as core development practice
-							(Vitest, Testing Library).
+							(Vitest, Testing Library)
 						</li>
 						<li>
 							Conducting design reviews, code reviews, and
-							mentoring developers.
+							mentoring developers
 						</li>
-						<li>Managing technical hiring and onboarding.</li>
+						<li>Managing technical hiring and onboarding</li>
 						<li>
 							Building internal tools and libraries to support
-							company-wide frontend development.
+							company-wide frontend development
 						</li>
 					</ul>
 				</div>
 
 				<div className="job">
-					<h3>Wezom — Middle Frontend Engineer</h3>
+					<h3>Wezom - Middle Frontend Engineer</h3>
 					<div>
-						<em>February 2017 – March 2020 (3 years)</em>
+						<em>February 2017–March 2020 (3 years)</em>
 					</div>
 					<ul>
 						<li>
 							Transitioned from traditional frontend stack
 							(jQuery, Laravel Blade, EJS) to React and
-							GraphQL-based applications.
+							GraphQL-based applications
 						</li>
 						<li>
 							Implemented CI/CD pipelines for frontend delivery
-							(GitHub Actions, Bitbucket Pipelines).
+							(GitHub Actions, Bitbucket Pipelines)
 						</li>
 						<li>
 							Started adopting automated testing and technical
-							documentation practices.
+							documentation practices
 						</li>
 					</ul>
 				</div>
 
 				<div className="job">
-					<h3>Wezom — HTML Developer</h3>
+					<h3>Wezom - HTML Developer</h3>
 					<div>
-						<em>March 2014 – February 2017 (3 years)</em>
+						<em>March 2014–February 2017 (3 years)</em>
 					</div>
 					<ul>
 						<li>
 							Built more than 20 web projects from scratch (HTML,
-							CSS, Sass, jQuery, Pug, Gulp, Webpack).
+							CSS, Sass, jQuery, Pug, Gulp, Webpack)
 						</li>
 						<li>
 							Learned fundamentals of web development, responsive
-							design and frontend tooling.
+							design and frontend tooling
 						</li>
 						<li>
 							Fully switched career path from Motion Design to Web
-							Development.
+							Development
 						</li>
 					</ul>
 				</div>
 			</section>
-			<hr className="hide-on-print" />
+
 			<div className="page-break" />
+
 			<section className="projects">
 				<h2>Key Projects</h2>
 
@@ -171,13 +180,12 @@ export default function CVPage() {
 				</div>
 
 				<div className="project">
-					<h3>Tourism Booking Platform (NDA)</h3>
+					<h3>Booking Platform for Resort Chain (NDA)</h3>
 					<p>
 						Public website with online booking system for a resort
 						chain. Implemented smooth page transitions and
 						interactive CSS animations for engaging user experience.
-						Built with Next.js App Router, TypeScript, Docker.
-						GitFlow and Scrum methodologies applied.
+						Built with App Router, TypeScript, Docker
 					</p>
 				</div>
 
@@ -194,8 +202,7 @@ export default function CVPage() {
 					<h3>VoIP CRM System (NDA)</h3>
 					<p>
 						Web soft-phone integration (JsSIP), browser-based VoIP
-						calling, role-based access control, and routing logic
-						integrated with Next.js.
+						calling, role-based access control.
 					</p>
 				</div>
 
@@ -210,15 +217,114 @@ export default function CVPage() {
 				<div className="project">
 					<h3>Internal Frontend Starter Kit (Wezom)</h3>
 					<p>
-						Internal boilerplate project evolving over years: from
+						Internal boilerplate projects evolving over years: from
 						Grant/Gulp to Webpack, CRA, Vite and Next (Next.js).
 						Served as a standardized starting point for new
 						projects, consolidating best practices, scalable
 						architecture patterns, and reusable tooling.
-						Significantly optimized project setup time and
-						development consistency across multiple teams.
+						Significantly optimized project setup time.
 					</p>
 				</div>
+			</section>
+
+			<section>
+				<h2>Education & Certifications</h2>
+
+				<p>
+					<b>Kherson National Technical University (2005–2010)</b> -
+					Specialist degree, Graphic and Motion Design.
+				</p>
+
+				<h3 style={{ fontSize: 'inherit' }}>Certifications:</h3>
+				<ul>
+					<li>
+						Apollo Graph Developer -{' '}
+						<ExternalLink href="https://www.apollographql.com/tutorials/certifications/8ead70f5-3778-4a6c-b223-687fa4ffe239">
+							Professional
+						</ExternalLink>
+					</li>
+
+					<li>
+						EF SET English Certificate -{' '}
+						<ExternalLink href="https://cert.efset.org/buMxtr">
+							C1 (Advanced)
+						</ExternalLink>
+					</li>
+
+					<li>
+						SmallTalk2Me English Speaking Level Test -{' '}
+						<ExternalLink href="https://app.smalltalk2.me/cert/e470e743">
+							B2 (Upper-Intermediate)
+						</ExternalLink>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Community Contributions</h2>
+				<h3>Open-Source Projects</h3>
+				<ul>
+					<li>
+						<ExternalLink href="https://www.npmjs.com/package/sort-css-media-queries">
+							sort-css-media-queries
+						</ExternalLink>{' '}
+						- algorithm for media query sorting
+					</li>
+					<li>
+						<ExternalLink href="https://www.npmjs.com/package/node-w3c-validator">
+							node-w3c-validator
+						</ExternalLink>{' '}
+						- W3C HTML validator wrapper for CI workflows
+					</li>
+					<li>
+						<ExternalLink href="https://www.npmjs.com/package/gulp-ejs-monster">
+							gulp-ejs-monster
+						</ExternalLink>{' '}
+						- Gulp plugin for EJS with steroids
+					</li>
+					<li>
+						<ExternalLink href="https://github.com/WezomCompany">
+							<em>Wezom internal tooling</em>
+						</ExternalLink>{' '}
+						- Multiple helper libraries developed for internal
+						company needs
+					</li>
+				</ul>
+
+				<h3>Conference Speaker</h3>
+				<ul>
+					<li>
+						JavaScript fwdays'25 - "
+						<a href="https://fwdays.com/en/event/javascript-fwdays-2025/review/rem-one-unit-to-rule-them-all">
+							Rem - one unit to rule them all
+						</a>
+						" [ukr]
+					</li>
+					<li>
+						JavaScript fwdays'24 - "
+						<a href="https://fwdays.com/en/event/javascript-fwdays-2024/review/pitfalls-of-typescript-generated-code-from-a-graphql-schema">
+							Pitfalls of TypeScript-generated code from a GraphQL
+							schema
+						</a>
+						" [ukr]
+					</li>
+				</ul>
+
+				<h3>YouTube Talks</h3>
+				<ul>
+					<li>
+						<ExternalLink href="https://www.youtube.com/watch?v=MSXZpTdoJ5s">
+							Public interview discussing Tech Lead career path
+						</ExternalLink>{' '}
+						[ukr]
+					</li>
+					<li>
+						<ExternalLink href="https://www.youtube.com/watch?v=DNOe80KVurI">
+							Live-coding session building JS Download Manager
+						</ExternalLink>{' '}
+						[ukr]
+					</li>
+				</ul>
 			</section>
 
 			<div className="hide-on-print" style={{ height: 100 }} />
