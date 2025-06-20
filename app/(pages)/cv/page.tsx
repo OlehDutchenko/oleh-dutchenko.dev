@@ -1,8 +1,6 @@
 import './page.css';
 import { ExternalLink } from '@/(pages)/cv/_components/ExternalLink';
 
-const EXTENDED_VERSION = true;
-
 export default function CVPage() {
 	return (
 		<main>
@@ -92,8 +90,15 @@ export default function CVPage() {
 							sub-teams) in large-scale ERP, CRM and Billing
 							systems
 						</li>
-						<li>Driving scalable frontend architecture</li>
-						<li>Implementing TDD as core development practice</li>
+						<li>
+							Driving scalable frontend architecture (monorepo,
+							multi-zone, modular design with Turborepo and
+							Next.js)
+						</li>
+						<li>
+							Implementing TDD as core development practice
+							(Vitest, Testing Library)
+						</li>
 						<li>
 							Conducting design reviews, code reviews, and
 							mentoring developers
@@ -113,7 +118,7 @@ export default function CVPage() {
 						</li>
 						<li>Next.js: Page Router, App Router, SSR, SSG</li>
 						<li>Apollo Client, graphql-codegen, introspection</li>
-						<li>Vitest, Jest, testing-library</li>
+						<li>Vitest, Jest, Testing Library</li>
 						<li>Date libraries (day.js, date-fns, Moment.js)</li>
 						<li>CSS Animations, GSAP, Canvas, SVG</li>
 						<li>Storybook, Design Systems</li>
@@ -149,8 +154,9 @@ export default function CVPage() {
 					<div className="mt-1em">Key achievements</div>
 					<ul>
 						<li>
-							Transitioned from HTML developer to more traditional
-							frontend perspectives and technology stack
+							Transitioned from traditional frontend stack
+							(jQuery, Laravel Blade, EJS) to React and
+							GraphQL-based applications
 						</li>
 						<li>
 							Implemented CI/CD pipelines for frontend delivery
@@ -189,10 +195,13 @@ export default function CVPage() {
 					</div>
 					<div className="mt-1em">Key achievements</div>
 					<ul>
-						<li>Built more than 20 web projects from scratch</li>
+						<li>
+							Built more than 20 web projects from scratch (HTML,
+							CSS, Sass, jQuery)
+						</li>
 						<li>
 							Learned fundamentals of web development, responsive
-							design and fundamental tooling
+							design and frontend tooling
 						</li>
 						<li>
 							Fully switched career path from Motion Design to Web
@@ -203,8 +212,7 @@ export default function CVPage() {
 					<ul>
 						<li>HTML, CSS, JavaScript, jQuery</li>
 						<li>Adobe Photoshop</li>
-						<li>FTP, SFTP</li>
-						<li>Version Control: Git</li>
+						<li>FTP, SFTP, Version Control: Git</li>
 					</ul>
 					<div>Methodologies</div>
 					<ul>
