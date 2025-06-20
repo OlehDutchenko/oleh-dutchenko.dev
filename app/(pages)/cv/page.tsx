@@ -278,10 +278,10 @@ export default function CVPage() {
 					</p>
 				</div>
 				<div className="project">
-					<h3>Internal Frontend Starter Kit (Wezom)</h3>
+					<h3>Internal Frontend Starter Kit</h3>
 					<p>
 						Internal boilerplate projects evolving over years: from
-						Grant/Gulp to Webpack, CRA, Vite and Next (Next.js).
+						Grunt/Gulp to Webpack, CRA, Vite and Next (Next.js).
 						Served as a standardized starting point for new
 						projects, consolidating best practices, scalable
 						architecture patterns, and reusable tooling.
