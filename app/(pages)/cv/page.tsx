@@ -1,6 +1,10 @@
 import './page.css';
 import { ExternalLink } from '@/(pages)/cv/_components/ExternalLink';
 
+export const metadata = {
+	title: 'Oleh Dutchenko CV',
+};
+
 export default function CVPage() {
 	return (
 		<main>

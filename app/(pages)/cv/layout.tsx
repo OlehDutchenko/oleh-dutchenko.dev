@@ -2,10 +2,6 @@ import { fontBase, fontCode, fontHeadings } from '@/_fonts';
 import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 
-export const metadata = {
-	title: 'CV Oleh Dutchenko',
-};
-
 export default function RootLayout({ children }: PropsWithChildren) {
 	const htmlClassName = clsx(
 		fontBase.variable,
