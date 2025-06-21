@@ -54,9 +54,7 @@ export default function CVPage() {
 					experience. <br /> Focused on scalable architecture, clean
 					code and building strong teams.
 				</p>
-				<p>
-					<b>Key Skills</b>
-				</p>
+				<div className="mt-1em bold">Key Skills</div>
 				<ul className="key-skills">
 					<li>TypeScript, JavaScript (ES6+), React.js</li>
 					<li>GraphQL (certified Apollo Graph Developer)</li>
@@ -83,7 +81,7 @@ export default function CVPage() {
 					<div className="caption">
 						<em>March 2020–Present (5+ years)</em>
 					</div>
-					<div className="mt-1em">Key achievements</div>
+					<div className="mt-1em bold">Key achievements</div>
 					<ul>
 						<li>
 							Leading frontend team (11 developers across 4
@@ -109,7 +107,7 @@ export default function CVPage() {
 							company-wide frontend development
 						</li>
 					</ul>
-					<div>Technologies</div>
+					<div className="bold">Technologies</div>
 					<ul>
 						<li>TypeScript, JavaScript (ES6+)</li>
 						<li>
@@ -134,7 +132,7 @@ export default function CVPage() {
 						<li>react-redux, redux-saga</li>
 						<li>Vue.js (basic knowledge)</li>
 					</ul>
-					<div>Methodologies and practices</div>
+					<div className="bold">Methodologies and practices</div>
 					<ul>
 						<li>Agile (Scrum)</li>
 						<li>Technical Documentation writing</li>
@@ -151,7 +149,7 @@ export default function CVPage() {
 					<div className="caption">
 						<em>February 2017–March 2020 (3 years)</em>
 					</div>
-					<div className="mt-1em">Key achievements</div>
+					<div className="mt-1em bold">Key achievements</div>
 					<ul>
 						<li>
 							Transitioned from traditional frontend stack
@@ -167,7 +165,7 @@ export default function CVPage() {
 							technical documentation practices
 						</li>
 					</ul>
-					<div>Technologies</div>
+					<div className="bold">Technologies</div>
 					<ul>
 						<li>SVG, HTML Canvas</li>
 						<li>Pug (Jade), Sass (SCSS), jQuery, Bootstrap</li>
@@ -179,7 +177,7 @@ export default function CVPage() {
 						</li>
 						<li>Adobe Photoshop</li>
 					</ul>
-					<div>Methodologies and practices</div>
+					<div className="bold">Methodologies and practices</div>
 					<ul>
 						<li>Waterfall, Agile (Scrum)</li>
 						<li>Gitflow workflow</li>
@@ -193,7 +191,7 @@ export default function CVPage() {
 					<div className="caption">
 						<em>March 2014–February 2017 (3 years)</em>
 					</div>
-					<div className="mt-1em">Key achievements</div>
+					<div className="mt-1em bold">Key achievements</div>
 					<ul>
 						<li>
 							Built more than 20 web projects from scratch (HTML,
@@ -208,13 +206,13 @@ export default function CVPage() {
 							Development
 						</li>
 					</ul>
-					<div>Technologies</div>
+					<div className="bold">Technologies</div>
 					<ul>
 						<li>HTML, CSS, JavaScript, jQuery</li>
 						<li>Adobe Photoshop</li>
 						<li>FTP, SFTP, Version Control: Git</li>
 					</ul>
-					<div>Methodologies</div>
+					<div className="bold">Methodologies</div>
 					<ul>
 						<li>
 							Responsive Web Design, Cross-browser compatibility
@@ -329,8 +327,8 @@ export default function CVPage() {
 
 			<section>
 				<h2>Community Contributions</h2>
-				<h3>Open-Source Projects</h3>
-				<ul>
+				<div className="mt-1em bold">Open-Source Projects</div>
+				<ul className="mt-0_25em">
 					<li>
 						<ExternalLink href="https://www.npmjs.com/package/sort-css-media-queries">
 							sort-css-media-queries
@@ -358,8 +356,8 @@ export default function CVPage() {
 					</li>
 				</ul>
 
-				<h3>Conference Speaker</h3>
-				<ul>
+				<div className="mt-1em bold">Conference Speaker</div>
+				<ul className="mt-0_25em">
 					<li>
 						JavaScript fwdays'25 - "
 						<ExternalLink href="https://fwdays.com/en/event/javascript-fwdays-2025/review/rem-one-unit-to-rule-them-all">
@@ -377,8 +375,8 @@ export default function CVPage() {
 					</li>
 				</ul>
 
-				<h3>YouTube Talks</h3>
-				<ul>
+				<div className="mt-1em bold">YouTube Talks</div>
+				<ul className="mt-0_25em">
 					<li>
 						<ExternalLink href="https://www.youtube.com/watch?v=MSXZpTdoJ5s">
 							Public interview discussing Tech Lead career path
