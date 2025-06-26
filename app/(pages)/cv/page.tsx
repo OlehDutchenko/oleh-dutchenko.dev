@@ -69,8 +69,9 @@ export default function CVPage() {
 					<li>
 						Clean Code Principles (SOLID, DRY, KISS, Refactoring)
 					</li>
-					<li>Domain-Driven Design (DDD applied to frontend)</li>
+					<li>Test-Driven Development (TDD)</li>
 					<li>Component-Driven Development</li>
+					<li>Domain-Driven Design (DDD applied to frontend)</li>
 					<li>CI/CD for Frontend</li>
 					<li>Mentoring, Leadership, Onboarding Engineers</li>
 				</ul>
