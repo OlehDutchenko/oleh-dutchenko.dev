@@ -6,16 +6,14 @@ export const metadata = {
 };
 
 export default function CVPage() {
+	const email = 'dutchenko.o.cv@gmail.com';
 	return (
 		<main>
 			<h1>Oleh Dutchenko</h1>
 			<section className="contacts">
 				<div>
 					<p>
-						Email:{' '}
-						<a href="mailto:dutchenko.o.cv@gmail.com">
-							dutchenko.o.cv@gmail.com
-						</a>
+						Email: <a href={`mailto:${email}`}>{email}</a>
 					</p>
 					<p>
 						LinkedIn:{' '}
